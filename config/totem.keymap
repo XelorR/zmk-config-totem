@@ -179,6 +179,13 @@
             bindings = <&en_win &kp CARET &ru_win>;
             label = "CARET_WIN";
         };
+
+        squot_win: squot_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp SQT &ru_win>;
+            label = "SQUOT_WIN";
+        };
     };
 
     keymap {
@@ -215,14 +222,14 @@
            &kp Q           &kp W           &kp E        &kp R             &kp T      &kp Y       &kp U        &kp I        &kp O             &kp P
            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H       &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
 &kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B      &kp N       &kp M        &kp COMMA    &mt LCTRL PERIOD  &kp SLASH               &kp SQT
-                                           &eng_win     &lt 6 SPACE       &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
+                                           &eng_win     &lt 6 SPACE       &kp TAB    &kp ESCAPE  &lt 7 ENTER  &rus_win
             >;
         };
 
-        sim_layer {
+        sym_en {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "SYM";
+            label = "SYM_EN";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -336,6 +343,16 @@
         &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &kp LG(LS(S))      &kp ESCAPE            &kp LEFT   &kp DOWN      &kp RIGHT      &kp BACKSPACE
 &trans  &kp DEL       &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp PRINTSCREEN    &kp C_MEDIA_COMPUTER  &kp PG_UP  &kp K_APP     &kp PAGE_DOWN  &kp DELETE     &trans
                                         &trans       &trans             &trans             &kp ESCAPE            &kp ENTER  &trans
+            >;
+        };
+
+        sym_ru_win {
+            label = "SYM_RU_WIN";
+            bindings = <
+              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
+              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) QUESTION
+&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win                 &kp SLASH
+                                                        &trans               &lt 6 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER      &trans
             >;
         };
     };
