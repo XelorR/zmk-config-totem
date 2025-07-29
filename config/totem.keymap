@@ -208,28 +208,49 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &lt 5 D      &kp C        &kp V      &kp J       &kp F        &lt 5 O      &kp U          &kp COMMA
+           &kp B       &kp L        &lt 2 D      &kp C        &kp V      &kp J       &kp F        &lt 2 O      &kp U          &kp COMMA
            &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y       &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
 &kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z      &kp K       &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
-                                    &eng_win     &lt 3 SPACE  &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
+                                    &eng_win     &lt 0 SPACE  &kp TAB    &kp ESCAPE  &lt 7 ENTER  &rus_win
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &lt 6 E      &kp R             &kp T      &kp Y       &kp U        &lt 6 I      &kp O             &kp P
+           &kp Q           &kp W           &lt 3 E      &kp R             &kp T      &kp Y       &kp U        &lt 3 I      &kp O             &kp P
            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H       &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
 &kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B      &kp N       &kp M        &kp COMMA    &mt LCTRL PERIOD  &kp SLASH               &kp SQT
-                                           &eng_win     &lt 3 SPACE       &kp TAB    &kp ESCAPE  &lt 4 ENTER  &rus_win
+                                           &eng_win     &lt 0 SPACE       &kp TAB    &kp ESCAPE  &lt 6 ENTER  &rus_win
             >;
 
             label = "RU_WIN";
         };
 
-        sym_en {
+        num_en_win {
+            bindings = <
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
+                                      &kp CAPSLOCK  &lt 6 SPACE   &kp TAB            &kp ESC    &lt 4 N0            &kp PERIOD
+            >;
+
+            label = "NUM_EN_WIN";
+        };
+
+        num_ru_win {
+            label = "NUM_RU_WIN";
+            bindings = <
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
+                                      &kp CAPSLOCK  &lt 6 SPACE   &kp TAB            &kp ESC    &lt 5 N0            &kp SLASH
+            >;
+        };
+
+        sym_en_win {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "SYM_EN";
+            label = "SYM_EN_WIN";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -246,14 +267,24 @@
            &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
            &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
 &kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON            &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
-                                                               &trans               &lt 3 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER             &trans
+                                                               &trans               &lt 0 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER             &trans
             >;
         };
 
-        nav_layer {
+        sym_ru_win {
+            label = "SYM_RU_WIN";
+            bindings = <
+              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
+              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
+&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
+                                                        &trans               &lt 0 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER      &trans
+            >;
+        };
+
+        nav_layer_win {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "Extend_win";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -271,37 +302,6 @@
         &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &kp LG(LS(S))      &kp ESCAPE            &kp LEFT   &kp DOWN      &kp RIGHT      &kp BACKSPACE
 &trans  &kp DEL       &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp PRINTSCREEN    &kp C_MEDIA_COMPUTER  &kp PG_UP  &kp K_APP     &kp PAGE_DOWN  &kp DELETE     &trans
                                         &trans       &trans             &trans             &kp ESCAPE            &kp ENTER  &trans
-            >;
-        };
-
-        sym_ru_win {
-            label = "SYM_RU_WIN";
-            bindings = <
-              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
-              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
-&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
-                                                        &trans               &lt 3 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER      &trans
-            >;
-        };
-
-        num_en {
-            bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
-                                      &kp ESCAPE    &kp SPACE     &kp TAB            &kp ESC    &kp N0              &kp PERIOD
-            >;
-
-            label = "NUM_EN";
-        };
-
-        num_ru {
-            label = "NUM_RU";
-            bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
-                                      &kp ESCAPE    &kp SPACE     &kp TAB            &kp ESC    &kp N0              &kp SLASH
             >;
         };
     };
