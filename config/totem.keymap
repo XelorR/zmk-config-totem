@@ -208,10 +208,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &kp D        &kp C        &kp V      &kp J       &kp F        &kp O        &kp U          &kp COMMA
-           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y       &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z      &kp K       &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
-                                    &eng_win     &lt 3 SPACE  &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
+           &kp B       &kp L        &kp D        &kp C        &kp V        &kp J         &kp F        &kp O        &kp U          &kp COMMA
+           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y         &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
+&kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z        &kp K         &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
+                                    &eng_win     &lt 3 SPACE  &lt 5 TAB    &lt 5 ESCAPE  &lt 2 ENTER  &rus_win
             >;
         };
 
@@ -282,6 +282,17 @@
 &kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win                 &kp SLASH
                                                         &trans               &lt 3 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER      &trans
             >;
+        };
+
+        num_en {
+            bindings = <
+       &kp F12  &kp F7  &kp F8  &kp F9     &kp C_VOLUME_UP    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
+       &kp F11  &kp F4  &kp F5  &kp F6     &kp C_VOL_DN       &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BSPC
+&none  &kp F10  &kp F1  &kp F2  &kp F3     &kp K_MUTE         &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp FSLH      &none
+                        &none   &kp SPACE  &kp TAB            &kp ESC    &kp N0  &none
+            >;
+
+            label = "NUM_EN";
         };
     };
 };
