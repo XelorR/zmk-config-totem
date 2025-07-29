@@ -47,19 +47,32 @@
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
+        en_win: en_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&kp LC(N8)>;
+            label = "EN_WIN";
+        };
+
+        ru_win: ru_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N9)>;
+            label = "RU_WIN";
+        };
+
+        eng_win: eng_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &to 0>;
+            label = "ENG_WIN";
+        };
+
+        rus_win: rus_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru_win &to 1>;
+            label = "RUS_WIN";
         };
     };
 
@@ -88,7 +101,7 @@
            &kp B       &kp L        &kp D        &kp C        &kp V      &kp J       &kp F        &kp O        &kp U          &kp COMMA
            &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y       &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
 &kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z      &kp K       &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
-                                    &to 0        &lt 6 SPACE  &kp TAB    &kp ESCAPE  &lt 2 ENTER  &to 1
+                                    &eng_win     &lt 6 SPACE  &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
             >;
         };
 
@@ -97,7 +110,7 @@
            &kp Q           &kp W           &kp E        &kp R             &kp T      &kp Y       &kp U        &kp I        &kp O             &kp P
            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H       &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
 &kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B      &kp N       &kp M        &kp COMMA    &mt LCTRL PERIOD  &kp SLASH               &kp SQT
-                                           &to 0        &lt 6 SPACE       &kp TAB    &kp ESCAPE  &lt 2 ENTER  &to 1
+                                           &eng_win     &lt 6 SPACE       &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
             >;
         };
 
