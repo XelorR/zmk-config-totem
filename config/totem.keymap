@@ -74,6 +74,20 @@
             bindings = <&ru_win &to 1>;
             label = "RUS_WIN";
         };
+
+        hash_win: hash_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp HASH &ru_win>;
+            label = "HASH_WIN";
+        };
+
+        numero_win: numero_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru_win &kp HASH &en_win>;
+            label = "NUMERO_WIN";
+        };
     };
 
     keymap {
@@ -131,7 +145,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &none        &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
+           &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
            &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
 &kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON            &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
                                                                &trans               &lt 6 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER             &trans
