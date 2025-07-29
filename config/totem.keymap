@@ -104,14 +104,14 @@
         lbracket_win: lbracket_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&en_win &mt LSHFT LEFT_BRACKET &ru_win>;
+            bindings = <&en_win &kp LEFT_BRACKET &ru_win>;
             label = "LBRACKET_WIN";
         };
 
         rbracket_win: rbracket_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&en_win &mt LEFT_ALT RIGHT_BRACKET &ru_win>;
+            bindings = <&en_win &kp RIGHT_BRACKET &ru_win>;
             label = "RBRACKET_WIN";
         };
 
