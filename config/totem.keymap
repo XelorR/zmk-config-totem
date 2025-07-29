@@ -272,9 +272,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &lt 4 D      &kp C        &kp V      &kp J                     &kp F        &lt 4 O      &kp U          &kp COMMA
-           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y                     &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z      &kp K                     &kp P        &kp SQT      &kp SEMICOLON  &lt 9 DOT   &kp SLASH
+           &kp B       &kp L        &lt 4 D      &kp C        &kp V      &kp J                     &kp F        &lt 4 O      &kp U                &kp COMMA
+           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y                     &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
+&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z      &kp K                     &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 9 DOT   &kp SLASH
                                     &eng_win     &lt 8 SPACE  &kp TAB    &kp LS(LC(LA(LEFT_GUI)))  &lt 6 ENTER  &rus_win
             >;
         };
