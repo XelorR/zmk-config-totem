@@ -208,16 +208,16 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &lt 5 D      &kp C        &kp V        &kp J         &kp F        &lt 5 O      &kp U          &kp COMMA
-           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y         &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z        &kp K         &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
-                                    &eng_win     &lt 3 SPACE  &lt 5 TAB    &lt 5 ESCAPE  &lt 2 ENTER  &rus_win
+           &kp B       &kp L        &lt 5 D      &kp C        &kp V      &kp J       &kp F        &lt 5 O      &kp U          &kp COMMA
+           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y       &mt RSHFT H  &mt RCTRL A  &mt RALT E     &mt RGUI I
+&kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z      &kp K       &kp P        &kp SQT      &kp SEMICOLON  &kp PERIOD  &kp SLASH
+                                    &eng_win     &lt 3 SPACE  &kp TAB    &kp ESCAPE  &lt 2 ENTER  &rus_win
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &kp E        &kp R             &kp T      &kp Y       &kp U        &kp I        &kp O             &kp P
+           &kp Q           &kp W           &lt 6 E      &kp R             &kp T      &kp Y       &kp U        &lt 6 I      &kp O             &kp P
            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H       &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
 &kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B      &kp N       &kp M        &kp COMMA    &mt LCTRL PERIOD  &kp SLASH               &kp SQT
                                            &eng_win     &lt 3 SPACE       &kp TAB    &kp ESCAPE  &lt 4 ENTER  &rus_win
@@ -286,13 +286,23 @@
 
         num_en {
             bindings = <
-       &kp F12       &kp F7           &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &kp N9                 &kp ASTERISK
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
        &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
 &none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
-                                      &none         &kp SPACE     &kp TAB            &kp ESC    &kp N0              &none
+                                      &kp ESCAPE    &kp SPACE     &kp TAB            &kp ESC    &kp N0              &kp PERIOD
             >;
 
             label = "NUM_EN";
+        };
+
+        num_ru {
+            label = "NUM_RU";
+            bindings = <
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
+                                      &kp ESCAPE    &kp SPACE     &kp TAB            &kp ESC    &kp N0              &kp SLASH
+            >;
         };
     };
 };
