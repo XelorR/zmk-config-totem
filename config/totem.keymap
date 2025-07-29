@@ -278,8 +278,8 @@
             label = "SYM_RU_WIN";
             bindings = <
               &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
-              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) QUESTION
-&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win                 &kp SLASH
+              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
+&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
                                                         &trans               &lt 3 SPACE                       &kp TAB          &kp ESCAPE   &kp ENTER      &trans
             >;
         };
