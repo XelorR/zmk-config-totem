@@ -88,6 +88,97 @@
             bindings = <&ru_win &kp HASH &en_win>;
             label = "NUMERO_WIN";
         };
+
+        lt_win: gt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp LESS_THAN &ru_win>;
+            label = "GT";
+        };
+
+        gt_win: gt_win_ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp GREATER_THAN &ru_win>;
+            label = "GT_WIN_";
+        };
+
+        lbracket_win: lbracket_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &mt LSHFT LEFT_BRACKET &ru_win>;
+            label = "LBRACKET_WIN";
+        };
+
+        rbracket_win: rbracket_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &mt LEFT_ALT RIGHT_BRACKET &ru_win>;
+            label = "RBRACKET_WIN";
+        };
+
+        lbrace_win: lbrace_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp LEFT_BRACE &ru_win>;
+            label = "LBRACE_WIN";
+        };
+
+        rbrace_win: rbrace_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp RIGHT_BRACE &ru_win>;
+            label = "RBRACE_WIN";
+        };
+
+        pipe_win: pipe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp PIPE &ru_win>;
+            label = "PIPE_WIN";
+        };
+
+        grv_win: grv_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp GRAVE &ru_win>;
+            label = "GRV_WIN";
+        };
+
+        tild_win: tild_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp TILDE &ru_win>;
+            label = "TILD_WIN";
+        };
+
+        dlr_win: dlr_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp DOLLAR &ru_win>;
+            label = "DLR_WIN";
+        };
+
+        amp_win: amp_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp AMPERSAND &ru_win>;
+            label = "AMP_WIN";
+        };
+
+        at_win: at_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp AT_SIGN &ru_win>;
+            label = "AT_WIN";
+        };
+
+        caret_win: caret_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_win &kp CARET &ru_win>;
+            label = "CARET_WIN";
+        };
     };
 
     keymap {
