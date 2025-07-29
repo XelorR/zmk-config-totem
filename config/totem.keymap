@@ -63,6 +63,42 @@
             key-positions = <28 29>;
             layers = <1>;
         };
+
+        C-a {
+            bindings = <&kp LC(A)>;
+            key-positions = <21 24>;
+            layers = <0 1>;
+        };
+
+        C-z {
+            bindings = <&kp LC(Z)>;
+            key-positions = <21 22>;
+            layers = <0 1>;
+        };
+
+        C-v {
+            bindings = <&kp LC(V)>;
+            key-positions = <23 24>;
+            layers = <0 1>;
+        };
+
+        C-x {
+            bindings = <&kp LC(X)>;
+            key-positions = <22 24>;
+            layers = <0 1>;
+        };
+
+        C-y {
+            bindings = <&kp LC(Y)>;
+            key-positions = <21 23>;
+            layers = <0 1>;
+        };
+
+        C-c {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 23>;
+            layers = <0 1>;
+        };
     };
 
     macros {
