@@ -112,6 +112,66 @@
             key-positions = <20 21>;
             layers = <0 1>;
         };
+
+        Ret {
+            bindings = <&kp ENTER>;
+            key-positions = <8 9>;
+            layers = <0 2 1>;
+        };
+
+        Cs {
+            bindings = <&kp LC(S)>;
+            key-positions = <2 3>;
+            layers = <0 1>;
+        };
+
+        gam_1 {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <24 25>;
+            layers = <2>;
+        };
+
+        gam_2 {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <13 14>;
+            layers = <2>;
+        };
+
+        gam_3 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <3 4>;
+            layers = <2>;
+        };
+
+        gam_4 {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <3 14>;
+            layers = <2>;
+        };
+
+        gam_5 {
+            bindings = <&kp N5>;
+            key-positions = <13 25>;
+            layers = <2>;
+        };
+
+        eng_win {
+            bindings = <&eng_win>;
+            key-positions = <1 3>;
+            layers = <0 1>;
+        };
+
+        rus_win {
+            bindings = <&rus_win>;
+            key-positions = <6 8>;
+            layers = <0 1>;
+        };
+
+        gam_ret {
+            bindings = <&kp ENTER>;
+            key-positions = <33 34>;
+            layers = <2>;
+        };
     };
 
     macros {
