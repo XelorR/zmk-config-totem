@@ -279,19 +279,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &lt 4 D      &kp C        &kp V      &kp J                     &kp F        &lt 4 O      &kp U                &kp COMMA
-           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G      &kp Y                     &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z      &kp K                     &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 9 DOT   &kp SLASH
-                                    &eng_win     &lt 8 SPACE  &kp TAB    &kp LS(LC(LA(LEFT_GUI)))  &lt 6 ENTER  &rus_win
+           &kp B       &kp L        &lt 4 D      &kp C        &kp V        &kp J                     &kp F        &lt 4 O      &kp U                &kp COMMA
+           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y                     &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
+&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z        &kp K                     &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 9 DOT   &kp SLASH
+                                    &eng_win     &lt 8 SPACE  &lt 9 TAB    &kp LS(LC(LA(LEFT_GUI)))  &lt 6 ENTER  &rus_win
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &lt 5 E      &kp R             &kp T      &kp Y                     &kp U        &lt 5 I      &kp O             &kp P
-           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G      &kp H                     &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z           &mt LCTRL X     &lt 9 C      &kp V             &kp B      &kp N                     &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 9 SLASH             &kp SQT
-                                           &eng_win     &lt 8 SPACE       &kp TAB    &kp LS(LA(LC(LEFT_GUI)))  &lt 7 ENTER  &rus_win
+           &kp Q           &kp W           &lt 5 E      &kp R             &kp T        &kp Y                     &kp U        &lt 5 I      &kp O             &kp P
+           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H                     &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
+&kp GRAVE  &kp Z           &mt LCTRL X     &lt 9 C      &kp V             &kp B        &kp N                     &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 9 SLASH             &kp SQT
+                                           &eng_win     &lt 8 SPACE       &lt 9 TAB    &kp LS(LA(LC(LEFT_GUI)))  &lt 7 ENTER  &rus_win
             >;
 
             label = "RU_WIN";
@@ -398,10 +398,10 @@
 
         mouse_win {
             bindings = <
-       &bootloader   &bt BT_NXT    &bt BT_CLR    &bt BT_NXT    &bt BT_CLR_ALL    &out OUT_BLE              &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &out OUT_USB              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&none  &kp DELETE    &kp LCTRL     &none         &mkp LCLK     &mkp RCLK         &none                     &eng_win        &rus_win        &to 2            &kp DEL         &none
-                                   &none         &kp SPACE     &kp TAB           &kp LS(LA(LC(LEFT_GUI)))  &kp ENTER       &none
+       &bootloader   &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&none  &kp DELETE    &kp LCTRL     &none         &mkp LCLK     &mkp RCLK         &none           &eng_win        &rus_win        &to 2            &kp DEL         &none
+                                   &none         &kp SPACE     &kp TAB           &mkp RCLK       &mkp LCLK       &none
             >;
         };
     };
