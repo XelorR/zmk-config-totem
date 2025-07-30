@@ -13,6 +13,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -397,8 +398,8 @@
 
         mouse_win {
             bindings = <
-       &bootloader   &bt BT_NXT    &bt BT_CLR    &bt BT_NXT    &bt BT_CLR_ALL    &none                     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none                     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+       &bootloader   &bt BT_NXT    &bt BT_CLR    &bt BT_NXT    &bt BT_CLR_ALL    &out OUT_BLE              &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &out OUT_USB              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &none  &kp DELETE    &kp LCTRL     &none         &mkp LCLK     &mkp RCLK         &none                     &eng_win        &rus_win        &to 2            &kp DEL         &none
                                    &none         &kp SPACE     &kp TAB           &kp LS(LA(LC(LEFT_GUI)))  &kp ENTER       &none
             >;
