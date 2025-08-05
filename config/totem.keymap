@@ -475,9 +475,9 @@
         mouse_win {
             bindings = <
        &bootloader   &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&none  &kp DELETE    &kp LCTRL     &none         &mkp LCLK     &mkp RCLK         &none           &eng_win        &rus_win        &to 2            &kp DEL         &none
-                                   &none         &kp SPACE     &kp TAB           &mkp RCLK       &mkp LCLK       &none
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &kp PSCRN         &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none           &eng_win        &rus_win        &to 2            &kp DEL         &none
+                                   &none         &kp SPACE     &kp TAB           &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
     };
