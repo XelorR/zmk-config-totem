@@ -345,19 +345,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B       &kp L        &lt 4 D      &kp C        &kp V        &kp J                       &kp F        &lt 4 O      &kp U                &kp COMMA
-           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y                       &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z        &kp K                       &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 9 DOT   &kp SLASH
-                                    &eng_win     &lt 8 SPACE  &lt 9 TAB    &lt 6 LS(LA(LC(LEFT_GUI)))  &lt 4 ENTER  &rus_win
+           &kp B       &kp L        &lt 4 D      &kp C        &kp V        &kp J      &kp F        &lt 4 O      &kp U                &kp COMMA
+           &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y      &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
+&kp GRAVE  &kp X       &mt LCTRL Q  &lt 9 M      &kp W        &kp Z        &kp K      &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 9 DOT   &kp SLASH
+                                    &eng_win     &lt 8 SPACE  &lt 9 TAB    &lt 6 RET  &lt 4 BSPC   &rus_win
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &lt 5 E      &kp R             &kp T        &kp Y                       &kp U        &lt 5 I      &kp O             &kp P
-           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H                       &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z           &mt LCTRL X     &lt 9 C      &kp V             &kp B        &kp N                       &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 9 SLASH             &kp SQT
-                                           &eng_win     &lt 8 SPACE       &lt 9 TAB    &lt 7 LS(LA(LC(LEFT_GUI)))  &lt 5 ENTER  &rus_win
+           &kp Q           &kp W           &lt 5 E      &kp R             &kp T        &kp Y      &kp U        &lt 5 I      &kp O             &kp P
+           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
+&kp GRAVE  &kp Z           &mt LCTRL X     &lt 9 C      &kp V             &kp B        &kp N      &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 9 SLASH             &kp SQT
+                                           &eng_win     &lt 8 SPACE       &lt 9 TAB    &lt 7 RET  &lt 5 BSPC   &rus_win
             >;
 
             label = "RU_WIN";
@@ -365,10 +365,10 @@
 
         gaming_win {
             bindings = <
-          &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y       &kp U      &kp I      &kp O    &kp P
-          &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H       &kp J      &kp K      &kp L    &kp SEMI
-&kp CAPS  &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N       &kp M      &kp COMMA  &kp DOT  &lt 9 SLASH  &kp BSPC
-                            &kp G  &kp SPACE  &mo 3    &kp ESCAPE  &kp ENTER  &kp B
+          &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y    &kp U     &kp I      &kp O    &kp P
+          &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H    &kp J     &kp K      &kp L    &kp SEMI
+&kp CAPS  &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N    &kp M     &kp COMMA  &kp DOT  &lt 9 SLASH  &kp SQT
+                            &kp G  &kp SPACE  &mo 3    &kp RET  &kp BSPC  &kp B
             >;
 
             label = "GAM_WIN";
@@ -376,19 +376,19 @@
 
         gam_fn_win {
             bindings = <
-           &kp I  &kp N2            &chat_win  &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7     &kp F8     &kp F9  &kp F12
-           &kp J  &kp LEFT_BRACKET  &kp F6     &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3     &kp F4     &kp F6  &kp F11
-&kp GRAVE  &kp M  &kp N1            &kp H      &kp N4             &kp B    &kp K_MUTE         &kp F1     &kp F2     &kp F3  &kp F10  &kp SQT
-                                    &kp LALT   &kp ENTER          &none    &kp PRINTSCREEN    &kp ENTER  &kp SLASH
+           &kp I  &kp N2            &chat_win  &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8     &kp F9  &kp F12
+           &kp J  &kp LEFT_BRACKET  &kp F6     &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3      &kp F4     &kp F6  &kp F11
+&kp GRAVE  &kp M  &kp N1            &kp H      &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2     &kp F3  &kp F10  &kp SQT
+                                    &kp LALT   &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp SLASH
             >;
         };
 
         num_en_win {
             bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS                  &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS                 &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL                 &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
-                                      &kp CAPSLOCK  &lt 8 SPACE   &kp TAB            &kp LS(LA(LC(LEFT_GUI)))  &lt 6 N0            &kp PERIOD
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
+                                      &kp CAPSLOCK  &lt 8 SPACE   &kp TAB            &lt 6 RET  &none               &kp N0
             >;
 
             label = "NUM_EN_WIN";
@@ -397,10 +397,10 @@
         num_ru_win {
             label = "NUM_RU_WIN";
             bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS                  &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS                 &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL                 &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
-                                      &kp CAPSLOCK  &lt 8 SPACE   &kp TAB            &kp LS(LA(LC(LEFT_GUI)))  &lt 7 N0            &kp SLASH
+       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
+                                      &kp CAPSLOCK  &lt 8 SPACE   &kp TAB            &lt 7 RET  &none               &kp N0
             >;
         };
 
@@ -421,20 +421,20 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &numero_win               &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
-           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT               &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
-&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON            &kp SLASH                         &kp BACKSLASH    &kp AT                    &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
-                                                               &trans               &lt 0 SPACE                       &kp TAB          &kp LS(LA(LC(LEFT_GUI)))  &kp ENTER             &trans
+           &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
+           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
+&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON            &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
+                                                               &none                &lt 0 SPACE                       &kp TAB          &kp RET      &lt 4 BSPC            &none
             >;
         };
 
         sym_ru_win {
             label = "SYM_RU_WIN";
             bindings = <
-              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH                  &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
-              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT               &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
-&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win                   &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
-                                                        &trans               &lt 0 SPACE                       &kp TAB          &kp LS(LA(LC(LEFT_GUI)))  &kp ENTER      &trans
+              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win    &kp UNDERSCORE    &rbracket_win  &squot_win
+              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win      &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
+&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win        &tild_win         &amp_win       &caret_win             &kp SLASH
+                                                        &none                &lt 0 SPACE                       &kp TAB          &kp RET      &lt 5 BACKSPACE  &none
             >;
         };
 
@@ -455,10 +455,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI       &kp INS                   &kp HOME   &kp UP_ARROW  &kp END        &kp F2
-        &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &kp LG(LS(S))      &caps_word                &kp LEFT   &kp DOWN      &kp RIGHT      &kp BACKSPACE
-&trans  &kp DEL       &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp PRINTSCREEN    &kp C_MEDIA_COMPUTER      &kp PG_UP  &kp K_APP     &kp PAGE_DOWN  &kp DELETE     &trans
-                                        &trans       &trans             &trans             &kp LS(LA(LC(LEFT_GUI)))  &kp ENTER  &trans
+        &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI       &kp INS               &kp HOME      &kp UP_ARROW  &kp END        &kp F2
+        &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &kp LG(LS(S))      &caps_word            &kp LEFT      &kp DOWN      &kp RIGHT      &kp BACKSPACE
+&trans  &kp DEL       &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp PRINTSCREEN    &kp C_MEDIA_COMPUTER  &kp PG_UP     &kp K_APP     &kp PAGE_DOWN  &kp DELETE     &trans
+                                        &trans       &trans             &trans             &lt 6 RET             &lt 4 DELETE  &trans
             >;
         };
 
