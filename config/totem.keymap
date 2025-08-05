@@ -386,18 +386,18 @@
         fun_win {
             label = "fun_win";
             bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &none
-                                      &kp CAPSLOCK  &lt 9 SPACE   &kp TAB            &lt 7 RET  &none               &kp N0
+                &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp C_VOLUME_UP  &kp F7        &kp F8        &mt LCTRL F9     &kp F12
+                &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp C_VOL_DN     &mt LSHFT F4  &mt LCTRL F5  &mt LEFT_ALT F6  &mt LCMD F11
+&kp SCROLLLOCK  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp K_MUTE       &kp F1        &kp F2        &kp F3           &kp F10       &kp SCROLLLOCK
+                                               &kp CAPSLOCK  &lt 9 SPACE   &kp TAB            &lt 7 RET        &none         &kp CAPSLOCK
             >;
         };
 
         num_en_win {
             bindings = <
-           &kp ASTERISK  &mt LCTRL N7           &kp N8        &kp N9              &kp PLUS     &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+           &kp ASTERISK  &kp N7                 &kp N8        &kp N9              &kp PLUS     &kp PLUS   &kp N7              &kp N8        &kp N9                 &kp ASTERISK
            &mt LCMD N0   &mt LEFT_ALT NUMBER_4  &mt LCTRL N5  &mt LSHFT NUMBER_6  &kp MINUS    &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&kp COLON  &kp SLASH     &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3        &kp EQUAL    &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp FSLH       &kp COLON
+&kp COLON  &kp SLASH     &mt LCTRL NUMBER_1     &kp NUMBER_2  &kp NUMBER_3        &kp EQUAL    &kp EQUAL  &kp N1              &kp N2        &mt LCTRL NUMBER_3     &kp FSLH       &kp COLON
                                                 &kp N0        &lt 9 SPACE         &kp TAB      &lt 7 RET  &none               &kp N0
             >;
 
@@ -407,10 +407,10 @@
         num_ru_win {
             label = "NUM_RU_WIN";
             bindings = <
-       &kp F12      &mt LCTRL N7           &kp N8        &kp N9              &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD N0  &mt LEFT_ALT NUMBER_4  &mt LCTRL N5  &mt LSHFT NUMBER_6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10      &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
-                                           &kp CAPSLOCK  &lt 9 SPACE         &kp TAB            &lt 8 RET  &none               &kp N0
+           &kp ASTERISK  &kp N7                 &kp N8        &kp N9              &kp PLUS     &kp PLUS   &kp N7              &kp N8        &kp N9                 &kp ASTERISK
+           &mt LCMD N0   &mt LEFT_ALT NUMBER_4  &mt LCTRL N5  &mt LSHFT NUMBER_6  &kp MINUS    &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&kp CARET  &kp PIPE      &mt LCTRL NUMBER_1     &kp NUMBER_2  &kp NUMBER_3        &kp EQUAL    &kp EQUAL  &kp N1              &kp N2        &mt LCTRL NUMBER_3     &kp PIPE       &kp CARET
+                                                &kp N0        &lt 9 SPACE         &kp TAB      &lt 8 RET  &none               &kp N0
             >;
         };
 
