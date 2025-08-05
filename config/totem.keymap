@@ -389,7 +389,7 @@
                 &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp C_VOLUME_UP  &kp F7        &kp F8        &mt LCTRL F9     &kp F12
                 &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp C_VOL_DN     &mt LSHFT F4  &mt LCTRL F5  &mt LEFT_ALT F6  &mt LCMD F11
 &kp SCROLLLOCK  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp K_MUTE       &kp F1        &kp F2        &kp F3           &kp F10       &kp SCROLLLOCK
-                                               &kp CAPSLOCK  &lt 9 SPACE   &kp TAB            &lt 7 RET        &none         &kp CAPSLOCK
+                                               &kp CAPSLOCK  &lt 9 SPACE   &lt 10 TAB         &lt 7 RET        &lt 5 BSPC    &kp CAPSLOCK
             >;
         };
 
