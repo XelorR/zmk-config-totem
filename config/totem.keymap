@@ -347,7 +347,7 @@
             bindings = <
            &kp B       &kp L        &lt 4 D      &kp C        &kp V         &kp J      &kp F        &lt 4 O      &kp U                &kp COMMA
            &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G         &kp Y      &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
-&kp GRAVE  &kp X       &mt LCTRL Q  &lt 10 M     &kp W        &kp Z         &kp K      &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 10 DOT  &kp SLASH
+&kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z         &kp K      &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 10 DOT  &kp SLASH
                                     &eng_win     &lt 9 SPACE  &lt 10 TAB    &lt 7 RET  &lt 5 BSPC   &rus_win
             >;
         };
@@ -356,7 +356,7 @@
             bindings = <
            &kp Q           &kp W           &lt 4 E      &kp R             &kp T         &kp Y      &kp U        &lt 4 I      &kp O             &kp P
            &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z           &mt LCTRL X     &lt 10 C     &kp V             &kp B         &kp N      &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 10 SLASH            &kp SQT
+&kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B         &kp N      &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 10 SLASH            &kp SQT
                                            &eng_win     &lt 9 SPACE       &lt 10 TAB    &lt 8 RET  &lt 6 BSPC   &rus_win
             >;
 
