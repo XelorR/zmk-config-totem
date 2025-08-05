@@ -407,10 +407,10 @@
         num_ru_win {
             label = "NUM_RU_WIN";
             bindings = <
-       &kp F12       &mt LCTRL F7     &kp F8        &kp F9        &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
-       &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
-&none  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
-                                      &kp CAPSLOCK  &lt 9 SPACE   &kp TAB            &lt 8 RET  &none               &kp N0
+       &kp F12      &mt LCTRL N7           &kp N8        &kp N9              &kp C_VOLUME_UP    &kp PLUS   &kp N7              &kp N8        &mt LCTRL N9           &kp ASTERISK
+       &mt LCMD N0  &mt LEFT_ALT NUMBER_4  &mt LCTRL N5  &mt LSHFT NUMBER_6  &kp C_VOL_DN       &kp MINUS  &mt LSHFT NUMBER_4  &mt LCTRL N5  &mt LEFT_ALT NUMBER_6  &mt LCMD BSPC
+&none  &kp F10      &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3        &kp K_MUTE         &kp EQUAL  &kp N1              &kp N2        &kp N3                 &kp PIPE       &none
+                                           &kp CAPSLOCK  &lt 9 SPACE         &kp TAB            &lt 8 RET  &none               &kp N0
             >;
         };
 
