@@ -106,12 +106,6 @@
             layers = <0 1>;
         };
 
-        Ret {
-            bindings = <&kp ENTER>;
-            key-positions = <8 9>;
-            layers = <0 2 1>;
-        };
-
         Cs {
             bindings = <&kp LC(S)>;
             key-positions = <2 3>;
