@@ -361,10 +361,10 @@
 
         gam_fn_win {
             bindings = <
-              &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8     &kp F9  &kp F12
-              &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3      &kp F4     &kp F6  &kp F11
-&chat_win_en  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2     &kp F3  &kp F10  &chat_win_ru
-                                       &kp LALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp SLASH
+              &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8         &kp F9  &kp F12
+              &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3      &kp F4         &kp F6  &kp F11
+&chat_win_en  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2         &kp F3  &kp F10  &chat_win_ru
+                                       &kp LALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp BACKSLASH
             >;
         };
 
@@ -431,10 +431,10 @@
 
         mouse_win {
             bindings = <
-           &kp LA(F4)    &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-           &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &kp PSCRN         &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&kp GRAVE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none           &eng_win        &rus_win        &gam_win         &none           &none
-                                       &lt 4 DEL     &lt 9 SPACE   &kp TAB           &mkp RCLK       &mkp LCLK       &mkp MCLK
+        &trans        &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &trans     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &trans            &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans     &eng_win        &rus_win        &gam_win         &trans          &trans
+                                    &lt 4 DEL     &lt 9 SPACE   &kp TAB           &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
