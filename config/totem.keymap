@@ -417,9 +417,9 @@
 
         mouse_win {
             bindings = <
-       &bootloader   &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+       &kp LA(F4)    &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &kp PSCRN         &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none           &eng_win        &rus_win        &to 2            &kp DEL         &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none           &eng_win        &rus_win        &to 2            &none           &none
                                    &lt 4 DEL     &lt 9 SPACE   &kp TAB           &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
