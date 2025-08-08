@@ -347,16 +347,16 @@
            &kp B       &kp L        &kp D        &kp C        &kp V         &kp J      &kp F        &kp O        &kp U                &kp COMMA
            &mt LGUI N  &mt LALT R   &mt LCTRL T  &mt LSHFT S  &kp G         &kp Y      &mt RSHFT H  &mt RCTRL A  &mt RALT E           &mt RGUI I
 &kp GRAVE  &kp X       &mt LCTRL Q  &kp M        &kp W        &kp Z         &kp K      &kp P        &kp SQT      &mt LCTRL SEMICOLON  &lt 11 DOT  &kp SLASH
-                                    &lt 4 DEL    &lt 9 SPACE  &lt 11 TAB    &lt 7 RET  &lt 5 BSPC   &lt 4 DEL
+                                    &lt 4 DEL    &lt 9 SPACE  &lt 11 TAB    &lt 7 RET  &lt 5 COMMA  &lt 4 DOT
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U        &kp I        &kp O             &kp P
-           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt LSHFT J  &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B         &kp N      &kp M        &kp COMMA    &mt LCTRL PERIOD  &lt 11 SLASH            &kp SQT
-                                           &lt 4 DEL    &lt 9 SPACE       &lt 11 TAB    &lt 8 RET  &lt 6 BSPC   &lt 4 DEL
+           &kp Q           &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U           &kp I        &kp O             &kp P
+           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H      &mt LSHFT J     &mt LCTRL K  &mt LEFT_ALT L    &mt LEFT_GUI SEMICOLON
+&kp GRAVE  &kp Z           &mt LCTRL X     &kp C        &kp V             &kp B         &kp N      &kp M           &kp COMMA    &mt LCTRL PERIOD  &lt 11 SQT              &kp LEFT_BRACKET
+                                           &lt 4 DEL    &lt 9 SPACE       &lt 11 TAB    &lt 8 RET  &lt 6 QUESTION  &lt 4 SLASH
             >;
 
             label = "RU_WIN";
