@@ -379,10 +379,10 @@
         fun_win {
             label = "fun_win";
             bindings = <
-                &kp F12       &kp F7           &kp F8        &kp F9        &kp C_VOLUME_UP    &kp C_VOLUME_UP  &kp F7             &kp F8        &kp F9           &kp F12
-                &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp C_VOL_DN       &kp C_VOL_DN     &mt LSHFT F4       &mt LCTRL F5  &mt LEFT_ALT F6  &mt LCMD F11
-&kp SCROLLLOCK  &kp F10       &kp F1           &kp F2        &kp F3        &kp K_MUTE         &kp K_MUTE       &kp F1             &kp F2        &kp F3           &kp F10       &kp SCROLLLOCK
-                                               &kp CAPSLOCK  &lt 9 SPACE   &lt 11 TAB         &lt 7 RET        &lt 5 PRINTSCREEN  &kp CAPSLOCK
+                &kp F12       &kp F7           &kp F8        &kp F9             &kp C_VOLUME_UP       &kp C_VOLUME_UP    &kp F7             &kp F8        &kp F9           &kp F12
+                &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6       &kp C_VOL_DN          &kp C_VOL_DN       &mt LSHFT F4       &mt LCTRL F5  &mt LEFT_ALT F6  &mt LCMD F11
+&kp SCROLLLOCK  &kp F10       &kp F1           &kp F2        &kp F3             &kp K_MUTE            &kp K_MUTE         &kp F1             &kp F2        &kp F3           &kp F10       &kp SCROLLLOCK
+                                               &kp CAPSLOCK  &lt 9 LOCKING_NUM  &lt 11 PRINTSCREEN    &lt 7 PRINTSCREEN  &lt 5 LOCKING_NUM  &kp CAPSLOCK
             >;
         };
 
