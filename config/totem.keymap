@@ -46,15 +46,9 @@
             layers = <1>;
         };
 
-        ru_kha {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <27 28>;
-            layers = <1>;
-        };
-
-        ru_soft_sign {
+        ru_hard_sign {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <28 29>;
+            key-positions = <27 28>;
             layers = <1>;
         };
 
