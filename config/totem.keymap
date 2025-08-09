@@ -36,13 +36,13 @@
 
         dquo_en_win {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <1 2>;
+            key-positions = <6 7>;
             layers = <0>;
         };
 
         dquo_ru_win {
             bindings = <&kp AT_SIGN>;
-            key-positions = <1 2>;
+            key-positions = <6 7>;
             layers = <1>;
         };
 
