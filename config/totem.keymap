@@ -444,7 +444,7 @@
             bindings = <
         &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI        &kp INS               &kp HOME        &kp UP_ARROW     &kp END    &kp DEL
         &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 10 LS(LG(S))    &caps_word            &kp LEFT        &kp DOWN         &kp RIGHT  &kp BSPC
-&trans  &kp LC(F4)    &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp LG(D)           &kp C_AL_MY_COMPUTER  &kp PG_UP       &kp K_APP        &kp PG_DN  &kp K_CALC  &trans
+&trans  &kp LC(F4)    &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp LG(D)           &kp C_AL_MY_COMPUTER  &kp PG_UP       &kp K_APP        &kp PG_DN  &lt 11 K_CALC  &trans
                                         &lt 4 DEL    &kp SPACE          &lt 11 TAB          &lt 7 RET             &lt 5 LA(LEFT)  &lt 4 LA(RIGHT)
             >;
         };
