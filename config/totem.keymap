@@ -102,7 +102,7 @@
 
         Cs {
             bindings = <&kp LC(S)>;
-            key-positions = <2 3>;
+            key-positions = <3 1>;
             layers = <0 1>;
         };
 
@@ -152,6 +152,18 @@
             bindings = <&kp ENTER>;
             key-positions = <33 34>;
             layers = <2>;
+        };
+
+        Ct {
+            bindings = <&kp LC(T)>;
+            key-positions = <3 2>;
+            layers = <0 1>;
+        };
+
+        Cw {
+            bindings = <&kp LC(W)>;
+            key-positions = <1 2>;
+            layers = <0 1>;
         };
     };
 
