@@ -410,20 +410,20 @@
         sym_en_win {
             label = "SYM_EN_WIN";
             bindings = <
-           &kp EXCL             &kp LESS_THAN                  &kp EQUAL            &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
-           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
-&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON            &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
-                                                               &lt 4 DEL            &lt 9 SPACE                       &lt 11 TAB       &kp RET      &lt 5 COMMA           &lt 4 DOT
+           &kp EXCL             &kp LESS_THAN                  &kp EQUAL        &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
+           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
+&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON        &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
+                                                               &lt 4 DEL        &lt 9 SPACE                       &lt 11 TAB       &kp RET      &lt 5 COMMA           &lt 4 DOT
             >;
         };
 
         sym_ru_win {
             label = "SYM_RU_WIN";
             bindings = <
-              &kp EXCL   &lt_win                        &kp EQUAL            &gt_win                           &grv_win         &kp HASH     &lbracket_win   &kp UNDERSCORE    &rbracket_win  &squot_win
-              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt RA(LCTRL) MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win     &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
-&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET            &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win       &tild_win         &amp_win       &caret_win             &kp SLASH
-                                                        &lt 4 DEL            &lt 9 SPACE                       &lt 11 TAB       &kp RET      &lt 6 QUESTION  &lt 4 SLASH
+              &kp EXCL   &lt_win                        &kp EQUAL        &gt_win                           &grv_win         &kp HASH     &lbracket_win   &kp UNDERSCORE    &rbracket_win  &squot_win
+              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win     &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
+&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET        &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win       &tild_win         &amp_win       &caret_win             &kp SLASH
+                                                        &lt 4 DEL        &lt 9 SPACE                       &lt 11 TAB       &kp RET      &lt 6 QUESTION  &lt 4 SLASH
             >;
         };
 
