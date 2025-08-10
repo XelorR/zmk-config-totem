@@ -29,13 +29,13 @@
 
         eng_win {
             bindings = <&eng_win>;
-            key-positions = <14 13>;
+            key-positions = <14 3>;
             layers = <0 1>;
         };
 
         rus_win {
             bindings = <&rus_win>;
-            key-positions = <15 16>;
+            key-positions = <15 6>;
             layers = <0 1>;
         };
 
