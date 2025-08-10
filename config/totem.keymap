@@ -27,11 +27,29 @@
     combos {
         compatible = "zmk,combos";
 
+        eng_win {
+            bindings = <&eng_win>;
+            key-positions = <14 13>;
+            layers = <0 1>;
+        };
+
+        rus_win {
+            bindings = <&rus_win>;
+            key-positions = <15 16>;
+            layers = <0 1>;
+        };
+
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
             layers = <0 1 2 9>;
+        };
+
+        lock_win {
+            bindings = <&kp LG(L)>;
+            key-positions = <20 21>;
+            layers = <0 1>;
         };
 
         dquo_en_win {
@@ -50,6 +68,12 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
             layers = <1>;
+        };
+
+        at {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <7 8>;
+            layers = <0>;
         };
 
         Ca {
@@ -88,15 +112,15 @@
             layers = <0 1>;
         };
 
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <7 8>;
-            layers = <0>;
+        Ct {
+            bindings = <&kp LC(T)>;
+            key-positions = <3 2>;
+            layers = <0 1>;
         };
 
-        lock_win {
-            bindings = <&kp LG(L)>;
-            key-positions = <20 21>;
+        Cw {
+            bindings = <&kp LC(W)>;
+            key-positions = <1 2>;
             layers = <0 1>;
         };
 
@@ -136,34 +160,10 @@
             layers = <2>;
         };
 
-        eng_win {
-            bindings = <&eng_win>;
-            key-positions = <14 13>;
-            layers = <0 1>;
-        };
-
-        rus_win {
-            bindings = <&rus_win>;
-            key-positions = <15 16>;
-            layers = <0 1>;
-        };
-
         gam_ret {
             bindings = <&kp ENTER>;
             key-positions = <33 34>;
             layers = <2>;
-        };
-
-        Ct {
-            bindings = <&kp LC(T)>;
-            key-positions = <3 2>;
-            layers = <0 1>;
-        };
-
-        Cw {
-            bindings = <&kp LC(W)>;
-            key-positions = <1 2>;
-            layers = <0 1>;
         };
     };
 
