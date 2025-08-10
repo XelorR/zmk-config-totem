@@ -352,6 +352,8 @@
                 <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 0>;
 
             label = "ML";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -409,10 +411,10 @@
 
         ru_win {
             bindings = <
-           &kp Q           &kp W           &kp E        &kp R             &kp T         &kp Y      &kp U           &kp I        &kp O           &kp P
-           &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &lt 10 G      &kp H      &mt LSHFT J     &mt LCTRL K  &mt LEFT_ALT L  &mt LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z           &kp X           &kp C        &kp V             &kp B         &kp N      &kp M           &kp COMMA    &kp DOT         &lt 11 SQT              &kp LEFT_BRACKET
-                                           &lt 4 DEL    &lt 9 SPACE       &lt 11 TAB    &lt 8 RET  &lt 6 QUESTION  &lt 4 SLASH
+           &kp Q             &kp W             &kp E          &kp R             &kp T         &kp Y      &kp U           &kp I          &kp O             &kp P
+           &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 10 G      &kp H      &mt LSHFT J     &hrml LCTRL K  &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
+&kp GRAVE  &kp Z             &kp X             &kp C          &kp V             &kp B         &kp N      &kp M           &kp COMMA      &kp DOT           &lt 11 SQT                &kp LEFT_BRACKET
+                                               &lt 4 DEL      &lt 9 SPACE       &lt 11 TAB    &lt 8 RET  &lt 6 QUESTION  &lt 4 SLASH
             >;
 
             label = "RU_WIN";
