@@ -363,7 +363,10 @@
         terminal_win: terminal_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&eng_win &kp LEFT_GUI &kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp RET>;
+            bindings =
+                <&eng_win>,
+                <&kp LEFT_GUI &kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp>,
+                <RET>;
             label = "TERMINAL_WIN";
             wait-ms = <400>;
         };
