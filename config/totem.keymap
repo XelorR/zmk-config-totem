@@ -189,6 +189,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp HASH &ru_win>;
             label = "HASH_WIN";
+            tap-ms = <50>;
         };
 
         numero_win: numero_win {
@@ -196,6 +197,7 @@
             #binding-cells = <0>;
             bindings = <&ru_win &kp HASH &en_win>;
             label = "NUMERO_WIN";
+            tap-ms = <50>;
         };
 
         lt_win: gt {
@@ -203,6 +205,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp LESS_THAN &ru_win>;
             label = "GT";
+            tap-ms = <50>;
         };
 
         gt_win: gt_win_ {
@@ -210,6 +213,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp GREATER_THAN &ru_win>;
             label = "GT_WIN_";
+            tap-ms = <50>;
         };
 
         lbracket_win: lbracket_win {
@@ -217,6 +221,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp LEFT_BRACKET &ru_win>;
             label = "LBRACKET_WIN";
+            tap-ms = <50>;
         };
 
         rbracket_win: rbracket_win {
@@ -224,6 +229,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp RIGHT_BRACKET &ru_win>;
             label = "RBRACKET_WIN";
+            tap-ms = <50>;
         };
 
         lbrace_win: lbrace_win {
@@ -231,6 +237,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp LEFT_BRACE &ru_win>;
             label = "LBRACE_WIN";
+            tap-ms = <50>;
         };
 
         rbrace_win: rbrace_win {
@@ -238,6 +245,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp RIGHT_BRACE &ru_win>;
             label = "RBRACE_WIN";
+            tap-ms = <50>;
         };
 
         pipe_win: pipe_win {
@@ -245,6 +253,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp PIPE &ru_win>;
             label = "PIPE_WIN";
+            tap-ms = <50>;
         };
 
         grv_win: grv_win {
@@ -252,6 +261,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp GRAVE &ru_win>;
             label = "GRV_WIN";
+            tap-ms = <50>;
         };
 
         tild_win: tild_win {
@@ -259,6 +269,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp TILDE &ru_win>;
             label = "TILD_WIN";
+            tap-ms = <50>;
         };
 
         dlr_win: dlr_win {
@@ -266,6 +277,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp DOLLAR &ru_win>;
             label = "DLR_WIN";
+            tap-ms = <50>;
         };
 
         amp_win: amp_win {
@@ -273,6 +285,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp AMPERSAND &ru_win>;
             label = "AMP_WIN";
+            tap-ms = <50>;
         };
 
         at_win: at_win {
@@ -280,6 +293,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp AT_SIGN &ru_win>;
             label = "AT_WIN";
+            tap-ms = <50>;
         };
 
         caret_win: caret_win {
@@ -287,6 +301,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp CARET &ru_win>;
             label = "CARET_WIN";
+            tap-ms = <50>;
         };
 
         squot_win: squot_win {
@@ -294,6 +309,7 @@
             #binding-cells = <0>;
             bindings = <&en_win &kp SQT &ru_win>;
             label = "SQUOT_WIN";
+            tap-ms = <50>;
         };
 
         chat_win_en: chat_win {
