@@ -29,13 +29,13 @@
 
         eng_win {
             bindings = <&eng_win>;
-            key-positions = <14 3>;
+            key-positions = <2 1>;
             layers = <0 1>;
         };
 
         rus_win {
             bindings = <&rus_win>;
-            key-positions = <15 6>;
+            key-positions = <7 8>;
             layers = <0 1>;
         };
 
@@ -115,18 +115,6 @@
         Ct {
             bindings = <&kp LC(T)>;
             key-positions = <3 2>;
-            layers = <0 1>;
-        };
-
-        Cw {
-            bindings = <&kp LC(W)>;
-            key-positions = <1 2>;
-            layers = <0 1>;
-        };
-
-        Cs {
-            bindings = <&kp LC(S)>;
-            key-positions = <3 1>;
             layers = <0 1>;
         };
 
