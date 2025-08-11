@@ -347,10 +347,7 @@
         terminal_win: terminal_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&eng_win &kp LEFT_GUI>,
-                <&kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L>,
-                <&kp RET>;
+            bindings = <&eng_win &kp LEFT_GUI &kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp RET>;
             label = "TERMINAL_WIN";
             wait-ms = <400>;
         };
@@ -505,7 +502,7 @@
             bindings = <
         &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI        &kp INS               &kp HOME        &kp UP_ARROW     &kp END    &kp DEL
         &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 11 LS(LG(S))    &caps_word            &kp LEFT        &kp DOWN         &kp RIGHT  &kp BSPC
-&trans  &kp LC(F4)    &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp LG(D)           &kp C_AL_MY_COMPUTER  &kp PG_UP       &kp K_APP        &kp PG_DN  &lt 12 K_CALC  &trans
+&trans  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &terminal_win       &kp C_AL_MY_COMPUTER  &kp PG_UP       &kp K_APP        &kp PG_DN  &lt 12 K_CALC  &trans
                                         &lt 5 DEL    &kp SPACE          &lt 12 TAB          &lt 8 RET             &lt 6 LA(LEFT)  &lt 5 LA(RIGHT)
             >;
         };
