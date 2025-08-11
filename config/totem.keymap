@@ -348,7 +348,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_GUI>,
+                <&en_win &kp LEFT_GUI>,
                 <&kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L>,
                 <&kp RET>;
             label = "TERMINAL_WIN";
