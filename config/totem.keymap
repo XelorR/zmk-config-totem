@@ -72,7 +72,7 @@
 
         at {
             bindings = <&kp AT_SIGN>;
-            key-positions = <7 8>;
+            key-positions = <8 6>;
             layers = <0>;
         };
 
