@@ -363,7 +363,7 @@
         terminal_word: terminal_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp>;
+            bindings = <&kp LS(T) &kp E &kp R &kp M &kp I &kp N &kp A &kp L>;
             label = "TERMINAL_WORD";
         };
 
