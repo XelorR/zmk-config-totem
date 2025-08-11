@@ -513,10 +513,10 @@
         sym_ru_win {
             label = "SYM_RU_WIN";
             bindings = <
-              &kp EXCL   &lt_win                        &kp EQUAL        &gt_win                           &grv_win         &kp HASH     &lbracket_win  &kp UNDERSCORE    &rbracket_win  &squot_win
-              &dlr_win   &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
-&kp QUESTION  &hash_win  &mt LCTRL ASTERISK             &kp CARET        &kp PIPE                          &kp BACKSLASH    &at_win      &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
-                                                        &trans           &trans                            &trans           &trans       &trans         &trans
+              &trans     &lt_win  &trans     &gt_win   &grv_win    &kp HASH  &lbracket_win  &trans            &rbracket_win  &squot_win
+              &dlr_win   &trans   &trans     &trans    &trans      &trans    &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
+&kp QUESTION  &hash_win  &trans   &kp CARET  &kp PIPE  &trans      &at_win   &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
+                                  &trans     &trans    &trans      &trans    &trans         &trans
             >;
         };
 
@@ -554,9 +554,14 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        common_num {
+        common_num_win {
             if-layers = <7>;
             then-layer = <6>;
+        };
+
+        common_sym_win {
+            if-layers = <9>;
+            then-layer = <8>;
         };
     };
 };
