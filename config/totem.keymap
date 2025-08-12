@@ -433,7 +433,7 @@
            &kp Q             &kp W             &kp E          &kp R             &kp T         &kp Y      &kp U           &kp I          &kp O             &kp P
            &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 11 G      &kp H      &mt LSHFT J     &hrml LCTRL K  &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
 &kp GRAVE  &kp Z             &kp X             &kp C          &kp V             &kp B         &kp N      &kp M           &kp COMMA      &kp DOT           &lt 12 SQT                &kp LEFT_BRACKET
-                                               &lt 5 DEL      &lt 10 SPACE      &lt 12 TAB    &lt 9 RET  &lt 7 QUESTION  &lt 5 SLASH
+                                               &lt 5 DEL      &lt 10 SPACE      &lt 12 TAB    &lt 8 RET  &lt 6 QUESTION  &lt 5 SLASH
             >;
 
             label = "RU_WIN";
@@ -555,13 +555,13 @@
         compatible = "zmk,conditional-layers";
 
         common_num_win {
-            if-layers = <7>;
-            then-layer = <6>;
+            if-layers = <1 6>;
+            then-layer = <7>;
         };
 
         common_sym_win {
-            if-layers = <9>;
-            then-layer = <8>;
+            if-layers = <1 8>;
+            then-layer = <9>;
         };
     };
 };
