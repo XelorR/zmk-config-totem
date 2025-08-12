@@ -641,10 +641,10 @@
 
         nav_files_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans     &trans    &trans    &trans     &trans    &trans   &kp LG(LBKT)  &kp UP     &kp LG(RBKT)  &trans
+        &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans    &kp RET  &kp LG(UP)    &kp DOWN   &kp LG(DOWN)  &kp LG(I)
+&trans  &trans     &trans    &trans    &trans     &trans    &trans   &kp LG(V)     &kp LG(C)  &kp LG(X)     &trans     &trans
+                             &trans    &trans     &trans    &trans   &trans        &trans
             >;
         };
 
