@@ -537,10 +537,10 @@
 
         en_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &trans
+        &mt LCTRL N  &mt LEFT_ALT R  &mt LGUI T   &mt LSHFT S   &lt 24 G      &trans      &mt LSHFT H   &mt LGUI A     &mt LALT E  &mt LCTRL I
+&trans  &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &lt 25 PERIOD  &trans
+                                     &lt 18 BSPC  &lt 23 SPACE  &lt 25 TAB    &lt 21 RET  &lt 19 COMMA  &lt 18 PERIOD
             >;
         };
 
