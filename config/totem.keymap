@@ -634,10 +634,10 @@
 
         nav_layer_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans    &trans     &trans    &trans  &kp LC(A)  &kp UP    &kp LC(E)  &kp LC(D)
+        &trans  &trans  &kp LALT  &kp LSHFT  &trans    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
+&trans  &trans  &trans  &trans    &trans     &trans    &trans  &trans     &trans    &trans     &trans     &trans
+                        &trans    &kp SPACE  &trans    &trans  &trans     &trans
             >;
         };
 
