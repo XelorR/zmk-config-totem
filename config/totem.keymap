@@ -489,8 +489,8 @@
             label = "SYM_EN_WIN";
             bindings = <
            &kp EXCL             &kp LESS_THAN                  &kp EQUAL        &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
-           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
-&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON        &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
+           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt LEFT_GUI QUESTION
+&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON        &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET              &kp PERIOD
                                                                &trans           &trans                            &trans           &trans       &trans                &trans
             >;
         };
@@ -564,40 +564,40 @@
 
         gaming_mac {
             bindings = <
-          &kp TAB    &kp Q  &kp X  &kp E      &kp R    &kp Y    &kp U     &kp I      &kp O    &kp P
-          &kp LSHFT  &kp A  &kp W  &kp D      &kp F    &kp H    &kp J     &kp K      &kp L    &kp SEMI
-&kp CAPS  &kp LCTRL  &kp Z  &kp S  &kp C      &kp V    &kp N    &kp M     &kp COMMA  &kp DOT  &lt 12 SLASH  &kp SQT
-                            &kp G  &kp SPACE  &mo 4    &kp RET  &kp BSPC  &kp B
+          &kp TAB    &kp Q  &kp X  &kp E      &kp R     &kp Y    &kp U     &kp I      &kp O    &kp P
+          &kp LSHFT  &kp A  &kp W  &kp D      &kp F     &kp H    &kp J     &kp K      &kp L    &kp SEMI
+&kp CAPS  &kp LCTRL  &kp Z  &kp S  &kp C      &kp V     &kp N    &kp M     &kp COMMA  &kp DOT  &lt 25 SLASH  &kp SQT
+                            &kp G  &kp SPACE  &mo 17    &kp RET  &kp BSPC  &kp B
             >;
 
-            label = "GAM_WIN";
+            label = "GAM_MAC";
         };
 
         gam_fn_mac {
             bindings = <
-              &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8         &kp F9  &kp F12
-              &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3      &kp F4         &kp F6  &kp F11
-&chat_win_en  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2         &kp F3  &kp F10  &chat_win_ru
-                                       &kp LALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp BACKSLASH
+       &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8         &kp F9  &kp F12
+       &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F3      &kp F4         &kp F6  &kp F11
+&none  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2         &kp F3  &kp F10  &none
+                                &kp LALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp BACKSLASH
             >;
         };
 
         fun_mac {
-            label = "fun_win";
+            label = "fun_mac";
             bindings = <
-                &kp F12       &kp F7           &kp F8        &kp F9             &kp C_VOLUME_UP       &kp C_VOLUME_UP    &kp F7            &kp F8        &kp F9           &kp F12
-                &mt LCMD F11  &mt LEFT_ALT F4  &mt LCTRL F5  &mt LSHFT F6       &kp C_VOL_DN          &kp C_VOL_DN       &mt LSHFT F4      &mt LCTRL F5  &mt LEFT_ALT F6  &mt LCMD F11
-&kp SCROLLLOCK  &kp F10       &kp F1           &kp F2        &kp F3             &kp K_MUTE            &kp K_MUTE         &kp F1            &kp F2        &kp F3           &kp F10       &kp SCROLLLOCK
-                                               &kp CAPSLOCK  &lt 10 KP_NUMLOCK  &lt 12 PRINTSCREEN    &lt 8 PRINTSCREEN  &lt 6 KP_NUMLOCK  &kp CAPSLOCK
+                &kp F12        &kp F7           &kp F8        &kp F9             &kp C_VOLUME_UP       &kp C_VOLUME_UP     &kp F7             &kp F8        &kp F9           &kp F12
+                &mt LCTRL F11  &mt LEFT_ALT F4  &mt LGUI F5   &mt LSHFT F6       &kp C_VOL_DN          &kp C_VOL_DN        &mt LSHFT F4       &mt LGUI F5   &mt LEFT_ALT F6  &mt LCTRL F11
+&kp SCROLLLOCK  &kp F10        &kp F1           &kp F2        &kp F3             &kp K_MUTE            &kp K_MUTE          &kp F1             &kp F2        &kp F3           &kp F10        &kp SCROLLLOCK
+                                                &kp CAPSLOCK  &lt 23 KP_NUMLOCK  &lt 25 PRINTSCREEN    &lt 21 PRINTSCREEN  &lt 19 KP_NUMLOCK  &kp CAPSLOCK
             >;
         };
 
         num_en_mac {
             bindings = <
-           &kp ASTERISK  &kp N7                 &kp N8              &kp N9              &kp MINUS    &kp KP_ASTERISK  &kp KP_N7        &kp KP_N8        &kp KP_N9           &kp KP_MINUS
-           &mt LCMD N0   &mt LEFT_ALT NUMBER_1  &mt LCTRL NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_N0        &mt LSHFT KP_N1  &mt LCTRL KP_N2  &mt LEFT_ALT KP_N3  &mt LCMD KP_PLUS
-&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5              &kp NUMBER_6        &kp DOT      &kp KP_DIVIDE    &kp KP_N4        &kp KP_N5        &kp KP_N6           &kp KP_DOT        &kp KP_EQUAL
-                                                &lt 5 COLON         &trans              &trans       &trans           &trans           &lt 5 COLON
+           &kp ASTERISK  &kp N7                 &kp N8             &kp N9              &kp MINUS    &kp KP_ASTERISK  &kp KP_N7        &kp KP_N8       &kp KP_N9           &kp KP_MINUS
+           &mt LCTRL N0  &mt LEFT_ALT NUMBER_1  &mt LGUI NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_N0        &mt LSHFT KP_N1  &mt LGUI KP_N2  &mt LEFT_ALT KP_N3  &mt LCTRL KP_PLUS
+&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5             &kp NUMBER_6        &kp DOT      &kp KP_DIVIDE    &kp KP_N4        &kp KP_N5       &kp KP_N6           &kp KP_DOT         &kp KP_EQUAL
+                                                &lt 18 COLON       &trans              &trans       &trans           &trans           &lt 18 COLON
             >;
 
             label = "NUM_EN_mac";
@@ -606,20 +606,20 @@
         num_ru_mac {
             label = "NUM_RU_mac";
             bindings = <
-        &trans    &trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans
-        &trans    &trans  &trans       &trans  &trans       &trans  &trans  &trans       &trans  &trans
-&trans  &kp PIPE  &trans  &trans       &trans  &kp SLASH    &trans  &trans  &trans       &trans  &trans  &trans
-                          &lt 5 CARET  &trans  &trans       &trans  &trans  &lt 5 CARET
+        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
+        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
+&trans  &kp PIPE  &trans  &trans        &trans  &kp SLASH    &trans  &trans  &trans        &trans  &trans  &trans
+                          &lt 18 CARET  &trans  &trans       &trans  &trans  &lt 18 CARET
             >;
         };
 
         sym_en_mac {
             label = "SYM_EN_mac";
             bindings = <
-           &kp EXCL             &kp LESS_THAN                  &kp EQUAL        &kp GREATER_THAN                  &kp GRAVE        &numero_mac  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
-           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt RA(LEFT_GUI) QUESTION
-&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON        &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET                  &kp PERIOD
-                                                               &trans           &trans                            &trans           &trans       &trans                &trans
+           &kp EXCL          &kp LESS_THAN                  &kp EQUAL       &kp GREATER_THAN                  &kp GRAVE        &none        &kp LEFT_BRACKET      &kp UNDERSCORE      &kp RIGHT_BRACKET         &kp SQT
+           &mt LCTRL DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LGUI MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LGUI SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt LCTRL QUESTION
+&kp COMMA  &kp HASH          &mt LCTRL ASTERISK             &kp COLON       &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE           &kp AMPERSAND             &kp CARET           &kp PERIOD
+                                                            &trans          &trans                            &trans           &trans       &trans                &trans
             >;
         };
 
