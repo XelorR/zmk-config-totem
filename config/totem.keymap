@@ -530,7 +530,7 @@
             bindings = <
         &trans        &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &trans     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &trans            &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans     &eng_win        &rus_win        &gam_win         &to 10          &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans     &eng_win        &to 13        &gam_win         &to 10          &trans
                                     &trans        &trans        &kp TAB           &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
@@ -652,10 +652,10 @@
 
         mouse_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans        &out OUT_USB  &bt BT_CLR    &out OUT_BLE  &bt BT_CLR_ALL    &trans     &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI     &kp LSHFT     &trans            &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans     &eng_win        &to 13        &to 16         &to 23          &trans
+                                    &trans        &trans        &kp TAB           &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
     };
