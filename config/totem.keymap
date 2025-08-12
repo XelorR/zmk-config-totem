@@ -433,19 +433,19 @@
 
         en_mac {
             bindings = <
-        &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &trans
-        &mt LCTRL N  &mt LEFT_ALT R  &mt LGUI T   &mt LSHFT S   &lt 23 G      &trans      &mt LSHFT H   &mt LGUI A     &mt LALT E  &mt LCTRL I
-&trans  &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &lt 25 PERIOD  &trans
-                                     &lt 11 BSPC  &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
+        &trans       &trans  &trans       &trans        &trans        &trans      &trans        &trans         &trans  &trans
+        &mt LCTRL N  &trans  &mt LGUI T   &trans        &lt 23 G      &trans      &trans        &mt LGUI A     &trans  &mt LCTRL I
+&trans  &trans       &trans  &trans       &trans        &trans        &trans      &trans        &trans         &trans  &lt 25 PERIOD  &trans
+                             &lt 11 BSPC  &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
             >;
         };
 
         ru_mac {
             bindings = <
-        &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &trans
-        &mt LCTRL A  &mt LEFT_ALT S  &mt LGUI D   &mt LSHFT F   &lt 23 G      &trans      &mt LSHFT J   &mt LGUI K     &mt LALT L  &mt LCTRL SEMICOLON
-&trans  &trans       &trans          &trans       &trans        &trans        &trans      &trans        &trans         &trans      &lt 25 SLASH         &trans
-                                     &lt 11 BSPC  &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
+        &trans       &trans  &trans       &trans        &trans        &trans      &trans        &trans         &trans  &trans
+        &mt LCTRL A  &trans  &mt LGUI D   &trans        &lt 23 G      &trans      &trans        &mt LGUI K     &trans  &mt LCTRL SEMICOLON
+&trans  &trans       &trans  &trans       &trans        &trans        &trans      &trans        &trans         &trans  &lt 25 SLASH         &trans
+                             &lt 11 BSPC  &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
             >;
         };
 
@@ -461,10 +461,10 @@
 
         shortcut_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &trans       &trans  &trans      &trans  &trans    &trans  &trans        &trans      &trans  &trans
+        &mt LCTRL N  &trans  &mt LGUI T  &trans  &trans    &trans  &trans        &mt LGUI A  &trans  &mt LCTRL I
+&trans  &trans       &trans  &trans      &trans  &trans    &trans  &trans        &trans      &trans  &trans       &trans
+                             &trans      &trans  &trans    &trans  &lt 14 COMMA  &lt 11 DOT
             >;
         };
 
