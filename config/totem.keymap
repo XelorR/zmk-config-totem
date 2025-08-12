@@ -521,10 +521,10 @@
         fun_mac {
             label = "fun_mac";
             bindings = <
-                &kp F12        &kp F7           &kp F8        &kp F9             &kp C_VOLUME_UP       &kp C_VOLUME_UP     &kp F7             &kp F8        &kp F9           &kp F12
-                &mt LCTRL F11  &mt LEFT_ALT F4  &mt LGUI F5   &mt LSHFT F6       &kp C_VOL_DN          &kp C_VOL_DN        &mt LSHFT F4       &mt LGUI F5   &mt LEFT_ALT F6  &mt LCTRL F11
-&kp SCROLLLOCK  &kp F10        &kp F1           &kp F2        &kp F3             &kp K_MUTE            &kp K_MUTE          &kp F1             &kp F2        &kp F3           &kp F10        &kp SCROLLLOCK
-                                                &kp CAPSLOCK  &lt 21 KP_NUMLOCK  &lt 25 PRINTSCREEN    &lt 18 PRINTSCREEN  &lt 14 KP_NUMLOCK  &kp CAPSLOCK
+        &trans         &trans  &trans       &trans             &trans                &trans              &trans             &trans       &trans  &trans
+        &mt LCTRL F11  &trans  &mt LGUI F5  &trans             &trans                &trans              &trans             &mt LGUI F5  &trans  &mt LCTRL F11
+&trans  &trans         &trans  &trans       &trans             &trans                &trans              &trans             &trans       &trans  &trans         &trans
+                               &trans       &lt 21 KP_NUMLOCK  &lt 25 PRINTSCREEN    &lt 18 PRINTSCREEN  &lt 14 KP_NUMLOCK  &trans
             >;
         };
 
