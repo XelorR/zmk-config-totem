@@ -547,9 +547,9 @@
         ru_mac {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &mt LCTRL A  &mt LEFT_ALT S  &mt LGUI D   &mt LSHFT F   &lt 24 G      &trans      &mt LSHFT J   &mt LGUI K     &mt LALT L  &mt LCTRL SEMICOLON
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+                                     &lt 18 BSPC  &lt 23 SPACE  &lt 25 TAB    &lt 21 RET  &lt 19 COMMA  &lt 18 PERIOD
             >;
         };
 
