@@ -153,6 +153,18 @@
             key-positions = <33 34>;
             layers = <6 7>;
         };
+
+        eng_mac {
+            bindings = <&eng_mac>;
+            key-positions = <1 2>;
+            layers = <2 3>;
+        };
+
+        rus_mac {
+            bindings = <&rus_mac>;
+            key-positions = <7 8>;
+            layers = <2 3>;
+        };
     };
 
     macros {
@@ -365,6 +377,34 @@
             #binding-cells = <0>;
             bindings = <&key_on GLOBE &kp F11 &key_off GLOBE>;
             label = "SHOW_DESKTOP_MAC";
+        };
+
+        en_mac: en_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N8))>;
+            label = "EN_MAC";
+        };
+
+        ru_mac: ru_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N9))>;
+            label = "RU_MAC";
+        };
+
+        eng_mac: eng_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &to 2>;
+            label = "ENG_MAC";
+        };
+
+        rus_mac: rus_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru_mac &to 3>;
+            label = "RUS_MAC";
         };
     };
 
