@@ -442,10 +442,10 @@
 
         ru_mac {
             bindings = <
-               &kp Q        &kp W       &kp E        &kp R         &kp T         &kp Y       &kp U         &kp I          &kp O       &kp P
-               &mt LCTRL A  &mt LALT S  &mt LGUI D   &mt LSHFT F   &lt 23 G      &kp H       &mt LSHFT J   &mt LGUI K     &mt LALT L  &mt LCTRL SEMICOLON
-&kp BACKSLASH  &kp Z        &kp X       &kp C        &kp V         &kp B         &kp N       &kp M         &kp COMMA      &kp DOT     &lt 25 SQT           &kp LBKT
-                                        &lt 11 BSPC  &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
+               &kp Q          &kp W         &kp E         &kp R         &kp T         &kp Y       &kp U         &kp I          &kp O         &kp P
+               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F   &lt 23 G      &kp H       &mt LSHFT J   &hrml LGUI K   &hrml LALT L  &hrml LCTRL SEMICOLON
+&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V         &kp B         &kp N       &kp M         &kp COMMA      &kp DOT       &lt 25 SQT             &kp LBKT
+                                            &lt 11 BSPC   &lt 21 SPACE  &lt 25 TAB    &lt 18 RET  &lt 14 COMMA  &lt 11 PERIOD
             >;
         };
 
@@ -678,6 +678,11 @@
         common_sym_win {
             if-layers = <1 16>;
             then-layer = <17>;
+        };
+
+        shortcuts_mac {
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
