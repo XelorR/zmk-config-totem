@@ -676,7 +676,7 @@
             label = "NUM_RU_mac";
             bindings = <
         &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
-        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
+        &mt LCTRL N0  &trans  &mt LGUI NUMBER_2  &trans  &trans    &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
 &trans  &kp PIPE  &trans  &trans        &trans  &kp SLASH    &trans  &trans  &trans        &trans  &trans  &trans
                           &lt 11 CARET  &trans  &trans       &trans  &trans  &lt 11 CARET
             >;
