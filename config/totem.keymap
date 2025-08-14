@@ -189,6 +189,12 @@
             key-positions = <6 8>;
             layers = <2 3>;
         };
+
+        lock_mac {
+            bindings = <&kp LC(LG(Q))>;
+            key-positions = <20 21>;
+            layers = <2 3>;
+        };
     };
 
     macros {
