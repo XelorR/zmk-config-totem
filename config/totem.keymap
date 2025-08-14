@@ -593,10 +593,10 @@
 
         gaming_mac {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &lt 25 SLASH  &trans
-                        &trans  &trans  &mo 9     &trans  &trans  &trans
+          &kp TAB    &kp Q  &kp X  &kp E      &kp R    &kp Y      &kp U     &kp I      &kp O    &kp P
+          &kp LSHFT  &kp A  &kp W  &kp D      &kp F    &kp H      &kp J     &kp K      &kp L    &kp SEMI
+&kp CAPS  &kp LCTRL  &kp Z  &kp S  &kp C      &kp V    &kp N      &kp M     &kp COMMA  &kp DOT  &lt 25 SLASH  &kp APOS
+                            &kp G  &kp SPACE  &mo 9    &kp ENTER  &kp BSPC  &kp B
             >;
 
             label = "GAM_MAC";
