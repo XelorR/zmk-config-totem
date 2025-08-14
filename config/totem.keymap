@@ -478,6 +478,94 @@
             bindings = <&kp LC(SPACE) &to 3>;
             label = "RUS_IOS";
         };
+
+        hash_mac: hash_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp HASH &ru_mac>;
+            label = "HASH_MAC";
+            tap-ms = <50>;
+        };
+
+        star_mac: star_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp STAR &ru_mac>;
+            label = "STAR_MAC";
+            tap-ms = <50>;
+        };
+
+        tild_mac: tild_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp TILDE &ru_mac>;
+            label = "TILD_MAC";
+            tap-ms = <50>;
+        };
+
+        backslash_mac: backslash_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp BSLH &ru_mac>;
+            label = "BACKSLASH_MAC";
+            tap-ms = <50>;
+        };
+
+        grv_mac: grv_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp GRAVE &ru_mac>;
+            label = "GRV_MAC";
+            tap-ms = <50>;
+        };
+
+        pipe_mac: pipe_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp PIPE &ru_mac>;
+            label = "PIPE_MAC";
+            tap-ms = <50>;
+        };
+
+        at_mac: at_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp AT &ru_mac>;
+            label = "AT_MAC";
+            tap-ms = <50>;
+        };
+
+        amp_mac: amp_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp AMPS &ru_mac>;
+            label = "AMP_MAC";
+            tap-ms = <50>;
+        };
+
+        squote_mac: squote_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp SQT &ru_mac>;
+            label = "SQUOTE_MAC";
+            tap-ms = <50>;
+        };
+
+        caret_mac: caret_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp CARET &ru_mac>;
+            label = "CARET_MAC";
+            tap-ms = <50>;
+        };
+
+        numero_mac: numero_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ru_mac &kp HASH &en_mac>;
+            label = "NUMERO_MAC";
+            tap-ms = <50>;
+        };
     };
 
     behaviors {
@@ -705,19 +793,19 @@
         sym_en_mac {
             label = "SYM_EN_mac";
             bindings = <
-        &trans            &trans  &trans          &trans  &trans    &trans  &trans  &trans              &trans  &trans
-        &mt LCTRL DOLLAR  &trans  &mt LGUI MINUS  &trans  &trans    &trans  &trans  &mt LGUI SEMICOLON  &trans  &mt LCTRL QUESTION
-&trans  &trans            &trans  &trans          &trans  &trans    &trans  &trans  &trans              &trans  &trans              &trans
-                                  &trans          &trans  &trans    &trans  &trans  &trans
+        &trans            &trans  &trans          &trans  &trans    &numero_mac  &trans  &trans              &trans  &trans
+        &mt LCTRL DOLLAR  &trans  &mt LGUI MINUS  &trans  &trans    &trans       &trans  &mt LGUI SEMICOLON  &trans  &mt LCTRL QUESTION
+&trans  &trans            &trans  &trans          &trans  &trans    &trans       &trans  &trans              &trans  &trans              &trans
+                                  &trans          &trans  &trans    &trans       &trans  &trans
             >;
         };
 
         sym_ru_mac {
             bindings = <
-           &trans          &kp LS(NUBS)  &trans          &kp NUBS  &trans    &kp HASH  &kp TILDE   &trans         &kp GRAVE   &trans
-           &mt LCTRL DLLR  &trans        &mt LGUI MINUS  &trans    &trans    &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
-&kp CARET  &trans          &trans        &kp PRCNT       &trans    &trans    &trans    &trans      &trans         &trans      &trans           &kp AMPS
-                                         &trans          &trans    &trans    &trans    &trans      &trans
+           &trans          &kp LS(NUBS)  &trans          &kp NUBS  &grv_mac          &kp HASH  &kp TILDE   &trans         &kp GRAVE   &squote_mac
+           &mt LCTRL DLLR  &trans        &mt LGUI MINUS  &trans    &trans            &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
+&kp CARET  &hash_mac       &star_mac     &kp PRCNT       &trans    &backslash_mac    &at_mac   &pipe_mac   &tild_mac      &amp_mac    &caret_mac       &kp AMPS
+                                         &trans          &trans    &trans            &trans    &trans      &trans
             >;
         };
 
