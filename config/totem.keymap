@@ -714,10 +714,10 @@
 
         sym_ru_mac {
             bindings = <
-           &trans          &kp TILDE  &trans          &kp GRAVE  &trans    &kp HASH  &kp RA(N9)  &trans         &kp RA(N0)  &trans
-           &mt LCTRL DLLR  &trans     &mt LGUI MINUS  &trans     &trans    &kp DLLR  &trans      &mt LGUI STAR  &trans      &mt LCTRL QMARK
-&kp CARET  &trans          &trans     &kp PRCNT       &trans     &trans    &trans    &trans      &trans         &trans      &trans           &kp AMPS
-                                      &trans          &trans     &trans    &trans    &trans      &trans
+           &trans          &kp LS(NUBS)  &trans          &kp NUBS  &trans    &kp HASH  &kp TILDE   &trans         &kp GRAVE   &trans
+           &mt LCTRL DLLR  &trans        &mt LGUI MINUS  &trans    &trans    &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
+&kp CARET  &trans          &trans        &kp PRCNT       &trans    &trans    &trans    &trans      &trans         &trans      &trans           &kp AMPS
+                                         &trans          &trans    &trans    &trans    &trans      &trans
             >;
         };
 
