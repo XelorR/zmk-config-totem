@@ -576,7 +576,7 @@
         &trans       &trans  &trans      &trans  &trans    &trans  &trans        &trans      &trans  &trans
         &mt LCTRL N  &trans  &mt LGUI T  &trans  &trans    &trans  &trans        &mt LGUI A  &trans  &mt LCTRL I
 &trans  &trans       &trans  &trans      &trans  &trans    &trans  &trans        &trans      &trans  &trans       &trans
-                             &trans      &trans  &trans    &trans  &lt 14 COMMA  &lt 11 DOT
+                             &trans      &trans  &trans    &trans  &lt 12 COMMA  &lt 11 DOT
             >;
         };
 
