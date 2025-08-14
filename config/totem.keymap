@@ -663,9 +663,9 @@
 
         num_en_mac {
             bindings = <
-           &kp ASTERISK  &kp N7                 &kp N8             &kp N9              &kp MINUS    &kp KP_ASTERISK  &kp KP_N7        &kp KP_N8       &kp KP_N9           &kp KP_MINUS
-           &mt LCTRL N0  &mt LEFT_ALT NUMBER_1  &mt LGUI NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_N0        &mt LSHFT KP_N1  &mt LGUI KP_N2  &mt LEFT_ALT KP_N3  &mt LCTRL KP_PLUS
-&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5             &kp NUMBER_6        &kp DOT      &kp KP_DIVIDE    &kp KP_N4        &kp KP_N5       &kp KP_N6           &kp KP_DOT         &kp KP_EQUAL
+        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
+        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
+&trans  &kp PIPE  &trans  &trans        &trans  &kp SLASH    &trans  &trans  &trans        &trans  &trans  &trans
                                                 &lt 11 COLON       &trans              &trans       &trans           &trans           &lt 11 COLON
             >;
 
