@@ -554,10 +554,10 @@
 
         ru_mac {
             bindings = <
-               &kp Q          &kp W         &kp E         &kp R         &kp T         &kp Y   &kp U         &kp I          &kp O         &kp P
-               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F   &lt 23 G      &kp H   &mt LSHFT J   &hrml LGUI K   &hrml LALT L  &hrml LCTRL SEMICOLON
-&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V         &kp B         &kp N   &kp M         &kp COMMA      &kp DOT       &lt 25 SQT             &kp LBKT
-                                            &lt 11 BSPC   &lt 21 SPACE  &lt 25 TAB    &trans  &lt 12 COMMA  &lt 11 PERIOD
+               &kp Q          &kp W         &kp E         &kp R         &kp T         &kp Y   &kp U         &kp I         &kp O         &kp P
+               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F   &lt 23 G      &kp H   &mt LSHFT J   &hrml LGUI K  &hrml LALT L  &hrml LCTRL SEMICOLON
+&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V         &kp B         &kp N   &kp M         &kp COMMA     &kp DOT       &lt 25 SQT             &kp LBKT
+                                            &lt 11 BSPC   &lt 21 SPACE  &lt 25 TAB    &trans  &lt 12 CARET  &lt 11 AMPS
             >;
         };
 
@@ -677,8 +677,8 @@
             bindings = <
         &trans        &trans  &trans             &trans  &trans       &trans  &trans  &trans          &trans  &trans
         &mt LCTRL N0  &trans  &mt LGUI NUMBER_2  &trans  &trans       &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
-&trans  &kp PIPE      &trans  &trans             &trans  &kp SLASH    &trans  &trans  &trans          &trans  &trans             &trans
-                              &lt 11 CARET       &trans  &trans       &trans  &trans  &lt 11 CARET
+&trans  &trans        &trans  &trans             &trans  &kp CARET    &trans  &trans  &trans          &trans  &trans             &trans
+                              &lt 11 PRCNT       &trans  &trans       &trans  &trans  &lt 11 PRCNT
             >;
         };
 
@@ -714,9 +714,9 @@
 
         sym_ru_mac {
             bindings = <
-        &trans          &trans  &trans          &trans  &trans    &trans  &trans  &trans              &trans  &trans
-        &mt LCTRL DLLR  &trans  &mt LGUI MINUS  &trans  &trans    &trans  &trans  &mt LGUI SEMICOLON  &trans  &mt LCTRL QMARK
-&trans  &trans          &trans  &trans          &trans  &trans    &trans  &trans  &trans              &trans  &trans           &trans
+        &trans          &trans  &trans          &trans  &trans    &trans  &trans  &trans         &trans  &trans
+        &mt LCTRL DLLR  &trans  &mt LGUI MINUS  &trans  &trans    &trans  &trans  &mt LGUI STAR  &trans  &mt LCTRL QMARK
+&trans  &trans          &trans  &kp PRCNT       &trans  &trans    &trans  &trans  &trans         &trans  &trans           &trans
                                 &trans          &trans  &trans    &trans  &trans  &trans
             >;
         };
