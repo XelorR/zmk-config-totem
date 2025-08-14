@@ -733,10 +733,10 @@
 
         nav_layer_mac {
             bindings = <
-        &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &kp LC(A)        &kp UP           &kp LC(E)  &kp LC(D)
-        &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &caps_word  &kp LEFT         &kp DOWN         &kp RIGHT  &kp BSPC
-&trans  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &trans      &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC  &trans
-                                             &trans      &kp SPACE         &trans               &trans      &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
+              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &kp LC(A)        &kp UP           &kp LC(E)  &kp LC(D)
+              &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &caps_word  &kp LEFT         &kp DOWN         &kp RIGHT  &kp BSPC
+&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &trans      &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC  &kp LG(RBKT)
+                                                   &trans      &kp SPACE         &trans               &trans      &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
 
