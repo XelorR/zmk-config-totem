@@ -608,6 +608,32 @@
             label = "NUMERO_MAC";
             tap-ms = <50>;
         };
+
+        dlr_mac: dlr_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&en_mac &kp DLLR &ru_mac>;
+            label = "DLR_MAC";
+            tap-ms = <50>;
+        };
+
+        home_mac: home_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LG(LEFT)>;
+            label = "HOME_MAC";
+            tap-ms = <0>;
+            wait-ms = <0>;
+        };
+
+        end_mac: end_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(E) &kp LG(RIGHT)>;
+            label = "END_MAC";
+            tap-ms = <0>;
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -844,10 +870,10 @@
 
         sym_ru_mac {
             bindings = <
-           &trans          &kp LS(NUBS)  &trans          &kp NUBS  &grv_mac          &kp HASH  &kp TILDE   &trans         &kp GRAVE   &squote_mac
-           &mt LCTRL DLLR  &trans        &mt LGUI MINUS  &trans    &trans            &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
-&kp CARET  &hash_mac       &star_mac     &kp PRCNT       &trans    &backslash_mac    &at_mac   &pipe_mac   &tild_mac      &amp_mac    &caret_mac       &kp AMPS
-                                         &trans          &trans    &trans            &trans    &trans      &trans
+           &trans     &kp LS(NUBS)  &trans          &kp NUBS  &grv_mac          &kp HASH  &kp TILDE   &trans         &kp GRAVE   &squote_mac
+           &dlr_mac   &trans        &mt LGUI MINUS  &trans    &trans            &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
+&kp CARET  &hash_mac  &star_mac     &kp PRCNT       &trans    &backslash_mac    &at_mac   &pipe_mac   &tild_mac      &amp_mac    &caret_mac       &kp AMPS
+                                    &trans          &trans    &trans            &trans    &trans      &trans
             >;
         };
 
@@ -863,7 +889,7 @@
 
         nav_layer_mac {
             bindings = <
-              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &kp LC(A)        &kp UP           &kp LC(E)  &kp LC(D)
+              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &home_mac        &kp UP           &end_mac   &kp LC(D)
               &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &caps_word  &kp LEFT         &kp DOWN         &kp RIGHT  &kp BSPC
 &kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &trans      &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC  &kp LG(RBKT)
                                                    &trans      &kp SPACE         &trans               &trans      &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
