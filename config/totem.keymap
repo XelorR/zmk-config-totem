@@ -817,10 +817,10 @@
         num_ru_win {
             label = "NUM_RU_WIN";
             bindings = <
-        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
-        &trans    &trans  &trans        &trans  &trans       &trans  &trans  &trans        &trans  &trans
-&trans  &kp PIPE  &trans  &trans        &trans  &kp SLASH    &trans  &trans  &trans        &trans  &trans  &trans
-                          &lt 10 CARET  &trans  &trans       &trans  &trans  &lt 10 CARET
+        &trans  &trans  &trans        &trans  &trans    &trans     &trans  &trans        &trans  &trans
+        &trans  &trans  &trans        &trans  &trans    &trans     &trans  &trans        &trans  &trans
+&trans  &trans  &trans  &trans        &trans  &trans    &kp SLASH  &trans  &trans        &trans  &kp PIPE  &trans
+                        &lt 10 CARET  &trans  &trans    &trans     &trans  &lt 10 CARET
             >;
         };
 
