@@ -798,10 +798,10 @@
 
         num_en_win {
             bindings = <
-           &kp ASTERISK  &kp N7                 &kp N8              &kp N9              &kp MINUS    &kp KP_ASTERISK  &kp KP_N7        &kp KP_N8        &kp KP_N9           &kp KP_MINUS
-           &mt LCMD N0   &mt LEFT_ALT NUMBER_1  &mt LCTRL NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_N0        &mt LSHFT KP_N1  &mt LCTRL KP_N2  &mt LEFT_ALT KP_N3  &mt LCMD KP_PLUS
-&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5              &kp NUMBER_6        &kp DOT      &kp KP_DIVIDE    &kp KP_N4        &kp KP_N5        &kp KP_N6           &kp KP_DOT        &kp KP_EQUAL
-                                                &lt 10 COLON        &trans              &trans       &trans           &trans           &lt 10 COLON
+           &kp ASTERISK  &kp N7                 &kp N8              &kp N9              &kp MINUS    &kp KP_MINUS  &kp KP_N7        &kp KP_N8        &kp KP_N9           &kp KP_MULTIPLY
+           &mt LCMD N0   &mt LEFT_ALT NUMBER_1  &mt LCTRL NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_PLUS   &mt LSHFT KP_N1  &mt LCTRL KP_N2  &mt LEFT_ALT KP_N3  &mt LCMD KP_N0
+&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5              &kp NUMBER_6        &kp DOT      &kp KP_DOT    &kp KP_N4        &kp KP_N5        &kp KP_N6           &kp KP_SLASH     &kp KP_EQUAL
+                                                &lt 10 COLON        &trans              &trans       &trans        &trans           &lt 10 COLON
             >;
 
             label = "NUM_EN_WIN";
@@ -831,10 +831,10 @@
         num_ru_mac {
             label = "NUM_RU_mac";
             bindings = <
-        &trans        &trans  &trans             &trans  &trans       &trans  &trans  &trans          &trans  &trans
-        &mt LCTRL N0  &trans  &mt LGUI NUMBER_2  &trans  &trans       &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
-&trans  &trans        &trans  &trans             &trans  &kp CARET    &trans  &trans  &trans          &trans  &trans             &trans
-                              &lt 11 PRCNT       &trans  &trans       &trans  &trans  &lt 11 PRCNT
+        &kp KP_MULTIPLY  &trans  &trans             &trans  &trans        &trans  &trans  &trans          &trans  &trans
+        &mt LCTRL N0     &trans  &mt LGUI NUMBER_2  &trans  &trans        &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
+&trans  &trans           &trans  &trans             &trans  &kp KP_DOT    &trans  &trans  &trans          &trans  &trans             &trans
+                                 &lt 11 PRCNT       &trans  &trans        &trans  &trans  &lt 11 PRCNT
             >;
         };
 
