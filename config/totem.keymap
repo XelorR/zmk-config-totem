@@ -807,7 +807,7 @@
             bindings = <
            &kp ASTERISK  &kp N7                 &kp N8              &kp N9              &kp MINUS    &kp KP_MINUS  &kp KP_N7        &kp KP_N8        &kp KP_N9           &kp KP_MULTIPLY
            &mt LCMD N0   &mt LEFT_ALT NUMBER_1  &mt LCTRL NUMBER_2  &mt LSHFT NUMBER_3  &kp PLUS     &kp KP_PLUS   &mt LSHFT KP_N1  &mt LCTRL KP_N2  &mt LEFT_ALT KP_N3  &mt LCMD KP_N0
-&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5              &kp NUMBER_6        &kp DOT      &kp KP_DOT    &kp KP_N4        &kp KP_N5        &kp KP_N6           &kp KP_SLASH     &kp KP_EQUAL
+&kp EQUAL  &kp SLASH     &kp NUMBER_4           &kp N5              &kp NUMBER_6        &kp DOT      &kp KP_DOT    &kp KP_N4        &kp KP_N5        &kp KP_N6           &lt 24 KP_SLASH  &kp KP_EQUAL
                                                 &lt 10 COLON        &trans              &trans       &trans        &trans           &lt 10 COLON
             >;
 
@@ -927,7 +927,7 @@
             bindings = <
         &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_USB  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
         &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL      &kp LSHFT      &bt BT_CLR      &out OUT_BLE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans        &eng_win        &eng_mac        &gam_win         &to 20          &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &gam_win         &to 20          &trans
                                     &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
         };
@@ -936,7 +936,7 @@
             bindings = <
         &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_USB  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
         &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT      &bt BT_CLR      &out OUT_BLE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans        &eng_win        &eng_mac        &to 7            &to 21          &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &to 7            &to 21          &trans
                                     &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
         };
