@@ -66,7 +66,7 @@
 
         ru_hard_sign {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <19 31>;
+            key-positions = <8 9>;
             layers = <1 3>;
         };
 
