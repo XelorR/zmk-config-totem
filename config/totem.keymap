@@ -776,10 +776,10 @@
 
         gam_fn_mac {
             bindings = <
-       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&none  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &none
-                       &trans  &trans  &trans    &trans  &trans  &trans
+       &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans
+       &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans
+&none  &trans  &trans  &trans  &trans  &trans    &trans          &trans  &trans  &trans  &trans  &none
+                       &trans  &trans  &trans    &kp LG(LS(N3))  &trans  &trans
             >;
         };
 
@@ -796,10 +796,10 @@
         fun_mac {
             label = "fun_mac";
             bindings = <
-                &kp F12        &kp F7  &kp F8        &kp F9             &kp C_VOL_UP          &kp C_VOL_UP        &kp F7             &kp F8        &kp F9  &kp F12
-                &mt LCTRL F11  &kp F4  &mt LGUI F5   &kp F6             &kp C_VOL_DN          &kp C_VOL_DN        &kp F4             &mt LGUI F5   &kp F6  &mt LCTRL F11
-&kp SCROLLLOCK  &kp F10        &kp F1  &kp F2        &kp F3             &kp K_MUTE            &kp K_MUTE          &kp F1             &kp F2        &kp F3  &kp F10        &kp SCROLLLOCK
-                                       &kp CAPSLOCK  &lt 21 KP_NUMLOCK  &lt 25 PRINTSCREEN    &lt 16 PRINTSCREEN  &lt 12 KP_NUMLOCK  &kp CAPSLOCK
+                &kp F12        &kp F7  &kp F8        &kp F9             &kp C_VOL_UP               &kp C_VOL_UP       &kp F7             &kp F8        &kp F9  &kp F12
+                &mt LCTRL F11  &kp F4  &mt LGUI F5   &kp F6             &kp C_VOL_DN               &kp C_VOL_DN       &kp F4             &mt LGUI F5   &kp F6  &mt LCTRL F11
+&kp SCROLLLOCK  &kp F10        &kp F1  &kp F2        &kp F3             &kp K_MUTE                 &kp K_MUTE         &kp F1             &kp F2        &kp F3  &kp F10        &kp SCROLLLOCK
+                                       &kp CAPSLOCK  &lt 21 KP_NUMLOCK  &lt 25 LS(LG(NUMBER_3))    &lt 16 LS(LG(N3))  &lt 12 KP_NUMLOCK  &kp CAPSLOCK
             >;
         };
 
