@@ -820,8 +820,8 @@
         num_en_mac {
             bindings = <
         &trans        &trans  &trans             &trans  &trans    &trans  &trans  &trans          &trans  &trans
-        &mt LCTRL N0  &trans  &mt LGUI NUMBER_2  &trans  &trans    &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
-&trans  &trans        &trans  &trans             &trans  &trans    &trans  &trans  &trans          &trans  &trans             &trans
+        &mt LCTRL N0  &trans  &mt LGUI NUMBER_2  &trans  &trans    &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_N0
+&trans  &trans        &trans  &trans             &trans  &trans    &trans  &trans  &trans          &trans  &trans           &trans
                               &lt 11 COLON       &trans  &trans    &trans  &trans  &lt 11 COLON
             >;
 
@@ -832,8 +832,8 @@
             label = "NUM_RU_mac";
             bindings = <
         &kp KP_MULTIPLY  &trans  &trans             &trans  &trans        &trans  &trans  &trans          &trans  &trans
-        &mt LCTRL N0     &trans  &mt LGUI NUMBER_2  &trans  &trans        &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_PLUS
-&trans  &trans           &trans  &trans             &trans  &kp KP_DOT    &trans  &trans  &trans          &trans  &trans             &trans
+        &mt LCTRL N0     &trans  &mt LGUI NUMBER_2  &trans  &trans        &trans  &trans  &mt LGUI KP_N2  &trans  &mt LCTRL KP_N0
+&trans  &trans           &trans  &trans             &trans  &kp KP_DOT    &trans  &trans  &trans          &trans  &trans           &trans
                                  &lt 11 PRCNT       &trans  &trans        &trans  &trans  &lt 11 PRCNT
             >;
         };
