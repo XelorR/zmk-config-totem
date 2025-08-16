@@ -641,6 +641,13 @@
             bindings = <&bt BT_SEL 3 &to 0>;
             label = "PERSONAL_AND";
         };
+
+        forward_delete_mac: forward_delete_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_on GLOBE &kp BSPC &key_off GLOBE>;
+            label = "FORWARD_DELETE_MAC";
+        };
     };
 
     behaviors {
@@ -896,9 +903,9 @@
 
         nav_layer_mac {
             bindings = <
-              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &home_mac        &kp UP           &end_mac   &kp LC(D)
+              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS     &home_mac        &kp UP           &end_mac   &forward_delete_mac
               &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &caps_word  &kp LEFT         &kp DOWN         &kp RIGHT  &kp BSPC
-&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &trans      &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC  &kp LG(RBKT)
+&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &trans      &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC        &kp LG(RBKT)
                                                    &trans      &kp SPACE         &trans               &trans      &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
