@@ -645,7 +645,7 @@
         finder_mac: finder_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp &kp &kp &kp LS(F) &kp I &kp N &kp D &kp E &kp R &kp &kp &kp RET>;
+            bindings = <&kp LG(SPACE) &kp K_CALC &kp K_CALC &kp K_CALC &kp LS(F) &kp I &kp N &kp D &kp E &kp R &kp K_CALC &kp K_CALC &kp RET>;
             label = "FINDER_MAC";
         };
     };
