@@ -815,7 +815,7 @@
               &kp KP_MULTIPLY  &kp KP_N7           &kp KP_N8        &kp KP_N9        &kp KP_MINUS    &kp MINUS  &kp N7              &kp N8              &kp N9           &kp STAR
               &mt LCMD KP_N0   &mt LEFT_ALT KP_N1  &mt LCTRL KP_N2  &mt LSHFT KP_N3  &kp KP_PLUS     &kp PLUS   &mt LSHFT NUMBER_1  &mt LCTRL NUMBER_2  &mt LEFT_ALT N3  &mt LCMD N0
 &kp KP_EQUAL  &kp KP_SLASH     &kp KP_N4           &kp KP_N5        &kp KP_N6        &kp KP_DOT      &kp DOT    &kp N4              &kp N5              &kp N6           &lt 24 SLASH  &kp EQUAL
-                                                   &lt 10 COLON     &trans           &trans          &trans     &trans              &lt 10 COLON
+                                                   &lt 10 COLON     &trans           &trans          &trans     &kp SPACE           &lt 10 COLON
             >;
 
             label = "NUM_EN_WIN";
@@ -896,7 +896,7 @@
             bindings = <
                       &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI        &kp INS               &kp HOME         &kp UP_ARROW      &kp END    &kp DEL
                       &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 22 LS(LG(S))    &caps_word            &kp LEFT         &kp DOWN          &kp RIGHT  &kp BSPC
-&kp LC(LEFT_BRACKET)  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp LG(E)           &kp C_AL_MY_COMPUTER  &kp PG_UP        &kp K_APP         &kp PG_DN  &lt 24 C_AL_CALC  &kp LC(RIGHT_BRACKET)
+&kp LC(LEFT_BRACKET)  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp C_AL_CALC       &kp C_AL_MY_COMPUTER  &kp PG_UP        &kp K_APP         &kp PG_DN  &lt 24 BSPC  &kp LC(RIGHT_BRACKET)
                                                       &trans       &kp SPACE          &trans              &trans                &lt 12 LA(LEFT)  &lt 10 LA(RIGHT)
             >;
         };
@@ -905,7 +905,7 @@
             bindings = <
               &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS      &home_mac        &kp UP           &end_mac   &kp DEL
               &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &caps_word   &kp LEFT         &kp DOWN         &kp RIGHT  &kp BSPC
-&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac  &kp PG_UP        &trans           &kp PG_DN  &lt 25 K_CALC  &kp LG(RBKT)
+&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac  &kp PG_UP        &trans           &kp PG_DN  &lt 25 BSPC  &kp LG(RBKT)
                                                    &trans      &kp SPACE         &trans               &trans       &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
