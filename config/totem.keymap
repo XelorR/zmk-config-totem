@@ -752,10 +752,10 @@
 
         gaming_win {
             bindings = <
-          &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y    &kp U     &kp I      &kp O    &kp P
-          &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H    &kp J     &kp K      &kp L    &kp SEMI
-&kp CAPS  &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N    &kp M     &kp COMMA  &kp DOT  &lt 24 SLASH  &kp SQT
-                            &kp G  &kp SPACE  &mo 8    &kp RET  &kp BSPC  &kp B
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &kp Y    &kp U     &kp I      &kp O    &kp P
+          &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &kp H    &kp J     &kp K      &kp L    &kp SEMI
+&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V    &kp N    &kp M     &kp COMMA  &kp DOT  &lt 24 SLASH  &kp SQT
+                            &kp LALT  &kp SPACE  &mo 8    &kp RET  &kp BSPC  &kp DEL
             >;
 
             label = "GAM_WIN";
@@ -763,10 +763,10 @@
 
         gaming_mac {
             bindings = <
-          &kp TAB    &kp Q  &kp W  &kp E      &kp R    &kp Y      &kp U     &kp I      &kp O    &kp P
-          &kp LSHFT  &kp A  &kp S  &kp D      &kp F    &kp H      &kp J     &kp K      &kp L    &kp SEMI
-&kp CAPS  &kp LCTRL  &kp Z  &kp X  &kp C      &kp V    &kp N      &kp M     &kp COMMA  &kp DOT  &lt 25 SLASH  &kp APOS
-                            &kp G  &kp SPACE  &mo 8    &kp ENTER  &kp BSPC  &kp B
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &kp Y      &kp U     &kp I      &kp O    &kp P
+          &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &kp H      &kp J     &kp K      &kp L    &kp SEMI
+&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V    &kp N      &kp M     &kp COMMA  &kp DOT  &lt 25 SLASH  &kp APOS
+                            &kp LALT  &kp SPACE  &mo 8    &kp ENTER  &kp BSPC  &kp DEL
             >;
 
             label = "GAM_MAC";
@@ -774,10 +774,10 @@
 
         gam_fn_win {
             bindings = <
-              &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7      &kp F8         &kp F9  &kp F12
-              &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F4      &kp F5         &kp F6  &kp F11
-&chat_win_en  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1      &kp F2         &kp F3  &kp F10  &chat_win_ru
-                                       &kp LALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp DELETE  &kp BACKSLASH
+              &kp J  &kp N2            &kp N5    &kp N3             &kp T    &kp C_VOLUME_UP    &kp F7     &kp F8         &kp F9  &kp F12
+              &kp I  &kp LEFT_BRACKET  &kp F6    &kp RIGHT_BRACKET  &kp G    &kp C_VOLUME_DOWN  &kp F4     &kp F5         &kp F6  &kp F11
+&chat_win_en  &kp M  &kp N1            &kp H     &kp N4             &kp B    &kp K_MUTE         &kp F1     &kp F2         &kp F3  &kp F10  &chat_win_ru
+                                       &kp RALT  &kp ENTER          &none    &kp PRINTSCREEN    &kp GRAVE  &kp BACKSLASH
             >;
         };
 
