@@ -143,7 +143,7 @@
         };
 
         Gy {
-            bindings = <&kp LG(Y)>;
+            bindings = <&kp LG(LS(Z))>;
             key-positions = <21 23>;
             layers = <2 3>;
         };
