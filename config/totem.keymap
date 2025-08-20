@@ -728,7 +728,7 @@
             bindings = <
                    &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F                 &kp O               &kp U                  &kp_unshift COMMA
                    &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H           &mt RCTRL A         &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P                 &kp_unshift SQT     &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
+&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P                 &kp SQT             &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
                                            &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &lt_unshift 12 COMMA  &lt_unshift 10 DOT
             >;
         };
@@ -886,39 +886,39 @@
         sym_en_win {
             label = "SYM_EN_WIN";
             bindings = <
-           &kp EXCL             &kp LESS_THAN                  &kp EQUAL        &kp GREATER_THAN                  &kp GRAVE        &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE       &kp RIGHT_BRACKET         &kp SQT
-           &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS         &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt LEFT_GUI QUESTION
-&kp COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp COLON        &kp SLASH                         &kp BACKSLASH    &kp AT       &kp PIPE              &kp TILDE            &kp AMPERSAND             &kp CARET              &kp PERIOD
-                                                               &trans           &trans                            &trans           &trans       &trans                &trans
+                   &kp_unshift EXCL     &kp LESS_THAN                  &kp EQUAL          &kp GREATER_THAN                  &kp_unshift GRAVE    &numero_win  &kp LEFT_BRACKET      &kp UNDERSCORE               &kp RIGHT_BRACKET         &kp SQT
+                   &mt LEFT_GUI DOLLAR  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LCTRL MINUS    &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp PLUS             &kp PERCENT  &mt LSHFT LEFT_BRACE  &mt_unshift LCTRL SEMICOLON  &mt LEFT_ALT RIGHT_BRACE  &mt_unshift LEFT_GUI QUESTION
+&kp_unshift COMMA  &kp HASH             &mt LCTRL ASTERISK             &kp_unshift COLON  &kp SLASH                         &kp BACKSLASH        &kp AT       &kp PIPE              &kp TILDE                    &kp AMPERSAND             &kp CARET                      &kp_unshift PERIOD
+                                                                       &trans             &trans                            &trans               &trans       &trans                &trans
             >;
         };
 
         sym_ru_win {
             label = "SYM_RU_WIN";
             bindings = <
-              &trans     &lt_win  &trans     &gt_win   &grv_win    &kp HASH  &lbracket_win  &trans            &rbracket_win  &squot_win
-              &dlr_win   &trans   &trans     &trans    &trans      &trans    &lbrace_win    &mt LCTRL DOLLAR  &rbrace_win    &mt RA(LEFT_GUI) AMPS
-&kp QUESTION  &hash_win  &trans   &kp CARET  &kp PIPE  &trans      &at_win   &pipe_win      &tild_win         &amp_win       &caret_win             &kp SLASH
-                                  &trans     &trans    &trans      &trans    &trans         &trans
+                      &trans     &lt_win  &trans             &gt_win   &grv_win    &kp HASH  &lbracket_win  &trans                    &rbracket_win  &squot_win
+                      &dlr_win   &trans   &trans             &trans    &trans      &trans    &lbrace_win    &mt_unshift LCTRL DOLLAR  &rbrace_win    &mt_unshift RA(LEFT_GUI) AMPS
+&kp_unshift QUESTION  &hash_win  &trans   &kp_unshift CARET  &kp PIPE  &trans      &at_win   &pipe_win      &tild_win                 &amp_win       &caret_win                     &kp_unshift SLASH
+                                          &trans             &trans    &trans      &trans    &trans         &trans
             >;
         };
 
         sym_en_mac {
             label = "SYM_EN_mac";
             bindings = <
-        &trans            &trans  &trans          &trans  &trans    &numero_mac  &trans  &trans              &trans  &trans
-        &mt LCTRL DOLLAR  &trans  &mt LGUI MINUS  &trans  &trans    &trans       &trans  &mt LGUI SEMICOLON  &trans  &mt LCTRL QUESTION
-&trans  &trans            &trans  &trans          &trans  &trans    &trans       &trans  &trans              &trans  &trans              &trans
+        &trans            &trans  &trans          &trans  &trans    &numero_mac  &trans  &trans                      &trans  &trans
+        &mt LCTRL DOLLAR  &trans  &mt LGUI MINUS  &trans  &trans    &trans       &trans  &mt_unshift LGUI SEMICOLON  &trans  &mt_unshift LCTRL QUESTION
+&trans  &trans            &trans  &trans          &trans  &trans    &trans       &trans  &trans                      &trans  &trans                      &trans
                                   &trans          &trans  &trans    &trans       &trans  &trans
             >;
         };
 
         sym_ru_mac {
             bindings = <
-           &trans     &kp LS(NUBS)  &trans          &kp NUBS  &grv_mac          &kp HASH  &kp TILDE   &trans         &kp GRAVE   &squote_mac
-           &dlr_mac   &trans        &mt LGUI MINUS  &trans    &trans            &kp DLLR  &kp RA(N9)  &mt LGUI STAR  &kp RA(N0)  &mt LCTRL QMARK
-&kp CARET  &hash_mac  &star_mac     &kp PRCNT       &trans    &backslash_mac    &at_mac   &pipe_mac   &tild_mac      &amp_mac    &caret_mac       &kp AMPS
-                                    &trans          &trans    &trans            &trans    &trans      &trans
+                   &trans     &kp LS(NUBS)  &trans             &kp NUBS  &grv_mac          &kp HASH  &kp TILDE   &trans                 &kp GRAVE   &squote_mac
+                   &dlr_mac   &trans        &mt LGUI MINUS     &trans    &trans            &kp DLLR  &kp RA(N9)  &mt_unshift LGUI STAR  &kp RA(N0)  &mt_unshift LCTRL QMARK
+&kp_unshift CARET  &hash_mac  &star_mac     &kp_unshift PRCNT  &trans    &backslash_mac    &at_mac   &pipe_mac   &tild_mac              &amp_mac    &caret_mac               &kp_unshift AMPS
+                                            &trans             &trans    &trans            &trans    &trans      &trans
             >;
         };
 
