@@ -648,6 +648,13 @@
             bindings = <&kp LG(SPACE) &kp K_CALC &kp K_CALC &kp K_CALC &kp LS(F) &kp I &kp N &kp D &kp E &kp R &kp K_CALC &kp K_CALC &kp RET>;
             label = "FINDER_MAC";
         };
+
+        kp_unshift: kp_unshift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_off LSHFT>;
+            label = "KP_UNSHIFT";
+        };
     };
 
     behaviors {
@@ -681,6 +688,28 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HRML";
             bindings = <&ml>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        lt_unshift: lt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_UNSHIFT";
+            bindings = <&mo>, <&kp_unshift>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
+        };
+
+        mt_unshift: mt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_UNSHIFT";
+            bindings = <&kp>, <&kp_unshift>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
