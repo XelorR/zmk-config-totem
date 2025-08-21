@@ -643,6 +643,13 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        kp_symspace: kp_symspace {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp_unshift MACRO_PLACEHOLDER &kp SPACE>;
+            label = "KP_SYMSPACE";
+        };
     };
 
     behaviors {
@@ -704,6 +711,16 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        lt_symspace: lt_symspace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SYMSPACE";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp_symspace>;
+        };
     };
 
     keymap {
@@ -712,19 +729,19 @@
         en_win {
             label = "EN_WIN";
             bindings = <
-                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F                 &kp O               &kp U                  &kp_unshift COMMA
-                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H           &mt RCTRL A         &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P                 &kp SQT             &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
-                                           &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &lt_unshift 12 COMMA  &lt_unshift 10 DOT
+                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F                  &kp O               &kp U                  &kp_unshift COMMA
+                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H            &mt RCTRL A         &mt RALT E             &mt RGUI I
+&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P                  &kp SQT             &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
+                                           &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &lt_symspace 12 COMMA  &lt_unshift 10 DOT
             >;
         };
 
         ru_win {
             bindings = <
-           &kp Q             &kp W             &kp E          &kp R             &kp T       &kp Y   &kp U                    &kp I                 &kp O             &kp P
-           &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 22 G    &kp H   &mt LSHFT J              &hrml LCTRL K         &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z             &kp X             &kp C          &kp V             &kp B       &kp N   &kp M                    &kp COMMA             &kp DOT           &lt 24 SQT                &kp LEFT_BRACKET
-                                               &trans         &trans            &trans      &trans  &lt_unshift 12 QUESTION  &lt_unshift 10 SLASH
+           &kp Q             &kp W             &kp E          &kp R             &kp T       &kp Y   &kp U                     &kp I                 &kp O             &kp P
+           &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 22 G    &kp H   &mt LSHFT J               &hrml LCTRL K         &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
+&kp GRAVE  &kp Z             &kp X             &kp C          &kp V             &kp B       &kp N   &kp M                     &kp COMMA             &kp DOT           &lt 24 SQT                &kp LEFT_BRACKET
+                                               &trans         &trans            &trans      &trans  &lt_symspace 12 QUESTION  &lt_unshift 10 SLASH
             >;
 
             label = "RU_WIN";
@@ -741,10 +758,10 @@
 
         ru_mac {
             bindings = <
-               &kp Q          &kp W         &kp E         &kp R                 &kp T                 &kp Y   &kp U                 &kp I                &kp O         &kp P
-               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F           &lt 23 G              &kp H   &mt LSHFT J           &hrml LGUI K         &hrml LALT L  &hrml LCTRL SEMICOLON
-&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &kp M                 &kp COMMA            &kp DOT       &lt 25 SQT             &kp LBKT
-                                            &lt 11 BSPC   &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &lt_unshift 12 CARET  &lt_unshift 11 AMPS
+               &kp Q          &kp W         &kp E         &kp R                 &kp T                 &kp Y   &kp U                  &kp I                &kp O         &kp P
+               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F           &lt 23 G              &kp H   &mt LSHFT J            &hrml LGUI K         &hrml LALT L  &hrml LCTRL SEMICOLON
+&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &kp M                  &kp COMMA            &kp DOT       &lt 25 SQT             &kp LBKT
+                                            &lt 11 BSPC   &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &lt_symspace 12 CARET  &lt_unshift 11 AMPS
             >;
         };
 
