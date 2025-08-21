@@ -53,20 +53,14 @@
         };
 
         dquo_en_win {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp_unshift DOUBLE_QUOTES>;
             key-positions = <6 7>;
             layers = <0 2>;
         };
 
         dquo_ru_win {
-            bindings = <&kp AT_SIGN>;
+            bindings = <&kp_unshift AT_SIGN>;
             key-positions = <6 7>;
-            layers = <1 3>;
-        };
-
-        ru_hard_sign {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <8 9>;
             layers = <1 3>;
         };
 
