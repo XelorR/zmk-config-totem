@@ -962,10 +962,10 @@
         num_ru_mac {
             label = "NUM_RU_mac";
             bindings = <
-        &trans           &trans  &trans          &trans  &trans    &trans      &trans  &trans        &trans  &kp KP_MULTIPLY
-        &mt LCTRL KP_N0  &trans  &mt LGUI KP_N2  &trans  &trans    &trans      &trans  &mt LGUI N2   &trans  &mt LCTRL N0
-&trans  &trans           &trans  &trans          &trans  &trans    &kp KP_DOT  &trans  &trans        &trans  &trans           &trans
-                                 &lt 11 PRCNT    &trans  &trans    &trans      &trans  &lt 11 PRCNT
+        &trans           &trans  &trans          &trans  &trans    &trans    &trans  &trans        &trans  &kp KP_MULTIPLY
+        &mt LCTRL KP_N0  &trans  &mt LGUI KP_N2  &trans  &trans    &trans    &trans  &mt LGUI N2   &trans  &mt LCTRL N0
+&trans  &trans           &trans  &trans          &trans  &trans    &kp AMPS  &trans  &trans        &trans  &trans           &trans
+                                 &lt 11 PRCNT    &trans  &trans    &trans    &trans  &lt 11 PRCNT
             >;
         };
 
