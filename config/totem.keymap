@@ -243,14 +243,14 @@
         en_win: en_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(N8)>;
+            bindings = <&kp_unshift LC(N8)>;
             label = "EN_WIN";
         };
 
         ru_win: ru_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(N9)>;
+            bindings = <&kp_unshift LC(N9)>;
             label = "RU_WIN";
         };
 
@@ -440,14 +440,14 @@
         en_mac: en_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp_unshift LC(LS(N8))>;
             label = "EN_MAC";
         };
 
         ru_mac: ru_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N9))>;
+            bindings = <&kp_unshift LC(LS(N9))>;
             label = "RU_MAC";
         };
 
@@ -482,28 +482,28 @@
         eng_and: eng_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 0>;
+            bindings = <&kp_unshift LC(SPACE) &to 0>;
             label = "ENG_AND";
         };
 
         rus_and: rus_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 1>;
+            bindings = <&kp_unshift LC(SPACE) &to 1>;
             label = "RUS_AND";
         };
 
         eng_ios: eng_ios {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 2>;
+            bindings = <&kp_unshift LC(SPACE) &to 2>;
             label = "ENG_IOS";
         };
 
         rus_ios: rus_ios {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 3>;
+            bindings = <&kp_unshift LC(SPACE) &to 3>;
             label = "RUS_IOS";
         };
 
