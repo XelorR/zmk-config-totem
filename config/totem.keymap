@@ -417,20 +417,6 @@
             label = "WASD_WIN";
         };
 
-        ru_comma_win: ru_comma_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION &kp SPACE>;
-            label = "RU_COMMA_WIN";
-        };
-
-        en_comma_win: en_comma_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA &kp SPACE>;
-            label = "EN_COMMA_WIN";
-        };
-
         ml: ml {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
