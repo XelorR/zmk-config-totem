@@ -804,6 +804,14 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        no_rshift: no_rshift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <1>;
+            bindings = <&kp DT_PAD>, <&kp DT_PAD>;
+            mods = <(MOD_RSFT)>;
+            keep-mods = <0>;
+        };
     };
 
     keymap {
