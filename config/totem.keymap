@@ -812,9 +812,9 @@
         en_win {
             label = "EN_WIN";
             bindings = <
-                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O        &kp U                  &kp_unshift COMMA
-                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A  &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &kp SQT      &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
+                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O            &kp U                  &kp_unshift COMMA
+                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A      &mt RALT E             &mt RGUI I
+&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &kp_unshift SQT  &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
                                            &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &comma_win_en  &dot_win_en
             >;
         };
