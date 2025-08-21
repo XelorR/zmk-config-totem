@@ -745,7 +745,7 @@
         comma_win_en: comma_win_en {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_WIN_EN";
-            bindings = <&lt_symspace 12 COMMA>, <&lt_symspcap 12 EXCL>;
+            bindings = <&lt_symspace 12 COMMA>, <&lt_symspcap 12 QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -754,7 +754,7 @@
         comma_win_ru: comma_win_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_WIN_RU";
-            bindings = <&lt_symspace 12 QMARK>, <&lt_symspcap 12 EXCL>;
+            bindings = <&lt_symspace 12 QMARK>, <&lt_symspcap 12 AMPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -763,7 +763,7 @@
         comma_mac_ru: comma_mac_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_MAC_RU";
-            bindings = <&lt_symspace 12 CARET>, <&lt_symspcap 12 EXCL>;
+            bindings = <&lt_symspace 12 CARET>, <&lt_symspcap 12 QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -772,7 +772,7 @@
         dot_win_en: dot_win_en {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_WIN_EN";
-            bindings = <&lt_symspcap 10 DOT>, <&lt_symspcap 10 QMARK>;
+            bindings = <&lt_symspcap 10 DOT>, <&lt_symspcap 10 EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -781,7 +781,7 @@
         dot_win_ru: dot_win_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_WIN_RU";
-            bindings = <&lt_symspcap 10 SLASH>, <&lt_symspcap 10 AMPS>;
+            bindings = <&lt_symspcap 10 SLASH>, <&lt_symspcap 10 EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -790,7 +790,7 @@
         dot_mac_en: dot_mac_en {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_MAC_EN";
-            bindings = <&lt_symspcap 11 DOT>, <&lt_symspcap 11 QMARK>;
+            bindings = <&lt_symspcap 11 DOT>, <&lt_symspcap 11 EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -799,7 +799,7 @@
         dot_mac_ru: dot_mac_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_MAC_RU";
-            bindings = <&lt_symspcap 11 AMPS>, <&lt_symspcap 11 QMARK>;
+            bindings = <&lt_symspcap 11 AMPS>, <&lt_symspcap 11 EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -857,9 +857,9 @@
         en_win {
             label = "EN_WIN";
             bindings = <
-                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O            &kp U                  &kp_unshift COMMA
-                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A      &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft     &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
+                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O         &kp U                  &kp_unshift COMMA
+                   &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A   &mt RALT E             &mt RGUI I
+&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft  &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
                                            &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &comma_win_en  &dot_win_en
             >;
         };
