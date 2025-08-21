@@ -804,6 +804,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        up_no_rsft:    up_no_rsft    { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp UP>,    <&kp UP>;    mods = <(MOD_RSFT)>; keep-mods = <0>; };
+        down_no_rsft:  down_no_rsft  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp DOWN>,  <&kp DOWN>;  mods = <(MOD_RSFT)>; keep-mods = <0>; };
+        left_no_rsft:  left_no_rsft  { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp LEFT>,  <&kp LEFT>;  mods = <(MOD_RSFT)>; keep-mods = <0>; };
+        right_no_rsft: right_no_rsft { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp RIGHT>, <&kp RIGHT>; mods = <(MOD_RSFT)>; keep-mods = <0>; };
+};
+        
     };
 
     keymap {
