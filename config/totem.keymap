@@ -462,14 +462,14 @@
         working_win: working_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &eng_win>;
+            bindings = <&out OUT_BLE &bt BT_SEL 1 &eng_win>;
             label = "WORKING_WIN";
         };
 
         personal_mac: personal_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &eng_mac>;
+            bindings = <&out OUT_BLE &bt BT_SEL 2 &eng_mac>;
             label = "PERSONAL_MAC";
         };
 
@@ -618,7 +618,7 @@
         personal_and: personal_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 3 &to 0>;
             label = "PERSONAL_AND";
         };
 
@@ -650,6 +650,13 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp_symspace MACRO_PLACEHOLDER &sk LSHFT>;
             label = "KP_SYMSPCAP";
+        };
+
+        usb_win: usb_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_USB &eng_win>;
+            label = "USB_WIN";
         };
     };
 
@@ -1094,8 +1101,8 @@
 
         mouse_win {
             bindings = <
-        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_USB  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL      &kp LSHFT      &bt BT_CLR      &out OUT_BLE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL      &kp LSHFT      &bt BT_CLR      &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &gam_win         &to 20          &trans
                                     &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
@@ -1103,8 +1110,8 @@
 
         mouse_mac {
             bindings = <
-        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_USB  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-        &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT      &bt BT_CLR      &out OUT_BLE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT      &bt BT_CLR      &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &to 7            &to 21          &trans
                                     &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
