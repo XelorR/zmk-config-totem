@@ -597,19 +597,19 @@
             tap-ms = <50>;
         };
 
-        home_mac: home_mac {
+        line_start_mac: home_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp LG(LEFT)>;
+            bindings = <&kp LG(LEFT) &kp LC(A)>;
             label = "HOME_MAC";
             tap-ms = <25>;
             wait-ms = <25>;
         };
 
-        end_mac: end_mac {
+        line_end_mac: end_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(E) &kp LG(RIGHT)>;
+            bindings = <&kp LG(RIGHT) &kp LC(E)>;
             label = "END_MAC";
             tap-ms = <25>;
             wait-ms = <25>;
@@ -882,6 +882,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_WIN";
             bindings = <&kp BSPC>, <&cmd_del_win>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        home_mac: home_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_MAC";
+            bindings = <&line_start_mac>, <&kp LG(UP)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        end_mac: end_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_MAC";
+            bindings = <&line_end_mac>, <&kp LG(DOWN)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
