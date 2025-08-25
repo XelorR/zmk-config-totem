@@ -1097,7 +1097,7 @@
             bindings = <
                       &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI        &kp INS               &kp HOME         &up_no_rsft       &kp END         &kp DEL
                       &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 22 LS(LG(S))    &key_on RSHFT         &left_no_rsft    &down_no_rsft     &right_no_rsft  &bspc_win
-&kp LC(LEFT_BRACKET)  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp C_AL_CALC       &kp C_AL_MY_COMPUTER  &kp PG_UP        &kp K_APP         &kp PG_DN       &lt 24 BSPC  &kp LC(RIGHT_BRACKET)
+&kp LC(LEFT_BRACKET)  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp LG(T)           &kp C_AL_MY_COMPUTER  &kp PG_UP        &kp K_APP         &kp PG_DN       &lt 24 BSPC  &kp LC(RIGHT_BRACKET)
                                                       &trans       &kp SPACE          &trans              &trans                &lt 12 LA(LEFT)  &lt 10 LA(RIGHT)
             >;
         };
@@ -1106,7 +1106,7 @@
             bindings = <
               &kp LG(Q)  &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS        &home_mac        &up_no_rsft      &end_mac        &kp DEL
               &kp LCTRL  &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &key_on RSHFT  &left_no_rsft    &down_no_rsft    &right_no_rsft  &kp BSPC
-&kp LG(LBKT)  &kp F11    &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &kp LS(F10)      &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
+&kp LG(LBKT)  &kp F11    &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp LC(F3)           &finder_mac    &pgup_mac        &kp LS(F10)      &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
                                            &trans      &kp SPACE         &trans               &trans         &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
