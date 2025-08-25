@@ -602,8 +602,8 @@
             #binding-cells = <0>;
             bindings = <&kp LC(A) &kp LG(LEFT)>;
             label = "HOME_MAC";
-            tap-ms = <0>;
-            wait-ms = <0>;
+            tap-ms = <25>;
+            wait-ms = <25>;
         };
 
         end_mac: end_mac {
@@ -611,8 +611,8 @@
             #binding-cells = <0>;
             bindings = <&kp LC(E) &kp LG(RIGHT)>;
             label = "END_MAC";
-            tap-ms = <0>;
-            wait-ms = <0>;
+            tap-ms = <25>;
+            wait-ms = <25>;
         };
 
         personal_and: personal_and {
@@ -657,6 +657,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_USB &eng_win>;
             label = "USB_WIN";
+        };
+
+        pgup_mac: pgup_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_on GLOBE &kp UP &key_off GLOBE>;
+            label = "PGUP_MAC";
+        };
+
+        pgdn_mac: pgdn_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&key_on GLOBE &kp DOWN &key_off GLOBE>;
+            label = "PGDN_MAC";
         };
     };
 
@@ -1074,7 +1088,7 @@
             bindings = <
               &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS        &home_mac        &up_no_rsft      &end_mac        &kp DEL
               &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &key_on RSHFT  &left_no_rsft    &down_no_rsft    &right_no_rsft  &kp BSPC
-&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &kp PG_UP        &trans           &kp PG_DN       &lt 25 BSPC  &kp LG(RBKT)
+&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &trans           &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
                                                    &trans      &kp SPACE         &trans               &trans         &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
