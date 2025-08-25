@@ -659,14 +659,14 @@
             label = "USB_WIN";
         };
 
-        pgup_mac: pgup_mac {
+        move_pgup_mac: pgup_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&key_on GLOBE &kp UP &key_off GLOBE>;
             label = "PGUP_MAC";
         };
 
-        pgdn_mac: pgdn_mac {
+        move_pgdn_mac: pgdn_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&key_on GLOBE &kp DOWN &key_off GLOBE>;
@@ -900,6 +900,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "END_MAC";
             bindings = <&line_end_mac>, <&kp LG(DOWN)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        pgup_mac: pgup_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGUP_MAC";
+            bindings = <&move_pgup_mac>, <&kp LG(LS(LBKT))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        pgdn_mac: pgdn_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PGDN_MAC";
+            bindings = <&move_pgdn_mac>, <&kp LG(LS(RBKT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
