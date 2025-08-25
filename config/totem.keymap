@@ -424,13 +424,6 @@
             tap-ms = <0>;
         };
 
-        show_desktop_mac: show_desktop_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_on GLOBE &kp F11 &key_off GLOBE>;
-            label = "SHOW_DESKTOP_MAC";
-        };
-
         en_mac: en_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -659,20 +652,6 @@
             label = "USB_WIN";
         };
 
-        move_pgup_mac: pgup_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_on GLOBE &kp UP &key_off GLOBE>;
-            label = "PGUP_MAC";
-        };
-
-        move_pgdn_mac: pgdn_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&key_on GLOBE &kp DOWN &key_off GLOBE>;
-            label = "PGDN_MAC";
-        };
-
         cmd_del_win: cmd_del_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -891,7 +870,7 @@
         home_mac: home_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "HOME_MAC";
-            bindings = <&line_start_mac>, <&kp LG(UP)>;
+            bindings = <&line_start_mac>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -901,7 +880,7 @@
         end_mac: end_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "END_MAC";
-            bindings = <&line_end_mac>, <&kp LG(DOWN)>;
+            bindings = <&line_end_mac>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -911,7 +890,7 @@
         pgup_mac: pgup_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGUP_MAC";
-            bindings = <&move_pgup_mac>, <&kp LG(LS(LBKT))>;
+            bindings = <&kp PG_UP>, <&kp LG(LS(LBKT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -921,7 +900,7 @@
         pgdn_mac: pgdn_mac {
             compatible = "zmk,behavior-mod-morph";
             label = "PGDN_MAC";
-            bindings = <&move_pgdn_mac>, <&kp LG(LS(RBKT))>;
+            bindings = <&kp PG_DN>, <&kp LG(LS(RBKT))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1143,10 +1122,10 @@
 
         nav_layer_mac {
             bindings = <
-              &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS        &home_mac        &up_no_rsft      &end_mac        &kp DEL
-              &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &key_on RSHFT  &left_no_rsft    &down_no_rsft    &right_no_rsft  &kp BSPC
-&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &kp LS(F10)      &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
-                                                   &trans      &kp SPACE         &trans               &trans         &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
+              &kp LG(Q)  &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS        &home_mac        &up_no_rsft      &end_mac        &kp DEL
+              &kp LCTRL  &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &key_on RSHFT  &left_no_rsft    &down_no_rsft    &right_no_rsft  &kp BSPC
+&kp LG(LBKT)  &kp F11    &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &kp LS(F10)      &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
+                                           &trans      &kp SPACE         &trans               &trans         &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
 
