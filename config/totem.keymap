@@ -1088,7 +1088,7 @@
             bindings = <
               &kp LG(Q)          &kp LG(LS(LBKT))  &kp TAB     &kp LG(LS(RBKT))  &kp LG(SPACE)        &kp INS        &home_mac        &up_no_rsft      &end_mac        &kp DEL
               &kp LCTRL          &kp LGUI          &kp LALT    &kp LSHFT         &lt 23 LS(LG(N4))    &key_on RSHFT  &left_no_rsft    &down_no_rsft    &right_no_rsft  &kp BSPC
-&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &trans           &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
+&kp LG(LBKT)  &show_desktop_mac  &kp LC(LEFT)      &kp LC(UP)  &kp LC(RIGHT)     &kp GLOBE            &finder_mac    &pgup_mac        &kp LS(F10)      &pgdn_mac       &lt 25 BSPC  &kp LG(RBKT)
                                                    &trans      &kp SPACE         &trans               &trans         &lt 12 LG(LBKT)  &lt 11 LG(RBKT)
             >;
         };
