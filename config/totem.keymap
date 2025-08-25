@@ -1004,10 +1004,10 @@
         fun_mac {
             label = "fun_mac";
             bindings = <
-                &kp F12        &kp F7  &kp F8        &kp F9                                   &kp C_VOL_UP               &kp C_VOL_UP       &kp F7                                   &kp F8        &kp F9  &kp F12
-                &mt LCTRL F11  &kp F4  &mt LGUI F5   &kp F6                                   &kp C_VOL_DN               &kp C_VOL_DN       &kp F4                                   &mt LGUI F5   &kp F6  &mt LCTRL F11
-&kp SCROLLLOCK  &kp F10        &kp F1  &kp F2        &kp F3                                   &kp K_MUTE                 &kp K_MUTE         &kp F1                                   &kp F2        &kp F3  &kp F10        &kp SCROLLLOCK
-                                       &kp CAPSLOCK  &lt 21 C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &lt 25 LS(LG(NUMBER_3))    &lt 16 LS(LG(N3))  &lt 12 C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp CAPSLOCK
+                &kp F12        &kp F7       &kp F8        &kp F9                                   &kp C_VOL_UP               &kp C_VOL_UP       &kp F7                                   &kp F8        &kp F9       &kp F12
+                &mt LCTRL F11  &mt LALT F4  &mt LGUI F5   &mt LSHFT F6                             &kp C_VOL_DN               &kp C_VOL_DN       &mt LSHFT F4                             &mt LGUI F5   &mt LALT F6  &mt LCTRL F11
+&kp SCROLLLOCK  &kp F10        &kp F1       &kp F2        &kp F3                                   &kp K_MUTE                 &kp K_MUTE         &kp F1                                   &kp F2        &kp F3       &kp F10        &kp SCROLLLOCK
+                                            &kp CAPSLOCK  &lt 21 C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &lt 25 LS(LG(NUMBER_3))    &lt 16 LS(LG(N3))  &lt 12 C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &kp CAPSLOCK
             >;
         };
 
