@@ -672,6 +672,13 @@
             bindings = <&key_on GLOBE &kp DOWN &key_off GLOBE>;
             label = "PGDN_MAC";
         };
+
+        cmd_del_win: cmd_del_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(HOME) &kp BSPC>;
+            label = "CMD_DEL_WIN";
+        };
     };
 
     behaviors {
@@ -869,6 +876,15 @@
 
             mods = <(MOD_RSFT)>;
             keep-mods = <0>;
+        };
+
+        bspc_win: bspc_win {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSPC_WIN";
+            bindings = <&kp BSPC>, <&cmd_del_win>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -1078,7 +1094,7 @@
             label = "Extend_win";
             bindings = <
                       &kp LA(F4)    &kp LS(LC(TAB))   &kp TAB      &kp LC(TAB)        &kp LEFT_GUI        &kp INS               &kp HOME         &up_no_rsft       &kp END         &kp DEL
-                      &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 22 LS(LG(S))    &key_on RSHFT         &left_no_rsft    &down_no_rsft     &right_no_rsft  &kp BSPC
+                      &kp LEFT_GUI  &kp LEFT_ALT      &kp LCTRL    &kp LEFT_SHIFT     &lt 22 LS(LG(S))    &key_on RSHFT         &left_no_rsft    &down_no_rsft     &right_no_rsft  &bspc_win
 &kp LC(LEFT_BRACKET)  &kp LG(D)     &kp LG(LC(LEFT))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp C_AL_CALC       &kp C_AL_MY_COMPUTER  &kp PG_UP        &kp K_APP         &kp PG_DN       &lt 24 BSPC  &kp LC(RIGHT_BRACKET)
                                                       &trans       &kp SPACE          &trans              &trans                &lt 12 LA(LEFT)  &lt 10 LA(RIGHT)
             >;
