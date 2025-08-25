@@ -885,6 +885,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <0>;
         };
 
         home_mac: home_mac {
@@ -894,6 +895,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <0>;
         };
 
         end_mac: end_mac {
@@ -903,6 +905,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <0>;
         };
 
         pgup_mac: pgup_mac {
@@ -912,6 +915,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <0>;
         };
 
         pgdn_mac: pgdn_mac {
@@ -921,6 +925,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+            keep-mods = <0>;
         };
     };
 
