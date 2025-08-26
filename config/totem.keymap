@@ -458,20 +458,6 @@
             label = "RUS_MAC";
         };
 
-        bt1_btout_win: working_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1 &eng_win>;
-            label = "WORKING_WIN";
-        };
-
-        bt2_btout_mac: personal_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 2 &eng_mac>;
-            label = "PERSONAL_MAC";
-        };
-
         eng_and: eng_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -596,13 +582,6 @@
             tap-ms = <50>;
         };
 
-        bt3_btout_and: personal_and {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 3 &to 0>;
-            label = "PERSONAL_AND";
-        };
-
         finder_mac: finder_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -647,25 +626,25 @@
             label = "CMD_DEL_WIN";
         };
 
-        bt0_btout_and: bt0_btout {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 0 &to 0>;
-            label = "BT0_BTOUT";
-        };
-
-        bt4_btout_ios: bt4_btout_noswitch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 4 &to 2>;
-            label = "BT4_BTOUT_NOSWITCH";
-        };
-
         usb_mac: usb_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_USB &eng_mac>;
             label = "USB_MAC";
+        };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&out OUT_BLE &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &eng_mac>;
+            label = "BT_MAC";
+        };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&out OUT_BLE &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER &eng_win>;
+            label = "BT_WIN";
         };
     };
 
@@ -1232,19 +1211,19 @@
 
         mouse_win {
             bindings = <
-              &bt0_btout_and  &bt1_btout_win  &bt2_btout_mac  &bt3_btout_and  &bt4_btout_ios    &usb_mac   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-              &kp LEFT_GUI    &kp LEFT_ALT    &kp LCTRL       &kp LSHFT       &bt BT_CLR        &usb_win   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&out OUT_BLE  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &to 12     &eng_win        &eng_mac        &gam_win         &to 20          &out OUT_USB
-                                              &trans          &trans          &kp TAB           &mkp RCLK  &mkp LCLK       &mkp MCLK
+              &bt_win 0     &bt_win 1     &bt_mac 2     &bt_win 3     &bt_mac 4       &usb_mac   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+              &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL     &kp LSHFT     &bt BT_CLR      &usb_win   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to 12     &eng_win        &eng_mac        &gam_win         &to 20          &out OUT_USB
+                                          &trans        &trans        &kp TAB         &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
         mouse_mac {
             bindings = <
-              &bt0_btout_and  &bt1_btout_win  &bt2_btout_mac  &bt3_btout_and  &bt4_btout_ios    &usb_mac   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-              &kp LCTRL       &kp LEFT_ALT    &kp LEFT_GUI    &kp LSHFT       &bt BT_CLR        &usb_win   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&out OUT_BLE  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &to 12     &eng_win        &eng_mac        &to 7            &to 21          &out OUT_USB
-                                              &trans          &trans          &kp TAB           &mkp RCLK  &mkp LCLK       &mkp MCLK
+              &bt_win 0     &bt_win 1     &bt_mac 2     &bt_win 3     &bt_mac 4       &usb_mac   &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+              &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &kp LSHFT     &bt BT_CLR      &usb_win   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to 12     &eng_win        &eng_mac        &to 7            &to 21          &out OUT_USB
+                                          &trans        &trans        &kp TAB         &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
     };
