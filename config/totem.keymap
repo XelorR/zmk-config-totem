@@ -268,131 +268,11 @@
             label = "RUS_WIN";
         };
 
-        hash_win: hash_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift HASH &ru_win>;
-            label = "HASH_WIN";
-            tap-ms = <50>;
-        };
-
         numero_win: numero_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&ru_win &kp_unshift HASH &en_win>;
             label = "NUMERO_WIN";
-            tap-ms = <50>;
-        };
-
-        lt_win: gt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift LESS_THAN &ru_win>;
-            label = "GT";
-            tap-ms = <50>;
-        };
-
-        gt_win: gt_win_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift GREATER_THAN &ru_win>;
-            label = "GT_WIN_";
-            tap-ms = <50>;
-        };
-
-        lbracket_win: lbracket_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift LEFT_BRACKET &ru_win>;
-            label = "LBRACKET_WIN";
-            tap-ms = <50>;
-        };
-
-        rbracket_win: rbracket_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift RIGHT_BRACKET &ru_win>;
-            label = "RBRACKET_WIN";
-            tap-ms = <50>;
-        };
-
-        lbrace_win: lbrace_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift LEFT_BRACE &ru_win>;
-            label = "LBRACE_WIN";
-            tap-ms = <50>;
-        };
-
-        rbrace_win: rbrace_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift RIGHT_BRACE &ru_win>;
-            label = "RBRACE_WIN";
-            tap-ms = <50>;
-        };
-
-        pipe_win: pipe_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift PIPE &ru_win>;
-            label = "PIPE_WIN";
-            tap-ms = <50>;
-        };
-
-        grv_win: grv_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift GRAVE &ru_win>;
-            label = "GRV_WIN";
-            tap-ms = <50>;
-        };
-
-        tild_win: tild_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift TILDE &ru_win>;
-            label = "TILD_WIN";
-            tap-ms = <50>;
-        };
-
-        dlr_win: dlr_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift DOLLAR &ru_win>;
-            label = "DLR_WIN";
-            tap-ms = <50>;
-        };
-
-        amp_win: amp_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift AMPERSAND &ru_win>;
-            label = "AMP_WIN";
-            tap-ms = <50>;
-        };
-
-        at_win: at_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift AT_SIGN &ru_win>;
-            label = "AT_WIN";
-            tap-ms = <50>;
-        };
-
-        caret_win: caret_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift CARET &ru_win>;
-            label = "CARET_WIN";
-            tap-ms = <50>;
-        };
-
-        squot_win: squot_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_win &kp_unshift SQT &ru_win>;
-            label = "SQUOT_WIN";
             tap-ms = <50>;
         };
 
@@ -486,99 +366,11 @@
             label = "RUS_IOS";
         };
 
-        hash_mac: hash_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift HASH &ru_mac>;
-            label = "HASH_MAC";
-            tap-ms = <50>;
-        };
-
-        star_mac: star_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift STAR &ru_mac>;
-            label = "STAR_MAC";
-            tap-ms = <50>;
-        };
-
-        tild_mac: tild_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift TILDE &ru_mac>;
-            label = "TILD_MAC";
-            tap-ms = <50>;
-        };
-
-        backslash_mac: backslash_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift BSLH &ru_mac>;
-            label = "BACKSLASH_MAC";
-            tap-ms = <50>;
-        };
-
-        grv_mac: grv_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift GRAVE &ru_mac>;
-            label = "GRV_MAC";
-            tap-ms = <50>;
-        };
-
-        pipe_mac: pipe_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift PIPE &ru_mac>;
-            label = "PIPE_MAC";
-            tap-ms = <50>;
-        };
-
-        at_mac: at_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift AT &ru_mac>;
-            label = "AT_MAC";
-            tap-ms = <50>;
-        };
-
-        amp_mac: amp_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift AMPS &ru_mac>;
-            label = "AMP_MAC";
-            tap-ms = <50>;
-        };
-
-        squote_mac: squote_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift SQT &ru_mac>;
-            label = "SQUOTE_MAC";
-            tap-ms = <50>;
-        };
-
-        caret_mac: caret_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift CARET &ru_mac>;
-            label = "CARET_MAC";
-            tap-ms = <50>;
-        };
-
         numero_mac: numero_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&ru_mac &kp_unshift HASH &en_mac>;
             label = "NUMERO_MAC";
-            tap-ms = <50>;
-        };
-
-        dlr_mac: dlr_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&en_mac &kp_unshift DLLR &ru_mac>;
-            label = "DLR_MAC";
             tap-ms = <50>;
         };
 
