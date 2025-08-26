@@ -458,14 +458,14 @@
             label = "RUS_MAC";
         };
 
-        working_win: working_win {
+        bt1_btout_win: working_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 1 &eng_win>;
             label = "WORKING_WIN";
         };
 
-        personal_mac: personal_mac {
+        bt2_btout_mac: personal_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 2 &eng_mac>;
@@ -596,7 +596,7 @@
             tap-ms = <50>;
         };
 
-        personal_and: personal_and {
+        bt3_btout_and: personal_and {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3 &to 0>;
@@ -645,6 +645,20 @@
             #binding-cells = <0>;
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "CMD_DEL_WIN";
+        };
+
+        bt0_btout_and: bt0_btout {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0 &to 0>;
+            label = "BT0_BTOUT";
+        };
+
+        bt4_btout_ios: bt4_btout_noswitch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 4 &to 2>;
+            label = "BT4_BTOUT_NOSWITCH";
         };
     };
 
@@ -1211,19 +1225,19 @@
 
         mouse_win {
             bindings = <
-        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL      &kp LSHFT      &bt BT_CLR      &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &gam_win         &to 20          &trans
-                                    &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
+        &bt0_btout_and  &bt1_btout_win  &bt2_btout_mac  &bt3_btout_and  &bt4_btout_ios    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LEFT_GUI    &kp LEFT_ALT    &kp LCTRL       &kp LSHFT       &bt BT_CLR        &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&trans  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &to 12        &eng_win        &eng_mac        &gam_win         &to 20          &trans
+                                        &trans          &trans          &kp TAB           &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
         };
 
         mouse_mac {
             bindings = <
-        &bt BT_SEL 0  &working_win  &personal_mac  &personal_and  &bt BT_SEL 4    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
-        &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI   &kp LSHFT      &bt BT_CLR      &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &to 12        &eng_win        &eng_mac        &to 7            &to 21          &trans
-                                    &trans         &trans         &kp TAB         &mkp RCLK     &mkp LCLK       &mkp MCLK
+        &bt0_btout_and  &bt1_btout_win  &bt2_btout_mac  &bt3_btout_and  &bt4_btout_ios    &out OUT_BLE  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+        &kp LCTRL       &kp LEFT_ALT    &kp LEFT_GUI    &kp LSHFT       &bt BT_CLR        &usb_win      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
+&trans  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &to 12        &eng_win        &eng_mac        &to 7            &to 21          &trans
+                                        &trans          &trans          &kp TAB           &mkp RCLK     &mkp LCLK       &mkp MCLK
             >;
         };
     };
