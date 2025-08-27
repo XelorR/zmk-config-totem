@@ -776,6 +776,28 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        mt_ruen_win: mt_ruen_win {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RUEN_WIN";
+            bindings = <&kp>, <&kp_ruen_win>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        mt_ruen_mac: mt_ruen_mac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RUEN_MAC";
+            bindings = <&kp>, <&kp_ruen_mac>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -954,10 +976,10 @@
         sym_ru_win {
             label = "SYM_RU_WIN";
             bindings = <
-                    &trans             &kp_ruen_win LT  &trans             &kp_ruen_win GT   &kp_ruen_win GRAVE    &kp_unshift HASH  &kp_ruen_win LEFT_BRACKET  &trans                    &kp_ruen_win RIGHT_BRACKET  &kp_unshift QMARK
-                    &kp_ruen_win DLLR  &trans           &trans             &trans            &trans                &trans            &kp_ruen_win LEFT_BRACE    &mt_unshift LCTRL DOLLAR  &kp_ruen_win RIGHT_BRACE    &mt_unshift RA(LEFT_GUI) AMPS
-&kp_ruen_win CARET  &kp_ruen_win HASH  &trans           &kp_unshift CARET  &kp_unshift PIPE  &trans                &kp_ruen_win AT   &kp_ruen_win PIPE          &kp_ruen_win TILDE        &kp_ruen_win AMPS           &kp_unshift SLASH              &kp_ruen_win SQT
-                                                        &trans             &trans            &trans                &trans            &trans                     &trans
+                    &trans                  &kp_ruen_win LT  &trans             &kp_ruen_win GT   &kp_ruen_win GRAVE    &kp_unshift HASH  &kp_ruen_win LEFT_BRACKET      &trans                    &kp_ruen_win RIGHT_BRACKET     &kp_unshift QMARK
+                    &mt_ruen_win LGUI DLLR  &trans           &trans             &trans            &trans                &trans            &mt_ruen_win LSHFT LEFT_BRACE  &mt_unshift LCTRL DOLLAR  &mt_ruen_win LALT RIGHT_BRACE  &mt_unshift LEFT_GUI AMPS
+&kp_ruen_win CARET  &kp_ruen_win HASH       &trans           &kp_unshift CARET  &kp_unshift PIPE  &trans                &kp_ruen_win AT   &kp_ruen_win PIPE              &kp_ruen_win TILDE        &kp_ruen_win AMPS              &kp_unshift SLASH          &kp_ruen_win SQT
+                                                             &trans             &trans            &trans                &trans            &trans                         &trans
             >;
         };
 
@@ -973,10 +995,10 @@
 
         sym_ru_mac {
             bindings = <
-                    &trans             &kp_unshift LS(NUBS)  &trans                  &kp_unshift NUBS  &kp_ruen_mac GRAVE    &kp_unshift HASH  &kp_unshift TILDE              &trans                 &kp_unshift GRAVE        &kp_unshift CARET
-                    &kp_ruen_mac DLLR  &trans                &mt_unshift LGUI MINUS  &trans            &trans                &kp_unshift DLLR  &mt_unshift LEFT_ARROW RA(N9)  &mt_unshift LGUI STAR  &mt_unshift LALT RA(N0)  &mt_unshift LCTRL QMARK
-&kp_ruen_mac CARET  &kp_ruen_mac HASH  &kp_ruen_mac STAR     &kp_unshift PRCNT       &trans            &kp_ruen_mac BSLH     &kp_ruen_mac AT   &kp_ruen_mac PIPE              &kp_ruen_mac TILDE     &kp_ruen_mac AMPS        &kp_unshift AMPS         &kp_ruen_mac SQT
-                                                             &trans                  &trans            &trans                &trans            &trans                         &trans
+                    &trans                   &kp_unshift LS(NUBS)  &trans                  &kp_unshift NUBS  &kp_ruen_mac GRAVE    &kp_unshift HASH  &kp_unshift TILDE         &trans                 &kp_unshift GRAVE        &kp_unshift CARET
+                    &mt_ruen_mac LCTRL DLLR  &trans                &mt_unshift LGUI MINUS  &trans            &trans                &kp_unshift DLLR  &mt_unshift LSHFT RA(N9)  &mt_unshift LGUI STAR  &mt_unshift LALT RA(N0)  &mt_unshift LCTRL QMARK
+&kp_ruen_mac CARET  &kp_ruen_mac HASH        &kp_ruen_mac STAR     &kp_unshift PRCNT       &trans            &kp_ruen_mac BSLH     &kp_ruen_mac AT   &kp_ruen_mac PIPE         &kp_ruen_mac TILDE     &kp_ruen_mac AMPS        &kp_unshift AMPS         &kp_ruen_mac SQT
+                                                                   &trans                  &trans            &trans                &trans            &trans                    &trans
             >;
         };
 
