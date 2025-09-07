@@ -829,6 +829,25 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp_dot_comma_en>;
         };
+
+        kp_dot_comma_ru_mac: kp_dot_comma_ru_mac {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_DOT_COMMA_RU_MAC";
+            bindings = <&kp_unshift LS(N7)>, <&kp_unshift LS(N6)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lt_dot_comma_ru_mac: lt_dot_comma_ru_mac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_DOT_COMMA_RU_MAC";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp_dot_comma_ru_mac>;
+        };
     };
 
     keymap {
@@ -868,7 +887,7 @@
             bindings = <
           &kp Q          &kp W         &kp E         &kp R                 &kp T                 &kp Y   &kp U                &kp I         &kp O         &kp P
           &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F           &lt 23 G              &kp H   &mt LSHFT J          &hrml LGUI K  &hrml LALT L  &hrml LCTRL SEMICOLON
-&kp LBKT  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &ru_soft_hard_signs  &kp COMMA     &kp DOT       &lt_unshift 25 LS(N7)  &kp SQT
+&kp LBKT  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &ru_soft_hard_signs  &kp COMMA     &kp DOT       &lt_dot_comma_ru_mac 25 0  &kp SQT
                                        &lt 11 BSPC   &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &comma_mac_ru        &dot_mac_ru
             >;
         };
