@@ -827,10 +827,10 @@
 
         ru_win {
             bindings = <
-           &kp Q             &kp W             &kp E          &kp R             &kp T       &kp Y   &kp U                &kp I          &kp O             &kp P
-           &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 22 G    &kp H   &mt LSHFT J          &hrml LCTRL K  &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
-&kp GRAVE  &kp Z             &kp X             &kp C          &kp V             &kp B       &kp N   &ru_soft_hard_signs  &kp COMMA      &kp DOT           &lt 24 LBKT               &kp SQT
-                                               &trans         &trans            &trans      &trans  &comma_win_ru        &dot_win_ru
+          &kp Q             &kp W             &kp E          &kp R             &kp T       &kp Y   &kp U                &kp I          &kp O             &kp P
+          &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &mt LEFT_SHIFT F  &lt 22 G    &kp H   &mt LSHFT J          &hrml LCTRL K  &hrml LEFT_ALT L  &hrml LEFT_GUI SEMICOLON
+&kp LBKT  &kp Z             &kp X             &kp C          &kp V             &kp B       &kp N   &ru_soft_hard_signs  &kp COMMA      &kp DOT           &lt_unshift 24 SLASH      &kp SQT
+                                              &trans         &trans            &trans      &trans  &comma_win_ru        &dot_win_ru
             >;
 
             label = "RU_WIN";
@@ -847,10 +847,10 @@
 
         ru_mac {
             bindings = <
-               &kp Q          &kp W         &kp E         &kp R                 &kp T                 &kp Y   &kp U                &kp I         &kp O         &kp P
-               &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F           &lt 23 G              &kp H   &mt LSHFT J          &hrml LGUI K  &hrml LALT L  &hrml LCTRL SEMICOLON
-&kp BACKSLASH  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &ru_soft_hard_signs  &kp COMMA     &kp DOT       &lt 25 LBKT            &kp SQT
-                                            &lt 11 BSPC   &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &comma_mac_ru        &dot_mac_ru
+          &kp Q          &kp W         &kp E         &kp R                 &kp T                 &kp Y   &kp U                &kp I         &kp O         &kp P
+          &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &mt LSHFT F           &lt 23 G              &kp H   &mt LSHFT J          &hrml LGUI K  &hrml LALT L  &hrml LCTRL SEMICOLON
+&kp LBKT  &kp Z          &kp X         &kp C         &kp V                 &kp B                 &kp N   &ru_soft_hard_signs  &kp COMMA     &kp DOT       &lt_unshift 25 LS(N7)  &kp SQT
+                                       &lt 11 BSPC   &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &comma_mac_ru        &dot_mac_ru
             >;
         };
 
