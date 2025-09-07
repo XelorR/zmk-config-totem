@@ -237,6 +237,18 @@
             key-positions = <27 28>;
             layers = <1 3>;
         };
+
+        yo_win {
+            bindings = <&kp GRAVE>;
+            key-positions = <3 4>;
+            layers = <1>;
+        };
+
+        yo_mac {
+            bindings = <&kp BSLH>;
+            key-positions = <3 4>;
+            layers = <3>;
+        };
     };
 
     macros {
