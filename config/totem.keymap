@@ -810,6 +810,25 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        kp_dot_comma_en: kp_dot_comma_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_DOT_COMMA_EN";
+            bindings = <&kp_unshift DOT>, <&kp_unshift COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lt_dot_comma_en: lt_dot_comma_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_DOT_COMMA_EN";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp_dot_comma_en>;
+        };
     };
 
     keymap {
@@ -818,9 +837,9 @@
         en_win {
             label = "EN_WIN";
             bindings = <
-                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O         &kp U                  &kp_unshift COMMA
+                   &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O         &kp U                  &kp_unshift BSLH
                    &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A   &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft  &kp_unshift SEMICOLON  &lt_unshift 24 DOT  &kp_unshift SLASH
+&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft  &kp_unshift SEMICOLON  &lt_dot_comma_en 24 0  &kp_unshift SLASH
                                            &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &comma_win_en  &dot_win_en
             >;
         };
@@ -840,7 +859,7 @@
             bindings = <
         &trans       &trans  &trans       &trans                &trans                &trans  &trans  &trans       &trans  &trans
         &mt LCTRL N  &trans  &mt LGUI T   &trans                &lt 23 G              &trans  &trans  &mt LGUI A   &trans  &mt LCTRL I
-&trans  &trans       &trans  &trans       &trans                &trans                &trans  &trans  &trans       &trans  &lt_unshift 25 PERIOD  &trans
+&trans  &trans       &trans  &trans       &trans                &trans                &trans  &trans  &trans       &trans  &lt_dot_comma_en 25 0  &trans
                              &lt 11 BSPC  &lt_unshift 21 SPACE  &lt_unshift 25 TAB    &trans  &trans  &dot_mac_en
             >;
         };
