@@ -249,6 +249,12 @@
             key-positions = <3 4>;
             layers = <3>;
         };
+
+        grv_en {
+            bindings = <&kp_unshift GRAVE>;
+            key-positions = <3 4>;
+            layers = <0 2>;
+        };
     };
 
     macros {
@@ -858,7 +864,7 @@
             bindings = <
                    &kp B       &kp L       &kp D        &kp C                 &kp V                 &kp J               &kp F          &kp O         &kp U                  &kp_unshift BSLH
                    &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S           &lt 22 G              &kp Y               &mt RSHFT H    &mt RCTRL A   &mt RALT E             &mt RGUI I
-&kp_unshift GRAVE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft  &kp_unshift SEMICOLON  &lt_dot_comma_en 24 0  &kp_unshift SLASH
+&kp_unshift TILDE  &kp X       &kp Q       &kp M        &kp W                 &kp Z                 &kp K               &kp P          &sqt_no_rsft  &kp_unshift SEMICOLON  &lt_dot_comma_en 24 0  &kp_unshift SLASH
                                            &lt 10 DEL   &lt_unshift 20 SPACE  &lt_unshift 24 TAB    &lt_unshift 16 RET  &comma_win_en  &dot_win_en
             >;
         };
