@@ -225,10 +225,10 @@
 
         sim_ru_layer {
             bindings = <
-        &kp EXCL  &none   &none      &none      &kp PERCENT    &kp HASH   &kp AMPS      &kp STAR   &kp LPAR  &kp RPAR
-        &trans    &trans  &trans     &kp AT     &kp MINUS      &kp PLUS   &sk LSHFT     &sk LCTRL  &sk LALT  &sk LCMD
-&trans  &kp BSLH  &trans  &kp CARET  &kp SLASH  &kp UNDER      &kp EQUAL  &kp QUESTION  &kp DLLR   &trans    &kp PIPE  &trans
-                          &trans     &trans     &mo 5          &trans     &trans        &trans
+        &kp EXCL  &none   &none     &none         &kp PERCENT    &kp HASH   &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
+        &trans    &trans  &trans    &kp AT        &kp MINUS      &kp PLUS   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
+&trans  &kp BSLH  &trans  &kp DLLR  &kp QUESTION  &kp UNDER      &kp EQUAL  &kp SLASH  &kp CARET  &trans    &kp PIPE  &trans
+                          &trans    &trans        &mo 5          &trans     &trans     &trans
             >;
 
             label = "SIM_RU";
