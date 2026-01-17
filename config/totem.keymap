@@ -106,6 +106,32 @@
             bindings = <&kp ESC &switch_en>;
             label = "VIM_ESC";
         };
+
+        in_below: in_below {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(RET)>;
+            label = "IN_BELOW";
+        };
+
+        in_above: in_above {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            label = "IN_ABOVE";
+            wait-ms = <0>;
+        };
+    };
+
+    behaviors {
+        ins_row: ins_row {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INSERT_ROW";
+            bindings = <&in_below>, <&in_above>;
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <0>;
+        };
     };
 
     keymap {
@@ -167,7 +193,7 @@
             bindings = <
         &trans            &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC    &kp ESC  &kp HOME   &kp UP    &kp END    &kp DEL
         &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT        &kp RET    &kp RET  &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
-&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &kp LGUI   &kp PRINTSCREEN  &kp TAB    &kp TAB  &kp PG_UP  &trans    &kp PG_DN  &gbspc    &kp C_MENU
+&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &kp LGUI   &kp PRINTSCREEN  &kp TAB    &kp TAB  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
                                              &trans     &trans           &trans     &mo 5    &trans     &trans
             >;
         };
