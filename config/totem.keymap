@@ -99,6 +99,13 @@
             bindings = <&kp LS(HOME) &kp BSPC>;
             label = "GBSPC";
         };
+
+        vim_esc: vim_esc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC &switch_en>;
+            label = "VIM_ESC";
+        };
     };
 
     keymap {
@@ -123,19 +130,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp F     &kp P      &kp B    &kp J  &kp L      &kp U                 &kp Y     &kp APOS
-           &kp A  &kp R  &kp S     &kp T      &kp G    &kp M  &kp N      &kp E                 &kp I     &kp O
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp D      &kp V    &kp K  &kp H      &kp LBKT              &kp RBKT  &kp FSLH  &kp BSLH
-                         &kp LALT  &kp SPACE  &mo 2    &mo 5  &kp RSHFT  &kp LS(LA(LC(LGUI)))
+          &kp Q  &kp W  &kp F     &kp P      &kp B    &kp J  &kp L      &kp U                 &kp Y     &kp APOS
+          &kp A  &kp R  &kp S     &kp T      &kp G    &kp M  &kp N      &kp E                 &kp I     &kp O
+&vim_esc  &kp Z  &kp X  &kp C     &kp D      &kp V    &kp K  &kp H      &kp LBKT              &kp RBKT  &kp FSLH  &kp BSLH
+                        &kp LALT  &kp SPACE  &mo 2    &mo 5  &kp RSHFT  &kp LS(LA(LC(LGUI)))
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y  &kp U      &kp I                 &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F      &kp G    &kp H  &kp J      &kp K                 &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N  &kp M      &kp COMMA             &kp DOT  &kp APOS  &kp LBKT
-                         &kp LALT  &kp SPACE  &mo 2    &mo 4  &kp RSHFT  &kp LS(LA(LC(LGUI)))
+          &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y  &kp U      &kp I                 &kp O    &kp P
+          &kp A  &kp S  &kp D     &kp F      &kp G    &kp H  &kp J      &kp K                 &kp L    &kp SEMI
+&vim_esc  &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N  &kp M      &kp COMMA             &kp DOT  &kp APOS  &kp LBKT
+                        &kp LALT  &kp SPACE  &mo 2    &mo 4  &kp RSHFT  &kp LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
