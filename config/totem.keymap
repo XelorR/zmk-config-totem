@@ -29,9 +29,7 @@
     tapping-term-ms = <170>;
 };
 
-&sk {
-        release-after-ms = <60000>;
-};
+&sk { release-after-ms = <60000>; };
 
 / {
     combos {
@@ -129,14 +127,14 @@
         ruen: ruen {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&switch_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &switch_ru>;
+            bindings = <&lg_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_ru>;
             label = "RUEN";
         };
 
         enru: enru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&switch_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &switch_en>;
+            bindings = <&lg_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en>;
             label = "ENRU";
         };
     };
