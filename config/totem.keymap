@@ -31,33 +31,44 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
+        switch_en_combo {
+            bindings = <&switch_en>;
+            key-positions = <2 3>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 0>;
+        switch_ru_combo {
+            bindings = <&switch_ru>;
+            key-positions = <6 7>;
         };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
+        lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&kp CAPS>;
+            label = "LG_EN";
+        };
+
+        lg_ru: lg_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(CAPS)>;
+            label = "LG_RU";
+        };
+
+        switch_en: switch_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &lg_en>;
+            label = "SWITCH_EN";
+        };
+
+        switch_ru: switch_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &lg_ru>;
+            label = "SWITCH_RU";
         };
     };
 
