@@ -238,19 +238,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp EXCL   &kp AT     &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
-           &kp TILDE  &kp GRAVE  &kp SQT   &kp DQT    &kp MINUS    &kp PLUS   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
-&kp SLASH  &kp BSLH   &kp PIPE   &kp SEMI  &kp COMMA  &kp UNDER    &kp EQUAL  &kp DOT    &kp COLON  &kp LT    &kp GT    &enru HASH
-                                 &trans    &trans     &mo 5        &trans     &trans     &trans
+        &kp EXCL  &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp QUESTION  &kp STAR   &kp LPAR  &kp RPAR
+        &kp PIPE  &kp GRAVE  &kp COLON  &kp DOT    &kp MINUS    &kp PLUS   &sk LSHFT     &sk LCTRL  &sk LALT  &sk LCMD
+&kp AT  &kp AMPS  &kp TILDE  &kp SEMI   &kp COMMA  &kp UNDER    &kp EQUAL  &kp BSLH      &kp LT     &kp GT    &kp SLASH  &enru HASH
+                             &trans     &trans     &mo 5        &trans     &trans        &trans
             >;
         };
 
         sim_ru_layer {
             bindings = <
-          &kp EXCL     &ruen AT     &ruen HASH  &ruen DLLR    &kp PERCENT    &ruen CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
-          &ruen TILDE  &ruen GRAVE  &ruen SQT   &kp AT        &kp MINUS      &kp PLUS     &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
-&kp PIPE  &kp BSLH     &ruen PIPE   &kp DLLR    &kp QUESTION  &kp UNDER      &kp EQUAL    &kp SLASH  &kp CARET  &ruen LT  &ruen GT  &kp HASH
-                                    &trans      &trans        &mo 5          &trans       &trans     &trans
+          &kp EXCL    &kp AT       &ruen HASH  &ruen DLLR  &kp PERCENT    &ruen CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
+          &ruen PIPE  &ruen GRAVE  &kp CARET   &kp SLASH   &kp MINUS      &kp PLUS     &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
+&ruen AT  &ruen AMPS  &ruen TILDE  &kp DLLR    &kp QMARK   &kp UNDER      &kp EQUAL    &kp BSLH   &ruen LT   &ruen GT  &kp PIPE  &kp HASH
+                                   &trans      &trans      &mo 5          &trans       &trans     &trans
             >;
 
             label = "SIM_RU";
