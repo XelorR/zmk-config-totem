@@ -128,6 +128,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "INSERT_ROW";
             bindings = <&in_below>, <&in_above>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             keep-mods = <0>;
@@ -266,6 +267,28 @@
             >;
 
             label = "CONF";
+        };
+
+        gaming_layer {
+            bindings = <
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP           &trans     &kp TAB
+          &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN         &kp RIGHT  &kp RSHFT
+&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans           &trans     &kp RCTRL  &trans
+                            &kp LALT  &kp SPACE  &mo 8    &switch_en  &kp SPACE  &kp PRINTSCREEN
+            >;
+
+            label = "GAM";
+        };
+
+        gaming_fn {
+            bindings = <
+         &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+         &kp RET  &kp N5  &kp N6  &kp N7  &kp N8    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F11  &kp G    &kp J   &kp I   &kp M   &kp T     &trans  &trans  &trans  &trans  &trans   &kp F12
+                          &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "GAM_FN";
         };
     };
 };
