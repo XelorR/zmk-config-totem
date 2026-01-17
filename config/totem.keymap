@@ -190,7 +190,7 @@
             bindings = <
           &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y  &kp U      &kp I                   &kp O    &kp P
           &kp A  &kp S  &kp D     &kp F      &kp G    &kp H  &kp J      &kp K                   &kp L    &kp SEMI
-&vim_esc  &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N  &kp M      &kp COMMA               &kp DOT  &kp APOS  &kp LBKT
+&vim_esc  &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N  &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
                         &kp LALT  &kp SPACE  &mo 2    &mo 4  &kp RSHFT  &lt 8 LS(LA(LC(LGUI)))
             >;
 
