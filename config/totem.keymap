@@ -214,7 +214,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans            &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC    &kp ESC  &kp HOME   &kp UP    &kp END    &kp DEL
+        &kp DEL           &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC    &kp ESC  &kp HOME   &kp UP    &kp END    &kp DEL
         &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT        &kp RET    &kp RET  &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
 &trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 6      &kp PRINTSCREEN  &kp TAB    &kp TAB  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
                                              &trans     &trans           &trans     &mo 5    &trans     &trans
