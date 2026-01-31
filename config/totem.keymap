@@ -37,13 +37,13 @@
 
         switch_en_combo {
             bindings = <&switch_en>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
             layers = <0 1>;
         };
 
         switch_ru_combo {
             bindings = <&switch_ru>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
             layers = <0 1>;
         };
 
