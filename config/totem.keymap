@@ -219,7 +219,7 @@
         &kp DEL           &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC     &kp ESC     &kp HOME   &kp UP    &kp END    &kp DEL
         &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT        &kp RET     &kp RET     &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
 &trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 4      &kp PRINTSCREEN  &kp LGUI    &caps_word  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
-                                             &trans     &trans           &trans      &trans      &trans     &trans
+                                             &trans     &trans           &trans      &mo 6       &trans     &trans
             >;
         };
 
@@ -243,7 +243,7 @@
            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp AT       &enru HASH   &kp LBKT        &kp DQT          &kp RBKT       &kp PIPE
            &kp DLLR   &kp LPAR  &kp MINUS  &kp RPAR  &kp HASH     &kp STAR     &mt LSHFT LBRC  &mt LCTRL UNDER  &mt LALT RBRC  &mt LGUI PLUS
 &kp CARET  &kp BSLH   &kp EXCL  &kp COLON  &kp DOT   &kp TILDE    &kp PERCENT  &kp COMMA       &kp SEMI         &kp QUESTION   &kp SLASH      &kp AMPS
-                                &trans     &trans    &trans       &trans       &trans          &trans
+                                &trans     &trans    &mo 6        &trans       &trans          &trans
             >;
         };
 
@@ -271,10 +271,10 @@
 
         config_layer {
             bindings = <
-        &trans        &trans        &trans        &trans        &trans          &trans  &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &out OUT_BLE  &out OUT_USB  &trans        &bt BT_CLR_ALL
-&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans        &trans        &trans        &trans          &trans
-                                    &trans        &trans        &trans          &trans  &trans        &trans
+              &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp ESC      &kp C_VOL_UP  &kp F7  &kp F8  &kp F9  &kp F12
+              &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT     &kp ENTER    &kp C_VOL_DN  &kp F4  &kp F5  &kp F6  &kp F11
+&bt BT_SEL 0  &trans        &trans        &out OUT_USB  &out OUT_BLE  &trans       &kp K_MUTE    &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                          &trans        &trans        &trans       &trans        &trans  &trans
             >;
 
             label = "CONF";
@@ -286,7 +286,7 @@
              &kp GRAVE   &ruen LT  &kp EQUAL  &ruen GT  &ruen AT       &kp HASH     &ruen LBKT      &kp AT           &ruen RBKT     &ruen PIPE
              &ruen DLLR  &kp LPAR  &kp MINUS  &kp RPAR  &ruen HASH     &kp STAR     &mt LSHFT LBRC  &mt LCTRL UNDER  &mt LALT RBRC  &mt LGUI PLUS
 &ruen CARET  &kp BSLH    &kp EXCL  &kp CARET  &kp FSLH  &ruen TILDE    &kp PERCENT  &kp QUESTION    &kp DLLR         &kp AMPS       &kp PIPE       &ruen AMPS
-                                   &trans     &trans    &trans         &trans       &trans          &trans
+                                   &trans     &trans    &mo 6          &trans       &trans          &trans
             >;
         };
 
@@ -296,7 +296,7 @@
            &kp GRAVE  &kp LT    &kp EQUAL  &kp GT     &kp AT       &enru HASH   &kp N7        &kp N8  &kp N9  &kp PIPE
            &sk LGUI   &sk LALT  &sk LCTRL  &sk LSHFT  &kp HASH     &kp STAR     &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
 &kp CARET  &kp BSLH   &kp EXCL  &kp COLON  &kp DOT    &kp TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp SLASH      &kp AMPS
-                                &trans     &trans     &trans       &trans       &kp N0        &trans
+                                &trans     &trans     &trans       &mo 6        &kp N0        &trans
             >;
         };
 
@@ -306,7 +306,7 @@
              &ruen GRAVE  &ruen LT  &kp EQUAL  &ruen GT   &ruen AT       &kp HASH     &kp N7        &kp N8  &kp N9  &ruen PIPE
              &sk LGUI     &sk LALT  &sk LCTRL  &sk LSHFT  &ruen HASH     &kp STAR     &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
 &ruen CARET  &kp BSLH     &kp EXCL  &kp CARET  &kp FSLH   &ruen TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp PIPE       &ruen AMPS
-                                    &trans     &trans     &trans         &trans       &kp N0        &trans
+                                    &trans     &trans     &trans         &mo 6        &kp N0        &trans
             >;
         };
     };
