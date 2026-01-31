@@ -48,7 +48,7 @@
         };
 
         access_conf_layer {
-            bindings = <&sl 8>;
+            bindings = <&sl 7>;
             key-positions = <11 12 13>;
             layers = <0 1>;
         };
@@ -68,7 +68,7 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
-            layers = <6>;
+            layers = <5>;
         };
     };
 
@@ -194,19 +194,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-          &kp Q  &kp W  &kp F     &kp P      &kp B          &kp J  &kp L      &kp U                   &kp Y     &kp APOS
-          &kp A  &kp R  &kp S     &kp T      &kp G          &kp M  &kp N      &kp E                   &kp I     &kp O
-&vim_esc  &kp Z  &kp X  &kp C     &kp D      &kp V          &kp K  &kp H      &kp LBKT                &kp RBKT  &kp FSLH  &kp BSLH
-                        &kp LALT  &kp SPACE  &mo_unmod 2    &mo 3  &kp RSHFT  &lt 8 LS(LA(LC(LGUI)))
+       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L      &kp U                   &kp Y     &kp APOS
+       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N      &kp E                   &kp I     &kp O
+&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H      &kp LBKT                &kp RBKT  &kp FSLH  &kp BSLH
+                     &kp LALT  &lt 2 SPACE  &mo_unmod 4    &mo_unmod 3  &kp RSHFT  &lt 7 LS(LA(LC(LGUI)))
             >;
         };
 
         ru_layer {
             bindings = <
-          &kp Q  &kp W  &kp E     &kp R      &kp T          &kp Y  &kp U      &kp I                   &kp O    &kp P
-          &kp A  &kp S  &kp D     &kp F      &kp G          &kp H  &kp J      &kp K                   &kp L    &kp SEMI
-&vim_esc  &kp Z  &kp X  &kp C     &kp V      &kp B          &kp N  &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
-                        &kp LALT  &kp SPACE  &mo_unmod 2    &mo 4  &kp RSHFT  &lt 8 LS(LA(LC(LGUI)))
+           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U      &kp I                   &kp O    &kp P
+           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J      &kp K                   &kp L    &kp SEMI
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
+                         &kp LALT  &lt 2 SPACE  &mo_unmod 4    &mo_unmod 8  &kp RSHFT  &lt 7 LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
@@ -229,10 +229,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp RG(TAB)       &kp RA(TAB)        &kp RC(TAB)  &none            &kp ESC    &kp ESC  &kp HOME   &kp UP    &kp END    &kp DEL
-        &sk LGUI          &sk LALT           &sk LCTRL    &sk LSHFT        &kp RET    &kp RET  &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
-&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 6        &kp PRINTSCREEN  &kp TAB    &kp TAB  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
-                                             &trans       &trans           &trans     &mo 5    &trans     &trans
+        &kp DEL           &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC     &kp ESC     &kp HOME   &kp UP    &kp END    &kp DEL
+        &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT        &kp RET     &kp RET     &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
+&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 5      &kp PRINTSCREEN  &kp LGUI    &caps_word  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
+                                             &trans     &trans           &trans      &trans      &trans     &trans
             >;
         };
 
@@ -253,22 +253,11 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL  &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp QUESTION  &kp STAR   &kp LPAR  &kp RPAR
-        &kp PIPE  &kp GRAVE  &kp COLON  &kp DOT    &kp MINUS    &kp PLUS   &sk LSHFT     &sk LCTRL  &sk LALT  &sk LCMD
-&kp AT  &kp AMPS  &kp TILDE  &kp SEMI   &kp COMMA  &kp UNDER    &kp EQUAL  &kp BSLH      &kp LT     &kp GT    &kp SLASH  &enru HASH
-                             &trans     &trans     &mo 5        &trans     &trans        &trans
+           &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp AT       &enru HASH   &kp LBKT        &kp DQT          &kp RBKT       &kp PIPE
+           &kp DLLR   &kp LPAR  &kp MINUS  &kp RPAR  &kp HASH     &kp STAR     &mt LSHFT LBRC  &mt LCTRL UNDER  &mt LALT RBRC  &mt LGUI PLUS
+&kp CARET  &kp BSLH   &kp EXCL  &kp COLON  &kp DOT   &kp TILDE    &kp PERCENT  &kp COMMA       &kp SEMI         &kp QUESTION   &kp SLASH      &kp AMPS
+                                &trans     &trans    &trans       &trans       &trans          &trans
             >;
-        };
-
-        sim_ru_layer {
-            bindings = <
-          &kp EXCL    &kp AT       &ruen HASH  &ruen DLLR  &kp PERCENT    &ruen CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
-          &ruen PIPE  &ruen GRAVE  &kp CARET   &kp SLASH   &kp MINUS      &kp PLUS     &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
-&ruen AT  &ruen AMPS  &ruen TILDE  &kp DLLR    &kp QMARK   &kp UNDER      &kp EQUAL    &kp BSLH   &ruen LT   &ruen GT  &kp PIPE  &kp HASH
-                                   &trans      &trans      &mo 5          &trans       &trans     &trans
-            >;
-
-            label = "SIM_RU";
         };
 
         num_layer {
@@ -300,7 +289,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 7    &switch_en  &kp SPACE  &mo 8
+                            &kp LALT  &kp SPACE  &mo 6    &switch_en  &kp SPACE  &mo 7
             >;
 
             label = "GAM";
@@ -326,6 +315,16 @@
             >;
 
             label = "CONF";
+        };
+
+        sim_ru_layer {
+            label = "SYM_RU";
+            bindings = <
+             &kp GRAVE   &ruen LT  &kp EQUAL  &ruen GT  &ruen AT       &kp HASH     &ruen LBKT      &kp AT           &ruen RBKT     &ruen PIPE
+             &ruen DLLR  &kp LPAR  &kp MINUS  &kp RPAR  &ruen HASH     &kp STAR     &mt LSHFT LBRC  &mt LCTRL UNDER  &mt LALT RBRC  &mt LGUI PLUS
+&ruen CARET  &kp BSLH    &kp EXCL  &kp CARET  &kp FSLH  &ruen TILDE    &kp PERCENT  &kp QUESTION    &kp DLLR         &kp AMPS       &kp PIPE       &ruen AMPS
+                                   &trans     &trans    &trans         &trans       &trans          &trans
+            >;
         };
     };
 };
