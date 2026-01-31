@@ -14,6 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -217,19 +218,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L      &kp U                   &kp Y     &kp APOS
-       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N      &kp E                   &kp I     &kp O
-&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H      &kp LBKT                &kp RBKT  &kp FSLH  &kp BSLH
-                     &kp LALT  &lt 2 SPACE  &mo_unmod 8    &mo_unmod 3  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
+       &kp Q  &kp W  &kp F        &kp P        &kp B          &kp J        &kp L      &kp U                   &kp Y     &kp APOS
+       &kp A  &kp R  &kp S        &kp T        &kp G          &kp M        &kp N      &kp E                   &kp I     &kp O
+&kp Q  &kp Z  &kp X  &kp C        &kp D        &kp V          &kp K        &kp H      &kp LBKT                &kp RBKT  &kp FSLH  &kp BSLH
+                     &lt 10 LALT  &lt 2 SPACE  &mo_unmod 8    &mo_unmod 3  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U      &kp I                   &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J      &kp K                   &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
-                         &kp LALT  &lt 2 SPACE  &mo_unmod 9    &mo_unmod 7  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
+           &kp Q  &kp W  &kp E        &kp R        &kp T          &kp Y        &kp U      &kp I                   &kp O    &kp P
+           &kp A  &kp S  &kp D        &kp F        &kp G          &kp H        &kp J      &kp K                   &kp L    &kp SEMI
+&kp GRAVE  &kp Z  &kp X  &kp C        &kp V        &kp B          &kp N        &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
+                         &lt 10 LALT  &lt 2 SPACE  &mo_unmod 9    &mo_unmod 7  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
@@ -344,6 +345,17 @@
 &ruen CARET  &kp BSLH     &kp EXCL  &kp CARET  &kp FSLH   &ruen TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp PIPE       &ruen AMPS
                                     &trans     &trans     &trans         &mo 6        &kp N0        &trans
             >;
+        };
+
+        mouse_layer {
+            bindings = <
+        &kp DEL           &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)  &kp ESC      &kp ESC    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp DEL
+        &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT    &kp ENTER    &kp RET    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp BSPC
+&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 4      &kp PSCRN    &kp LGUI     &kp LGUI   &msc SCRL_UP    &trans          &msc SCRL_DOWN   &gbspc    &kp C_MENU
+                                             &trans     &trans       &trans       &mkp RCLK  &mkp LCLK       &mkp MCLK
+            >;
+
+            label = "MOS";
         };
     };
 };
