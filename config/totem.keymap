@@ -62,7 +62,7 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
-            layers = <5>;
+            layers = <4>;
         };
     };
 
@@ -184,7 +184,7 @@
        &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L      &kp U                   &kp Y     &kp APOS
        &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N      &kp E                   &kp I     &kp O
 &kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H      &kp LBKT                &kp RBKT  &kp FSLH  &kp BSLH
-                     &kp LALT  &lt 2 SPACE  &mo_unmod 4    &mo_unmod 3  &kp RSHFT  &lt 7 LS(LA(LC(LGUI)))
+                     &kp LALT  &lt 2 SPACE  &mo_unmod 8    &mo_unmod 3  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
             >;
         };
 
@@ -193,7 +193,7 @@
            &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U      &kp I                   &kp O    &kp P
            &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J      &kp K                   &kp L    &kp SEMI
 &kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M      &kp COMMA               &kp DOT  &kp LBKT  &kp SQT
-                         &kp LALT  &lt 2 SPACE  &mo_unmod 4    &mo_unmod 8  &kp RSHFT  &lt 7 LS(LA(LC(LGUI)))
+                         &kp LALT  &lt 2 SPACE  &mo_unmod 9    &mo_unmod 7  &kp RSHFT  &lt 6 LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
@@ -218,7 +218,7 @@
             bindings = <
         &kp DEL           &kp LC(LS(TAB))    &kp TAB    &kp LC(TAB)      &kp ESC     &kp ESC     &kp HOME   &kp UP    &kp END    &kp DEL
         &sk LGUI          &sk LALT           &sk LCTRL  &sk LSHFT        &kp RET     &kp RET     &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
-&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 5      &kp PRINTSCREEN  &kp LGUI    &caps_word  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
+&trans  &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &to 4      &kp PRINTSCREEN  &kp LGUI    &caps_word  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
                                              &trans     &trans           &trans      &trans      &trans     &trans
             >;
         };
@@ -247,36 +247,12 @@
             >;
         };
 
-        num_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "NUM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp N1    &kp N2    &kp N3     &kp N4     &kp N5     &kp N6   &kp N7     &kp N8     &kp N9    &kp N0
-        &sk LCMD  &sk LALT  &sk LCTRL  &sk LSHFT  &kp F11    &kp F12  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LCMD
-&trans  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5     &kp F6   &kp F7     &kp F8     &kp F9    &kp F10   &trans
-                            &trans     &trans     &trans     &trans   &trans     &trans
-            >;
-        };
-
         gaming_layer {
             bindings = <
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &switch_en  &kp SPACE  &mo 7
+                            &kp LALT  &kp SPACE  &mo 5    &switch_en  &kp SPACE  &mo 6
             >;
 
             label = "GAM";
@@ -311,6 +287,26 @@
              &ruen DLLR  &kp LPAR  &kp MINUS  &kp RPAR  &ruen HASH     &kp STAR     &mt LSHFT LBRC  &mt LCTRL UNDER  &mt LALT RBRC  &mt LGUI PLUS
 &ruen CARET  &kp BSLH    &kp EXCL  &kp CARET  &kp FSLH  &ruen TILDE    &kp PERCENT  &kp QUESTION    &kp DLLR         &kp AMPS       &kp PIPE       &ruen AMPS
                                    &trans     &trans    &trans         &trans       &trans          &trans
+            >;
+        };
+
+        num_layer {
+            label = "NUM";
+            bindings = <
+           &kp GRAVE  &kp LT    &kp EQUAL  &kp GT     &kp AT       &enru HASH   &kp N7        &kp N8  &kp N9  &kp PIPE
+           &sk LGUI   &sk LALT  &sk LCTRL  &sk LSHFT  &kp HASH     &kp STAR     &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
+&kp CARET  &kp BSLH   &kp EXCL  &kp COLON  &kp DOT    &kp TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp SLASH      &kp AMPS
+                                &trans     &trans     &trans       &trans       &kp N0        &trans
+            >;
+        };
+
+        num_ru_layer {
+            label = "NUM_RU";
+            bindings = <
+             &ruen GRAVE  &ruen LT  &kp EQUAL  &ruen GT   &ruen AT       &kp HASH     &kp N7        &kp N8  &kp N9  &ruen PIPE
+             &sk LGUI     &sk LALT  &sk LCTRL  &sk LSHFT  &ruen HASH     &kp STAR     &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
+&ruen CARET  &kp BSLH     &kp EXCL  &kp CARET  &kp FSLH   &ruen TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp PIPE       &ruen AMPS
+                                    &trans     &trans     &trans         &trans       &kp N0        &trans
             >;
         };
     };
