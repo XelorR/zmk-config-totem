@@ -302,19 +302,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L               &kp U                    &kp Y       &kp APOS
-       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N               &kp E                    &kp I       &kp O
-&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp COMMA                &kp PERIOD  &kp FSLH  &kp DQT
-                     &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 4  &mo_shift_caps 6 0  &lt 10 LS(LA(LC(LGUI)))
+       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L               &kp U                   &kp Y       &kp APOS
+       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N               &kp E                   &kp I       &kp O
+&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp COMMA               &kp PERIOD  &kp FSLH  &kp DQT
+                     &kp LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 4  &mo_shift_caps 9 0  &lt 8 LS(LA(LC(LGUI)))
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U                  &kp I                    &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J                  &kp K                    &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M                  &kp COMMA                &kp DOT  &kp SQT   &kp AT
-                         &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 5  &mo_shift_caps_ru 7 0  &lt 10 LS(LA(LC(LGUI)))
+           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U                   &kp I                   &kp O    &kp P
+           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J                   &kp K                   &kp L    &kp SEMI
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M                   &kp COMMA               &kp DOT  &kp SQT   &kp AT
+                         &kp LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 5  &mo_shift_caps_ru 10 0  &lt 8 LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
@@ -325,7 +325,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 10
+                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 8
             >;
 
             label = "GAM";
@@ -362,7 +362,7 @@
              &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
              &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
 &kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR        &enru HASH
-                                           &trans           &trans          &mo 10       &trans     &trans          &trans
+                                           &trans           &trans          &mo 8        &trans     &trans          &trans
             >;
         };
 
@@ -371,28 +371,8 @@
             bindings = <
              &kp EXCL       &ruen LT       &kp EQUAL        &ruen GT         &ruen GRAVE    &ruen CARET  &ruen LBKT           &kp UNDER       &ruen RBKT          &ruen AT
              &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHIFT RPAR  &kp PLUS       &kp PRCNT    &mt_ruen LSHFT LBRC  &mt LCTRL DLLR  &mt_ruen LALT RBRC  &mt LGUI AMPS
-&kp LG(DOT)  &ruen HASH     &kp STAR       &kp CARET        &kp PIPE         &kp QMARK      &kp FSLH     &ruen PIPE           &ruen TILDE     &kp AMPS            &ruen DLLR     &kp HASH
-                                           &trans           &trans           &mo 10         &trans       &trans               &trans
-            >;
-        };
-
-        num_layer {
-            label = "NUM";
-            bindings = <
-           &kp GRAVE  &kp LT    &kp EQUAL  &kp GT     &kp AT       &enru HASH  &kp N7        &kp N8  &kp N9  &kp PIPE
-           &sk LGUI   &sk LALT  &sk LCTRL  &sk LSHFT  &kp HASH     &kp STAR    &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
-&kp CARET  &kp BSLH   &kp EXCL  &kp COLON  &kp DOT    &kp TILDE    &kp PRCNT   &kp NUMBER_1  &kp N2  &kp N3  &kp SLASH      &kp AMPS
-                                &trans     &trans     &trans       &mo 10      &kp N0        &trans
-            >;
-        };
-
-        num_ru_layer {
-            label = "NUM_RU";
-            bindings = <
-             &ruen GRAVE  &ruen LT  &kp EQUAL  &ruen GT   &ruen AT       &kp HASH     &kp N7        &kp N8  &kp N9  &ruen PIPE
-             &sk LGUI     &sk LALT  &sk LCTRL  &sk LSHFT  &ruen HASH     &kp STAR     &kp N4        &kp N5  &kp N6  &mt LGUI PLUS
-&ruen CARET  &kp BSLH     &kp EXCL  &kp CARET  &kp FSLH   &ruen TILDE    &kp PERCENT  &kp NUMBER_1  &kp N2  &kp N3  &kp PIPE       &ruen AMPS
-                                    &trans     &trans     &trans         &mo 10       &kp N0        &trans
+&kp LG(DOT)  &ruen HASH     &kp STAR       &kp CARET        &kp PIPE         &kp QMARK      &kp FSLH     &ruen PIPE           &ruen TILDE     &ruen AMPS          &ruen DLLR     &kp HASH
+                                           &trans           &trans           &mo 8          &trans       &trans               &trans
             >;
         };
 
@@ -416,7 +396,7 @@
            &kp DEL      &kp LC(LS(TAB))   &kp TAB    &kp LC(TAB)        &kp ESC     &kp ESC   &kp HOME   &kp UP    &kp END    &kp DEL
            &sk LGUI     &sk LALT          &sk LCTRL  &sk LSHFT          &kp RET     &kp RET   &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
 &kp PSCRN  &kp LS(DEL)  &kp LC(LG(LEFT))  &to 2      &kp LC(LG(RIGHT))  &kp LGUI    &kp RGUI  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
-                                          &trans     &trans             &trans      &mo 10    &trans     &trans
+                                          &trans     &trans             &trans      &mo 8     &trans     &trans
             >;
         };
 
@@ -440,6 +420,26 @@
             >;
 
             label = "CONF";
+        };
+
+        num_layer {
+            label = "NUM";
+            bindings = <
+             &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp N7        &kp N8        &kp N9       &kp N0
+             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI QMARK
+&kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp N1        &kp N2        &kp N3       &kp DLLR        &enru HASH
+                                           &trans           &trans          &mo 8        &trans     &trans        &trans
+            >;
+        };
+
+        num_ru_layer {
+            label = "NUM_RU";
+            bindings = <
+             &kp EXCL       &ruen LT       &kp EQUAL        &ruen GT         &ruen GRAVE    &ruen CARET  &kp N7        &kp N8        &kp N9       &kp N0
+             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHIFT RPAR  &kp PLUS       &kp PRCNT    &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI AMPS
+&kp LG(DOT)  &ruen HASH     &kp STAR       &kp CARET        &kp PIPE         &kp QMARK      &kp FSLH     &kp N1        &kp N2        &kp N3       &ruen DLLR     &kp HASH
+                                           &trans           &trans           &mo 8          &trans       &trans        &trans
+            >;
         };
     };
 };
