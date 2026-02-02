@@ -285,7 +285,7 @@
             bindings = <
        &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L               &kp U                    &kp Y       &kp APOS
        &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N               &kp E                    &kp I       &kp O
-&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp COMMA                &kp PERIOD  &kp FSLH  &kp BSLH
+&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp COMMA                &kp PERIOD  &kp FSLH  &kp DQT
                      &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 4  &mo_shift_caps 6 0  &lt 10 LS(LA(LC(LGUI)))
             >;
         };
@@ -294,7 +294,7 @@
             bindings = <
            &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U               &kp I                    &kp O    &kp P
            &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J               &kp K                    &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M               &kp COMMA                &kp DOT  &kp SQT   &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M               &kp COMMA                &kp DOT  &kp SQT   &kp AT
                          &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 5  &mo_shift_caps 7 0  &lt 10 LS(LA(LC(LGUI)))
             >;
 
