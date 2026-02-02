@@ -227,7 +227,7 @@
         shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_CAPS_WORD";
-            bindings = <&sk RSHFT>, <&caps_word>;
+            bindings = <&sk LSHFT>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -263,7 +263,7 @@
         shift_caps_word_ru: shift_caps_word_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_CAPS_WORD_RU";
-            bindings = <&sk RSHFT>, <&ru_caps_word>;
+            bindings = <&sk LSHFT>, <&ru_caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
