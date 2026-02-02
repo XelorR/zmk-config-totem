@@ -302,19 +302,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L               &kp U                   &kp Y       &kp APOS
-       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N               &kp E                   &kp I       &kp O
-&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp COMMA               &kp PERIOD  &kp FSLH  &kp DQT
-                     &kp LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 4  &mo_shift_caps 9 0  &lt 8 LS(LA(LC(LGUI)))
+       &kp Q  &kp W  &kp F       &kp P        &kp B          &kp J        &kp L               &kp U      &kp Y       &kp APOS
+       &kp A  &kp R  &kp S       &kp T        &kp G          &kp M        &kp N               &kp E      &kp I       &kp O
+&kp Q  &kp Z  &kp X  &kp C       &kp D        &kp V          &kp K        &kp H               &kp COMMA  &kp PERIOD  &kp FSLH  &kp DQT
+                     &lt 8 LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 4  &mo_shift_caps 9 0  &lt 8 F19
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U                   &kp I                   &kp O    &kp P
-           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J                   &kp K                   &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M                   &kp COMMA               &kp DOT  &kp SQT   &kp AT
-                         &kp LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 5  &mo_shift_caps_ru 10 0  &lt 8 LS(LA(LC(LGUI)))
+           &kp Q  &kp W  &kp E       &kp R        &kp T          &kp Y        &kp U                   &kp I      &kp O    &kp P
+           &kp A  &kp S  &kp D       &kp F        &kp G          &kp H        &kp J                   &kp K      &kp L    &kp SEMI
+&kp GRAVE  &kp Z  &kp X  &kp C       &kp V        &kp B          &kp N        &kp M                   &kp COMMA  &kp DOT  &kp SQT   &kp AT
+                         &lt 8 LALT  &lt 6 SPACE  &mo_unmod 7    &mo_unmod 5  &mo_shift_caps_ru 10 0  &lt 8 F19
             >;
 
             label = "RU";
