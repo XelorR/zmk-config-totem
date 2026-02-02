@@ -194,6 +194,25 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <0>;
         };
+
+        shift_caps_word: shift_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_CAPS_WORD";
+            bindings = <&sk RSHFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        mo_shift_caps: mo_shift_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_SHIFT_CAPS";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&shift_caps_word>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -218,19 +237,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp F       &kp P        &kp B          &kp J        &kp L      &kp U                    &kp Y     &kp APOS
-       &kp A  &kp R  &kp S       &kp T        &kp G          &kp M        &kp N      &kp E                    &kp I     &kp O
-&kp Q  &kp Z  &kp X  &kp C       &kp D        &kp V          &kp K        &kp H      &kp LBKT                 &kp RBKT  &kp FSLH  &kp BSLH
-                     &lt 9 LALT  &lt 8 SPACE  &mo_unmod 6    &mo_unmod 4  &kp RSHFT  &lt 10 LS(LA(LC(LGUI)))
+       &kp Q  &kp W  &kp F     &kp P        &kp B          &kp J        &kp L               &kp U                    &kp Y     &kp APOS
+       &kp A  &kp R  &kp S     &kp T        &kp G          &kp M        &kp N               &kp E                    &kp I     &kp O
+&kp Q  &kp Z  &kp X  &kp C     &kp D        &kp V          &kp K        &kp H               &kp LBKT                 &kp RBKT  &kp FSLH  &kp BSLH
+                     &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 4  &mo_shift_caps 6 0  &lt 10 LS(LA(LC(LGUI)))
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q  &kp W  &kp E       &kp R        &kp T          &kp Y        &kp U      &kp I                    &kp O    &kp P
-           &kp A  &kp S  &kp D       &kp F        &kp G          &kp H        &kp J      &kp K                    &kp L    &kp SEMI
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V        &kp B          &kp N        &kp M      &kp COMMA                &kp DOT  &kp LBKT  &kp SQT
-                         &lt 9 LALT  &lt 8 SPACE  &mo_unmod 7    &mo_unmod 5  &kp RSHFT  &lt 10 LS(LA(LC(LGUI)))
+           &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y        &kp U               &kp I                    &kp O    &kp P
+           &kp A  &kp S  &kp D     &kp F        &kp G          &kp H        &kp J               &kp K                    &kp L    &kp SEMI
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N        &kp M               &kp COMMA                &kp DOT  &kp LBKT  &kp SQT
+                         &kp LALT  &lt 8 SPACE  &mo_unmod 9    &mo_unmod 5  &mo_shift_caps 7 0  &lt 10 LS(LA(LC(LGUI)))
             >;
 
             label = "RU";
