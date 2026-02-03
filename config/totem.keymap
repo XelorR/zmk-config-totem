@@ -41,65 +41,6 @@
             key-positions = <0 1>;
             layers = <2>;
         };
-
-        select_all {
-            bindings = <&kp LC(A)>;
-            key-positions = <24 21>;
-            layers = <0 1>;
-        };
-
-        undo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <21 22>;
-            layers = <0 1>;
-        };
-
-        redo {
-            bindings = <&kp LC(Y)>;
-            key-positions = <21 23>;
-            layers = <0 1>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <22 24>;
-            layers = <0 1>;
-        };
-
-        copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <22 23>;
-            layers = <0 1>;
-        };
-
-        paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <23 24>;
-            layers = <0 1>;
-        };
-
-        comma {
-            bindings = <&kp COMMA>;
-            key-positions = <27 28>;
-            layers = <0>;
-        };
-
-        dot {
-            bindings = <&kp DOT>;
-            key-positions = <28 29>;
-            layers = <0>;
-        };
-
-        comma_ru {
-            bindings = <&kp QMARK>;
-            key-positions = <27 28>;
-            layers = <1>;
-        };
-
-        dot_ru {
-            bindings = <&kp FSLH>;
-            key-positions = <28 29>;
-        };
     };
 
     macros {
@@ -363,19 +304,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp DEL      &kp LC(LS(TAB))   &kp TAB    &kp LC(TAB)        &kp ESC     &kp ESC   &kp HOME   &kp UP    &kp END    &kp DEL
-           &sk LGUI     &sk LALT          &sk LCTRL  &sk LSHFT          &kp RET     &kp RET   &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
-&kp PSCRN  &kp LS(DEL)  &kp LC(LG(LEFT))  &to 2      &kp LC(LG(RIGHT))  &kp LGUI    &kp RGUI  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
-                                          &trans     &trans             &trans      &mo 8     &trans     &trans
+           &kp DEL    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp ESC     &kp ESC   &kp HOME   &kp UP    &kp END    &kp DEL
+           &sk LGUI   &sk LALT         &sk LCTRL  &sk LSHFT    &kp RET     &kp RET   &kp LEFT   &kp DOWN  &kp RIGHT  &kp BSPC
+&kp PSCRN  &kp LC(Z)  &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LGUI    &kp RGUI  &kp PG_UP  &ins_row  &kp PG_DN  &gbspc    &kp C_MENU
+                                       &trans     &trans       &trans      &mo 8     &to 2      &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-           &kp DEL      &kp LC(LS(TAB))   &kp TAB    &kp LC(TAB)        &kp ESC      &kp ESC    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp DEL
-           &sk LGUI     &sk LALT          &sk LCTRL  &sk LSHFT          &kp ENTER    &kp RET    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp BSPC
-&kp PSCRN  &kp LS(DEL)  &kp LC(LG(LEFT))  &to 2      &kp LC(LG(RIGHT))  &kp LGUI     &kp RGUI   &msc SCRL_UP    &kp C_MENU      &msc SCRL_DOWN   &gbspc    &kp C_MENU
-                                          &trans     &trans             &trans       &mkp RCLK  &mkp LCLK       &mkp MCLK
+           &kp DEL    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp ESC      &kp ESC    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp DEL
+           &sk LGUI   &sk LALT         &sk LCTRL  &sk LSHFT    &kp ENTER    &kp RET    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp BSPC
+&kp PSCRN  &kp LC(Z)  &kp LC(X)        &kp LC(C)  &kp LC(V)    &kp LGUI     &kp RGUI   &msc SCRL_UP    &kp C_MENU      &msc SCRL_DOWN   &gbspc    &kp C_MENU
+                                       &trans     &trans       &trans       &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
             label = "MOS";
