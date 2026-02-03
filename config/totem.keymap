@@ -11,7 +11,9 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
@@ -235,7 +237,7 @@
        &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J      &kp L        &kp U        &kp Y       &kp APOS
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
 &kp Q  &lt 7 Z     &kp X       &kp C        &kp D        &kp V        &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
-                               &lt 3 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
+                               &lt 9 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
             >;
         };
 
@@ -244,7 +246,7 @@
            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L  &mt LGUI SEMI
 &kp GRAVE  &lt 7 Z     &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &lt 7 FSLH     &kp SQT
-                                   &lt 3 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
+                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
             >;
 
             label = "RU";
@@ -315,6 +317,15 @@
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
 &kp Q  &lt 7 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
                                &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
+            >;
+        };
+
+        media {
+            bindings = <
+       &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)     &kp LC(Z)
+       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&none  &none     &none     &none       &none       &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
+                           &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP    &kp C_PAUSE   &kp K_MUTE
             >;
         };
     };
