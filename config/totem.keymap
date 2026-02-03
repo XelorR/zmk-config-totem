@@ -288,7 +288,7 @@
             bindings = <
           &ruen LEFT_BRACE  &kp AMPS    &kp STAR    &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &none
           &kp CARET         &ruen DLLR  &kp PRCNT   &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &kp PIPE      &none      &none       &none       &none     &none     &none
+&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &none       &none       &none     &none     &none
                                         &ruen AMPS  &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
