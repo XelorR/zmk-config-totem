@@ -364,5 +364,14 @@
                                      &kp LPAR   &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
+
+        fun {
+            bindings = <
+       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &to 2     &none
+       &kp F11  &kp F3  &kp F4     &kp F5     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &none       &none       &none     &none     &none
+                        &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
+            >;
+        };
     };
 };
