@@ -234,7 +234,7 @@
        &kp Q  &kp W  &kp F      &kp P        &kp B        &kp J      &kp L       &kp U      &kp Y       &kp APOS
        &kp A  &kp R  &kp S      &kp T        &kp G        &kp M      &kp N       &kp E      &kp I       &kp O
 &kp Q  &kp Z  &kp X  &kp C      &kp D        &kp V        &kp K      &kp H       &kp COMMA  &kp PERIOD  &kp FSLH  &kp DQT
-                     &lt 3 ESC  &lt 3 SPACE  &lt 3 TAB    &lt 3 RET  &lt 3 BSPC  &lt 3 DEL
+                     &lt 3 ESC  &lt 4 SPACE  &lt 3 TAB    &lt 3 RET  &lt 3 BSPC  &lt 3 DEL
             >;
         };
 
@@ -243,7 +243,7 @@
            &kp Q  &kp W  &kp E      &kp R        &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P
            &kp A  &kp S  &kp D      &kp F        &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI
 &kp GRAVE  &kp Z  &kp X  &kp C      &kp V        &kp B        &kp N      &soft_hard_sign  &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                         &lt 3 ESC  &lt 3 SPACE  &lt 3 TAB    &lt 3 RET  &lt 3 BSPC       &lt 3 DEL
+                         &lt 3 ESC  &lt 5 SPACE  &lt 3 TAB    &lt 3 RET  &lt 3 BSPC       &lt 3 DEL
             >;
 
             label = "RU";
@@ -269,6 +269,24 @@
             >;
 
             label = "GAM_FN";
+        };
+
+        navi {
+            bindings = <
+       &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)   &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&none  &none     &none     &none       &none       &none      &kp INS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+                           &kp ESC     &kp SPACE   &kp TAB    &kp RET     &kp BSPC   &kp DEL
+            >;
+        };
+
+        navi_ru {
+            bindings = <
+       &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &ru_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&none  &none     &none     &none       &none       &none      &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+                           &kp ESC     &kp SPACE   &kp TAB    &kp RET        &kp BSPC   &kp DEL
+            >;
         };
     };
 };
