@@ -237,7 +237,7 @@
        &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J      &kp L        &kp U        &kp Y       &kp APOS
        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
 &kp Q  &lt 7 Z     &kp X       &kp C        &kp D        &kp V        &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
-                               &lt 9 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
+                               &lt 9 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 3 RET  &lt 10 BSPC  &lt 3 DEL
             >;
         };
 
@@ -246,7 +246,7 @@
            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L  &mt LGUI SEMI
 &kp GRAVE  &lt 7 Z     &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &lt 7 FSLH     &kp SQT
-                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 3 RET  &lt 3 BSPC   &lt 3 DEL
+                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 3 RET  &lt 11 BSPC  &lt 3 DEL
             >;
 
             label = "RU";
@@ -326,6 +326,24 @@
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &none  &none     &none     &none       &none       &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
                            &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP    &kp C_PAUSE   &kp K_MUTE
+            >;
+        };
+
+        num {
+            bindings = <
+       &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &none
+       &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &none       &none       &none     &none     &none
+                          &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
+            >;
+        };
+
+        num_ru {
+            bindings = <
+       &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &none
+       &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&none  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &none       &none       &none     &none     &none
+                            &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
     };
