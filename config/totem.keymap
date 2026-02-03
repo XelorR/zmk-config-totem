@@ -205,7 +205,7 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp RALT &kp RGUI &kp RCTRL &kp LSHFT>;
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LALT &kp LGUI &kp LCTRL &kp LSHFT &kp RALT &kp RCTRL &kp RGUI &kp RSHFT>;
 
             label = "MO_UNMOD";
             wait-ms = <0>;
