@@ -30,8 +30,6 @@
     tapping-term-ms = <170>;
 };
 
-&sk { release-after-ms = <60000>; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -109,28 +107,6 @@
             tap-ms = <0>;
         };
 
-        gbspc: gbspc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(HOME) &kp BSPC>;
-            label = "GBSPC";
-        };
-
-        in_below: in_below {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
-            label = "IN_BELOW";
-        };
-
-        in_above: in_above {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
-            label = "IN_ABOVE";
-            wait-ms = <0>;
-        };
-
         ruen: ruen {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -182,16 +158,6 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
-        };
-
-        ins_row: ins_row {
-            compatible = "zmk,behavior-mod-morph";
-            label = "INSERT_ROW";
-            bindings = <&in_below>, <&in_above>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <0>;
         };
 
         ru_caps_word: ru_caps_word {
