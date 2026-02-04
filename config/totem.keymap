@@ -234,7 +234,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)   &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none     &none     &none       &none       &none      &kp INS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none     &none     &tog 10     &tog 4      &none      &kp INS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                            &kp ESC     &kp SPACE   &kp TAB    &kp RET     &kp BSPC   &kp DEL
             >;
         };
@@ -243,7 +243,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &ru_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none     &none     &none       &none       &none      &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none     &none     &tog 11     &tog 5      &none      &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                            &kp ESC     &kp SPACE   &kp TAB    &kp RET        &kp BSPC   &kp DEL
             >;
         };
@@ -252,7 +252,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none     &none     &none       &none       &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none  &none     &none     &tog 12     &tog 6      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                            &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
@@ -280,7 +280,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)     &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none     &none     &none       &none       &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
+&none  &none     &none     &tog 14     &tog 9      &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
                            &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP    &kp C_PAUSE   &kp K_MUTE
             >;
         };
@@ -289,7 +289,7 @@
             bindings = <
             &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &none
             &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &none       &none       &none     &none     &none
+&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 10     &tog 4      &none     &none     &none
                                &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -298,7 +298,7 @@
             bindings = <
           &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &none
           &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &none       &none       &none     &none     &none
+&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 11     &tog 5      &none     &none     &none
                                &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -307,7 +307,7 @@
             bindings = <
         &kp LEFT_BRACE  &kp QMARK  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &none
         &kp COLON       &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &none       &none       &none     &none     &none
+&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &tog 12     &tog 6      &none     &none     &none
                                    &kp AMPS   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -316,7 +316,7 @@
             bindings = <
           &ruen LEFT_BRACE  &kp AMPS    &kp STAR    &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &none
           &kp CARET         &ruen DLLR  &kp PRCNT   &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &none       &none       &none     &none     &none
+&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &tog 12     &tog 6      &none     &none     &none
                                         &ruen AMPS  &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -325,7 +325,7 @@
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &to 2     &none
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &none       &none       &none     &none     &none
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14     &tog 9      &none     &none     &none
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
