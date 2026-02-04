@@ -54,13 +54,13 @@
 
         ru_comma {
             bindings = <&kp QMARK>;
-            key-positions = <6 16>;
+            key-positions = <3 13>;
             layers = <1>;
         };
 
         ru_dot {
             bindings = <&kp FSLH>;
-            key-positions = <3 13>;
+            key-positions = <6 16>;
             layers = <1>;
         };
 
@@ -84,55 +84,37 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <3 13>;
+            key-positions = <6 16>;
             layers = <0>;
         };
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <6 16>;
+            key-positions = <3 13>;
             layers = <0>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <2 12>;
-            layers = <0>;
-        };
-
-        colon_ru {
-            bindings = <&kp CARET>;
-            key-positions = <2 12>;
-            layers = <1>;
-        };
-
-        semi {
-            bindings = <&kp SEMI>;
-            key-positions = <7 17>;
-            layers = <0>;
-        };
-
-        semi_ru {
-            bindings = <&kp DLLR>;
-            key-positions = <7 17>;
-            layers = <1>;
-        };
-
-        exclamation_mark {
-            bindings = <&kp EXCL>;
-            key-positions = <1 11>;
-            layers = <0 1>;
         };
 
         question_mark {
             bindings = <&kp QMARK>;
-            key-positions = <8 18>;
+            key-positions = <7 17>;
             layers = <0>;
         };
 
         question_mark_ru {
             bindings = <&kp AMPS>;
-            key-positions = <8 18>;
+            key-positions = <7 17>;
+            layers = <1>;
+        };
+
+        double_quote {
+            bindings = <&kp DQT>;
+            key-positions = <2 12>;
+            layers = <0>;
+        };
+
+        double_quote_ru {
+            bindings = <&kp AT>;
+            key-positions = <2 12>;
             layers = <1>;
         };
     };
@@ -439,7 +421,7 @@
         num {
             bindings = <
             &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-            &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &kp SQT    &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+            &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
 &enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 11     &tog 5      &none     &kp FSLH        &none
                                &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
             >;
@@ -448,7 +430,7 @@
         num_ru {
             bindings = <
           &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &ruen SQT  &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+          &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
 &kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 12     &tog 6      &none     &kp PIPE        &none
                                &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
@@ -457,7 +439,7 @@
         sym {
             bindings = <
           &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp DQT    &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+          &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
 &kp FSLH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &kp FSLH        &none
                                     &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
@@ -466,7 +448,7 @@
         sym_ru {
             bindings = <
           &ruen LEFT_BRACE  &ruen AMPS  &kp STAR   &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &kp AT     &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+          &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
 &kp PIPE  &ruen TILDE       &kp EXCL    &ruen AT   &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &kp PIPE        &none
                                         &kp LPAR   &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
