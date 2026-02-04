@@ -81,6 +81,17 @@
             key-positions = <13 11>;
             layers = <10 11 12 13>;
         };
+
+        dqt {
+            bindings = <&kp DQT>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+
+        dqt_ru {
+            bindings = <&kp AT>;
+            key-positions = <1 11>;
+        };
     };
 
     macros {
