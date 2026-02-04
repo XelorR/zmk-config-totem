@@ -105,6 +105,18 @@
             key-positions = <23 24>;
             layers = <11>;
         };
+
+        combo_braces_pair {
+            bindings = <&braces_pair>;
+            key-positions = <23 24>;
+            layers = <12>;
+        };
+
+        combo_braces_pair_ru {
+            bindings = <&braces_pair_ru>;
+            key-positions = <23 24>;
+            layers = <13>;
+        };
     };
 
     macros {
@@ -210,6 +222,20 @@
             #binding-cells = <0>;
             bindings = <&lg_en &kp LBKT &kp RBKT &kp LEFT &lg_ru>;
             label = "BRACKET_PAIR_RU";
+        };
+
+        braces_pair: braces_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "BRACES_PAIR";
+        };
+
+        braces_pair_ru: braces_pair_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&lg_en &kp LBRC &kp RBRC &kp LEFT &lg_ru>;
+            label = "BRACES_PAIR_RU";
         };
     };
 
