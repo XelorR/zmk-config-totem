@@ -53,6 +53,18 @@
             key-positions = <7 8>;
             layers = <1>;
         };
+
+        ru_comma {
+            bindings = <&kp QMARK>;
+            key-positions = <27 28>;
+            layers = <1>;
+        };
+
+        ru_dot {
+            bindings = <&kp FSLH>;
+            key-positions = <28 29>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -173,7 +185,7 @@
             bindings = <
            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y       &kp U        &kp I        &kp O       &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &mt LCTRL K  &mt LALT L  &mt LGUI SEMI
-&kp GRAVE  &lt 7 Z     &kp X       &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &kp DOT     &lt 7 FSLH     &kp SQT
+&kp GRAVE  &lt 7 Z     &kp X       &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &kp DOT     &lt 7 SQT      &kp LBKT
                                    &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 13 RET  &lt 11 BSPC  &lt 14 DEL
             >;
 
