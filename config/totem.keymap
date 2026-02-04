@@ -92,6 +92,18 @@
             bindings = <&kp AT>;
             key-positions = <1 11>;
         };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <18 29>;
+            layers = <0>;
+        };
+
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <17 28>;
+            layers = <0>;
+        };
     };
 
     macros {
