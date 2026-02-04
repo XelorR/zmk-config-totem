@@ -87,6 +87,12 @@
             key-positions = <3 1>;
             layers = <13 11>;
         };
+
+        combo_paraphesis_pair {
+            bindings = <&paraphesis_pair>;
+            key-positions = <13 12>;
+            layers = <10 11 12 13>;
+        };
     };
 
     macros {
@@ -171,6 +177,13 @@
             #binding-cells = <0>;
             bindings = <&lg_en &kp LT &kp FSLH &kp GT &kp LEFT &lg_ru>;
             label = "TAG_CLOSE_RU";
+        };
+
+        paraphesis_pair: paraphesis_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARAPHESIS_PAIR";
         };
     };
 
