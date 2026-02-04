@@ -456,19 +456,19 @@
 
         sym {
             bindings = <
-        &kp LEFT_BRACE  &kp QMARK  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-        &kp COLON       &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &kp FSLH        &none
-                                   &kp AMPS   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
+          &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
+          &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&kp FSLH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &kp FSLH        &none
+                                    &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
 
         sym_ru {
             bindings = <
-          &ruen LEFT_BRACE  &kp AMPS    &kp STAR    &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp CARET         &ruen DLLR  &kp PRCNT   &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &kp PIPE        &none
-                                        &ruen AMPS  &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
+          &ruen LEFT_BRACE  &ruen AMPS  &kp STAR   &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
+          &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&kp PIPE  &ruen TILDE       &kp EXCL    &ruen AT   &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &kp PIPE        &none
+                                        &kp LPAR   &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
 
