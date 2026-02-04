@@ -167,100 +167,15 @@
             continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
         };
 
-        td_tog_4: td_tog_4 {
+        td_tog: tap_dance_toggle_layer {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_4";
+            label = "TD_TOGGLE_LAYER";
             #binding-cells = <1>;
             tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 4>;
-        };
-
-        td_tog_5: td_tog_5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_5";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 5>;
-        };
-
-        td_tog_6: td_tog_6 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_6";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 6>;
-        };
-
-        td_tog_7: td_tog_7 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_7";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 7>;
-        };
-
-        td_tog_8: td_tog_8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_8";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 8>;
-        };
-
-        td_tog_9: td_tog_9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_9";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 9>;
-        };
-
-        td_tog_10: td_tog_10 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_10";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 10>;
-        };
-
-        td_tog_11: td_tog_11 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_11";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 11>;
-        };
-
-        td_tog_12: td_tog_12 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_12";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 12>;
-        };
-
-        td_tog_13: td_tog_13 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_13";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 13>;
-        };
-
-        td_tog_14: td_tog_14 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_14";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 14>;
-        };
-
-        td_tog_15: td_tog_15 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOG_15";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <&none>, <&tog 15>;
+            bindings = <
+                &none
+                &tog 0
+            >;
         };
     };
 
@@ -330,7 +245,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)   &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none     &none     &td_tog_10  &td_tog_4   &none      &kp INS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none     &none     &tog 10     &tog 4      &none      &kp INS     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                            &kp ESC     &kp SPACE   &kp TAB    &kp RET     &kp BSPC   &kp DEL
             >;
         };
@@ -339,7 +254,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)      &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &ru_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none     &none     &td_tog_11  &td_tog_5   &none      &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none     &none     &tog 11     &tog 5      &none      &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                            &kp ESC     &kp SPACE   &kp TAB    &kp RET        &kp BSPC   &kp DEL
             >;
         };
@@ -348,7 +263,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none     &none     &td_tog_12  &td_tog_6   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none  &none     &none     &tog 12     &tog 6      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                            &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
@@ -376,7 +291,7 @@
             bindings = <
        &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)     &kp LC(C)     &kp LC(X)     &kp LC(Z)
        &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none     &none     &td_tog_14  &td_tog_9   &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
+&none  &none     &none     &tog 14     &tog 9      &none      &out OUT_TOG  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0
                            &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP    &kp C_PAUSE   &kp K_MUTE
             >;
         };
@@ -385,7 +300,7 @@
             bindings = <
             &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &none
             &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &td_tog_10  &td_tog_4   &none     &none     &none
+&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 10     &tog 4      &none     &none     &none
                                &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -394,7 +309,7 @@
             bindings = <
           &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &none
           &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &td_tog_11  &td_tog_5   &none     &none     &none
+&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 11     &tog 5      &none     &none     &none
                                &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -403,7 +318,7 @@
             bindings = <
         &kp LEFT_BRACE  &kp QMARK  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &none
         &kp COLON       &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &td_tog_12  &td_tog_6   &none     &none     &none
+&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &tog 12     &tog 6      &none     &none     &none
                                    &kp AMPS   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -412,7 +327,7 @@
             bindings = <
           &ruen LEFT_BRACE  &kp AMPS    &kp STAR    &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &none
           &kp CARET         &ruen DLLR  &kp PRCNT   &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &td_tog_13  &td_tog_15  &none     &none     &none
+&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &tog 12     &tog 6      &none     &none     &none
                                         &ruen AMPS  &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -421,17 +336,8 @@
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &to 2     &none
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &td_tog_14  &td_tog_9   &none     &none     &none
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14     &tog 9      &none     &none     &none
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
-            >;
-        };
-
-        mouse_ru {
-            bindings = <
-       &none     &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-       &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none     &none     &td_tog_13  &td_tog_15  &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                           &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
     };
