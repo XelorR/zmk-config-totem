@@ -307,7 +307,7 @@
             bindings = <
         &kp LEFT_BRACE  &kp QMARK  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &none
         &kp COLON       &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &tog 12     &tog 6      &none     &none     &none
+&kp AT  &kp TILDE       &kp EXCL   &kp DQT    &kp HASH   &kp PIPE     &none      &tog 12     &tog 6      &none     &kp FSLH  &none
                                    &kp AMPS   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -316,7 +316,7 @@
             bindings = <
           &ruen LEFT_BRACE  &kp AMPS    &kp STAR    &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &none
           &kp CARET         &ruen DLLR  &kp PRCNT   &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &tog 13     &tog 15     &none     &none     &none
+&ruen AT  &ruen TILDE       &kp EXCL    &kp AT      &ruen HASH   &ruen PIPE    &none      &tog 13     &tog 15     &none     &kp PIPE  &none
                                         &ruen AMPS  &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
