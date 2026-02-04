@@ -117,6 +117,12 @@
             key-positions = <2 12>;
             layers = <1>;
         };
+
+        yo {
+            bindings = <&kp GRAVE>;
+            key-positions = <3 4>;
+            layers = <1>;
+        };
     };
 
     macros {
