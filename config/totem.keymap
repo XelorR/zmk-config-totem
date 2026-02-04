@@ -224,19 +224,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
-       &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp Q  &lt 7 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
-                               &lt 9 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 12 RET  &lt 10 BSPC  &lt 14 DEL
+        &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
+        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&kp AT  &lt 7 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
+                                &lt 9 ESC    &lt 4 SPACE  &lt 6 TAB    &lt 12 RET  &lt 10 BSPC  &lt 14 DEL
             >;
         };
 
         ru_layer {
             bindings = <
-           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y       &kp U        &kp I        &kp O       &kp P
+           &kp Q         &kp W         &kp E          &kp R        &kp T        &kp Y       &kp U        &kp I          &kp O         &kp P
            &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp GRAVE  &lt 7 Z     &kp X       &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &kp DOT     &lt 7 SQT      &kp LBKT
-                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 13 RET  &lt 11 BSPC  &lt 14 DEL
+&kp GRAVE  &lt 7 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 7 SQT        &kp LBKT
+                                       &lt 9 ESC      &lt 5 SPACE  &lt 6 TAB    &lt 13 RET  &lt 11 BSPC  &lt 14 DEL
             >;
 
             label = "RU";
@@ -303,10 +303,10 @@
         shortcut {
             label = "shortcut";
             bindings = <
-       &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
-       &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp Q  &lt 7 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
-                               &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
+        &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
+        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&kp AT  &lt 7 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 7 FSLH  &kp DQT
+                                &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
             >;
         };
 
