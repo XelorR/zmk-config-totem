@@ -66,56 +66,20 @@
 
         combo_tag_open {
             bindings = <&tag_open>;
-            key-positions = <3 2>;
-            layers = <12 10>;
-        };
-
-        combo_tag_close {
-            bindings = <&tag_close>;
             key-positions = <3 1>;
             layers = <12 10>;
         };
 
         combo_tag_open_ru {
             bindings = <&tag_open_ru>;
-            key-positions = <3 2>;
-            layers = <13 11>;
-        };
-
-        combo_tag_close_ru {
-            bindings = <&tag_close_ru>;
             key-positions = <3 1>;
             layers = <13 11>;
         };
 
         combo_paraphesis_pair {
             bindings = <&paraphesis_pair>;
-            key-positions = <13 12>;
+            key-positions = <13 11>;
             layers = <10 11 12 13>;
-        };
-
-        combo_bracket_pair {
-            bindings = <&bracket_pair>;
-            key-positions = <23 24>;
-            layers = <10>;
-        };
-
-        combo_bracket_pair_ru {
-            bindings = <&bracket_pair_ru>;
-            key-positions = <23 24>;
-            layers = <11>;
-        };
-
-        combo_braces_pair {
-            bindings = <&braces_pair>;
-            key-positions = <23 24>;
-            layers = <12>;
-        };
-
-        combo_braces_pair_ru {
-            bindings = <&braces_pair_ru>;
-            key-positions = <23 24>;
-            layers = <13>;
         };
     };
 
