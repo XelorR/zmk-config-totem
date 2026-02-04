@@ -435,7 +435,7 @@
 
         media {
             bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &bt BT_PRV    &out OUT_BLE  &out OUT_USB  &bt BT_NXT
+       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR      &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &none  &none           &none     &tog 15     &tog 10     &none      &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
                                  &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PAUSE   &kp K_MUTE
