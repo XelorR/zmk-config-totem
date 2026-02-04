@@ -166,17 +166,6 @@
             #binding-cells = <0>;
             continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
         };
-
-        td_tog: tap_dance_toggle_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TOGGLE_LAYER";
-            #binding-cells = <1>;
-            tapping-term-ms = <180>;
-            bindings = <
-                &none
-                &tog 0
-            >;
-        };
     };
 
     keymap {
