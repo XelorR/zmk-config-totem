@@ -54,13 +54,13 @@
 
         ru_comma {
             bindings = <&kp QMARK>;
-            key-positions = <28 17>;
+            key-positions = <6 16>;
             layers = <1>;
         };
 
         ru_dot {
             bindings = <&kp FSLH>;
-            key-positions = <29 18>;
+            key-positions = <3 13>;
             layers = <1>;
         };
 
@@ -82,27 +82,58 @@
             layers = <11 12 13 14>;
         };
 
-        dqt {
-            bindings = <&kp DQT>;
-            key-positions = <1 11>;
-            layers = <0>;
-        };
-
-        dqt_ru {
-            bindings = <&kp AT>;
-            key-positions = <1 11>;
-        };
-
         dot {
             bindings = <&kp DOT>;
-            key-positions = <18 29>;
+            key-positions = <3 13>;
             layers = <0>;
         };
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <17 28>;
+            key-positions = <6 16>;
             layers = <0>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <2 12>;
+            layers = <0>;
+        };
+
+        colon_ru {
+            bindings = <&kp CARET>;
+            key-positions = <2 12>;
+            layers = <1>;
+        };
+
+        semi {
+            bindings = <&kp SEMI>;
+            key-positions = <7 17>;
+            layers = <0>;
+        };
+
+        semi_ru {
+            bindings = <&kp DLLR>;
+            key-positions = <7 17>;
+            layers = <1>;
+        };
+
+        exclamation_mark {
+            bindings = <&kp EXCL>;
+            key-positions = <1 11>;
+            layers = <0 1>;
+        };
+
+        question_mark {
+            bindings = <&kp QMARK>;
+            key-positions = <8 18>;
+            layers = <0>;
+        };
+
+        question_mark_ru {
+            bindings = <&kp AMPS>;
+            key-positions = <8 18>;
+            layers = <1>;
         };
     };
 
