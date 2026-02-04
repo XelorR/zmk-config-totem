@@ -52,14 +52,14 @@
             layers = <1>;
         };
 
-        ru_comma {
-            bindings = <&kp QMARK>;
+        ru_comma_combo {
+            bindings = <&ru_comma>;
             key-positions = <3 13>;
             layers = <1>;
         };
 
-        ru_dot {
-            bindings = <&kp FSLH>;
+        ru_dot_combo {
+            bindings = <&ru_dot>;
             key-positions = <6 16>;
             layers = <1>;
         };
@@ -289,6 +289,24 @@
             label = "TD_BOOTLOADER";
             #binding-cells = <0>;
             bindings = <&none>, <&bootloader>;
+        };
+
+        ru_dot: ru_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_DOT";
+            bindings = <&kp FSLH>, <&ruen GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        ru_comma: ru_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_COMMA";
+            bindings = <&kp QUESTION>, <&ruen LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
