@@ -93,6 +93,18 @@
             key-positions = <13 12>;
             layers = <10 11 12 13>;
         };
+
+        combo_bracket_pair {
+            bindings = <&bracket_pair>;
+            key-positions = <23 24>;
+            layers = <10>;
+        };
+
+        combo_bracket_pair_ru {
+            bindings = <&bracket_pair_ru>;
+            key-positions = <23 24>;
+            layers = <11>;
+        };
     };
 
     macros {
@@ -184,6 +196,20 @@
             #binding-cells = <0>;
             bindings = <&kp LPAR &kp RPAR &kp LEFT>;
             label = "PARAPHESIS_PAIR";
+        };
+
+        bracket_pair: bracket_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "BRACKET_PAIR";
+        };
+
+        bracket_pair_ru: bracket_pair_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&lg_en &kp LBKT &kp RBKT &kp LEFT &lg_ru>;
+            label = "BRACKET_PAIR_RU";
         };
     };
 
