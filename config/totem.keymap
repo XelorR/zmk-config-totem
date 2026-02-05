@@ -95,13 +95,13 @@
         };
 
         question_mark {
-            bindings = <&kp QMARK>;
+            bindings = <&qmark_fslash>;
             key-positions = <7 17>;
             layers = <0>;
         };
 
         question_mark_ru {
-            bindings = <&kp AMPS>;
+            bindings = <&qmark_fslash_ru>;
             key-positions = <7 17>;
             layers = <1>;
         };
@@ -310,6 +310,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COMMA";
             bindings = <&kp QUESTION>, <&ruen LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        qmark_fslash: qmark_fslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_FSLASH";
+            bindings = <&kp QMARK>, <&kp FSLH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        qmark_fslash_ru: qmark_fslash_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_FSLASH_RU";
+            bindings = <&kp AMPS>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
