@@ -243,6 +243,41 @@
             bindings = <&lg_en &kp LBRC &kp RBRC &kp LEFT &lg_ru>;
             label = "BRACES_PAIR_RU";
         };
+
+        bt_clear_0: bt_clear_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
+            label = "BT_CLEAR_0";
+        };
+
+        bt_clear_1: bt_clear_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+            label = "BT_CLEAR_1";
+        };
+
+        bt_clear_2: bt_clear_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+            label = "BT_CLEAR_2";
+        };
+
+        bt_clear_3: bt_clear_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+            label = "BT_CLEAR_3";
+        };
+
+        bt_clear_4: bt_clear_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
+            label = "BT_CLEAR_4";
+        };
     };
 
     behaviors {
@@ -328,6 +363,51 @@
             compatible = "zmk,behavior-mod-morph";
             label = "QMARK_FSLASH_RU";
             bindings = <&kp AMPS>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_0: bt_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_0";
+            bindings = <&bt BT_SEL 0>, <&bt_clear_0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_1: bt_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_1";
+            bindings = <&bt BT_SEL 1>, <&bt_clear_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_2: bt_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_2";
+            bindings = <&bt BT_SEL 2>, <&bt_clear_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_3: bt_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_3";
+            bindings = <&bt BT_SEL 3>, <&bt_clear_3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        bt_4: bt_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_4";
+            bindings = <&bt BT_SEL 4>, <&bt_clear_4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -455,7 +535,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &bt BT_CLR      &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none           &none     &tog 15     &tog 10     &none      &out OUT_TOG    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none  &none           &none     &tog 15     &tog 10     &none      &out OUT_TOG    &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                  &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PAUSE   &kp K_MUTE
             >;
         };
