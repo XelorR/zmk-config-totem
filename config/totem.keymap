@@ -12,6 +12,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -421,6 +422,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        u_ep_tog: u_ep_tog {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_EP_TOG";
+            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -543,7 +553,7 @@
         media {
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none           &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &none  &none           &none     &tog 15     &tog 10     &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                  &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PAUSE   &kp K_MUTE
             >;
