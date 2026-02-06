@@ -121,7 +121,7 @@
 
         yo {
             bindings = <&kp GRAVE>;
-            key-positions = <3 4>;
+            key-positions = <1 2>;
             layers = <1>;
         };
     };
