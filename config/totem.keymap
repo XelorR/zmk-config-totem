@@ -279,6 +279,21 @@
             bindings = <&bt BT_SEL 4 &bt BT_CLR>;
             label = "BT_CLEAR_4";
         };
+
+        in_below: in_below {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp LS(RET)>;
+            label = "IN_BELOW";
+        };
+
+        in_above: in_above {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            label = "IN_ABOVE";
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -461,6 +476,16 @@
             flavor = "tap-preferred";
             tapping-term-ms = <170>;
         };
+
+        ins_row: ins_row {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INSERT_ROW";
+            bindings = <&in_below>, <&in_above>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <0>;
+        };
     };
 
     keymap {
@@ -539,7 +564,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 10     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none           &none     &tog 10     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET       &kp BSPC   &kp DEL
             >;
         };
@@ -548,7 +573,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word_ru  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 11     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none           &none     &tog 11     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET          &kp BSPC   &kp DEL
             >;
         };
