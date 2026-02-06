@@ -566,7 +566,7 @@
             bindings = <
         &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
         &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &tog 8       &tog 8     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
+&tog 8  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &tog 8
                               &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
             >;
         };
