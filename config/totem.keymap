@@ -449,6 +449,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_ruen: mt_ruen {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RUEN";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&ruen>;
+
+            global-quick-tap;
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
+        };
     };
 
     keymap {
