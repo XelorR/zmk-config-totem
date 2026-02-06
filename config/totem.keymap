@@ -582,19 +582,19 @@
 
         num {
             bindings = <
-            &kp STAR   &kp N7  &kp N8   &kp N9  &kp EQUAL    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
+            &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
             &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp UNDER    &none      &tog 10     &tog 5      &none     &none           &none
-                               &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
+&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &none      &tog 10     &tog 5      &none     &none           &none
+                               &kp DOT  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
 
         num_ru {
             bindings = <
-          &kp STAR   &kp N7  &kp N8    &kp N9  &kp EQUAL    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
+          &kp STAR   &kp N7  &kp N8    &kp N9  &kp MINUS    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
           &kp CARET  &kp N4  &kp N5    &kp N6  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp UNDER    &none      &tog 11     &tog 6      &none     &none           &none
-                             &kp FSLH  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
+&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &none      &tog 11     &tog 6      &none     &none           &none
+                             &kp FSLH  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
 
