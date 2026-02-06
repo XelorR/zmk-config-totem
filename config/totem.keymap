@@ -68,19 +68,19 @@
         combo_tag_open {
             bindings = <&tag_open>;
             key-positions = <3 1>;
-            layers = <13 11>;
+            layers = <12 10>;
         };
 
         combo_tag_open_ru {
             bindings = <&tag_open_ru>;
             key-positions = <3 1>;
-            layers = <14 12>;
+            layers = <13 11>;
         };
 
         combo_paraphesis_pair {
             bindings = <&paraphesis_pair>;
             key-positions = <13 11>;
-            layers = <11 12 13 14>;
+            layers = <10 11 12 13>;
         };
 
         dot {
@@ -487,8 +487,8 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp DQT
-                                &lt 10 ESC   &lt 5 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 15 DEL
+&kp AT  &lt 8 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 8 FSLH  &kp DQT
+                                &lt 9 ESC    &lt 5 SPACE  &lt 7 TAB    &lt 12 RET  &lt 10 BSPC  &lt 14 DEL
             >;
         };
 
@@ -496,8 +496,8 @@
             bindings = <
            &kp Q         &kp W         &kp E          &kp R        &kp T        &kp Y       &kp U        &kp I          &kp O         &kp P
            &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp GRAVE  &lt 9 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 9 SQT        &kp LBKT
-                                       &lt 10 ESC     &lt 6 SPACE  &lt 8 TAB    &lt 14 RET  &lt 12 BSPC  &lt 15 DEL
+&kp GRAVE  &lt 8 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 8 SQT        &kp LBKT
+                                       &lt 9 ESC      &lt 6 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 14 DEL
             >;
 
             label = "RU";
@@ -508,7 +508,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 10
+                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 9
             >;
 
             label = "GAM";
@@ -530,7 +530,7 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp DQT
+&kp AT  &lt 8 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 8 FSLH  &kp DQT
                                 &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
             >;
         };
@@ -539,7 +539,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 11     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none           &none     &tog 10     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET       &kp BSPC   &kp DEL
             >;
         };
@@ -548,7 +548,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word_ru  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 12     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &none           &none     &tog 11     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET          &kp BSPC   &kp DEL
             >;
         };
@@ -557,16 +557,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none           &none     &tog 13     &tog 7      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                 &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
-            >;
-        };
-
-        mouse_ru {
-            bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none           &none     &tog 14     &tog 8      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none  &none           &none     &none       &tog 7      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                                  &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
@@ -584,7 +575,7 @@
             bindings = <
        &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none           &none     &tog 15     &tog 10     &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+&none  &none           &none     &tog 14     &tog 9      &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                  &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
             >;
         };
@@ -593,7 +584,7 @@
             bindings = <
             &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
             &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 11     &tog 5      &none     &none           &none
+&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 10     &tog 5      &none     &none           &none
                                &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -602,7 +593,7 @@
             bindings = <
           &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
           &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 12     &tog 6      &none     &none           &none
+&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 11     &tog 6      &none     &none           &none
                                &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -629,7 +620,7 @@
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &to 2     &td_bootloader
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 15     &tog 10     &none     &none           &none
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14     &tog 9      &none     &none           &none
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
