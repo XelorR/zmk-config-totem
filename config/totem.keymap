@@ -603,7 +603,7 @@
              &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
              &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
 &kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR        &enru HASH
-                                           &trans           &trans          &trans       &trans     &trans          &trans
+                                           &trans           &trans          &kp UNDER    &trans     &trans          &trans
             >;
         };
 
@@ -612,7 +612,7 @@
              &kp EXCL       &ruen LT       &kp EQUAL        &ruen GT         &ruen GRAVE    &ruen CARET  &ruen LBKT           &kp UNDER       &ruen RBKT          &ruen AT
              &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHIFT RPAR  &kp PLUS       &kp PRCNT    &mt_ruen LSHFT LBRC  &mt LCTRL DLLR  &mt_ruen LALT RBRC  &mt LGUI AMPS
 &kp LG(DOT)  &ruen HASH     &kp STAR       &kp CARET        &kp PIPE         &kp QMARK      &kp FSLH     &ruen PIPE           &ruen TILDE     &ruen AMPS          &ruen DLLR     &kp HASH
-                                           &trans           &trans           &trans         &trans       &trans               &trans
+                                           &trans           &trans           &kp UNDER      &trans       &trans               &trans
             >;
         };
 
