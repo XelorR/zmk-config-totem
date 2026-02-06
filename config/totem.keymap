@@ -581,7 +581,7 @@
             bindings = <
             &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
             &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 11     &tog 5      &none     &kp FSLH        &none
+&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 11     &tog 5      &none     &none           &none
                                &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -590,7 +590,7 @@
             bindings = <
           &ruen LBKT   &kp N7  &kp N8    &kp N9  &ruen RBKT    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
           &kp DLLR     &kp N4  &kp N5    &kp N6  &kp EQUAL     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 12     &tog 6      &none     &kp PIPE        &none
+&kp HASH  &ruen GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH      &none      &tog 12     &tog 6      &none     &none           &none
                                &kp FSLH  &kp N0  &kp MINUS     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -599,7 +599,7 @@
             bindings = <
           &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
           &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp FSLH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &kp FSLH        &none
+&kp FSLH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &none           &none
                                     &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -608,7 +608,7 @@
             bindings = <
           &ruen LEFT_BRACE  &ruen AMPS  &kp STAR   &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
           &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp PIPE  &ruen TILDE       &kp EXCL    &ruen AT   &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &kp PIPE        &none
+&kp PIPE  &ruen TILDE       &kp EXCL    &ruen AT   &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &none           &none
                                         &kp LPAR   &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
