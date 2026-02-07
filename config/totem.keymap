@@ -507,8 +507,8 @@
             bindings = <
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 10
+&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &kp RET
+                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 9
             >;
 
             label = "GAM";
@@ -516,10 +516,10 @@
 
         gaming_fn {
             bindings = <
-         &kp I  &kp N1  &kp N2  &kp N3   &kp T     &kp ESC    &kp F1  &kp F2  &kp F3  &kp F10
-         &kp M  &kp N4  &kp N5  &kp N6   &kp G     &kp ENTER  &kp F4  &kp F5  &kp F6  &kp F11
-&kp ESC  &kp J  &kp N7  &kp N8  &kp N9   &kp B     &kp TAB    &kp F7  &kp F8  &kp F9  &kp F12  &kp F12
-                        &kp N0  &kp RET  &trans    &trans     &trans  &trans
+       &kp ESC  &kp N1  &kp N2  &kp N3   &kp T     &kp C_VOL_UP  &kp F1  &kp F2  &kp F3  &kp F10
+       &kp I    &kp N4  &kp N5  &kp N6   &kp G     &kp C_VOL_DN  &kp F4  &kp F5  &kp F6  &kp F11
+&kp J  &kp M    &kp N7  &kp N8  &kp N9   &kp B     &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F12  &kp PSCRN
+                        &kp N0  &kp RET  &trans    &trans        &trans  &trans
             >;
 
             label = "GAM_FN";
