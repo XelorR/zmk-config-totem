@@ -35,12 +35,6 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-            layers = <2>;
-        };
-
         kha {
             bindings = <&kp LBKT>;
             key-positions = <7 6>;
