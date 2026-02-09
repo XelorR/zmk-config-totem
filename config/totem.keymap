@@ -579,19 +579,19 @@
 
         navi {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &none         &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &mo 8     &tog 2           &tog 10    &tog 5       &none        &kp INS       &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
-                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET       &kp BSPC      &kp DEL
+                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &kp C_AL_MY_COMPUTER  &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+&td_bootloader  &mo 8     &tog 2           &tog 10    &tog 5       &none        &kp INS               &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET               &kp BSPC      &kp DEL
             >;
         };
 
         navi_ru {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &none            &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word_ru  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &mo 8     &tog 2           &tog 11    &tog 6       &none        &kp INS          &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
-                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET          &kp BSPC      &kp DEL
+                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &kp C_AL_MY_COMPUTER  &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word_ru       &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+&td_bootloader  &mo 8     &tog 2           &tog 11    &tog 6       &none        &kp INS               &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET               &kp BSPC      &kp DEL
             >;
         };
 
