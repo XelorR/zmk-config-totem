@@ -512,6 +512,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        p_HOME: p_HOME {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_HOME";
+            bindings = <&kp HOME>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        p_END: p_END {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_END";
+            bindings = <&kp END>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -590,7 +608,7 @@
             bindings = <
                 &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 5     &kp C_AL_MY_COMPUTER  &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
                 &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 10    &u_caps_word          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp INS               &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp INS               &p_HOME       &kp PG_DN  &kp PG_UP  &p_END       &none
                                              &kp ESC    &kp SPACE    &kp TAB    &kp RET               &kp BSPC      &kp DEL
             >;
         };
@@ -599,7 +617,7 @@
             bindings = <
                 &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 6     &kp C_AL_MY_COMPUTER  &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
                 &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 11    &u_caps_word_ru       &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp INS               &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp INS               &p_HOME       &kp PG_DN  &kp PG_UP  &p_END       &none
                                              &kp ESC    &kp SPACE    &kp TAB    &kp RET               &kp BSPC      &kp DEL
             >;
         };
