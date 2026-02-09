@@ -606,10 +606,10 @@
 
         mouse {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&td_bootloader  &mo 8     &tog 2           &none      &tog 7       &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                           &kp ESC    &kp SPACE    &kp TAB      &mkp RCLK  &mkp LCLK       &mkp MCLK
+                &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 7     &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
+                &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                                             &kp ESC    &kp SPACE    &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -624,27 +624,27 @@
 
         media {
             bindings = <
-                &kp DEL   &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &none        &none       &out OUT_BLE  &out OUT_USB  &none         &none
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_ep_tog   &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&td_bootloader  &mo 8     &tog 2           &tog 14    &tog 9       &none        &u_out_tog  &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                           &kp ESC    &kp SPACE    &kp TAB      &kp C_STOP  &kp C_PP      &kp K_MUTE
+                &kp DEL     &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &tog 9     &none       &out OUT_BLE  &out OUT_USB  &none         &none
+                &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 14    &u_ep_tog   &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &u_out_tog  &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+                                             &kp ESC    &kp SPACE    &kp TAB    &kp C_STOP  &kp C_PP      &kp K_MUTE
             >;
         };
 
         num {
             bindings = <
-            &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &none      &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-            &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &none      &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &none      &tog 10          &tog 5     &tog 2       &mo 8     &td_bootloader
+            &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &tog 10    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+            &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &tog 5     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
+&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
                                &kp DOT  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC         &kp DEL
             >;
         };
 
         num_ru {
             bindings = <
-          &kp STAR   &kp N7  &kp N8    &kp N9  &kp MINUS    &none      &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-          &kp CARET  &kp N4  &kp N5    &kp N6  &kp PLUS     &none      &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &none      &tog 11          &tog 6     &tog 2       &mo 8     &td_bootloader
+          &kp STAR   &kp N7  &kp N8    &kp N9  &kp MINUS    &tog 11    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+          &kp CARET  &kp N4  &kp N5    &kp N6  &kp PLUS     &tog 6     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
+&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
                              &kp FSLH  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC         &kp DEL
             >;
         };
@@ -669,9 +669,9 @@
 
         fun {
             bindings = <
-       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-       &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14          &tog 9     &tog 2       &mo 8     &td_bootloader
+       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &tog 14    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+       &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &tog 9     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC         &kp DEL
             >;
         };
