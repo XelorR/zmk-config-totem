@@ -597,10 +597,10 @@
 
         mouse {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&td_bootloader  &mo 8     &tog 2           &none      &tog 7       &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                           &kp ESC    &kp SPACE    &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
+                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&td_bootloader  &mo 8     &tog 2           &none      &tog 7       &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                                           &kp ESC    &kp SPACE    &kp TAB      &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -615,10 +615,10 @@
 
         media {
             bindings = <
-                &kp DEL   &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &none      &td_bootloader  &out OUT_BLE  &out OUT_USB  &none         &none
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&td_bootloader  &mo 8     &tog 2           &tog 14    &tog 9       &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                           &kp ESC    &kp SPACE    &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+                &kp DEL   &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &none        &td_bootloader  &out OUT_BLE  &out OUT_USB  &none         &none
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&td_bootloader  &mo 8     &tog 2           &tog 14    &tog 9       &none        &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+                                           &kp ESC    &kp SPACE    &kp TAB      &kp C_STOP      &kp C_PP      &kp K_MUTE
             >;
         };
 
