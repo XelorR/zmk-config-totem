@@ -569,7 +569,7 @@
             bindings = <
        &td_bootloader  &tog 2    &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 10     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
+&none  &mo 8           &none     &tog 10     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET       &kp BSPC   &kp DEL
             >;
         };
@@ -578,7 +578,7 @@
             bindings = <
        &td_bootloader  &tog 2    &switch_ru  &switch_en  &none      &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word_ru  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 11     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
+&none  &mo 8           &none     &tog 11     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &ins_row
                                  &kp ESC     &kp SPACE   &kp TAB    &kp RET          &kp BSPC   &kp DEL
             >;
         };
@@ -587,7 +587,7 @@
             bindings = <
        &td_bootloader  &tog 2    &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none           &none     &none       &tog 7      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none  &mo 8           &none     &none       &tog 7      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                                  &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
@@ -605,7 +605,7 @@
             bindings = <
        &td_bootloader  &tog 2    &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
        &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none           &none     &tog 14     &tog 9      &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+&none  &mo 8           &none     &tog 14     &tog 9      &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                  &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
             >;
         };
@@ -614,7 +614,7 @@
             bindings = <
             &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &none      &switch_en  &switch_ru  &tog 2    &td_bootloader
             &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &none      &tog 10     &tog 5      &none     &none           &none
+&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &none      &tog 10     &tog 5      &none     &mo 8           &none
                                &kp DOT  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -623,7 +623,7 @@
             bindings = <
           &kp STAR   &kp N7  &kp N8    &kp N9  &kp MINUS    &none      &switch_en  &switch_ru  &tog 2    &td_bootloader
           &kp CARET  &kp N4  &kp N5    &kp N6  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &none      &tog 11     &tog 6      &none     &none           &none
+&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &none      &tog 11     &tog 6      &none     &mo 8           &none
                              &kp FSLH  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
@@ -650,7 +650,7 @@
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &tog 2    &td_bootloader
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14     &tog 9      &none     &none           &none
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14     &tog 9      &none     &mo 8           &none
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
