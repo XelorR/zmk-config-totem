@@ -579,19 +579,19 @@
 
         navi {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none      &none         &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &none      &u_caps_word  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &mo 8     &tog 2           &tog 10    &tog 5       &none      &kp INS       &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
-                                           &kp ESC    &kp SPACE    &kp TAB    &kp RET       &kp BSPC      &kp DEL
+                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &none         &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+&td_bootloader  &mo 8     &tog 2           &tog 10    &tog 5       &none        &kp INS       &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET       &kp BSPC      &kp DEL
             >;
         };
 
         navi_ru {
             bindings = <
-                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none      &none            &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
-                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &none      &u_caps_word_ru  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &mo 8     &tog 2           &tog 11    &tog 6       &none      &kp INS          &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
-                                           &kp ESC    &kp SPACE    &kp TAB    &kp RET          &kp BSPC      &kp DEL
+                &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &none        &none            &kp LC(HOME)  &in_below  &in_above  &kp LC(END)
+                &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &kp PSCRN    &u_caps_word_ru  &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+&td_bootloader  &mo 8     &tog 2           &tog 11    &tog 6       &none        &kp INS          &kp HOME      &kp PG_DN  &kp PG_UP  &kp END      &none
+                                           &kp ESC    &kp SPACE    &kp TAB      &kp RET          &kp BSPC      &kp DEL
             >;
         };
 
@@ -615,7 +615,7 @@
 
         media {
             bindings = <
-                &kp DEL   &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
+                &kp DEL   &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &none      &td_bootloader  &out OUT_BLE  &out OUT_USB  &none         &none
                 &kp LGUI  &kp LALT         &kp LCTRL  &kp LSHFT    &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &td_bootloader  &mo 8     &tog 2           &tog 14    &tog 9       &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                            &kp ESC    &kp SPACE    &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
@@ -660,7 +660,7 @@
 
         fun {
             bindings = <
-       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+       &kp F12  &kp F7  &kp F8     &kp F9     &td_bootloader     &none      &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
 &none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 14          &tog 9     &tog 2       &mo 8     &td_bootloader
                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC         &kp DEL
