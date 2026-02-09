@@ -594,10 +594,10 @@
 
         button {
             bindings = <
-        &kp C_AL_CALC  &kp LC(S)  &kp LC(F)  &kp C_AL_MY_COMPUTER  &kp LC(N)    &kp LC(N)  &kp C_AL_MY_COMPUTER  &kp LC(F)  &kp LC(S)  &kp C_AL_CALC
-        &kp LGUI       &kp LALT   &kp LCTRL  &kp LSHFT             &kp DEL      &kp DEL    &kp LSHFT             &kp LCTRL  &kp LALT   &kp LGUI
-&tog 8  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)             &kp LC(Y)    &kp LC(Y)  &kp LC(V)             &kp LC(C)  &kp LC(X)  &kp LC(Z)      &tog 8
-                                  &mkp MCLK  &mkp LCLK             &mkp RCLK    &mkp RCLK  &mkp LCLK             &mkp MCLK
+        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)               &kp LC(Y)             &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp C_AL_MY_COMPUTER    &kp C_AL_MY_COMPUTER  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+&tog 8  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)               &kp LC(Y)             &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &tog 8
+                              &mkp MCLK  &mkp LCLK  &mkp RCLK               &mkp RCLK             &mkp LCLK  &mkp MCLK
             >;
         };
 
