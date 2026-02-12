@@ -1,0 +1,7 @@
+.west
+build
+build-left
+build-right
+modules
+zephyr
+zmk
