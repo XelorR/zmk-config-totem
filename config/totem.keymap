@@ -608,7 +608,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        base_layer_linux {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "BASE";
@@ -632,7 +632,7 @@
             >;
         };
 
-        ru_layer {
+        ru_layer_linux {
             bindings = <
            &kp Q           &kp W         &kp E              &kp R                &kp T                &kp Y               &kp U        &kp I          &kp O         &kp P
            &hrml LGUI A    &hrml LALT S  &hrml LCTRL D      &mt LSHFT F          &kp G                &kp H               &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
@@ -665,7 +665,7 @@
             label = "GAM_FN";
         };
 
-        shortcut {
+        shortcut_linux {
             label = "shortcut";
             bindings = <
                 &kp Q       &kp W       &kp F            &kp P              &kp B              &kp J              &kp L        &kp U        &kp Y       &kp APOS
@@ -675,7 +675,7 @@
             >;
         };
 
-        navi {
+        navi_linux {
             bindings = <
                 &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 5     &kp INS               &p_HOME       &kp PG_DN  &kp PG_UP  &p_END
                 &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 10    &u_caps_word          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
@@ -684,7 +684,7 @@
             >;
         };
 
-        navi_ru {
+        navi_ru_linux {
             bindings = <
                 &kp DEL     &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &tog 6             &kp INS                       &p_HOME               &kp_unshift PG_DN  &kp_unshift PG_UP  &p_END
                 &kp LGUI    &kp LALT           &kp LCTRL          &kp LSHFT          &tog 11            &u_caps_word_ru               &left_ignore_cw       &down_ignore_cw    &up_ignore_cw      &right_ignore_cw
@@ -693,7 +693,7 @@
             >;
         };
 
-        mouse {
+        mouse_linux {
             bindings = <
                 &kp DEL     &kp LC(LS(TAB))  &kp TAB          &kp LC(TAB)        &tog 7             &kp LS(DEL)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
                 &kp LGUI    &kp LALT         &kp LCTRL        &kp LSHFT          &none              &kp DEL      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
@@ -702,7 +702,7 @@
             >;
         };
 
-        button {
+        button_linux {
             bindings = <
         &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)          &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
         &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp_unshift RET    &kp_unshift RET  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
@@ -711,7 +711,7 @@
             >;
         };
 
-        media {
+        media_linux {
             bindings = <
                 &kp DEL     &kp LC(RS(TAB))  &kp TAB          &kp LC(TAB)        &tog 9             &none       &out OUT_BLE  &out OUT_USB  &none         &none
                 &kp LGUI    &kp LALT         &kp LCTRL        &kp LSHFT          &tog 14            &u_ep_tog   &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
@@ -720,7 +720,7 @@
             >;
         };
 
-        num {
+        num_linux {
             bindings = <
             &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &tog 10    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
             &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &tog 5     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
@@ -729,7 +729,7 @@
             >;
         };
 
-        num_ru {
+        num_ru_linux {
             bindings = <
                   &kp_unshift STAR   &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift MINUS    &tog 11            &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &kp DEL
                   &kp_unshift CARET  &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift PLUS     &tog 6             &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
@@ -738,7 +738,7 @@
             >;
         };
 
-        sym {
+        sym_linux {
             bindings = <
              &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
              &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
@@ -747,7 +747,7 @@
             >;
         };
 
-        sym_ru {
+        sym_ru_linux {
             bindings = <
                      &kp_unshift EXCL       &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE          &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen AT
                      &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS     &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI AMPS
@@ -756,7 +756,7 @@
             >;
         };
 
-        fun {
+        fun_linux {
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9             &kp PSCRN          &tog 14            &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
        &kp F11  &kp F4  &kp F5     &kp F6             &kp SCROLLLOCK     &tog 9             &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
