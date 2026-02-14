@@ -108,7 +108,7 @@
         };
 
         double_quote_ru {
-            bindings = <&kp AT>;
+            bindings = <&kp_unshift AT>;
             key-positions = <2 12>;
             layers = <1>;
         };
@@ -136,14 +136,14 @@
         lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp_unshift LC(LS(N8))>;
             label = "LG_EN";
         };
 
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9))>;
+            bindings = <&kp_unshift LC(LS(N9))>;
             label = "LG_RU";
         };
 
@@ -198,7 +198,7 @@
         tag_open_ru: tag_open_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lg_en &kp LT &kp GT &kp LEFT &lg_ru>;
+            bindings = <&lg_en &kp_unshift LT &kp GT &kp LEFT &lg_ru>;
             label = "TAG_OPEN_RU";
         };
 
@@ -212,14 +212,14 @@
         tag_close_ru: tag_close_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lg_en &kp LT &kp FSLH &kp GT &kp LEFT &lg_ru>;
+            bindings = <&lg_en &kp_unshift LT &kp FSLH &kp GT &kp LEFT &lg_ru>;
             label = "TAG_CLOSE_RU";
         };
 
         paraphesis_pair: paraphesis_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            bindings = <&kp_unshift LPAR &kp RPAR &kp LEFT>;
             label = "PARAPHESIS_PAIR";
         };
 
@@ -233,7 +233,7 @@
         bracket_pair_ru: bracket_pair_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lg_en &kp LBKT &kp RBKT &kp LEFT &lg_ru>;
+            bindings = <&lg_en &kp_unshift LBKT &kp RBKT &kp LEFT &lg_ru>;
             label = "BRACKET_PAIR_RU";
         };
 
@@ -247,7 +247,7 @@
         braces_pair_ru: braces_pair_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lg_en &kp LBRC &kp RBRC &kp LEFT &lg_ru>;
+            bindings = <&lg_en &kp_unshift LBRC &kp RBRC &kp LEFT &lg_ru>;
             label = "BRACES_PAIR_RU";
         };
 
@@ -289,16 +289,38 @@
         in_below: in_below {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp END &kp LS(RET)>;
+            bindings = <&kp_unshift END &kp LS(RET)>;
             label = "IN_BELOW";
         };
 
         in_above: in_above {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp LS(RET) &kp UP>;
+            bindings = <&kp_unshift HOME &kp LS(RET) &kp UP>;
             label = "IN_ABOVE";
             wait-ms = <0>;
+        };
+
+        rshift_down: rshift_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp RSHFT>;
+
+            label = "RSHIFT_DOWN";
+        };
+
+        kp_unshift: kp_rsup {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_release>,
+                <&kp RSHFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KP_RSUP";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
@@ -340,13 +362,6 @@
             flavor = "tap-preferred";
         };
 
-        ru_caps_word: ru_caps_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "RU_CAPS_WORD";
-            #binding-cells = <0>;
-            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
-        };
-
         td_bootloader: td_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BOOTLOADER";
@@ -357,7 +372,7 @@
         ru_dot: ru_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_DOT";
-            bindings = <&kp FSLH>, <&ruen GT>;
+            bindings = <&kp_unshift FSLH>, <&ruen GT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -366,7 +381,7 @@
         ru_comma: ru_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COMMA";
-            bindings = <&kp QUESTION>, <&ruen LT>;
+            bindings = <&kp_unshift QUESTION>, <&ruen LT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -384,7 +399,7 @@
         qmark_fslash_ru: qmark_fslash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "QMARK_FSLASH_RU";
-            bindings = <&kp AMPS>, <&kp PIPE>;
+            bindings = <&kp_unshift AMPS>, <&kp_unshift PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -465,7 +480,7 @@
         u_caps_word_ru: u_caps_word_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "U_CAPS_WORD_RU";
-            bindings = <&ru_caps_word>, <&kp CAPS>;
+            bindings = <&rshift_down>, <&kp CAPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -507,7 +522,7 @@
         undo_redo: undo_redo {
             compatible = "zmk,behavior-mod-morph";
             label = "UNDO_REDO";
-            bindings = <&kp LC(Z)>, <&kp LC(Y)>;
+            bindings = <&kp_unshift LC(Z)>, <&kp_unshift LC(Y)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -516,7 +531,7 @@
         p_HOME: p_HOME {
             compatible = "zmk,behavior-mod-morph";
             label = "P_HOME";
-            bindings = <&kp HOME>, <&kp HOME>;
+            bindings = <&kp_unshift HOME>, <&kp_unshift HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -525,10 +540,66 @@
         p_END: p_END {
             compatible = "zmk,behavior-mod-morph";
             label = "P_END";
-            bindings = <&kp END>, <&kp END>;
+            bindings = <&kp_unshift END>, <&kp_unshift END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        lt_unshift: lt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_UNSHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp_unshift>;
+        };
+
+        up_ignore_cw: up_ignore_cw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_IGNORE_CW";
+            bindings = <&kp UP>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        down_ignore_cw: down_ignore_cw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_IGNORE_CW";
+            bindings = <&kp DOWN>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        left_ignore_cw: left_ignore_cw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_IGNORE_CW";
+            bindings = <&kp LEFT>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        right_ignore_cw: right_ignore_cw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_IGNORE_CW";
+            bindings = <&kp RIGHT>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        mt_unshift: mt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_UNSHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp_unshift>;
+
+            quick-tap-ms = <100>;
         };
     };
 
@@ -563,10 +634,10 @@
 
         ru_layer {
             bindings = <
-           &kp Q           &kp W         &kp E          &kp R        &kp T        &kp Y       &kp U        &kp I          &kp O         &kp P
-           &hrml LGUI A    &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp GRAVE  &lt_typing 8 Z  &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt_typing 8 SQT  &kp LBKT
-                                         &lt 9 ESC      &lt 6 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 14 DEL
+           &kp Q           &kp W         &kp E              &kp R                &kp T                &kp Y               &kp U        &kp I          &kp O         &kp P
+           &hrml LGUI A    &hrml LALT S  &hrml LCTRL D      &mt LSHFT F          &kp G                &kp H               &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
+&kp GRAVE  &lt_typing 8 Z  &kp X         &kp C              &kp V                &kp B                &kp N               &kp M        &kp COMMA      &kp DOT       &lt_typing 8 SQT  &kp LBKT
+                                         &lt_unshift 9 ESC  &lt_unshift 6 SPACE  &lt_unshift 7 TAB    &lt_unshift 13 RET  &lt 11 BSPC  &lt 14 DEL
             >;
 
             label = "RU";
@@ -597,10 +668,10 @@
         shortcut {
             label = "shortcut";
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt 8 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 8 FSLH  &kp DQT
-                                &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
+                &kp Q       &kp W       &kp F            &kp P              &kp B              &kp J              &kp L        &kp U        &kp Y       &kp APOS
+                &mt LGUI A  &mt LALT R  &mt LCTRL S      &mt LSHFT T        &kp G              &kp M              &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&kp_unshift AT  &lt 8 Z     &kp X       &kp C            &kp D              &kp V              &kp K              &kp H        &kp COMMA    &kp PERIOD  &lt 8 FSLH  &kp_unshift DQT
+                                        &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift ENTER  &kp BSPC     &kp DEL
             >;
         };
 
@@ -615,37 +686,37 @@
 
         navi_ru {
             bindings = <
-                &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 6     &kp INS               &p_HOME       &kp PG_DN  &kp PG_UP  &p_END
-                &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 11    &u_caps_word_ru       &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp C_AL_MY_COMPUTER  &kp LC(HOME)  &in_below  &in_above  &kp LC(END)  &none
-                                             &kp ESC    &kp SPACE    &kp TAB    &kp RET               &kp BSPC      &kp DEL
+                &kp DEL     &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &tog 6             &kp INS                       &p_HOME               &kp_unshift PG_DN  &kp_unshift PG_UP  &p_END
+                &kp LGUI    &kp LALT           &kp LCTRL          &kp LSHFT          &tog 11            &u_caps_word_ru               &left_ignore_cw       &down_ignore_cw    &up_ignore_cw      &right_ignore_cw
+&td_bootloader  &undo_redo  &kp_unshift LC(X)  &kp_unshift LC(C)  &kp_unshift LC(V)  &tog 2             &kp_unshift C_AL_MY_COMPUTER  &kp_unshift LC(HOME)  &in_below          &in_above          &kp_unshift LC(END)  &none
+                                               &kp_unshift ESC    &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift RET               &kp BSPC              &kp DEL
             >;
         };
 
         mouse {
             bindings = <
-                &kp DEL     &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &tog 7     &kp LS(DEL)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
-                &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &none      &kp DEL      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &kp LC(Y)    &kp LC(V)       &kp LC(C)       &kp LC(X)     &undo_redo       &none
-                                             &kp ESC    &kp SPACE    &kp TAB    &mkp RCLK    &mkp LCLK       &mkp MCLK
+                &kp DEL     &kp LC(LS(TAB))  &kp TAB          &kp LC(TAB)        &tog 7             &kp LS(DEL)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT
+                &kp LGUI    &kp LALT         &kp LCTRL        &kp LSHFT          &none              &kp DEL      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)        &kp LC(V)          &tog 2             &kp LC(Y)    &kp LC(V)       &kp LC(C)       &kp LC(X)     &undo_redo       &none
+                                             &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &mkp RCLK    &mkp LCLK       &mkp MCLK
             >;
         };
 
         button {
             bindings = <
-        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp RET      &kp RET    &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
-&tog 8  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &tog 8
-                              &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
+        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)          &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp_unshift RET    &kp_unshift RET  &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+&tog 8  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)          &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &tog 8
+                              &mkp MCLK  &mkp LCLK  &mkp RCLK          &mkp RCLK        &mkp LCLK  &mkp MCLK
             >;
         };
 
         media {
             bindings = <
-                &kp DEL     &kp LC(RS(TAB))  &kp TAB    &kp LC(TAB)  &tog 9     &none       &out OUT_BLE  &out OUT_USB  &none         &none
-                &kp LGUI    &kp LALT         &kp LCTRL  &kp LSHFT    &tog 14    &u_ep_tog   &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)  &kp LC(V)    &tog 2     &u_out_tog  &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                             &kp ESC    &kp SPACE    &kp TAB    &kp C_STOP  &kp C_PP      &kp K_MUTE
+                &kp DEL     &kp LC(RS(TAB))  &kp TAB          &kp LC(TAB)        &tog 9             &none       &out OUT_BLE  &out OUT_USB  &none         &none
+                &kp LGUI    &kp LALT         &kp LCTRL        &kp LSHFT          &tog 14            &u_ep_tog   &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&td_bootloader  &undo_redo  &kp LC(X)        &kp LC(C)        &kp LC(V)          &tog 2             &u_out_tog  &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+                                             &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp C_STOP  &kp C_PP      &kp K_MUTE
             >;
         };
 
@@ -660,10 +731,10 @@
 
         num_ru {
             bindings = <
-          &kp STAR   &kp N7  &kp N8    &kp N9  &kp MINUS    &tog 11    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-          &kp CARET  &kp N4  &kp N5    &kp N6  &kp PLUS     &tog 6     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&kp HASH  &kp PIPE   &kp N1  &kp N2    &kp N3  &kp EQUAL    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
-                             &kp FSLH  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC         &kp DEL
+                  &kp_unshift STAR   &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift MINUS    &tog 11            &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &kp DEL
+                  &kp_unshift CARET  &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift PLUS     &tog 6             &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+&kp_unshift HASH  &kp_unshift PIPE   &kp_unshift N1  &kp_unshift N2    &kp_unshift N3  &kp_unshift EQUAL    &tog 2             &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &undo_redo  &td_bootloader
+                                                     &kp_unshift FSLH  &kp_unshift N0  &kp UNDER            &kp_unshift ENTER  &kp BSPC           &kp DEL
             >;
         };
 
@@ -678,19 +749,19 @@
 
         sym_ru {
             bindings = <
-             &kp EXCL       &ruen LT       &kp EQUAL        &ruen GT         &ruen GRAVE    &ruen CARET  &ruen LBKT           &kp UNDER       &ruen RBKT          &ruen AT
-             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHIFT RPAR  &kp PLUS       &kp PRCNT    &mt_ruen LSHFT LBRC  &mt LCTRL DLLR  &mt_ruen LALT RBRC  &mt LGUI AMPS
-&kp LG(DOT)  &ruen HASH     &kp STAR       &kp CARET        &kp PIPE         &kp QMARK      &kp FSLH     &ruen PIPE           &ruen TILDE     &ruen AMPS          &ruen DLLR     &td_bootloader
-                                           &trans           &trans           &kp UNDER      &trans       &trans               &trans
+                     &kp_unshift EXCL       &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE          &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen AT
+                     &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS     &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI AMPS
+&kp_unshift LG(DOT)  &ruen HASH             &kp_unshift STAR       &kp_unshift CARET        &kp_unshift PIPE         &kp_unshift QMARK    &kp_unshift FSLH   &ruen PIPE           &ruen TILDE             &ruen AMPS          &ruen DLLR             &td_bootloader
+                                                                   &trans                   &trans                   &kp UNDER            &trans             &trans               &trans
             >;
         };
 
         fun {
             bindings = <
-       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &tog 14    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-       &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &tog 9     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
-                        &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC         &kp DEL
+       &kp F12  &kp F7  &kp F8     &kp F9             &kp PSCRN          &tog 14            &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+       &kp F11  &kp F4  &kp F5     &kp F6             &kp SCROLLLOCK     &tog 9             &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
+&none  &kp F10  &kp F1  &kp F2     &kp F3             &kp PAUSE_BREAK    &tog 2             &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
+                        &kp K_APP  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift ENTER  &kp BSPC         &kp DEL
             >;
         };
     };
