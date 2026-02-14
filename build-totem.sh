@@ -10,8 +10,8 @@ DOWNLOADS_DIR="$HOME/Downloads"
 ZEPHYR_SDK="$HOME/.opt/zephyr-sdk-0.17.4"
 
 # File Names
-LEFT_FIRMWARE="totem_left-xiao_ble-zmk_local-build.uf2"
-RIGHT_FIRMWARE="totem_right-xiao_ble-zmk_local-build.uf2"
+LEFT_FIRMWARE="totem_left-seeeduino_xiao_ble-zmk_local-build.uf2"
+RIGHT_FIRMWARE="totem_right-seeeduino_xiao_ble-zmk_local-build.uf2"
 
 echo "=== Building Totem Firmware ==="
 
