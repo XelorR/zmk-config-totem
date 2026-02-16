@@ -101,14 +101,14 @@
             layers = <1>;
         };
 
-        double_quote {
-            bindings = <&kp DQT>;
+        combo_double_quote {
+            bindings = <&double_quote>;
             key-positions = <2 12>;
             layers = <0>;
         };
 
-        double_quote_ru {
-            bindings = <&kp_unshift AT>;
+        combo_double_quote_ru {
+            bindings = <&double_quote_ru>;
             key-positions = <2 12>;
             layers = <1>;
         };
@@ -626,6 +626,24 @@
             bindings = <&kp>, <&kp_unshift>;
 
             quick-tap-ms = <100>;
+        };
+
+        double_quote: double_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOUBLE_QUOTE";
+            bindings = <&kp DQT>, <&kp SQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        double_quote_ru: double_quote_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOUBLE_QUOTE_RU";
+            bindings = <&kp AT>, <&ruen SQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
