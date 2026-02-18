@@ -33,12 +33,12 @@ west zephyr-export
 # Left half built
 echo ""
 echo ">>> Building left half..."
-west build -p -b xiao_ble -d build-left -s zmk/app -- -DSHIELD=totem_left -DZMK_CONFIG="$PWD/config"
+west build -p -b seeeduino_xiao_ble -d build-left -s zmk/app -- -DSHIELD=totem_left -DZMK_CONFIG="$PWD/config"
 
 # Right half build
 echo ""
 echo ">>> Building right half..."
-west build -p -b xiao_ble -d build-right -s zmk/app -- -DSHIELD=totem_right -DZMK_CONFIG="$PWD/config"
+west build -p -b seeeduino_xiao_ble -d build-right -s zmk/app -- -DSHIELD=totem_right -DZMK_CONFIG="$PWD/config"
 
 # Copy artefacts into Downloads folder
 echo ""
