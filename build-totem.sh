@@ -52,4 +52,4 @@ echo "✓ Right: $DOWNLOADS_DIR/$RIGHT_FIRMWARE"
 
 echo ""
 echo "=== Done! ==="
-echo "Firmware saved into ~/Downloads/"
+echo "Firmware saved into $DOWNLOADS_DIR"
