@@ -736,37 +736,37 @@
 
         num_linux {
             bindings = <
-            &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &tog 10    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
-            &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &tog 5     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
-&enru HASH  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
-                               &kp DOT  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC         &kp DEL
+           &kp STAR   &kp N7  &kp N8   &kp N9  &kp MINUS    &tog 10    &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)  &kp DEL
+           &kp COLON  &kp N4  &kp N5   &kp N6  &kp PLUS     &tog 5     &kp LSHFT        &kp LCTRL  &kp LALT     &kp LGUI
+&kp PRCNT  &kp FSLH   &kp N1  &kp N2   &kp N3  &kp EQUAL    &tog 2     &kp LC(V)        &kp LC(C)  &kp LC(X)    &undo_redo  &td_bootloader
+                              &kp DOT  &kp N0  &kp UNDER    &kp ENTER  &kp BSPC         &kp DEL
             >;
         };
 
         num_ru_linux {
             bindings = <
-                  &kp_unshift STAR   &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift MINUS    &tog 11            &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &kp DEL
-                  &kp_unshift CARET  &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift PLUS     &tog 6             &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
-&kp_unshift HASH  &kp_unshift PIPE   &kp_unshift N1  &kp_unshift N2    &kp_unshift N3  &kp_unshift EQUAL    &tog 2             &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &undo_redo  &td_bootloader
-                                                     &kp_unshift FSLH  &kp_unshift N0  &kp UNDER            &kp_unshift ENTER  &kp BSPC           &kp DEL
+                   &kp_unshift STAR   &kp_unshift N7  &kp_unshift N8    &kp_unshift N9  &kp_unshift MINUS    &tog 11            &kp LC(LS(TAB))    &kp TAB            &kp LC(TAB)        &kp DEL
+                   &kp_unshift CARET  &kp_unshift N4  &kp_unshift N5    &kp_unshift N6  &kp_unshift PLUS     &tog 6             &kp LSHFT          &kp LCTRL          &kp LALT           &kp LGUI
+&kp_unshift PRCNT  &kp_unshift PIPE   &kp_unshift N1  &kp_unshift N2    &kp_unshift N3  &kp_unshift EQUAL    &tog 2             &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &undo_redo  &td_bootloader
+                                                      &kp_unshift FSLH  &kp_unshift N0  &kp UNDER            &kp_unshift ENTER  &kp BSPC           &kp DEL
             >;
         };
 
         sym_linux {
             bindings = <
-             &kp DQT        &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
-             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI EXCL
-&kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR       &td_bootloader
-                                           &trans           &trans          &kp UNDER    &trans     &trans          &trans
+             &kp DQT        &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET   &kp LBKT        &kp UNDER       &kp RBKT       &kp SQT
+             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT   &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI EXCL
+&kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp AT       &enru HASH  &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR       &td_bootloader
+                                           &trans           &trans          &kp UNDER    &trans      &trans          &trans
             >;
         };
 
         sym_ru_linux {
             bindings = <
-                     &kp_unshift AT         &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE          &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen AT
-                     &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS     &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI EXCL
-&kp_unshift LG(DOT)  &ruen HASH             &kp_unshift STAR       &kp_unshift CARET        &kp_unshift PIPE         &kp_unshift QMARK    &kp_unshift FSLH   &ruen PIPE           &ruen TILDE             &ruen AMPS          &ruen DLLR             &td_bootloader
-                                                                   &trans                   &trans                   &kp UNDER            &trans             &trans               &trans
+                     &kp_unshift AT         &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE         &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen SQT
+                     &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS    &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI EXCL
+&kp_unshift LG(DOT)  &ruen HASH             &kp_unshift STAR       &kp_unshift CARET        &kp_unshift PIPE         &ruen AT            &kp_unshift HASH   &ruen PIPE           &ruen TILDE             &ruen AMPS          &ruen DLLR             &td_bootloader
+                                                                   &trans                   &trans                   &kp UNDER           &trans             &trans               &trans
             >;
         };
 
