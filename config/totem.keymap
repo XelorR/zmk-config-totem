@@ -47,18 +47,6 @@
             layers = <1>;
         };
 
-        ru_comma_combo {
-            bindings = <&ru_comma>;
-            key-positions = <3 13>;
-            layers = <1>;
-        };
-
-        ru_dot_combo {
-            bindings = <&ru_dot>;
-            key-positions = <6 16>;
-            layers = <1>;
-        };
-
         combo_tag_open {
             bindings = <&tag_open>;
             key-positions = <3 1>;
@@ -75,42 +63,6 @@
             bindings = <&paraphesis_pair>;
             key-positions = <13 11>;
             layers = <10 11 12 13>;
-        };
-
-        dot {
-            bindings = <&kp DOT>;
-            key-positions = <6 16>;
-            layers = <0>;
-        };
-
-        comma {
-            bindings = <&kp COMMA>;
-            key-positions = <3 13>;
-            layers = <0>;
-        };
-
-        question_mark {
-            bindings = <&qmark_fslash>;
-            key-positions = <7 17>;
-            layers = <0>;
-        };
-
-        question_mark_ru {
-            bindings = <&qmark_fslash_ru>;
-            key-positions = <7 17>;
-            layers = <1>;
-        };
-
-        combo_double_quote {
-            bindings = <&double_quote>;
-            key-positions = <2 12>;
-            layers = <0>;
-        };
-
-        combo_double_quote_ru {
-            bindings = <&double_quote_ru>;
-            key-positions = <2 12>;
-            layers = <1>;
         };
 
         yo {
@@ -398,7 +350,7 @@
         ru_dot: ru_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_DOT";
-            bindings = <&kp_unshift FSLH>, <&ruen GT>;
+            bindings = <&kp_unshift FSLH>, <&kp_unshift EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -407,7 +359,7 @@
         ru_comma: ru_comma {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COMMA";
-            bindings = <&kp_unshift QUESTION>, <&ruen LT>;
+            bindings = <&kp_unshift QUESTION>, <&kp AMPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -645,6 +597,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        en_dot: en_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EN_DOT";
+            bindings = <&kp_unshift DOT>, <&kp_unshift EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        en_comma: en_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EN_COMMA";
+            bindings = <&kp_unshift COMMA>, <&kp_unshift QMARK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -669,19 +639,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp Q           &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
-        &mt LGUI A      &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt_typing 8 Z  &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt_typing 8 FSLH  &kp DQT
-                                    &lt 9 ESC    &lt 5 SPACE  &lt 7 TAB    &lt 12 RET  &lt 10 BSPC  &lt 14 DEL
+         &kp Q           &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
+         &mt LGUI A      &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&en_dot  &lt_typing 8 Z  &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt_typing 8 FSLH  &en_comma
+                                     &lt 9 ESC    &lt 5 SPACE  &lt 7 TAB    &lt 12 RET  &lt 10 BSPC  &lt 14 DEL
             >;
         };
 
         ru_layer_linux {
             bindings = <
-           &kp Q           &kp W         &kp E              &kp R                &kp T                &kp Y               &kp U        &kp I          &kp O         &kp P
-           &hrml LGUI A    &hrml LALT S  &hrml LCTRL D      &mt LSHFT F          &kp G                &kp H               &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp GRAVE  &lt_typing 8 Z  &kp X         &kp C              &kp V                &kp B                &kp N               &kp M        &kp COMMA      &kp DOT       &lt_typing 8 SQT  &kp LBKT
-                                         &lt_unshift 9 ESC  &lt_unshift 6 SPACE  &lt_unshift 7 TAB    &lt_unshift 13 RET  &lt 11 BSPC  &lt 14 DEL
+         &kp Q           &kp W         &kp E              &kp R                &kp T                &kp Y               &kp U        &kp I          &kp O         &kp P
+         &hrml LGUI A    &hrml LALT S  &hrml LCTRL D      &mt LSHFT F          &kp G                &kp H               &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
+&ru_dot  &lt_typing 8 Z  &kp X         &kp C              &kp V                &kp B                &kp N               &kp M        &kp COMMA      &kp DOT       &lt_typing 8 SQT  &ru_comma
+                                       &lt_unshift 9 ESC  &lt_unshift 6 SPACE  &lt_unshift 7 TAB    &lt_unshift 13 RET  &lt 11 BSPC  &lt 14 DEL
             >;
 
             label = "RU";
@@ -784,17 +754,17 @@
 
         sym_linux {
             bindings = <
-             &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
-             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
-&kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR        &td_bootloader
+             &kp DQT        &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp AT
+             &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI EXCL
+&kp LG(DOT)  &kp HASH       &kp STAR       &kp COLON        &kp FSLH        &kp COMMA    &kp DOT    &kp PIPE        &kp TILDE       &kp AMPS       &kp DLLR       &td_bootloader
                                            &trans           &trans          &kp UNDER    &trans     &trans          &trans
             >;
         };
 
         sym_ru_linux {
             bindings = <
-                     &kp_unshift EXCL       &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE          &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen AT
-                     &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS     &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI AMPS
+                     &kp_unshift AT         &ruen LT               &kp_unshift EQUAL        &ruen GT                 &ruen GRAVE          &ruen CARET        &ruen LBKT           &kp UNDER               &ruen RBKT          &ruen AT
+                     &mt_unshift LGUI BSLH  &mt_unshift LALT LPAR  &mt_unshift LCTRL MINUS  &mt_unshift LSHIFT RPAR  &kp_unshift PLUS     &kp_unshift PRCNT  &mt_ruen LSHFT LBRC  &mt_unshift LCTRL DLLR  &mt_ruen LALT RBRC  &mt_unshift LGUI EXCL
 &kp_unshift LG(DOT)  &ruen HASH             &kp_unshift STAR       &kp_unshift CARET        &kp_unshift PIPE         &kp_unshift QMARK    &kp_unshift FSLH   &ruen PIPE           &ruen TILDE             &ruen AMPS          &ruen DLLR             &td_bootloader
                                                                    &trans                   &trans                   &kp UNDER            &trans             &trans               &trans
             >;
