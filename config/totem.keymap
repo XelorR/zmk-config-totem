@@ -682,10 +682,10 @@
         shortcut_linux {
             label = "shortcut";
             bindings = <
-                &kp Q       &kp W       &kp F            &kp P              &kp B              &kp J              &kp L        &kp U        &kp Y       &kp APOS
-                &mt LGUI A  &mt LALT R  &mt LCTRL S      &mt LSHFT T        &kp G              &kp M              &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp_unshift AT  &lt 0 Z     &kp X       &kp C            &kp D              &kp V              &kp K              &kp H        &kp COMMA    &kp PERIOD  &lt 0 FSLH  &kp_unshift DQT
-                                        &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift ENTER  &kp BSPC     &kp DEL
+           &kp Q       &kp W       &kp F            &kp P              &kp B              &kp J              &kp L        &kp U            &kp Y          &kp APOS
+           &mt LGUI A  &mt LALT R  &mt LCTRL S      &mt LSHFT T        &kp G              &kp M              &mt LSHFT N  &mt LCTRL E      &mt LALT I     &mt LGUI O
+&en_comma  &kp Z       &kp X       &kp C            &kp D              &kp V              &kp K              &kp H        &down_ignore_cw  &up_ignore_cw  &kp_unshift AT  &en_dot
+                                   &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift ENTER  &kp BSPC     &kp DEL
             >;
         };
 
