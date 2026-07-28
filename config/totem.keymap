@@ -35,27 +35,15 @@
     combos {
         compatible = "zmk,combos";
 
-        kha {
+        ru_kha {
             bindings = <&kp LBKT>;
             key-positions = <7 6>;
             layers = <1>;
         };
 
-        hard_sign {
+        ru_hard_sign {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <1>;
-        };
-
-        ru_comma_combo {
-            bindings = <&ru_comma>;
-            key-positions = <3 13>;
-            layers = <1>;
-        };
-
-        ru_dot_combo {
-            bindings = <&ru_dot>;
-            key-positions = <6 16>;
             layers = <1>;
         };
 
@@ -77,45 +65,15 @@
             layers = <11 12 13 14>;
         };
 
-        dot {
-            bindings = <&kp DOT>;
-            key-positions = <6 16>;
-            layers = <0>;
-        };
-
-        comma {
-            bindings = <&kp COMMA>;
-            key-positions = <3 13>;
-            layers = <0>;
-        };
-
-        question_mark {
-            bindings = <&qmark_fslash>;
-            key-positions = <7 17>;
-            layers = <0>;
-        };
-
-        question_mark_ru {
-            bindings = <&qmark_fslash_ru>;
-            key-positions = <7 17>;
-            layers = <1>;
-        };
-
-        double_quote {
-            bindings = <&kp DQT>;
-            key-positions = <2 12>;
-            layers = <0>;
-        };
-
-        double_quote_ru {
-            bindings = <&kp AT>;
-            key-positions = <2 12>;
-            layers = <1>;
-        };
-
-        yo {
-            bindings = <&kp GRAVE>;
+        ru_e {
+            bindings = <&kp SQT>;
             key-positions = <1 2>;
+            layers = <1>;
+        };
+
+        ru_yo {
+            bindings = <&kp GRAVE>;
+            key-positions = <4 3>;
             layers = <1>;
         };
     };
@@ -124,14 +82,14 @@
         lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp LC(LS(N7))>;
             label = "LG_EN";
         };
 
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9))>;
+            bindings = <&kp LS(LC(N8))>;
             label = "LG_RU";
         };
 
@@ -479,10 +437,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp DQT
-                                &lt 10 ESC   &lt 5 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 15 DEL
+           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&kp LSHFT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp LSHFT
+                                   &lt 10 ESC   &lt 5 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 15 DEL
             >;
         };
 
@@ -490,7 +448,7 @@
             bindings = <
            &kp Q         &kp W         &kp E          &kp R        &kp T        &kp Y       &kp U        &kp I          &kp O         &kp P
            &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp GRAVE  &lt 9 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 9 SQT        &kp LBKT
+&kp LSHFT  &lt 9 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 9 SLASH      &kp LSHFT
                                        &lt 10 ESC     &lt 6 SPACE  &lt 8 TAB    &lt 14 RET  &lt 12 BSPC  &lt 15 DEL
             >;
 
@@ -502,7 +460,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &kp RET
-                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 9
+                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 15
             >;
 
             label = "GAM";
@@ -510,9 +468,9 @@
 
         gaming_fn {
             bindings = <
-       &kp ESC  &kp N1  &kp N2  &kp N3   &kp T     &kp C_VOL_UP  &kp F1  &kp F2  &kp F3  &kp F10
+       &kp ESC  &kp N7  &kp N8  &kp N9   &kp T     &kp C_VOL_UP  &kp F1  &kp F2  &kp F3  &kp F10
        &kp I    &kp N4  &kp N5  &kp N6   &kp G     &kp C_VOL_DN  &kp F4  &kp F5  &kp F6  &kp F11
-&kp J  &kp M    &kp N7  &kp N8  &kp N9   &kp B     &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F12  &kp PSCRN
+&kp J  &kp M    &kp N1  &kp N2  &kp N3   &kp B     &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F12  &kp PSCRN
                         &kp N0  &kp RET  &trans    &trans        &trans  &trans
             >;
 
@@ -522,10 +480,10 @@
         shortcut {
             label = "shortcut";
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp AT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp DQT
-                                &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
+           &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
+&kp LSHFT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp LSHFT
+                                   &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
             >;
         };
 
@@ -604,7 +562,7 @@
         sym {
             bindings = <
             &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-            &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+            &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp SLASH  &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
 &enru HASH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &none           &none
                                       &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
             >;
@@ -612,9 +570,9 @@
 
         sym_ru {
             bindings = <
-          &ruen LEFT_BRACE  &ruen AMPS  &kp STAR   &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &ruen TILDE       &kp EXCL    &ruen AT   &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &none           &none
+          &ruen LEFT_BRACE  &kp AMPS    &kp STAR   &kp LPAR     &ruen RBRC    &none      &switch_en  &switch_ru  &to 2     &td_bootloader
+          &kp CARET         &ruen DLLR  &kp PRCNT  &ruen CARET  &kp PLUS      &kp PIPE   &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
+&kp HASH  &ruen TILDE       &kp EXCL    &kp AT     &ruen HASH   &ruen PIPE    &none      &tog 14     &tog 8      &none     &none           &none
                                         &kp LPAR   &kp RPAR     &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
             >;
         };
