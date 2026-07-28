@@ -104,69 +104,6 @@
             label = "ENRU";
         };
 
-        tag_open: tag_open {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp GT &kp LEFT>;
-            label = "TAG_OPEN";
-        };
-
-        tag_open_ru: tag_open_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lg_en &kp LT &kp GT &kp LEFT &lg_ru>;
-            label = "TAG_OPEN_RU";
-        };
-
-        tag_close: tag_close {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT &kp FSLH &kp GT &kp LEFT>;
-            label = "TAG_CLOSE";
-        };
-
-        tag_close_ru: tag_close_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lg_en &kp LT &kp FSLH &kp GT &kp LEFT &lg_ru>;
-            label = "TAG_CLOSE_RU";
-        };
-
-        paraphesis_pair: paraphesis_pair {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
-            label = "PARAPHESIS_PAIR";
-        };
-
-        bracket_pair: bracket_pair {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
-            label = "BRACKET_PAIR";
-        };
-
-        bracket_pair_ru: bracket_pair_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lg_en &kp LBKT &kp RBKT &kp LEFT &lg_ru>;
-            label = "BRACKET_PAIR_RU";
-        };
-
-        braces_pair: braces_pair {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
-            label = "BRACES_PAIR";
-        };
-
-        braces_pair_ru: braces_pair_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lg_en &kp LBRC &kp RBRC &kp LEFT &lg_ru>;
-            label = "BRACES_PAIR_RU";
-        };
-
         bt_clear_0: bt_clear_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
