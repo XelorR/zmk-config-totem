@@ -64,6 +64,18 @@
             key-positions = <27 29>;
             layers = <0 1>;
         };
+
+        ckeckbox_combo {
+            bindings = <&checkbox>;
+            key-positions = <22 24>;
+            layers = <9 10>;
+        };
+
+        para_combo {
+            bindings = <&parathesis>;
+            key-positions = <11 13>;
+            layers = <9 10>;
+        };
     };
 
     macros {
@@ -128,6 +140,20 @@
             #binding-cells = <0>;
             bindings = <&kp LC(SPACE) &to 1>;
             label = "CTRL_SPACE_LANG2";
+        };
+
+        checkbox: checkbox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE &kp END>;
+            label = "CHECKBOX";
+        };
+
+        parathesis: parathesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARATHESIS";
         };
     };
 
