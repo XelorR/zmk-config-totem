@@ -74,6 +74,11 @@ That variant enables the ZMK defaults for USB, BLE, UF2 output, flash, NVS, and
 settings. Building plain `xiao_ble` can produce suspiciously small firmware
 because those ZMK defaults are missing.
 
+GitHub Actions reads `build.yaml`, not the local helper script. Keep the board
+entries there on `xiao_ble/nrf52840/zmk` as well; otherwise the reusable ZMK
+workflow will either build incomplete firmware or fail its explicit ZMK compat
+check.
+
 Older configs sometimes refer to `seeeduino_xiao_ble`. If the build says the
 board is unknown, try:
 
