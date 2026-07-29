@@ -1,0 +1,10 @@
+.west/
+zmk/
+bootloader/
+modules/
+tools/
+zephyr/
+build/
+firmware/
+.venv-zmk/
+
