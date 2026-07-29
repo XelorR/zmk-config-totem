@@ -6,15 +6,20 @@ The helper script is `scripts/zmk-local-build.sh`.
 ## Current Local State
 
 - Zephyr SDK path: `/home/user/.opt/zephyr-sdk-0.17.4`
-- Board target: `xiao_ble`
+- Board target: `xiao_ble/nrf52840/zmk`
 - Shields: `totem_left`, `totem_right`
 - ZMK config directory: `config`
 - Manifest: `config/west.yml`
+- Zephyr base: `zephyr`
 
 The manifest currently tracks `zmk` revision `main`. That is convenient but
 not reproducible. If a future ZMK/Zephyr change breaks the build, pin
 `config/west.yml` to a known-good ZMK commit or release branch before running
 `west update`.
+
+The script exports `ZEPHYR_BASE` and passes `Zephyr_DIR` directly to CMake.
+This avoids the common local-build failure where CMake cannot find
+`ZephyrConfig.cmake` even though `west update` has already fetched Zephyr.
 
 ## Offline-Safe Check
 
@@ -58,14 +63,19 @@ Build only one half:
 The UF2 files are copied to `firmware/`:
 
 ```text
-firmware/totem_left-xiao_ble-zmk.uf2
-firmware/totem_right-xiao_ble-zmk.uf2
+firmware/totem_left-xiao_ble_nrf52840_zmk-zmk.uf2
+firmware/totem_right-xiao_ble_nrf52840_zmk-zmk.uf2
 ```
 
 ## If `xiao_ble` Fails
 
-Recent ZMK normally uses `xiao_ble` for Seeed XIAO BLE. Older configs sometimes
-refer to `seeeduino_xiao_ble`. If the build says the board is unknown, try:
+Recent ZMK's Seeed XIAO BLE ZMK board variant is `xiao_ble/nrf52840/zmk`.
+That variant enables the ZMK defaults for USB, BLE, UF2 output, flash, NVS, and
+settings. Building plain `xiao_ble` can produce suspiciously small firmware
+because those ZMK defaults are missing.
+
+Older configs sometimes refer to `seeeduino_xiao_ble`. If the build says the
+board is unknown, try:
 
 ```sh
 BOARD=seeeduino_xiao_ble ./scripts/zmk-local-build.sh
@@ -101,9 +111,13 @@ Then run:
 
 - The script exports `ZEPHYR_SDK_INSTALL_DIR=/home/user/.opt/zephyr-sdk-0.17.4`
   and `ZEPHYR_TOOLCHAIN_VARIANT=zephyr`.
+- `config/totem.conf` selects `CONFIG_NEWLIB_LIBC=y`. With the current pulled
+  ZMK/Zephyr tree (`zephyr` reports 4.1.0) and Zephyr SDK 0.17.4, the default
+  toolchain Picolibc path fails while compiling `zephyr/lib/libc/picolibc/locks.c`
+  because of a lock symbol type conflict. Newlib is provided by the same SDK and
+  builds successfully here.
 - Build outputs are ignored by git: `.west/`, `zmk/`, `zephyr/`, `modules/`,
   `tools/`, `build/`, `firmware/`, and `.venv-zmk/`.
 - Your root `config/totem.keymap` is the active user keymap for local ZMK
   builds. The shield-local `config/boards/shields/totem/totem.keymap` appears
   to be an older/default keymap.
-

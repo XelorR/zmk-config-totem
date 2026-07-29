@@ -3,10 +3,13 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SDK_DIR="${ZEPHYR_SDK_INSTALL_DIR:-/home/user/.opt/zephyr-sdk-0.17.4}"
-BOARD="${BOARD:-xiao_ble}"
+BOARD="${BOARD:-xiao_ble/nrf52840/zmk}"
+BOARD_FILE="${BOARD//\//_}"
 CONFIG_DIR="${ZMK_CONFIG:-$ROOT_DIR/config}"
 BUILD_ROOT="${BUILD_ROOT:-$ROOT_DIR/build}"
 FIRMWARE_DIR="${FIRMWARE_DIR:-$ROOT_DIR/firmware}"
+ZEPHYR_BASE="${ZEPHYR_BASE:-$ROOT_DIR/zephyr}"
+ZEPHYR_PACKAGE_DIR="$ZEPHYR_BASE/share/zephyr-package/cmake"
 SIDES=("left" "right")
 DO_UPDATE=0
 DO_PY_DEPS=0
@@ -93,6 +96,7 @@ need_cmd() {
 echo "Repo:      $ROOT_DIR"
 echo "Config:    $CONFIG_DIR"
 echo "SDK:       $SDK_DIR"
+echo "Zephyr:    $ZEPHYR_BASE"
 echo "Board:     $BOARD"
 
 need_cmd west
@@ -138,6 +142,24 @@ EOF
   exit 1
 fi
 
+if [[ ! -f "$ZEPHYR_PACKAGE_DIR/ZephyrConfig.cmake" ]]; then
+  cat >&2 <<EOF
+Zephyr is not present or is incomplete.
+
+Expected:
+
+  $ZEPHYR_PACKAGE_DIR/ZephyrConfig.cmake
+
+When you have connectivity, refresh the workspace:
+
+  $0 --update --check-only
+EOF
+  exit 1
+fi
+
+export ZEPHYR_BASE
+export CMAKE_PREFIX_PATH="$ZEPHYR_PACKAGE_DIR${CMAKE_PREFIX_PATH:+:$CMAKE_PREFIX_PATH}"
+
 if [[ "$DO_PY_DEPS" -eq 1 ]]; then
   echo "Installing ZMK Python requirements into .venv-zmk..."
   python3 -m venv "$ROOT_DIR/.venv-zmk"
@@ -167,16 +189,16 @@ for side in "${SIDES[@]}"; do
     -b "$BOARD" \
     -p "$PRISTINE" \
     -- \
+    -DZephyr_DIR="$ZEPHYR_PACKAGE_DIR" \
     -DSHIELD="$shield" \
     -DZMK_CONFIG="$CONFIG_DIR")
 
   uf2="$build_dir/zephyr/zmk.uf2"
   if [[ -f "$uf2" ]]; then
-    cp "$uf2" "$FIRMWARE_DIR/${shield}-${BOARD}-zmk.uf2"
-    echo "Wrote $FIRMWARE_DIR/${shield}-${BOARD}-zmk.uf2"
+    cp "$uf2" "$FIRMWARE_DIR/${shield}-${BOARD_FILE}-zmk.uf2"
+    echo "Wrote $FIRMWARE_DIR/${shield}-${BOARD_FILE}-zmk.uf2"
   else
     echo "Build completed, but UF2 was not found at $uf2" >&2
     exit 1
   fi
 done
-
