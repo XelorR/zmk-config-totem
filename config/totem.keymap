@@ -68,19 +68,19 @@
         ckeckbox_combo {
             bindings = <&checkbox>;
             key-positions = <22 24>;
-            layers = <9 10>;
+            layers = <8 10>;
         };
 
         para_combo {
             bindings = <&parathesis>;
             key-positions = <11 13>;
-            layers = <9 10>;
+            layers = <8 10>;
         };
 
         arrow_combo {
             bindings = <&arrow>;
             key-positions = <1 3>;
-            layers = <9 10>;
+            layers = <8 10>;
         };
     };
 
@@ -289,14 +289,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
+            bindings = <&none>, <&tog 7>;
         };
 
         frz_num: frz_num {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
+            bindings = <&none>, <&tog 8>;
         };
 
         frz_sym: frz_sym {
@@ -327,20 +327,20 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SEMI
+           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 7 Z     &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 7 FSLH  &kp LSHFT
-                                   &lt 8 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 10 RET  &lt 9 BSPC   &lt 11 DEL
+&kp LSHFT  &lt 13 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 13 FSLH  &kp LSHFT
+                                   &lt 7 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 10 RET  &lt 8 BSPC   &lt 12 DEL
             >;
         };
 
         alt_layout_layer {
             label = "EXTRA";
             bindings = <
-        &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
-        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
-&trans  &lt 7 Z     &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 7 FSLH     &trans
-                                &trans       &trans       &trans    &trans  &trans       &trans
+        &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y       &kp U        &kp I        &kp O         &kp P
+        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H       &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
+&trans  &lt 13 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N       &kp M        &kp COMMA    &mt RALT DOT  &lt 13 FSLH    &trans
+                                &trans       &trans       &trans    &lt 11 RET  &lt 9 BSPC   &trans
             >;
         };
 
@@ -359,7 +359,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans     &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 4    &lt 8 RET  &kp SPACE  &mo 11
+                            &kp LALT  &kp SPACE  &mo 4    &lt 7 RET  &kp SPACE  &mo 12
             >;
 
             label = "GAM";
@@ -370,7 +370,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 11
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 12
             >;
 
             label = "GAM_FN";
@@ -394,15 +394,6 @@
             >;
         };
 
-        button {
-            bindings = <
-        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &trans     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
-                              &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
-            >;
-        };
-
         media {
             bindings = <
         &td_bootloader  &to_tap   &to_alt    &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
@@ -412,22 +403,48 @@
             >;
         };
 
-        num {
+        num_base {
+            bindings = <
+        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_alt    &to_tap   &td_bootloader
+        &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
+                           &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+            >;
+
+            label = "NUM_BASE";
+        };
+
+        num_extra {
             bindings = <
         &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_alt    &to_tap   &td_bootloader
         &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
                            &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
+
+            label = "NUM_EXTRA";
         };
 
-        sym {
+        sym_base {
+            bindings = <
+        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_alt    &to_tap   &td_bootloader
+        &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
+                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+            >;
+
+            label = "SYM_BASE";
+        };
+
+        sym_extra {
             bindings = <
         &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_alt    &to_tap   &td_bootloader
         &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
                                   &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
+
+            label = "SYM_EXTRA";
         };
 
         fun {
@@ -436,6 +453,15 @@
         &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
                          &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
+            >;
+        };
+
+        button {
+            bindings = <
+        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &trans     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
+                              &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
             >;
         };
     };
