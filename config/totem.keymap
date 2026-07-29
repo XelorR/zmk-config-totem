@@ -32,7 +32,15 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        un_tap {
+            bindings = <&to 0>;
+            key-positions = <0 9>;
+            layers = <2>;
+        };
+    };
 
     macros {
         bt_clear_2: bt_clear_2 {
