@@ -331,7 +331,7 @@
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &to_base   &kp UP    &trans     &kp TAB
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans     &trans     &trans    &trans     &kp RCTRL  &trans
                             &kp LALT  &kp SPACE  &mo 4    &lt 8 RET  &kp SPACE  &mo 11
@@ -342,10 +342,10 @@
 
         gaming_fn {
             bindings = <
-       &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
-       &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI
-&kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp RET  &kp N0  &trans    &trans  &trans  &trans
+       &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
+       &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
+&kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 11
             >;
 
             label = "GAM_FN";
