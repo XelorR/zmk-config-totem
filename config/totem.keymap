@@ -150,6 +150,27 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        to_alt: to_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_ALT";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 1>;
+        };
+
+        to_tap: to_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_TAP";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 2>;
+        };
+
+        to_base: to_base {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TO_BASE";
+            #binding-cells = <0>;
+            bindings = <&none>, <&to 0>;
+        };
     };
 
     keymap {
@@ -201,7 +222,7 @@
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &to 0      &kp UP    &trans     &kp TAB
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &to_base   &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans     &trans     &trans    &trans     &kp RCTRL  &trans
                             &kp LALT  &kp SPACE  &mo 4    &lt 8 RET  &kp SPACE  &mo 11
@@ -223,7 +244,7 @@
 
         navi {
             bindings = <
-        &td_bootloader  &to 2     &to 1      &to 0      &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &td_bootloader  &to_tap   &to_alt    &to 0      &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 3      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
 &trans  &none           &kp RALT  &tog 7     &tog 3     &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC   &kp DEL
@@ -232,7 +253,7 @@
 
         mouse {
             bindings = <
-       &td_bootloader  &to 2     &to 1      &to 0      &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
+       &td_bootloader  &to_tap   &to_alt    &to 0      &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 3      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
 &none  &none           &kp RALT  &tog 8     &tog 4     &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                                  &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
@@ -250,7 +271,7 @@
 
         media {
             bindings = <
-        &td_bootloader  &to 2     &to 1      &to 0      &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
+        &td_bootloader  &to_tap   &to_alt    &to 0      &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 3      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &trans  &none           &kp RALT  &tog 9     &tog 6     &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
                                   &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
@@ -259,7 +280,7 @@
 
         num {
             bindings = <
-        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to 0      &to 1      &to 2     &td_bootloader
+        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to 0      &to_alt    &to_tap   &td_bootloader
         &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL    &to 3      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 7     &tog 3     &kp RALT  &none           &trans
                            &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
@@ -268,7 +289,7 @@
 
         sym {
             bindings = <
-        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to 0      &to 1      &to 2     &td_bootloader
+        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to 0      &to_alt    &to_tap   &td_bootloader
         &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to 3      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 8     &tog 4     &kp RALT  &none           &trans
                                   &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
@@ -277,7 +298,7 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to 0      &to 1      &to 2     &td_bootloader
+        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to 0      &to_alt    &to_tap   &td_bootloader
         &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to 3      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 9     &tog 6     &kp RALT  &none           &trans
                          &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
