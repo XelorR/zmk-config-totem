@@ -32,92 +32,9 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        ru_switch {
-            bindings = <&switch_ru>;
-            key-positions = <8 6>;
-            layers = <1 0>;
-        };
-
-        en_switch {
-            bindings = <&switch_en>;
-            key-positions = <1 3>;
-            layers = <0 1>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
-        lg_en: lg_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(N7))>;
-            label = "LG_EN";
-        };
-
-        lg_ru: lg_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8))>;
-            label = "LG_RU";
-        };
-
-        switch_en: switch_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0 &lg_en>;
-            label = "SWITCH_EN";
-        };
-
-        switch_ru: switch_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1 &lg_ru>;
-            label = "SWITCH_RU";
-        };
-
-        ml: ml {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 4>,
-                <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 4>;
-
-            label = "ML";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
-
-        ruen: ruen {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&lg_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_ru>;
-            label = "RUEN";
-        };
-
-        enru: enru {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&lg_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en>;
-            label = "ENRU";
-        };
-
-        bt_clear_0: bt_clear_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-            label = "BT_CLEAR_0";
-        };
-
-        bt_clear_1: bt_clear_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-            label = "BT_CLEAR_1";
-        };
-
         bt_clear_2: bt_clear_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -138,94 +55,28 @@
             bindings = <&bt BT_SEL 4 &bt BT_CLR>;
             label = "BT_CLEAR_4";
         };
+
+        bt_clear_0: bt_clear_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
+            label = "BT_CLEAR_0";
+        };
+
+        bt_clear_1: bt_clear_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+            label = "BT_CLEAR_1";
+        };
     };
 
     behaviors {
-        key_on: key_on {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_ON";
-            #binding-cells = <1>;
-        };
-
-        key_off: key_off {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        layer_on: layer_on {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_ON";
-            #binding-cells = <1>;
-        };
-
-        layer_off: layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        hrml: hrml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
-        ru_caps_word: ru_caps_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "RU_CAPS_WORD";
-            #binding-cells = <0>;
-            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
-        };
-
         td_bootloader: td_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BOOTLOADER";
             #binding-cells = <0>;
             bindings = <&none>, <&bootloader>;
-        };
-
-        ru_dot: ru_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_DOT";
-            bindings = <&kp FSLH>, <&ruen GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        ru_comma: ru_comma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_COMMA";
-            bindings = <&kp QUESTION>, <&ruen LT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        qmark_fslash: qmark_fslash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QMARK_FSLASH";
-            bindings = <&kp QMARK>, <&kp FSLH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        qmark_fslash_ru: qmark_fslash_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QMARK_FSLASH_RU";
-            bindings = <&kp AMPS>, <&kp PIPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
 
         bt_0: bt_0 {
@@ -299,27 +150,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        u_caps_word_ru: u_caps_word_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_CAPS_WORD_RU";
-            bindings = <&ru_caps_word>, <&kp CAPS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        mt_ruen: mt_ruen {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_RUEN";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&ruen>;
-
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-        };
     };
 
     keymap {
@@ -344,30 +174,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y       &kp APOS
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp LSHFT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp LSHFT
-                                   &lt 10 ESC   &lt 5 SPACE  &lt 7 TAB    &lt 13 RET  &lt 11 BSPC  &lt 15 DEL
+           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
+&kp LSHFT  &lt 5 Z     &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 5 FSLH     &kp LSHFT
+                                   &lt 6 ESC    &lt 3 SPACE  &lt 4 TAB    &lt 8 RET  &lt 7 BSPC   &lt 9 DEL
             >;
-        };
-
-        ru_layer {
-            bindings = <
-           &kp Q         &kp W         &kp E          &kp R        &kp T        &kp Y       &kp U        &kp I          &kp O         &kp P
-           &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L  &hrml LGUI SEMI
-&kp LSHFT  &lt 9 Z       &kp X         &kp C          &kp V        &kp B        &kp N       &kp M        &kp COMMA      &kp DOT       &lt 9 SLASH      &kp LSHFT
-                                       &lt 10 ESC     &lt 6 SPACE  &lt 8 TAB    &lt 14 RET  &lt 12 BSPC  &lt 15 DEL
-            >;
-
-            label = "RU";
         };
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
-          &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &kp RET
-                            &kp LALT  &kp SPACE  &mo 3    &switch_en  &kp SPACE  &mo 15
+          &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans     &to 0      &kp UP    &trans     &kp TAB
+          &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans     &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
+&kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans     &trans     &trans    &trans     &kp RCTRL  &trans
+                            &kp LALT  &kp SPACE  &mo 2    &lt 8 RET  &kp SPACE  &mo 9
             >;
 
             label = "GAM";
@@ -375,58 +194,30 @@
 
         gaming_fn {
             bindings = <
-       &kp ESC  &kp N7  &kp N8  &kp N9   &kp T     &kp C_VOL_UP  &kp F1  &kp F2  &kp F3  &kp F10
-       &kp I    &kp N4  &kp N5  &kp N6   &kp G     &kp C_VOL_DN  &kp F4  &kp F5  &kp F6  &kp F11
-&kp J  &kp M    &kp N1  &kp N2  &kp N3   &kp B     &kp K_MUTE    &kp F7  &kp F8  &kp F9  &kp F12  &kp PSCRN
-                        &kp N0  &kp RET  &trans    &trans        &trans  &trans
+       &kp ESC  &kp N7  &kp N8  &kp N9   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
+       &kp I    &kp N4  &kp N5  &kp N6   &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI
+&kp J  &kp M    &kp N1  &kp N2  &kp N3   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                        &kp N0  &kp RET  &trans    &trans  &trans  &trans
             >;
 
             label = "GAM_FN";
         };
 
-        shortcut {
-            label = "shortcut";
-            bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J      &kp L        &kp U        &kp Y       &kp APOS
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LGUI O
-&kp LSHFT  &lt 9 Z     &kp X       &kp C        &kp D        &kp V      &kp K      &kp H        &kp COMMA    &kp PERIOD  &lt 9 FSLH  &kp LSHFT
-                                   &kp ESC      &kp SPACE    &kp TAB    &kp ENTER  &kp BSPC     &kp DEL
-            >;
-        };
-
         navi {
             bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 11     &tog 5      &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                                 &kp ESC     &kp SPACE   &kp TAB    &kp RET       &kp BSPC   &kp DEL
-            >;
-        };
-
-        navi_ru {
-            bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_caps_word_ru  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&none  &none           &none     &tog 12     &tog 6      &none      &kp INS          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-                                 &kp ESC     &kp SPACE   &kp TAB    &kp RET          &kp BSPC   &kp DEL
+        &td_bootloader  &none     &none      &to 0      &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 1      &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&trans  &none           &kp RALT  &tog 7     &tog 3     &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC   &kp DEL
             >;
         };
 
         mouse {
             bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none           &none     &tog 13     &tog 7      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                 &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
-            >;
-        };
-
-        mouse_ru {
-            bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&none  &none           &none     &tog 14     &tog 8      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                 &kp ESC     &kp SPACE   &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
+       &td_bootloader  &none     &none      &to 0      &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
+       &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 1      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&none  &none           &kp RALT  &tog 8     &tog 4     &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+                                 &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -441,55 +232,37 @@
 
         media {
             bindings = <
-       &td_bootloader  &to 2     &switch_ru  &switch_en  &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-       &kp LGUI        &kp LALT  &kp LCTRL   &kp LSHFT   &none      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&none  &none           &none     &tog 15     &tog 10     &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                 &kp ESC     &kp SPACE   &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+        &td_bootloader  &none     &none      &to 0      &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to 1      &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&trans  &none           &kp RALT  &tog 9     &tog 6     &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
             >;
         };
 
         num {
             bindings = <
-            &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-            &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 11     &tog 5      &none     &none           &none
-                               &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
-            >;
-        };
-
-        num_ru {
-            bindings = <
-          &kp LBKT   &kp N7  &kp N8    &kp N9  &kp RBKT     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp SQT    &kp N4  &kp N5    &kp N6  &kp EQUAL    &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &kp GRAVE  &kp N1  &kp N2    &kp N3  &kp BSLH     &none      &tog 12     &tog 6      &none     &none           &none
-                             &kp FSLH  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC    &kp DEL
+        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to 0      &none      &none     &td_bootloader
+        &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL    &to 1      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &tog 7     &tog 3     &kp RALT  &none           &trans
+                           &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
 
         sym {
             bindings = <
-            &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-            &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &kp SLASH  &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&enru HASH  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 13     &tog 7      &none     &none           &none
-                                      &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC    &kp DEL
-            >;
-        };
-
-        sym_ru {
-            bindings = <
-          &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR    &kp RBRC      &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-          &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET   &kp PLUS      &kp PIPE   &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&kp HASH  &kp TILDE       &kp EXCL  &kp AT     &ruen HASH  &ruen PIPE    &none      &tog 14     &tog 8      &none     &none           &none
-                                    &kp LPAR   &kp RPAR    &kp UNDER     &kp ENTER  &kp BSPC    &kp DEL
+        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to 0      &none      &none     &td_bootloader
+        &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to 1      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &tog 8     &tog 4     &kp RALT  &none           &trans
+                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
 
         fun {
             bindings = <
-       &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &switch_en  &switch_ru  &to 2     &td_bootloader
-       &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT   &kp LCTRL   &kp LALT  &kp LGUI
-&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 15     &tog 10     &none     &none           &none
-                        &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC    &kp DEL
+        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to 0      &none      &none     &td_bootloader
+        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to 1      &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &tog 9     &tog 6     &kp RALT  &none           &trans
+                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
     };
