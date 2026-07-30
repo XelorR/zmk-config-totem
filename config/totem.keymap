@@ -448,7 +448,7 @@
            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
 &kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
-                                   &lt 16 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 17 DEL
+                                   &lt 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
             >;
         };
 
@@ -497,7 +497,7 @@
           &kp TAB    &kp Q  &kp W     &kp E      &kp R    &trans      &trans     &kp UP    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp S     &kp D      &kp F    &trans      &kp LEFT   &kp DOWN  &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp X     &kp C      &kp B    &trans      &trans     &trans    &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &lt 16 RET  &kp SPACE  &mo 17
+                            &kp LALT  &kp SPACE  &mo 6    &lt 15 RET  &kp SPACE  &mo 16
             >;
 
             label = "GAM";
@@ -508,7 +508,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 17
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 16
             >;
 
             label = "GAM_FN";
