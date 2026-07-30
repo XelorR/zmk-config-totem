@@ -296,11 +296,11 @@
             mods = <(MOD_LSFT)>;
         };
 
-        lg2_caps_word: ru_caps_word {
+        lg2_caps_word: lg2_caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = "RU_CAPS_WORD";
+            label = "LG2_CAPS_WORD";
             #binding-cells = <0>;
-            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE SEMI DOT COMMA>;
         };
 
         to_alt: to_alt {
