@@ -207,6 +207,13 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        lg1_symbol: lg1_symbol {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LG(SPACE) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LG(SPACE)>;
+            label = "LG1_SYMBOL";
+        };
     };
 
     behaviors {
@@ -395,6 +402,20 @@
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
         };
+
+        frz_num2: frz_num2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NUM2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 12>;
+        };
+
+        frz_sym2: frz_sym2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_SYM2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 13>;
+        };
     };
 
     keymap {
@@ -509,7 +530,7 @@
             bindings = <
         &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_alt    &to_tap   &td_bootloader
         &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
+&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num2  &frz_nav   &kp RALT  &none           &trans
                            &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
@@ -540,10 +561,10 @@
 
         sym_lang2 {
             bindings = <
-        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_alt    &to_tap   &td_bootloader
-        &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
-                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR          &kp RBRC     &none      &to_base   &to_alt    &to_tap   &td_bootloader
+        &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET         &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp TILDE       &kp EXCL  &kp AT     &lg1_symbol HASH  &kp PIPE     &none      &frz_sym2  &frz_mou   &kp RALT  &none           &trans
+                                  &kp LPAR   &kp RPAR          &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "SYM_LANG2";
