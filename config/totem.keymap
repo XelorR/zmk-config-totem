@@ -342,7 +342,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
+            bindings = <&none>, <&tog 15>;
         };
 
         frz_num: frz_num {
@@ -363,7 +363,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
+            bindings = <&none>, <&tog 16>;
         };
 
         to_gam: to_gam {
