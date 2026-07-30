@@ -296,6 +296,13 @@
             mods = <(MOD_LSFT)>;
         };
 
+        lg2_caps_word: ru_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "RU_CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDER LBKT RBKT SQT GRAVE>;
+        };
+
         to_alt: to_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_ALT";
@@ -554,10 +561,10 @@
         navi_lang2 {
             label = "NAVI_lang2";
             bindings = <
-        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC   &kp DEL
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)       &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET         &kp BSPC   &kp DEL
             >;
         };
 
