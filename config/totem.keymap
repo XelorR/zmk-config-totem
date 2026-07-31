@@ -88,7 +88,7 @@
             layers = <13 14>;
         };
 
-        lg2_left_backet_letter {
+        lg2_left_bracket_letter {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
             layers = <2>;
