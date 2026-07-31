@@ -700,10 +700,10 @@
 
         num_lang2 {
             bindings = <
-        &kp LBKT   &kp_unshift N7  &kp_unshift N8     &kp_unshift N9  &kp RBKT             &none              &to_base   &to_alt    &to_tap   &td_bootloader
-        &kp SQT    &kp_unshift N4  &kp_unshift N5     &kp_unshift N6  &kp_unshift EQUAL    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp GRAVE  &kp_unshift N1  &kp_unshift N2     &kp_unshift N3  &kp_unshift BSLH     &none              &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                                   &kp_unshift SLASH  &kp_unshift N0  &kp_unshift MINUS    &kp_unshift ENTER  &kp BSPC   &kp DEL
+        &lg1_symbol LBKT   &kp_unshift N7  &kp_unshift N8     &kp_unshift N9  &lg1_symbol RBKT     &none              &to_base   &to_alt    &to_tap   &td_bootloader
+        &kp_unshift DLLR   &kp_unshift N4  &kp_unshift N5     &kp_unshift N6  &kp_unshift EQUAL    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &lg1_symbol GRAVE  &kp_unshift N1  &kp_unshift N2     &kp_unshift N3  &kp_unshift BSLH     &none              &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+                                           &kp_unshift SLASH  &kp_unshift N0  &kp_unshift MINUS    &kp_unshift ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -711,10 +711,10 @@
 
         sym_lang2 {
             bindings = <
-        &kp LEFT_BRACE  &kp_unshift AMPS  &kp_unshift STAR   &kp_unshift LPAR   &kp RBRC            &none              &to_base   &to_alt    &to_tap   &td_bootloader
-        &kp DQT         &kp_unshift DLLR  &kp_unshift PRCNT  &kp_unshift CARET  &kp_unshift PLUS    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp TILDE       &kp_unshift EXCL  &kp_unshift AT     &lg1_symbol HASH   &kp_unshift PIPE    &none              &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
-                                          &kp_unshift LPAR   &kp_unshift RPAR   &kp UNDER           &kp_unshift ENTER  &kp BSPC   &kp DEL
+        &lg1_symbol LEFT_BRACE  &kp_unshift AMPS  &kp_unshift STAR   &kp_unshift LPAR   &lg1_symbol RBRC    &none              &to_base   &to_alt    &to_tap   &td_bootloader
+        &kp_unshift CARET       &lg1_symbol DLLR  &kp_unshift PRCNT  &lg1_symbol CARET  &kp_unshift PLUS    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &lg1_symbol TILDE       &kp_unshift EXCL  &kp_unshift AT     &lg1_symbol HASH   &kp_unshift PIPE    &none              &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
+                                                  &kp_unshift LPAR   &kp_unshift RPAR   &kp UNDER           &kp_unshift ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "SYM_LANG2";
