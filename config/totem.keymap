@@ -524,6 +524,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        lg2_caps_word: lg2_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LG2_CAPS_WORD";
+            bindings = <&key_on RSHFT>, <&kp CAPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -649,7 +658,7 @@
             label = "NAVI_lang2";
             bindings = <
         &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &kp_unshift LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &key_on RSHFT      &u_left            &u_down            &u_up              &u_right
+        &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &lg2_caps_word     &u_left            &u_down            &u_up              &u_right
 &trans  &none           &kp RALT  &frz_num2        &frz_nav2          &none              &kp INS            &u_home            &u_pgdn            &u_pgup            &u_end             &trans
                                   &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift RET    &kp BSPC           &kp DEL
             >;
