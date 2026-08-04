@@ -228,11 +228,11 @@
         lg1_symbol: lg1_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LG(SPACE) &macro_param_1to1 &kp_unshift MACRO_PLACEHOLDER &kp LG(SPACE)>;
+            bindings = <&kp LG(SPACE) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LG(SPACE)>;
             label = "LG1_SYMBOL";
         };
 
-        kp_unshift: kp_unshift {
+        ku: kp_unshift {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&key_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
@@ -457,10 +457,10 @@
             bindings = <&none>, <&tog 12>;
         };
 
-        mt_unshift: mt_unshift {
+        mu: mt_unshift {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_UNSHIFT";
-            bindings = <&kp>, <&kp_unshift>;
+            bindings = <&kp>, <&ku>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -468,10 +468,10 @@
             flavor = "tap-preferred";
         };
 
-        lt_unshift: lt_unshift {
+        lu: lt_unshift {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_UNSHIFT";
-            bindings = <&mo>, <&kp_unshift>;
+            bindings = <&mo>, <&ku>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -565,10 +565,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F               &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S         &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C               &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
-                                   &lt_unshift 15 ESC  &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
+           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
+&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
+                                   &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
             >;
         };
 
@@ -585,10 +585,10 @@
         lang2_layer {
             label = "LANG2";
             bindings = <
-        &kp Q         &kp W         &kp E          &kp R                 &kp T                 &kp Y               &kp U                &kp I          &kp O           &kp P
-        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F           &kp G                 &kp H               &mt LSHFT J          &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V                 &kp B                 &kp N               &kp M                &kp COMMA      &hrml RALT DOT  &lt_unshift 17 FSLH  &trans
-                                    &trans         &lt_unshift 11 SPACE  &lt_unshift 12 TAB    &lt_unshift 14 RET  &lt_unshift 13 BSPC  &trans
+        &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
+        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
+&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 17 FSLH      &trans
+                                    &trans         &lu 11 SPACE  &lu 12 TAB    &lu 14 RET  &lu 13 BSPC  &trans
             >;
         };
 
@@ -637,9 +637,9 @@
         navi {
             bindings = <
         &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC   &kp DEL
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT
+&trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC     &kp DEL
             >;
 
             label = "NAVI";
@@ -647,7 +647,7 @@
 
         mouse {
             bindings = <
-        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)  &kp LS(INS)       &kp LC(INS)       &kp LC(X)     &kp LC(Z)
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
 &trans  &none           &kp RALT  &frz_sym   &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
@@ -681,29 +681,29 @@
         navi_lang2 {
             label = "NAVI_lang2";
             bindings = <
-        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LS(INS)  &kp_unshift LC(INS)  &kp_unshift LC(X)  &kp_unshift LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &lg2_caps_word     &u_left            &u_down            &u_up              &u_right
-&trans  &none           &kp RALT  &frz_num2        &frz_nav2          &none              &kp INS            &u_home            &u_pgdn            &u_pgup            &u_end             &trans
-                                  &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift RET    &kp BSPC           &kp DEL
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
+&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
+                                  &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
             >;
         };
 
         mouse_lang2 {
             label = "MOUSE_LANG2";
             bindings = <
-        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LS(INS)  &kp_unshift LC(INS)  &kp_unshift LC(X)  &kp_unshift LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &none              &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym2        &frz_mou2          &none              &none              &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT    &trans
-                                  &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &mkp RCLK          &mkp LCLK          &mkp MCLK
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &ku LC(Y)  &ku LS(INS)     &ku LC(INS)     &ku LC(X)     &ku LC(Z)
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&trans  &none           &kp RALT  &frz_sym2  &frz_mou2  &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+                                  &ku ESC    &ku SPACE  &ku TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
         num_lang2 {
             bindings = <
-        &lg1_symbol LBKT   &kp_unshift N7  &kp_unshift N8     &kp_unshift N9  &lg1_symbol RBKT     &none              &to_base   &to_alt    &to_tap   &td_bootloader
-        &kp_unshift DLLR   &kp_unshift N4  &kp_unshift N5     &kp_unshift N6  &kp_unshift EQUAL    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &lg1_symbol GRAVE  &kp_unshift N1  &kp_unshift N2     &kp_unshift N3  &kp_unshift BSLH     &none              &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                                           &kp_unshift SLASH  &kp_unshift N0  &kp_unshift MINUS    &kp_unshift ENTER  &kp BSPC   &kp DEL
+        &lg1_symbol LBKT   &ku N7  &ku N8     &ku N9  &lg1_symbol RBKT    &none      &to_base   &to_alt    &to_tap   &td_bootloader
+        &ku DLLR           &ku N4  &ku N5     &ku N6  &ku EQUAL           &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &lg1_symbol GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH            &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+                                   &ku SLASH  &ku N0  &ku MINUS           &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -711,10 +711,10 @@
 
         sym_lang2 {
             bindings = <
-        &lg1_symbol LEFT_BRACE  &kp_unshift AMPS  &kp_unshift STAR   &kp_unshift LPAR   &lg1_symbol RBRC    &none              &to_base   &to_alt    &to_tap   &td_bootloader
-        &kp_unshift CARET       &lg1_symbol DLLR  &kp_unshift PRCNT  &lg1_symbol CARET  &kp_unshift PLUS    &to_gam            &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &lg1_symbol TILDE       &kp_unshift EXCL  &kp_unshift AT     &lg1_symbol HASH   &kp_unshift PIPE    &none              &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
-                                                  &kp_unshift LPAR   &kp_unshift RPAR   &kp UNDER           &kp_unshift ENTER  &kp BSPC   &kp DEL
+        &lg1_symbol LEFT_BRACE  &ku AMPS          &ku STAR   &ku LPAR           &lg1_symbol RBRC    &none      &to_base   &to_alt    &to_tap   &td_bootloader
+        &ku CARET               &lg1_symbol DLLR  &ku PRCNT  &lg1_symbol CARET  &ku PLUS            &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &lg1_symbol TILDE       &ku EXCL          &ku AT     &lg1_symbol HASH   &ku PIPE            &none      &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
+                                                  &ku LPAR   &ku RPAR           &kp UNDER           &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "SYM_LANG2";
@@ -743,9 +743,9 @@
         button {
             bindings = <
         &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &trans     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
+        &kp LGUI   &kp LALT   &kp LCTRL    &kp LSHFT    &trans       &trans     &kp LSHFT    &kp LCTRL    &kp LALT   &kp LGUI
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)  &trans
-                              &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
+                              &mkp MCLK    &mkp LCLK    &mkp RCLK    &mkp RCLK  &mkp LCLK    &mkp MCLK
             >;
         };
     };
