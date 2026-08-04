@@ -636,7 +636,7 @@
 
         navi {
             bindings = <
-        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)     &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
 &trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC   &kp DEL
@@ -647,7 +647,7 @@
 
         mouse {
             bindings = <
-        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)  &kp LC(V)       &kp LC(C)       &kp LC(X)     &kp LC(Z)
+        &td_bootloader  &to_tap   &to_alt    &to_base   &none      &kp LC(Y)  &kp LS(INS)       &kp LC(INS)       &kp LC(X)     &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
 &trans  &none           &kp RALT  &frz_sym   &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
@@ -681,7 +681,7 @@
         navi_lang2 {
             label = "NAVI_lang2";
             bindings = <
-        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &kp_unshift LC(Z)
+        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LS(INS)  &kp_unshift LC(INS)  &kp_unshift LC(X)  &kp_unshift LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &lg2_caps_word     &u_left            &u_down            &u_up              &u_right
 &trans  &none           &kp RALT  &frz_num2        &frz_nav2          &none              &kp INS            &u_home            &u_pgdn            &u_pgup            &u_end             &trans
                                   &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &kp_unshift RET    &kp BSPC           &kp DEL
@@ -691,7 +691,7 @@
         mouse_lang2 {
             label = "MOUSE_LANG2";
             bindings = <
-        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LC(V)  &kp_unshift LC(C)  &kp_unshift LC(X)  &kp_unshift LC(Z)
+        &td_bootloader  &to_tap   &to_alt          &to_base           &none              &kp_unshift LC(Y)  &kp_unshift LS(INS)  &kp_unshift LC(INS)  &kp_unshift LC(X)  &kp_unshift LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL        &kp LSHFT          &to_gam            &none              &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP       &mmv MOVE_RIGHT
 &trans  &none           &kp RALT  &frz_sym2        &frz_mou2          &none              &none              &msc SCRL_LEFT     &msc SCRL_DOWN     &msc SCRL_UP       &msc SCRL_RIGHT    &trans
                                   &kp_unshift ESC  &kp_unshift SPACE  &kp_unshift TAB    &mkp RCLK          &mkp LCLK          &mkp MCLK
@@ -742,9 +742,9 @@
 
         button {
             bindings = <
-        &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
+        &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
         &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &trans       &trans     &kp LSHFT  &kp LCTRL  &kp LALT   &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)  &trans
                               &mkp MCLK  &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
             >;
         };
