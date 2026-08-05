@@ -711,10 +711,10 @@
 
         sym_lang2 {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
-&trans  &none           &kp RALT  &frz_mou2  &frz_sym2  &none        &kp PIPE   &kp EXCL  &kp AT     &kp HASH   &kp TILDE  &trans
-                                  &kp DEL    &kp BSPC   &kp ENTER    &kp UNDER  &kp LPAR  &kp RPAR
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &ku LBRC   &ku AMPS  &ku STAR   &ku LPAR   &ku RBRC
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &ku PLUS   &ku DLLR  &ku PRCNT  &ku CARET  &ku CARET
+&trans  &none           &kp RALT  &frz_mou2  &frz_sym2  &none        &ku PIPE   &ku EXCL  &ku AT     &ku HASH   &ku TILDE  &trans
+                                  &kp DEL    &kp BSPC   &ku ENTER    &ku UNDER  &ku LPAR  &ku RPAR
             >;
 
             label = "SYM_LANG2";
