@@ -636,10 +636,10 @@
 
         navi {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT
-&trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC     &kp DEL
+        &kp HOME   &kp PG_DN  &kp PG_UP    &kp END      &kp INS         &none    &to_base   &to_extra  &to_tap   &td_bootloader
+        &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT    &u_caps_word    &to_gam  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)       &none    &frz_nav   &frz_num   &kp RALT  &none           &trans
+                              &kp DEL      &kp BSPC     &kp ENTER       &kp TAB  &kp SPACE  &kp ESC
             >;
 
             label = "NAVI";
