@@ -700,10 +700,10 @@
 
         num_lang2 {
             bindings = <
-        &lg1_symbol LBKT   &ku N7  &ku N8     &ku N9  &lg1_symbol RBKT    &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku DLLR           &ku N4  &ku N5     &ku N6  &ku EQUAL           &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &lg1_symbol GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH            &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                                   &ku SLASH  &ku N0  &ku MINUS           &ku ENTER  &kp BSPC   &kp DEL
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI
+&trans  &none           &kp RALT  &frz_nav2  &frz_num2  &none        &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
+                                  &kp DEL    &kp BSPC   &kp ENTER    &kp MINUS  &kp N0  &kp DOT
             >;
 
             label = "NUM_LANG2";
@@ -711,10 +711,10 @@
 
         sym_lang2 {
             bindings = <
-        &lg1_symbol LEFT_BRACE  &ku AMPS          &ku STAR   &ku LPAR           &lg1_symbol RBRC    &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku CARET               &lg1_symbol DLLR  &ku PRCNT  &lg1_symbol CARET  &ku PLUS            &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &lg1_symbol TILDE       &ku EXCL          &ku AT     &lg1_symbol HASH   &ku PIPE            &none      &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
-                                                  &ku LPAR   &ku RPAR           &kp UNDER           &ku ENTER  &kp BSPC   &kp DEL
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&trans  &none           &kp RALT  &frz_mou2  &frz_sym2  &none        &kp PIPE   &kp EXCL  &kp AT     &kp HASH   &kp TILDE  &trans
+                                  &kp DEL    &kp BSPC   &kp ENTER    &kp UNDER  &kp LPAR  &kp RPAR
             >;
 
             label = "SYM_LANG2";
