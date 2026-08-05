@@ -605,10 +605,10 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp APOS
-           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
+           &kp Q  &kp W  &kp F    &kp P     &kp B        &kp J    &kp L      &kp U      &kp Y    &kp APOS
+           &kp A  &kp R  &kp S    &kp T     &kp G        &kp M    &kp N      &kp E      &kp I    &kp O
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp D     &kp V        &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+                         &kp DEL  &kp BSPC  &kp ENTER    &kp TAB  &kp SPACE  &kp ESC
             >;
         };
 
