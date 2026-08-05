@@ -681,10 +681,10 @@
         navi_lang2 {
             label = "NAVI_LANG2";
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
-&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
-                                  &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
+        &u_home    &u_pgdn    &u_pgup      &u_end       &ku INS           &none    &to_base   &to_extra  &to_tap   &td_bootloader
+        &u_left    &u_down    &u_up        &u_right     &lg2_caps_word    &to_gam  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &ku LC(Z)  &ku LC(X)  &ku LC(INS)  &ku LS(INS)  &ku LC(Y)         &none    &frz_nav2  &frz_num2  &kp RALT  &none           &trans
+                              &kp DEL      &kp BSPC     &ku RET           &ku TAB  &ku SPACE  &ku ESC
             >;
         };
 
