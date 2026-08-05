@@ -700,10 +700,10 @@
 
         num_lang2 {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI
-&trans  &none           &kp RALT  &frz_nav2  &frz_num2  &none        &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
-                                  &kp DEL    &kp BSPC   &kp ENTER    &kp MINUS  &kp N0  &kp DOT
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &lg1_symbol LBKT  &ku N7  &ku N8    &ku N9  &lg1_symbol RBKT
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &ku EQUAL         &ku N4  &ku N5    &ku N6  &ku DLLR
+&trans  &none           &kp RALT  &frz_nav2  &frz_num2  &none        &ku BSLH          &ku N1  &ku N2    &ku N3  &lg1_symbol GRAVE  &trans
+                                  &kp DEL    &kp BSPC   &ku ENTER    &ku MINUS         &ku N0  &ku FSLH
             >;
 
             label = "NUM_LANG2";
