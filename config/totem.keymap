@@ -669,10 +669,10 @@
 
         sym_base {
             bindings = <
-        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
-                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp LBRC   &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET  &kp COLON
+&trans  &none           &kp RALT  &frz_mou   &frz_sym   &none        &kp PIPE   &kp EXCL  &kp AT     &kp HASH   &kp TILDE  &trans
+                                  &kp DEL    &kp BSPC   &kp ENTER    &kp UNDER  &kp LPAR  &kp RPAR
             >;
 
             label = "SYM_BASE";
