@@ -679,7 +679,7 @@
         };
 
         navi_lang2 {
-            label = "NAVI_lang2";
+            label = "NAVI_LANG2";
             bindings = <
         &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
@@ -738,6 +738,8 @@
 &trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
                          &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
             >;
+
+            label = "FUN";
         };
 
         button {
@@ -747,6 +749,8 @@
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)  &trans
                               &mkp MCLK    &mkp LCLK    &mkp RCLK    &mkp RCLK  &mkp LCLK    &mkp MCLK
             >;
+
+            label = "BUTTON";
         };
     };
 };
