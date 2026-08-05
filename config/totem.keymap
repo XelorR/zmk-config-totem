@@ -647,10 +647,10 @@
 
         mouse {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym   &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
+        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none        &none    &to_base   &to_extra  &to_tap   &td_bootloader
+        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none        &to_gam  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp LC(Z)       &kp LC(X)       &kp LC(INS)   &kp LS(INS)      &kp LC(Y)    &none    &frz_mou   &frz_sym   &kp RALT  &none           &trans
+                                        &mkp MB3      &mkp MB1         &mkp MB2     &kp TAB  &kp SPACE  &kp ESC
             >;
 
             label = "MOUSE";
