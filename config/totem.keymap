@@ -733,10 +733,10 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
-                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp PSCRN        &kp F7     &kp F8     &kp F9  &kp F12
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp SLCK         &kp F4     &kp F5     &kp F6  &kp F11
+&trans  &none           &kp RALT  &frz_med   &frz_fun   &none        &kp PAUSE_BREAK  &kp F1     &kp F2     &kp F3  &kp F10  &trans
+                                  &kp DEL    &kp BSPC   &kp ENTER    &kp TAB          &kp SPACE  &kp K_APP
             >;
 
             label = "FUN";
