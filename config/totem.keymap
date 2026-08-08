@@ -711,10 +711,10 @@
 
         sym_lang2 {
             bindings = <
-        &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp DQT
-        &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMICOLON  &mt LALT RBRC  &mt LGUI QMARK
-&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &kp SQT
-                                      &kp DEL          &kp BSPC        &kp ENTER           &kp TAB    &kp SPACE       &kp ESC
+        &kp EXCL          &lg1_symbol LT  &kp EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &kp N7        &kp N8        &kp N9       &kp AT
+        &mt LGUI BSLH     &mt LALT LPAR   &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS             &kp PRCNT          &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI AMPS
+&trans  &lg1_symbol HASH  &mt RALT STAR   &kp CARET        &kp PIPE        &kp HASH             &lg1_symbol AT     &kp N1        &kp N2        &mt RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
+                                          &kp DEL          &kp BSPC        &kp ENTER            &kp N0             &kp SPACE     &kp FSLH
             >;
 
             label = "SYM_LANG2";
