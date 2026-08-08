@@ -557,6 +557,17 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mtlg1: mtlg1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MTLG1";
+            bindings = <&kp>, <&lg1_symbol>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -700,10 +711,10 @@
 
         num_lang2 {
             bindings = <
-        &kp EXCL          &lg1_symbol LT  &kp EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &kp N7        &kp N8        &kp N9       &kp AT
-        &mt LGUI BSLH     &mt LALT LPAR   &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS             &kp PRCNT          &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI AMPS
-&trans  &lg1_symbol HASH  &mt RALT STAR   &kp CARET        &kp PIPE        &kp HASH             &lg1_symbol AT     &kp N1        &kp N2        &mt RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
-                                          &kp DEL          &kp BSPC        &kp ENTER            &kp N0             &kp SPACE     &kp FSLH
+        &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &ku N7        &ku N8        &ku N9       &ku AT
+        &mu LGUI BSLH     &mu LALT LPAR   &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS             &ku PRCNT          &mu LSHFT N4  &mu LCTRL N5  &mu LALT N6  &mu LGUI AMPS
+&trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku N1        &ku N2        &mu RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
+                                          &kp DEL          &kp BSPC        &ku ENTER            &ku N0             &ku SPACE     &ku FSLH
             >;
 
             label = "NUM_LANG2";
@@ -711,10 +722,10 @@
 
         sym_lang2 {
             bindings = <
-        &kp EXCL          &lg1_symbol LT  &kp EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &kp N7        &kp N8        &kp N9       &kp AT
-        &mt LGUI BSLH     &mt LALT LPAR   &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS             &kp PRCNT          &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI AMPS
-&trans  &lg1_symbol HASH  &mt RALT STAR   &kp CARET        &kp PIPE        &kp HASH             &lg1_symbol AT     &kp N1        &kp N2        &mt RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
-                                          &kp DEL          &kp BSPC        &kp ENTER            &kp N0             &kp SPACE     &kp FSLH
+        &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &lg1_symbol LBRC   &ku UNDER          &lg1_symbol RBRC  &ku AT
+        &mu LGUI BSLH     &mu LALT LPAR   &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS             &ku PRCNT          &mtlg1 LSHFT LBKT  &mu LCTRL DLLR     &mtlg1 LALT RBRC  &mu LGUI AMPS
+&trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku LS(NUBS)       &lg1_symbol TILDE  &mtlg1 RALT AMPS  &lg1_symbol DLLR  &lg1_symbol SQT
+                                          &kp DEL          &kp BSPC        &ku ENTER            &lg2_arrow         &ku SPACE          &ku FSLH
             >;
 
             label = "SYM_LANG2";
