@@ -229,7 +229,7 @@
         lg1_symbol: lg1_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LG(SPACE) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LG(SPACE)>;
+            bindings = <&kp LS(LC(N8)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N7))>;
             label = "LG1_SYMBOL";
             tap-ms = <50>;
         };
@@ -255,6 +255,14 @@
             #binding-cells = <0>;
             bindings = <&ku HOME &kp LS(RET) &kp LEFT>;
             label = "IN_ROW_ABOVE";
+        };
+
+        lg2_symbol: lg2_symbol {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LS(LC(N7)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N8))>;
+            label = "LG2_SYMBOL";
+            tap-ms = <50>;
         };
     };
 
@@ -665,7 +673,7 @@
             bindings = <
         &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp SQT
         &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMICOLON  &mt LALT RBRC  &mt LGUI QMARK
-&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &trans
+&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg2_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &trans
                                       &kp ESC          &kp SPACE       &kp DQT             &kp ENTER  &kp BSPC        &kp DEL
             >;
 
