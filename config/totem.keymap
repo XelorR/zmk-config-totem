@@ -67,7 +67,7 @@
         para_combo {
             bindings = <&parathesis>;
             key-positions = <11 13>;
-            layers = <9 10 13 14>;
+            layers = <9 10 12 13>;
         };
 
         arrow_combo {
@@ -79,13 +79,13 @@
         lg2_checkbox_combo {
             bindings = <&lg2_checkbox>;
             key-positions = <22 24>;
-            layers = <13 14>;
+            layers = <12 13>;
         };
 
         lg2_arrow_combo {
             bindings = <&lg2_arrow>;
             key-positions = <1 3>;
-            layers = <13 14>;
+            layers = <12 13>;
         };
 
         lg2_left_bracket_letter {
@@ -361,7 +361,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 15>;
+            bindings = <&none>, <&tog 0>;
         };
 
         frz_num: frz_num {
@@ -382,7 +382,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
+            bindings = <&none>, <&tog 14>;
         };
 
         to_gam: to_gam {
@@ -433,14 +433,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
+            bindings = <&none>, <&tog 12>;
         };
 
         frz_sym2: frz_sym2 {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_SYM2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 14>;
+            bindings = <&none>, <&tog 13>;
         };
 
         frz_nav2: frz_nav2 {
@@ -454,7 +454,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MOU2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 12>;
+            bindings = <&none>, <&tog 0>;
         };
 
         mu: mt_unshift {
@@ -622,8 +622,8 @@
             bindings = <
            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
-                                   &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
+&kp LSHFT  &lt 15 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 15 FSLH  &kp LSHFT
+                                   &lu 14 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 14 DEL
             >;
         };
 
@@ -632,7 +632,7 @@
             bindings = <
         &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
         &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
+&trans  &lt 15 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 15 FSLH   &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -640,10 +640,10 @@
         lang2_layer {
             label = "LANG2";
             bindings = <
-        &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
-        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 17 FSLH      &trans
-                                    &trans         &lu 11 SPACE  &lu 12 TAB    &lu 14 RET  &lu 13 BSPC  &trans
+        &kp Q         &kp W         &kp E          &kp R         &kp T        &kp Y       &kp U        &kp I          &kp O           &kp P
+        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
+&trans  &lt 15 Z      &hrml RALT X  &kp C          &kp V         &kp B        &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 15 FSLH      &trans
+                                    &trans         &lu 11 SPACE  &lu 8 TAB    &lu 13 RET  &lu 12 BSPC  &trans
             >;
         };
 
@@ -652,7 +652,7 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp B     &kp J   &kp L        &kp U        &kp Y         &kp SQT
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G     &kp M   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
+&trans  &lt 15 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 15 FSLH  &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -669,10 +669,10 @@
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans      &trans     &trans    &trans     &kp TAB
-          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans      &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans      &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &lt 15 RET  &kp SPACE  &mo 16
+          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans   &trans     &trans    &trans     &kp TAB
+          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans   &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
+&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans   &trans     &kp DOWN  &trans     &kp RCTRL  &trans
+                            &kp LALT  &kp SPACE  &mo 6    &kp RET  &kp SPACE  &mo 14
             >;
 
             label = "GAM";
@@ -682,8 +682,8 @@
             bindings = <
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
-&kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 16
+&kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 14
             >;
 
             label = "GAM_FN";
@@ -704,7 +704,7 @@
             bindings = <
         &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym   &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+&trans  &none           &kp RALT  &none      &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
@@ -724,10 +724,10 @@
 
         sym_base {
             bindings = <
-        &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp DQT
+        &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp SQT
         &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMICOLON  &mt LALT RBRC  &mt LGUI QMARK
-&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &kp SQT
-                                      &kp LPAR         &kp RPAR        &kp UNDER           &kp ENTER  &kp BSPC        &kp DEL
+&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &trans
+                                      &kp ESC          &kp SPACE       &kp DQT             &kp ENTER  &kp BSPC        &kp DEL
             >;
 
             label = "SYM_BASE";
@@ -740,16 +740,6 @@
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
 &trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
                                   &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
-            >;
-        };
-
-        mouse_lang2 {
-            label = "MOUSE_LANG2";
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)  &ku LS(INS)     &ku LC(INS)     &ku LC(X)     &ku LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym2  &frz_mou2  &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                  &ku ESC    &ku SPACE  &ku TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -766,32 +756,21 @@
 
         sym_lang2 {
             bindings = <
-        &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &lg1_symbol LBRC   &ku UNDER          &lg1_symbol RBRC  &ku AT
+        &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &lg1_symbol LBRC   &ku UNDER          &lg1_symbol RBRC  &lg1_symbol SQT
         &mu LGUI BSLH     &mu LALT LPAR   &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS             &ku PRCNT          &mtlg1 LSHFT LBKT  &mu LCTRL DLLR     &mtlg1 LALT RBRC  &mu LGUI AMPS
-&trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku LS(NUBS)       &lg1_symbol TILDE  &mtlg1 RALT AMPS  &lg1_symbol DLLR  &lg1_symbol SQT
-                                          &ku LPAR         &ku RPAR        &kp UNDER            &ku ENTER          &kp BSPC           &kp DEL
+&trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku LS(NUBS)       &lg1_symbol TILDE  &mtlg1 RALT AMPS  &lg1_symbol DLLR  &trans
+                                          &ku ESC          &ku SPACE       &kp AT               &ku ENTER          &kp BSPC           &kp DEL
             >;
 
             label = "SYM_LANG2";
         };
 
-        media {
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
-            >;
-
-            label = "MEDIA";
-        };
-
         fun {
             bindings = <
-                &kp F12       &kp F7       &kp F8        &kp F9        &kp PSCRN          &bt_0         &bt_1               &bt_2             &bt_3              &bt_4
-                &mt LGUI F11  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp SCROLLLOCK     &out OUT_BLE  &mt LSHFT C_VOL_DN  &mt LCTRL K_MUTE  &mt LALT C_VOL_UP  &kp LGUI
-&td_bootloader  &kp F10       &mt RALT F1  &kp F2        &kp F3        &kp PAUSE_BREAK    &out OUT_USB  &kp C_PREV          &kp C_PP          &mt RALT C_NEXT    &bt BT_CLR_ALL  &td_bootloader
-                                           &kp K_APP     &kp SPACE     &kp TAB            &kp C_STOP    &kp C_PP            &kp K_MUTE
+                &kp F12       &kp F7       &kp F8        &kp F9        &kp PSCRN          &bt_0         &bt_1                 &bt_2             &bt_3              &bt_4
+                &mt LGUI F11  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp SCROLLLOCK     &out OUT_BLE  &mt LSHFT C_VOL_DN    &mt LCTRL K_MUTE  &mt LALT C_VOL_UP  &mt LGUI C_STOP
+&td_bootloader  &kp F10       &mt RALT F1  &kp F2        &kp F3        &kp PAUSE_BREAK    &out OUT_USB  &kp C_PREV            &kp C_PP          &mt RALT C_NEXT    &bt BT_CLR_ALL   &td_bootloader
+                                           &kp K_APP     &kp SPACE     &kp TAB            &kp C_AL_WWW  &kp C_AL_MY_COMPUTER  &kp C_AL_CALC
             >;
 
             label = "FUN";
@@ -806,17 +785,6 @@
             >;
 
             label = "BUTTON";
-        };
-
-        fun_ {
-            bindings = <
-                &bt_0           &bt_1              &bt_2             &bt_3               &bt_4           &kp PSCRN        &kp F7        &kp F8        &kp F9       &kp F12
-                &kp LGUI        &mt LALT C_VOL_DN  &mt LCTRL K_MUTE  &mt LSHFT C_VOL_UP  &out OUT_BLE    &kp SLCK         &mt LSHFT F4  &mt LCTRL F5  &mt LALT F6  &mt LGUI F11
-&td_bootloader  &bt BT_CLR_ALL  &mt RALT C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT          &out OUT_USB    &kp PAUSE_BREAK  &kp F1        &kp F2        &mt RALT F3  &kp F10       &bootloader
-                                                   &kp K_MUTE        &kp C_PP            &kp C_STOP      &kp TAB          &kp SPACE     &kp K_APP
-            >;
-
-            label = "FUN_;
         };
     };
 };
