@@ -537,6 +537,17 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        lgmt_pgup: lgmt_pgup {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LGMT_PGUP";
+            bindings = <&kp>, <&u_pgup>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -670,10 +681,10 @@
 
         num_lang2 {
             bindings = <
-           &ku PIPE  &ku N7  &ku N8   &ku N9     &ku MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
-           &ku STAR  &ku N4  &ku N5   &ku N6     &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp EQUAL  &ku N0    &ku N1  &ku N2   &ku N3     &ku FSLH     &none      &none      &none      &kp RALT  &none           &trans
-                             &ku ESC  &ku SPACE  &ku RET      &ku ENTER  &kp BSPC   &kp DEL
+           &ku PIPE       &ku N7       &ku N8        &ku N9        &ku MINUS    &none           &ku LC(LEFT)        &in_row_below       &in_row_above      &ku LC(RIGHT)
+           &mu LGUI STAR  &mu LALT N4  &mu LCTRL N5  &mu LSHFT N6  &ku PLUS     &lg2_caps_word  &lgmt_left LSHFT 0  &lgmt_down LCTRL 0  &lgmt_up LALT 0    &lgmt_right LGUI 0
+&kp EQUAL  &ku N0         &mu RALT N1  &ku N2        &ku N3        &ku FSLH     &kp INS         &u_home             &u_pgdn             &lgmt_pgup RALT 0  &u_end              &trans
+                                       &ku ESC       &ku SPACE     &ku RET      &ku ENTER       &kp BSPC            &kp DEL
             >;
 
             label = "NUM_LANG2";
