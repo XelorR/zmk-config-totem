@@ -629,7 +629,7 @@
         num_lang2 {
             bindings = <
         &ku LBKT   &ku N7  &ku N8     &ku N9  &ku RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku DLLR   &ku N4  &ku N5     &ku N6  &ku EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+        &ku SQT    &ku N4  &ku N5     &ku N6  &ku EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &ku GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH     &ku PIPE   &frz_num2  &frz_nav2  &kp RALT  &none           &trans
                            &ku SLASH  &ku N0  &ku MINUS    &ku ENTER  &kp BSPC   &kp DEL
             >;
@@ -640,7 +640,7 @@
         sym_lang2 {
             bindings = <
         &ku LBRC   &ku AMPS  &ku STAR   &ku LPAR   &ku RBRC        &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku CARET  &ku DLLR  &ku PRCNT  &ku CARET  &ku PLUS        &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+        &ku DQT    &ku DLLR  &ku PRCNT  &ku CARET  &ku PLUS        &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &trans  &ku TILDE  &ku EXCL  &ku AT     &ku HASH   &ku LS(NUBS)    &ku PIPE   &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
                              &ku LPAR   &ku RPAR   &kp UNDER       &ku ENTER  &kp BSPC   &kp DEL
             >;
