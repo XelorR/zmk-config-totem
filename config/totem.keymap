@@ -693,7 +693,7 @@
             bindings = <
         &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT
-&trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
+&trans  &kp LC(Z)  &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC     &kp DEL
             >;
 
@@ -704,7 +704,7 @@
             bindings = <
         &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &none      &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+&trans  &kp LC(Z)  &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y) &none &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                                   &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
@@ -738,7 +738,7 @@
             bindings = <
         &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
-&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
+&trans  &kp LC(Z)  &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
                                   &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
             >;
         };
