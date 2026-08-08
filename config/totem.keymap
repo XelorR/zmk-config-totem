@@ -151,14 +151,14 @@
         cmd_space_lang1: cmd_space_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 0>;
+            bindings = <&lang1_custom &to 0>;
             label = "CMD_SPACE_LANG1";
         };
 
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 2>;
+            bindings = <&lang2_custom &to 2>;
             label = "CMD_SPACE_LANG2";
         };
 
@@ -200,7 +200,7 @@
         lg2_checkbox: ru_checkbox {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &checkbox &kp LG(SPACE)>;
+            bindings = <&lang1_custom &checkbox &lang2_custom>;
             label = "RU_CHECKBOX";
             tap-ms = <50>;
             wait-ms = <30>;
@@ -209,7 +209,7 @@
         lg2_arrow: lg2_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &arrow &kp LG(SPACE)>;
+            bindings = <&lang1_custom &arrow &lang2_custom>;
             label = "LG2_ARROW";
             tap-ms = <50>;
             wait-ms = <30>;
@@ -231,7 +231,7 @@
         lg1_symbol: lg1_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LG(SPACE) &macro_param_1to1 &ku MACRO_PLACEHOLDER &none &kp LG(SPACE)>;
+            bindings = <&lang1_custom &macro_param_1to1 &ku MACRO_PLACEHOLDER &lang2_custom>;
             label = "LG1_SYMBOL";
             tap-ms = <50>;
             wait-ms = <30>;
@@ -263,10 +263,24 @@
         lg2_symbol: lg2_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LG(SPACE) &macro_param_1to1 &ku MACRO_PLACEHOLDER &none &kp LG(SPACE)>;
+            bindings = <&lang2_custom &macro_param_1to1 &ku MACRO_PLACEHOLDER &lang1_custom>;
             label = "LG2_SYMBOL";
             tap-ms = <50>;
             wait-ms = <30>;
+        };
+
+        lang2_custom: lang2_custom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ku LC(LS(N8))>;
+            label = "LANG2_CUSTOM";
+        };
+
+        lang1_custom: lang1_custom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ku LC(LS(N7))>;
+            label = "LANG1_CUSTOM";
         };
     };
 
