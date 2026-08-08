@@ -713,10 +713,10 @@
 
         num_lang2 {
             bindings = <
-         &u_home            &u_pgdn            &u_pgup           &u_end               &ku INS           &lg1_symbol CARET  &ku N7        &ku N8        &ku N9       &ku AT
-         &lgmt_left LGUI 0  &lgmt_down LALT 0  &lgmt_up LCTRL 0  &lgmt_right LSHFT 0  &lg2_caps_word    &ku PRCNT          &mu LSHFT N4  &mu LCTRL N5  &mu LALT N6  &mu LGUI AMPS
-&kp DEL  &ku LC(Z)          &mu RALT LC(X)     &ku LC(INS)       &ku LS(INS)          &ku LC(Y)         &lg1_symbol AT     &ku N1        &ku N2        &mu RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
-                                               &kp DEL           &kp BSPC             &ku RET           &ku N0             &ku SPACE     &ku FSLH
+         &u_home            &u_pgdn            &u_pgup           &u_end               &ku INS           &kp PIPE           &ku N7        &ku N8        &ku N9       &ku MINUS
+         &lgmt_left LGUI 0  &lgmt_down LALT 0  &lgmt_up LCTRL 0  &lgmt_right LSHFT 0  &lg2_caps_word    &ku STAR           &mu LSHFT N4  &mu LCTRL N5  &mu LALT N6  &mu LGUI PLUS
+&kp DEL  &ku LC(Z)          &mu RALT LC(X)     &ku LC(INS)       &ku LS(INS)          &ku LC(Y)         &lg1_symbol EQUAL  &ku N1        &ku N2        &mu RALT N3  &kp FSLH       &ku PRCNT
+                                               &kp DEL           &kp BSPC             &ku RET           &ku N0             &ku SPACE     &ku CARET
             >;
 
             label = "NUM_LANG2";
