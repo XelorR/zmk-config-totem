@@ -612,7 +612,6 @@
             quick-tap-ms = <100>;
             flavor = "tap-preferred";
         };
-
     };
 
     keymap {
@@ -714,10 +713,10 @@
 
         num_base {
             bindings = <
-        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
-                           &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+           &kp FSLH  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
+           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp DOT      &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
+                             &kp ESC  &kp SPACE  &kp RET      &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_BASE";
@@ -728,7 +727,7 @@
         &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp DQT
         &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMICOLON  &mt LALT RBRC  &mt LGUI QMARK
 &trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &kp SQT
-                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+                                      &kp LPAR         &kp RPAR        &kp UNDER           &kp ENTER  &kp BSPC        &kp DEL
             >;
 
             label = "SYM_BASE";
@@ -756,10 +755,10 @@
 
         num_lang2 {
             bindings = <
-        &lg1_symbol LBKT   &ku N7  &ku N8     &ku N9  &lg1_symbol RBKT    &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku DLLR           &ku N4  &ku N5     &ku N6  &ku EQUAL           &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &lg1_symbol GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH            &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                                   &ku SLASH  &ku N0  &ku MINUS           &ku ENTER  &kp BSPC   &kp DEL
+           &ku PIPE  &ku N7  &ku N8   &ku N9     &ku MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
+           &ku STAR  &ku N4  &ku N5   &ku N6     &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp EQUAL  &ku N0    &ku N1  &ku N2   &ku N3     &ku FSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+                             &ku ESC  &ku SPACE  &ku RET      &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -770,7 +769,7 @@
         &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &lg1_symbol LBRC   &ku UNDER          &lg1_symbol RBRC  &ku AT
         &mu LGUI BSLH     &mu LALT LPAR   &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS             &ku PRCNT          &mtlg1 LSHFT LBKT  &mu LCTRL DLLR     &mtlg1 LALT RBRC  &mu LGUI AMPS
 &trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku LS(NUBS)       &lg1_symbol TILDE  &mtlg1 RALT AMPS  &lg1_symbol DLLR  &lg1_symbol SQT
-                                                  &ku LPAR   &ku RPAR           &kp UNDER           &ku ENTER  &kp BSPC   &kp DEL
+                                          &ku LPAR         &ku RPAR        &kp UNDER            &ku ENTER          &kp BSPC           &kp DEL
             >;
 
             label = "SYM_LANG2";
@@ -789,10 +788,10 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
-                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
+                &kp F12       &kp F7       &kp F8        &kp F9        &kp PSCRN          &bt_0         &bt_1               &bt_2             &bt_3              &bt_4
+                &mt LGUI F11  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp SCROLLLOCK     &out OUT_BLE  &mt LSHFT C_VOL_DN  &mt LCTRL K_MUTE  &mt LALT C_VOL_UP  &kp LGUI
+&td_bootloader  &kp F10       &mt RALT F1  &kp F2        &kp F3        &kp PAUSE_BREAK    &out OUT_USB  &kp C_PREV          &kp C_PP          &mt RALT C_NEXT    &bt BT_CLR_ALL  &td_bootloader
+                                           &kp K_APP     &kp SPACE     &kp TAB            &kp C_STOP    &kp C_PP            &kp K_MUTE
             >;
 
             label = "FUN";
