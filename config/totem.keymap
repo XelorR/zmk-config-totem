@@ -239,6 +239,20 @@
             wait-ms = <0>;
             tap-ms = <0>;
         };
+
+        in_row_below: in_row_below {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ku END &kp LS(RET)>;
+            label = "IN_ROW_BELOW";
+        };
+
+        in_row_above: in_row_above {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ku HOME &kp LS(RET) &kp LEFT>;
+            label = "IN_ROW_ABOVE";
+        };
     };
 
     behaviors {
@@ -602,10 +616,10 @@
 
         navi {
             bindings = <
-         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &u_caps_word  &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT
-&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
-                                         &kp ESC      &kp SPACE    &kp TAB      &kp RET       &kp BSPC     &kp DEL
+         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &none         &kp LC(LEFT)  &in_row_below  &in_row_above  &kp LC(RIGHT)
+         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &u_caps_word  &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT
+&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS       &kp HOME      &kp PG_DN      &kp PG_UP      &kp END        &trans
+                                         &kp ESC      &kp SPACE    &kp TAB      &kp RET       &kp BSPC      &kp DEL
             >;
 
             label = "NAVI";
@@ -613,9 +627,9 @@
 
         mouse {
             bindings = <
-         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
-         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &none      &kp C_AC_BACK   &kp LC(PG_UP)   &kp LC(PG_DN)  &kp C_AC_FORWARD
+         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT
+&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT   &trans
                                          &kp ESC      &kp SPACE    &kp TAB      &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
@@ -647,10 +661,10 @@
         navi_lang2 {
             label = "NAVI_LANG2";
             bindings = <
-         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
-         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
-&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
-                                         &ku ESC      &ku SPACE    &ku TAB      &ku RET         &kp BSPC     &kp DEL
+         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &none           &ku LC(LEFT)  &in_row_below  &in_row_above  &ku LC(RIGHT)
+         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &lg2_caps_word  &u_left       &u_down        &u_up          &u_right
+&kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp INS         &u_home       &u_pgdn        &u_pgup        &u_end         &trans
+                                         &ku ESC      &ku SPACE    &ku TAB      &ku RET         &kp BSPC      &kp DEL
             >;
         };
 
