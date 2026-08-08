@@ -203,6 +203,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N7)) &none &checkbox &none &kp LG(N8)>;
             label = "RU_CHECKBOX";
+            wait-ms = <50>;
         };
 
         lg2_arrow: lg2_arrow {
@@ -210,6 +211,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N7)) &none &arrow &none &kp LC(LS(N8))>;
             label = "LG2_ARROW";
+            wait-ms = <50>;
         };
 
         ml: ml {
@@ -230,6 +232,7 @@
             #binding-cells = <1>;
             bindings = <&kp LC(LS(N7)) &none &macro_param_1to1 &ku MACRO_PLACEHOLDER &none &kp LC(LS(N8))>;
             label = "LG1_SYMBOL";
+            wait-ms = <50>;
         };
 
         ku: kp_unshift {
