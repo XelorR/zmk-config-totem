@@ -203,6 +203,7 @@
             bindings = <&kp LG(SPACE) &checkbox &kp LG(SPACE)>;
             label = "RU_CHECKBOX";
             tap-ms = <50>;
+            wait-ms = <30>;
         };
 
         lg2_arrow: lg2_arrow {
@@ -211,6 +212,7 @@
             bindings = <&kp LG(SPACE) &arrow &kp LG(SPACE)>;
             label = "LG2_ARROW";
             tap-ms = <50>;
+            wait-ms = <30>;
         };
 
         ml: ml {
@@ -232,6 +234,7 @@
             bindings = <&kp LS(LC(N8)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N7))>;
             label = "LG1_SYMBOL";
             tap-ms = <50>;
+            wait-ms = <30>;
         };
 
         ku: kp_unshift {
@@ -263,6 +266,7 @@
             bindings = <&kp LS(LC(N7)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N8))>;
             label = "LG2_SYMBOL";
             tap-ms = <50>;
+            wait-ms = <30>;
         };
     };
 
