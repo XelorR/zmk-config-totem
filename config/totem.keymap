@@ -152,14 +152,14 @@
         cmd_space_lang1: cmd_space_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 0>;
+            bindings = <&kp LC(LS(N7)) &to 0>;
             label = "CMD_SPACE_LANG1";
         };
 
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 2>;
+            bindings = <&kp LC(LS(N8)) &to 2>;
             label = "CMD_SPACE_LANG2";
         };
 
@@ -201,14 +201,14 @@
         lg2_checkbox: ru_checkbox {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &checkbox &kp LG(SPACE)>;
+            bindings = <&kp LC(LS(N7)) &checkbox &kp LG(N8)>;
             label = "RU_CHECKBOX";
         };
 
         lg2_arrow: lg2_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &arrow &kp LG(SPACE)>;
+            bindings = <&kp LC(LS(N7)) &arrow &kp LC(LS(N8))>;
             label = "LG2_ARROW";
         };
 
@@ -228,7 +228,7 @@
         lg1_symbol: lg1_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LG(SPACE) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LG(SPACE)>;
+            bindings = <&kp LC(LS(N7)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N8))>;
             label = "LG1_SYMBOL";
         };
 
