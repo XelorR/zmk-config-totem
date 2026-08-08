@@ -627,10 +627,10 @@
 
         num_base {
             bindings = <
-        &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp N7        &kp N8        &kp N9       &kp DQT
-        &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI QMARK
-&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp N1        &kp N2        &mt RALT N3  &kp DLLR        &kp SQT
-                                      &kp DEL          &kp BSPC        &kp ENTER           &kp N0     &kp SPACE     &kp DOT
+        &kp HOME   &kp PG_DN  &kp PG_UP    &kp END      &kp INS         &kp CARET  &kp N7        &kp N8        &kp N9       &kp DQT
+        &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT    &u_caps_word    &kp PRCNT  &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI QMARK
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)       &kp AT     &kp N1        &kp N2        &mt RALT N3  &kp DLLR        &kp SQT
+                              &kp DEL      &kp BSPC     &kp ENTER       &kp N0     &kp SPACE     &kp DOT
             >;
 
             label = "NUM_BASE";
@@ -669,10 +669,10 @@
 
         num_lang2 {
             bindings = <
-        &ku EXCL          &lg1_symbol LT  &ku EQUAL        &lg1_symbol GT  &lg1_symbol GRAVE    &lg1_symbol CARET  &ku N7        &ku N8        &ku N9       &ku AT
-        &mu LGUI BSLH     &mu LALT LPAR   &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS             &ku PRCNT          &mu LSHFT N4  &mu LCTRL N5  &mu LALT N6  &mu LGUI AMPS
-&trans  &lg1_symbol HASH  &mu RALT STAR   &ku CARET        &ku PIPE        &ku HASH             &lg1_symbol AT     &ku N1        &ku N2        &mu RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
-                                          &kp DEL          &kp BSPC        &ku ENTER            &ku N0             &ku SPACE     &ku FSLH
+        &u_home    &u_pgdn    &u_pgup      &u_end       &ku INS          &lg1_symbol CARET  &ku N7        &ku N8        &ku N9       &ku AT
+        &u_left    &u_down    &u_up        &u_right     &lg2_caps_word   &ku PRCNT          &mu LSHFT N4  &mu LCTRL N5  &mu LALT N6  &mu LGUI AMPS
+&trans  &ku LC(Z)  &ku LC(X)  &ku LC(INS)  &ku LS(INS)  &ku LC(Y)        &lg1_symbol AT     &ku N1        &ku N2        &mu RALT N3  &lg1_symbol DLLR  &lg1_symbol SQT
+                              &kp DEL      &kp BSPC     &ku RET          &ku N0             &ku SPACE     &ku FSLH
             >;
 
             label = "NUM_LANG2";
