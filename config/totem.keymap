@@ -231,7 +231,7 @@
         lg1_symbol: lg1_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LS(LC(N8)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N7))>;
+            bindings = <&kp LS(LC(N8)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &none &kp LC(LS(N7))>;
             label = "LG1_SYMBOL";
             tap-ms = <50>;
             wait-ms = <30>;
@@ -263,7 +263,7 @@
         lg2_symbol: lg2_symbol {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LS(LC(N7)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &kp LC(LS(N8))>;
+            bindings = <&kp LS(LC(N7)) &macro_param_1to1 &ku MACRO_PLACEHOLDER &none &kp LC(LS(N8))>;
             label = "LG2_SYMBOL";
             tap-ms = <50>;
             wait-ms = <30>;
