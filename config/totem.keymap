@@ -12,7 +12,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -295,24 +294,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        u_out_tog: u_out_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_OUT_TOG";
-            bindings = <&out OUT_TOG>, <&out OUT_USB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_EP_TOG";
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         u_caps_word: u_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = "U_CAPS_WORD";
@@ -341,48 +322,6 @@
             label = "TO_BASE";
             #binding-cells = <0>;
             bindings = <&none>, <&to 0>;
-        };
-
-        frz_nav: frz_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
-        };
-
-        frz_mou: frz_mou {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
-        };
-
-        frz_med: frz_med {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MED";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 0>;
-        };
-
-        frz_num: frz_num {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
-        };
-
-        frz_sym: frz_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
-        };
-
-        frz_fun: frz_fun {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_FUN";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 14>;
         };
 
         to_gam: to_gam {
@@ -427,34 +366,6 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
-        };
-
-        frz_num2: frz_num2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 12>;
-        };
-
-        frz_sym2: frz_sym2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
-        };
-
-        frz_nav2: frz_nav2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 11>;
-        };
-
-        frz_mou2: frz_mou2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 0>;
         };
 
         mu: mt_unshift {
@@ -715,7 +626,7 @@
             bindings = <
            &kp FSLH  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
            &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp DOT      &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
+&kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp DOT      &none      &none      &none      &kp RALT  &none           &trans
                              &kp ESC  &kp SPACE  &kp RET      &kp ENTER  &kp BSPC   &kp DEL
             >;
 
@@ -747,7 +658,7 @@
             bindings = <
            &ku PIPE  &ku N7  &ku N8   &ku N9     &ku MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
            &ku STAR  &ku N4  &ku N5   &ku N6     &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp EQUAL  &ku N0    &ku N1  &ku N2   &ku N3     &ku FSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+&kp EQUAL  &ku N0    &ku N1  &ku N2   &ku N3     &ku FSLH     &none      &none      &none      &kp RALT  &none           &trans
                              &ku ESC  &ku SPACE  &ku RET      &ku ENTER  &kp BSPC   &kp DEL
             >;
 
