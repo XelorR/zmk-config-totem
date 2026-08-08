@@ -581,7 +581,7 @@
            &kp Q       &kp W       &kp F        &kp P        &kp B         &kp J      &kp L        &kp U        &kp Y         &kp SQT
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G         &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
 &kp LSHFT  &lt 16 Z    &mt RALT X  &kp C        &kp D        &kp V         &kp K      &kp H        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &kp LSHFT
-                                   &lt 15 DEL   &lt 9 BSPC   &lt 10 RET    &lt 8 TAB  &lt 7 SPACE  &lu 15 ESC
+                                   &lu 15 ESC   &lt 9 SPACE  &lt 10 TAB    &lt 8 RET  &lt 7 BSPC   &lt 15 DEL
             >;
         };
 
@@ -598,10 +598,10 @@
         lang2_layer {
             label = "LANG2";
             bindings = <
-        &kp Q         &kp W         &kp E          &kp R        &kp T         &kp Y       &kp U         &kp I          &kp O           &kp P
-        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F  &kp G         &kp H       &mt LSHFT J   &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 16 Z      &hrml RALT X  &kp C          &kp V        &kp B         &kp N       &kp M         &kp COMMA      &hrml RALT DOT  &lu 16 FSLH      &trans
-                                    &trans         &lt 13 BSPC  &lu 14 RET    &lu 12 TAB  &lu 11 SPACE  &trans
+        &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
+        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
+&trans  &lt 16 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 16 FSLH      &trans
+                                    &trans         &lu 13 SPACE  &lu 14 TAB    &lu 12 RET  &lt 11 BSPC  &trans
             >;
         };
 
@@ -618,10 +618,10 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P     &kp B        &kp J    &kp L      &kp U      &kp Y    &kp APOS
-           &kp A  &kp R  &kp S    &kp T     &kp G        &kp M    &kp N      &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D     &kp V        &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-                         &kp DEL  &kp BSPC  &kp ENTER    &kp TAB  &kp SPACE  &kp ESC
+           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp APOS
+           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
 
@@ -649,10 +649,10 @@
 
         navi {
             bindings = <
-        &kp HOME   &kp PG_DN  &kp PG_UP    &kp END      &kp INS         &none    &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT    &u_caps_word    &to_gam  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)       &none    &frz_nav   &none      &kp RALT  &none           &trans
-                              &kp DEL      &kp BSPC     &kp ENTER       &kp TAB  &kp SPACE  &kp ESC
+        &kp HOME   &kp PG_DN  &kp PG_UP    &kp END      &kp INS         &none      &to_base   &to_extra  &to_tap   &td_bootloader
+        &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT    &u_caps_word    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)       &none      &frz_nav   &none      &kp RALT  &none           &trans
+                              &kp ESC      &kp SPACE    &kp TAB         &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NAVI";
@@ -674,7 +674,7 @@
          &kp HOME       &kp PG_DN       &kp PG_UP     &kp END          &kp INS         &kp FSLH   &kp N7        &kp N8        &kp N9       &kp MINUS
          &mt LGUI LEFT  &mt LALT DOWN   &mt LCTRL UP  &mt LSHFT RIGHT  &u_caps_word    &kp STAR   &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI PLUS
 &kp DEL  &kp LC(Z)      &mt RALT LC(X)  &kp LC(INS)   &kp LS(INS)      &kp LC(Y)       &kp EQUAL  &kp N1        &kp N2        &mt RALT N3  &kp DOT        &kp PRCNT
-                                        &kp DEL       &kp BSPC         &kp ENTER       &kp N0     &kp SPACE     &kp COLON
+                                        &kp ESC       &kp SPACE        &kp ENTER       &kp N0     &kp BSPC      &kp COLON
             >;
 
             label = "NUM_BASE";
