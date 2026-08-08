@@ -658,10 +658,10 @@
 
         num_base {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp FSLH   &kp N7     &kp N8   &kp N9  &kp MINUS
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp STAR   &kp N4     &kp N5   &kp N6  &kp PLUS
-&trans  &none           &kp RALT  &frz_nav   &frz_num   &none        &kp EQUAL  &kp N1     &kp N2   &kp N3  &kp DOT    &kp PRCNT
-                                  &kp DEL    &kp BSPC   &kp ENTER    &kp N0     &kp SPACE  &kp ESC
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none        &kp CARET  &kp N7        &kp N8        &kp N9       &kp DQT
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam      &kp PRCNT  &mt LSHFT N4  &mt LCTRL N5  &mt LALT N6  &mt LGUI QMARK
+&trans  &none           &kp RALT  &frz_nav   &frz_num   &none        &kp AT     &kp N1        &kp N2        &mt RALT N3  &kp DOT         &kp SQT
+                                  &kp DEL    &kp BSPC   &kp ENTER    &kp N0     &kp SPACE     &kp ESC
             >;
 
             label = "NUM_BASE";
@@ -671,7 +671,7 @@
             bindings = <
         &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE           &kp CARET  &kp LBKT        &kp UNDER            &kp RBKT       &kp DQT
         &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS            &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL SEMICOLON  &mt LALT RBRC  &mt LGUI QMARK
-&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &trans
+&trans  &kp HASH       &mt RALT STAR  &kp COLON        &kp SLASH       &lg1_symbol HASH    &kp AT     &kp PIPE        &kp TILDE            &mt RALT AMPS  &kp DLLR        &kp SQT
                                       &kp DEL          &kp BSPC        &kp ENTER           &kp TAB    &kp SPACE       &kp ESC
             >;
 
