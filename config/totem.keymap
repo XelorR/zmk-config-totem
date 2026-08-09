@@ -586,10 +586,10 @@
 
         num_base {
             bindings = <
-        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &kp NUBS   &frz_num   &frz_nav   &kp RALT  &none           &trans
-                           &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+          &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
+          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
+                             &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_BASE";
@@ -597,10 +597,10 @@
 
         sym_base {
             bindings = <
-        &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none         &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam       &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &kp LS(NUBS)  &frz_sym   &frz_mou   &kp RALT  &none           &trans
-                                  &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER     &kp BSPC   &kp DEL
+              &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
+              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
+                                        &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "SYM_BASE";
@@ -628,10 +628,10 @@
 
         num_lang2 {
             bindings = <
-        &ku LBKT   &ku N7  &ku N8     &ku N9  &ku RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku SQT    &ku N4  &ku N5     &ku N6  &ku EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &ku GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH     &ku NUBS   &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                           &ku SLASH  &ku N0  &ku MINUS    &ku ENTER  &kp BSPC   &kp DEL
+          &ku LBKT   &ku N7  &ku N8     &ku N9  &ku RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
+          &ku SQT    &ku N4  &ku N5     &ku N6  &ku EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&ku NUBS  &ku GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+                             &ku SLASH  &ku N0  &ku MINUS    &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -639,10 +639,10 @@
 
         sym_lang2 {
             bindings = <
-        &ku LBRC   &ku AMPS  &ku STAR   &ku LPAR   &ku RBRC     &none         &to_base   &to_extra  &to_tap   &td_bootloader
-        &ku DQT    &ku DLLR  &ku PRCNT  &ku CARET  &ku PLUS     &to_gam       &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &ku TILDE  &ku EXCL  &ku AT     &ku HASH   &ku PIPE     &ku LS(NUBS)  &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
-                             &ku LPAR   &ku RPAR   &kp UNDER    &ku ENTER     &kp BSPC   &kp DEL
+              &ku LBRC   &ku AMPS  &ku STAR   &ku LPAR   &ku RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
+              &ku DQT    &ku DLLR  &ku PRCNT  &ku CARET  &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&ku LS(NUBS)  &ku TILDE  &ku EXCL  &ku AT     &ku HASH   &ku PIPE     &none      &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
+                                   &ku LPAR   &ku RPAR   &kp UNDER    &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "SYM_LANG2";
