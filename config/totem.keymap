@@ -171,6 +171,26 @@
     };
 
     behaviors {
+        mu: mt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_UNSHIFT";
+            bindings = <&kp>, <&ku>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+        };
+
+        lu: lt_unshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_UNSHIFT";
+            bindings = <&mo>, <&ku>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         td_bootloader: td_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BOOTLOADER";
@@ -250,6 +270,15 @@
             mods = <(MOD_LSFT)>;
         };
 
+        lg2_caps_word: lg2_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LG2_CAPS_WORD";
+            bindings = <&key_on RSHFT>, <&kp CAPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
         to_extra: to_extra {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_EXTRA";
@@ -269,48 +298,6 @@
             label = "TO_BASE";
             #binding-cells = <0>;
             bindings = <&none>, <&to 0>;
-        };
-
-        frz_nav: frz_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
-        };
-
-        frz_mou: frz_mou {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
-        };
-
-        frz_med: frz_med {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MED";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 15>;
-        };
-
-        frz_num: frz_num {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
-        };
-
-        frz_sym: frz_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
-        };
-
-        frz_fun: frz_fun {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_FUN";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
         };
 
         to_gam: to_gam {
@@ -357,6 +344,48 @@
             quick-tap-ms = <100>;
         };
 
+        frz_nav: frz_nav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NAV";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 7>;
+        };
+
+        frz_mou: frz_mou {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_MOU";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 8>;
+        };
+
+        frz_med: frz_med {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_MED";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 15>;
+        };
+
+        frz_num: frz_num {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_NUM";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 9>;
+        };
+
+        frz_sym: frz_sym {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_SYM";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 10>;
+        };
+
+        frz_fun: frz_fun {
+            compatible = "zmk,behavior-tap-dance";
+            label = "FRZ_FUN";
+            #binding-cells = <0>;
+            bindings = <&none>, <&tog 16>;
+        };
+
         frz_num2: frz_num2 {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM2";
@@ -383,26 +412,6 @@
             label = "FRZ_MOU2";
             #binding-cells = <0>;
             bindings = <&none>, <&tog 12>;
-        };
-
-        mu: mt_unshift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_UNSHIFT";
-            bindings = <&kp>, <&ku>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
-        lu: lt_unshift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_UNSHIFT";
-            bindings = <&mo>, <&ku>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
 
         u_left: u_left {
@@ -475,15 +484,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
-        };
-
-        lg2_caps_word: lg2_caps_word {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LG2_CAPS_WORD";
-            bindings = <&key_on RSHFT>, <&kp CAPS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
     };
 
