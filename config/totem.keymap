@@ -650,10 +650,10 @@
 
         media {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+        &td_bootloader  &to_tap         &to_extra    &to_base     &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
+        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)  &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
+                                        &kp ESC      &kp SPACE    &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
             >;
 
             label = "MEDIA";
