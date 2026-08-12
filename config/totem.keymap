@@ -566,7 +566,7 @@
             bindings = <
         &td_bootloader  &to_tap         &to_extra    &to_base     &none      &kp INS         &kp HOME     &kp PG_DN    &kp PG_UP      &kp END
         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam    &u_caps_word    &kp LEFT     &kp DOWN     &kp UP         &kp RIGHT
-&trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)  &none           &kp BSPC     &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL     &trans
+&trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)  &kp LG(LS(S))   &kp BSPC     &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL     &trans
                                         &ku ESC      &ku SPACE    &ku TAB    &ku RET         &kp BSPC     &kp DEL
             >;
 
@@ -611,7 +611,7 @@
             bindings = <
         &td_bootloader  &to_tap         &to_extra    &to_base     &none      &kp INS         &u_home      &u_pgdn      &u_pgup        &u_end
         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up          &u_right
-&trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)  &none           &kp BSPC     &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL     &trans
+&trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)  &kp LG(LS(S))   &kp BSPC     &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL     &trans
                                         &ku ESC      &ku SPACE    &ku TAB    &ku RET         &kp BSPC     &kp DEL
             >;
         };
