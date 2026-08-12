@@ -599,7 +599,7 @@
             bindings = <
           &kp EXCL        &kp LT         &kp EQUAL        &kp GT           &kp GRAVE    &kp CARET  &kp LBKT         &kp UNDER       &kp RBKT       &kp SQT
           &mt LGUI BSLH   &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR   &kp PLUS     &kp PRCNT  &mt LSHFT LBRC   &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
-&kp NUBS  &kp HASH        &kp STAR       &kp COLON        &kp FSLH         &none        &none      &kp PIPE         &kp TILDE       &kp AMPS       &kp DLLR         &trans
+&none     &kp HASH        &kp STAR       &kp COLON        &kp FSLH         &kp AT       &kp NUBS   &kp PIPE         &kp TILDE       &kp AMPS       &kp DLLR         &trans
                                          &kp ESC          &kp SPACE        &kp DQT      &kp ENTER  &kp BSPC         &kp DEL
             >;
 
@@ -628,10 +628,10 @@
 
         num_lang2 {
             bindings = <
-          &kp FSLH   &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra    &to_tap        &td_bootloader
+          &kp PIPE   &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra    &to_tap        &td_bootloader
           &kp STAR   &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL    &kp LALT       &kp LGUI
-&kp EQUAL &kp N0     &kp N1  &kp N2   &kp N3     &kp DOT      &none      &kp BSPC   &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL         &trans
-                             &kp ESC  &kp SPACE  &kp COLON    &kp ENTER  &kp BSPC   &kp DEL
+&kp EQUAL &kp N0     &kp N1  &kp N2   &kp N3     &kp FSLH     &none      &kp BSPC   &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL         &trans
+                             &kp ESC  &kp SPACE  &kp CARET    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -640,9 +640,9 @@
         sym_lang2 {
             bindings = <
           &kp EXCL        &kp LT         &kp EQUAL        &kp GT           &kp GRAVE    &kp CARET  &kp LBKT         &kp UNDER       &kp RBKT       &kp SQT
-          &mt LGUI BSLH   &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR   &kp PLUS     &kp PRCNT  &mt LSHFT LBRC   &mt LCTRL SEMI  &mt LALT RBRC  &mt LGUI QMARK
-&kp NUBS  &kp HASH        &kp STAR       &kp COLON        &kp FSLH         &none        &none      &kp PIPE         &kp TILDE       &kp AMPS       &kp DLLR         &trans
-                                         &kp ESC          &kp SPACE        &kp DQT      &kp ENTER  &kp BSPC         &kp DEL
+          &mt LGUI BSLH   &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR   &kp PLUS     &kp PRCNT  &mt LSHFT LBRC   &mt LCTRL DLLR  &mt LALT RBRC  &mt LGUI AMPS
+&none     &kp HASH        &kp STAR       &kp CARET        &kp PIPE         &kp AT       &kp NUBS   &kp LS(NUBS)     &kp TILDE       &kp AMPS       &kp DLLR         &trans
+                                         &kp ESC          &kp SPACE        &kp AT       &kp ENTER  &kp BSPC         &kp DEL
             >;
 
             label = "SYM_LANG2";
