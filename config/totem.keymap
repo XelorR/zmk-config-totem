@@ -586,10 +586,10 @@
 
         num_base {
             bindings = <
-          &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra    &to_tap        &td_bootloader
-          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL    &kp LALT       &kp LGUI
-&kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &kp BSPC   &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL         &trans
-                             &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+          &kp FSLH   &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra    &to_tap        &td_bootloader
+          &kp STAR   &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL    &kp LALT       &kp LGUI
+&kp NUBS  &kp N0     &kp N1  &kp N2   &kp N3     &kp DOT      &none      &kp BSPC   &kp LC(LEFT) &kp LC(RIGHT)  &kp DEL         &trans
+                             &kp ESC  &kp SPACE  &kp EQUAL    &kp ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_BASE";
