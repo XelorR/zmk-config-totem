@@ -12,7 +12,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -31,55 +30,55 @@
         un_tap {
             bindings = <&to 0>;
             key-positions = <0 9>;
-            layers = <4>;
+            layers = <3>;
         };
 
         win_lg1 {
             bindings = <&cmd_space_lang1>;
             key-positions = <1 3>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         win_lg2 {
             bindings = <&cmd_space_lang2>;
             key-positions = <6 8>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
             key-positions = <22 24>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
             key-positions = <27 29>;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         lg2_left_bracket_letter {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
-            layers = <2>;
+            layers = <1>;
         };
 
         lg2_right_bracket_letter {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <2>;
+            layers = <1>;
         };
 
         lg2_quote_letter {
             bindings = <&kp SQT>;
             key-positions = <2 1>;
-            layers = <2>;
+            layers = <1>;
         };
 
         lg2_grave_letter {
             bindings = <&kp GRAVE>;
             key-positions = <2 3>;
-            layers = <2>;
+            layers = <1>;
         };
     };
 
@@ -94,7 +93,7 @@
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8)) &to 2>;
+            bindings = <&kp LC(LS(N8)) &to 1>;
             label = "CMD_SPACE_LANG2";
         };
 
@@ -108,7 +107,7 @@
         ctrl_space_lang2: ctrl_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 2>;
+            bindings = <&kp LC(SPACE) &to 1>;
             label = "CTRL_SPACE_LANG2";
         };
 
@@ -151,9 +150,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 3>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 2>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 3>;
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 2>;
 
             label = "ML";
             wait-ms = <0>;
@@ -243,24 +242,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        u_out_tog: u_out_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_OUT_TOG";
-            bindings = <&out OUT_TOG>, <&out OUT_USB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_EP_TOG";
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         u_caps_word: u_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = "U_CAPS_WORD";
@@ -279,18 +260,11 @@
             mods = <(MOD_LSFT)>;
         };
 
-        to_extra: to_extra {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_EXTRA";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 1>;
-        };
-
         to_tap: to_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_TAP";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 4>;
+            bindings = <&none>, <&to 3>;
         };
 
         to_base: to_base {
@@ -304,7 +278,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TO_GAM";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 5>;
+            bindings = <&none>, <&to 4>;
         };
 
         layer_on: layer_on {
@@ -342,76 +316,6 @@
             tapping-term-ms = <170>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
-        };
-
-        frz_nav: frz_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
-        };
-
-        frz_mou: frz_mou {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
-        };
-
-        frz_med: frz_med {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MED";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 15>;
-        };
-
-        frz_num: frz_num {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
-        };
-
-        frz_sym: frz_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
-        };
-
-        frz_fun: frz_fun {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_FUN";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
-        };
-
-        frz_num2: frz_num2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
-        };
-
-        frz_sym2: frz_sym2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 14>;
-        };
-
-        frz_nav2: frz_nav2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 11>;
-        };
-
-        frz_mou2: frz_mou2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 12>;
         };
 
         u_left: u_left {
@@ -493,20 +397,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
-                                   &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
-            >;
-        };
-
-        extra_layer {
-            label = "EXTRA";
-            bindings = <
-        &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
-        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
-                                &trans       &trans       &trans    &trans  &trans       &trans
+           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J      &kp L        &kp U        &kp Y         &kp SQT
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
+&kp LSHFT  &lt 16 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K      &kp H        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &kp LSHFT
+                                   &lu 14 ESC   &lt 6 SPACE  &lt 7 TAB    &lt 9 RET  &lt 8 BSPC   &lt 15 DEL
             >;
         };
 
@@ -515,8 +409,8 @@
             bindings = <
         &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
         &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 17 FSLH      &trans
-                                    &trans         &lu 11 SPACE  &lu 12 TAB    &lu 14 RET  &lu 13 BSPC  &trans
+&trans  &lt 16 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 16 FSLH      &trans
+                                    &trans         &lu 10 SPACE  &lu 11 TAB    &lu 13 RET  &lu 12 BSPC  &trans
             >;
         };
 
@@ -525,7 +419,7 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp B     &kp J   &kp L        &kp U        &kp Y         &kp SQT
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G     &kp M   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
+&trans  &lt 16 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -545,7 +439,7 @@
           &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans      &trans     &trans    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans      &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans      &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &lt 15 RET  &kp SPACE  &mo 16
+                            &kp LALT  &kp SPACE  &mo 5    &lt 14 RET  &kp SPACE  &mo 15
             >;
 
             label = "GAM";
@@ -556,7 +450,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 16
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 15
             >;
 
             label = "GAM_FN";
@@ -564,8 +458,8 @@
 
         navi {
             bindings = <
-         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &kp INS        &kp HOME  &kp PG_DN     &kp PG_UP      &kp END
-         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &u_caps_word   &kp LEFT  &kp DOWN      &kp UP         &kp RIGHT
+         &td_bootloader  &to_tap         &to_gam      &to_base     &none        &kp INS        &kp HOME  &kp PG_DN     &kp PG_UP      &kp END
+         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &none        &u_caps_word   &kp LEFT  &kp DOWN      &kp UP         &kp RIGHT
 &kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LG(LS(S))  &kp BSPC  &kp LC(LEFT)  &kp LC(RIGHT)  &kp DEL    &trans
                                          &ku ESC      &ku SPACE    &ku TAB      &ku RET        &kp BSPC  &kp DEL
             >;
@@ -575,8 +469,8 @@
 
         mouse {
             bindings = <
-        &td_bootloader  &to_tap         &to_extra    &to_base     &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT
-        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT
+        &td_bootloader  &to_tap         &to_gam      &to_base     &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT
+        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &none        &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT
 &trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &none      &kp BSPC        &kp C_AC_BACK   &kp C_AC_FORWARD  &kp DEL          &trans
                                         &ku ESC      &ku SPACE    &ku TAB      &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
@@ -586,8 +480,8 @@
 
         num_base {
             bindings = <
-           &kp FSLH  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra     &to_tap        &td_bootloader
-           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
+           &kp FSLH  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_gam       &to_tap        &td_bootloader
+           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &none      &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
 &kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp DOT      &none      &kp BSPC   &kp LC(LEFT)  &kp LC(RIGHT)  &kp DEL         &trans
                              &kp ESC  &kp SPACE  &kp COLON    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -609,8 +503,8 @@
         navi_lang2 {
             label = "NAVI_LANG2";
             bindings = <
-         &td_bootloader  &to_tap         &to_extra    &to_base     &none        &kp INS         &u_home   &u_pgdn       &u_pgup        &u_end
-         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &lg2_caps_word  &u_left   &u_down       &u_up          &u_right
+         &td_bootloader  &to_tap         &to_gam      &to_base     &none        &kp INS         &u_home   &u_pgdn       &u_pgup        &u_end
+         &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &none        &lg2_caps_word  &u_left   &u_down       &u_up          &u_right
 &kp DEL  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LG(LS(S))   &kp BSPC  &kp LC(LEFT)  &kp LC(RIGHT)  &kp DEL   &trans
                                          &ku ESC      &ku SPACE    &ku TAB      &ku RET         &kp BSPC  &kp DEL
             >;
@@ -619,8 +513,8 @@
         mouse_lang2 {
             label = "MOUSE_LANG2";
             bindings = <
-        &td_bootloader  &to_tap         &to_extra    &to_base     &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT
-        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT
+        &td_bootloader  &to_tap         &to_gam      &to_base     &none        &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT
+        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &none        &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT
 &trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &none      &kp BSPC        &kp C_AC_BACK   &kp C_AC_FORWARD  &kp DEL          &trans
                                         &ku ESC      &ku SPACE    &ku TAB      &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
@@ -628,8 +522,8 @@
 
         num_lang2 {
             bindings = <
-           &kp PIPE  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra     &to_tap        &td_bootloader
-           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
+           &kp PIPE  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_gam       &to_tap        &td_bootloader
+           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &none      &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
 &kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp FSLH     &none      &kp BSPC   &kp LC(LEFT)  &kp LC(RIGHT)  &kp DEL         &trans
                              &kp ESC  &kp SPACE  &kp CARET    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -650,8 +544,8 @@
 
         media {
             bindings = <
-        &td_bootloader  &to_tap         &to_extra    &to_base     &none        &bt_4       &bt_0       &bt_1         &bt_2         &bt_3
-        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &to_gam      &kp C_PP    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+        &td_bootloader  &to_tap         &to_gam      &to_base     &none        &bt_4       &bt_0       &bt_1         &bt_2         &bt_3
+        &kp LGUI        &kp LALT        &kp LCTRL    &kp LSHFT    &none        &kp C_PP    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
 &trans  &kp LC(Z)       &mt RALT LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp C_STOP  &kp K_MUTE  &out OUT_BLE  &out OUT_USB  &bt BT_CLR_ALL  &trans
                                         &kp ESC      &kp SPACE    &kp TAB      &kp C_STOP  &kp C_PP    &kp K_MUTE
             >;
@@ -661,8 +555,8 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_extra     &to_tap        &td_bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
+        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_gam       &to_tap        &td_bootloader
+        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none      &kp LSHFT  &kp LCTRL     &kp LALT       &kp LGUI
 &trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &kp BSPC   &kp LC(LEFT)  &kp LC(RIGHT)  &kp DEL         &trans
                          &kp K_APP  &kp SPACE  &kp TAB            &ku ENTER  &kp BSPC   &kp DEL
             >;
