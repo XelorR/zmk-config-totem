@@ -654,10 +654,10 @@
 
         num_lang2 {
             bindings = <
-           &kp PIPE  &kp N7  &kp N8   &kp N9     &kp MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
-           &kp STAR  &kp N4  &kp N5   &kp N6     &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp EQUAL  &kp N0    &kp N1  &kp N2   &kp N3     &kp FSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                             &kp ESC  &kp SPACE  &kp CARET    &ku ENTER  &kp BSPC   &kp DEL
+           &ku PIPE  &ku N7  &ku N8   &ku N9     &ku MINUS    &none      &to_base   &to_extra  &to_tap   &td_bootloader
+           &ku STAR  &ku N4  &ku N5   &ku N6     &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&ku EQUAL  &ku N0    &ku N1  &ku N2   &ku N3     &ku FSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
+                             &ku ESC  &ku SPACE  &ku CARET    &ku ENTER  &kp BSPC   &kp DEL
             >;
 
             label = "NUM_LANG2";
@@ -665,10 +665,10 @@
 
         sym_lang2 {
             bindings = <
-        &kp EXCL       &kp LT         &kp EQUAL        &kp GT          &kp GRAVE    &kp CARET  &kp LBKT        &kp UNDER       &kp RBKT       &kp SQT
-        &mt LGUI BSLH  &mt LALT LPAR  &mt LCTRL MINUS  &mt LSHFT RPAR  &kp PLUS     &kp PRCNT  &mt LSHFT LBRC  &mt LCTRL DLLR  &mt LALT RBRC  &mt LGUI AMPS
-&trans  &kp HASH       &kp STAR       &kp CARET        &kp PIPE        &kp AT       &kp NUBS   &kp LS(NUBS)    &kp TILDE       &kp AMPS       &kp DLLR       &trans
-                                      &kp ESC          &kp SPACE       &kp AT       &kp ENTER  &kp BSPC        &kp DEL
+        &ku EXCL       &ku LT         &ku EQUAL        &ku GT          &ku GRAVE    &ku CARET  &ku LBKT        &ku UNDER       &ku RBKT       &ku SQT
+        &mu LGUI BSLH  &mu LALT LPAR  &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS     &ku PRCNT  &mu LSHFT LBRC  &mu LCTRL DLLR  &mu LALT RBRC  &mu LGUI AMPS
+&trans  &ku HASH       &ku STAR       &ku CARET        &ku PIPE        &ku AT       &ku NUBS   &ku LS(NUBS)    &ku TILDE       &ku AMPS       &ku DLLR       &trans
+                                      &ku ESC          &ku SPACE       &ku AT       &ku ENTER  &ku BSPC        &kp DEL
             >;
 
             label = "SYM_LANG2";
