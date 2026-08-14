@@ -398,7 +398,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 15>;
+            bindings = <&none>, <&tog 14>;
         };
 
         frz_num: frz_num {
@@ -419,21 +419,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
+            bindings = <&none>, <&tog 15>;
         };
 
         frz_num2: frz_num2 {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
+            bindings = <&none>, <&tog 12>;
         };
 
         frz_sym2: frz_sym2 {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_SYM2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 14>;
+            bindings = <&none>, <&tog 13>;
         };
 
         frz_nav2: frz_nav2 {
@@ -447,7 +447,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MOU2";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 12>;
+            bindings = <&none>, <&tog 0>;
         };
 
         u_left: u_left {
@@ -531,8 +531,8 @@
             bindings = <
            &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y       &kp U        &kp I        &kp O         &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &kp LSHFT
-                                   &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
+&kp LSHFT  &lt 16 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &mt RALT DOT  &lt 16 FSLH   &kp LSHFT
+                                   &lu 14 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 15 DEL
             >;
         };
 
@@ -541,7 +541,7 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SQT
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
+&trans  &lt 16 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -549,10 +549,10 @@
         lang2_layer {
             label = "LANG2";
             bindings = <
-        &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
-        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 17 FSLH      &trans
-                                    &trans         &lu 11 SPACE  &lu 12 TAB    &lu 14 RET  &lu 13 BSPC  &trans
+        &kp Q         &kp W         &kp E          &kp R         &kp T        &kp Y       &kp U        &kp I          &kp O           &kp P
+        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G        &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
+&trans  &lt 16 Z      &hrml RALT X  &kp C          &kp V         &kp B        &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 16 FSLH      &trans
+                                    &trans         &lu 11 SPACE  &lu 8 TAB    &lu 13 RET  &lt 12 BSPC  &trans
             >;
         };
 
@@ -561,7 +561,7 @@
             bindings = <
         &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
         &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
+&trans  &lt 16 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 16 FSLH   &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -581,7 +581,7 @@
           &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans      &trans     &trans    &trans     &kp TAB
           &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans      &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
 &kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans      &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &lt 15 RET  &kp SPACE  &mo 16
+                            &kp LALT  &kp SPACE  &mo 6    &lt 14 RET  &kp SPACE  &mo 15
             >;
 
             label = "GAM";
@@ -592,7 +592,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 16
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 15
             >;
 
             label = "GAM_FN";
@@ -649,16 +649,6 @@
         &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
 &trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
                                   &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
-            >;
-        };
-
-        mouse_lang2 {
-            label = "MOUSE_LANG2";
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)  &ku LS(INS)     &ku LC(INS)     &ku LC(X)     &ku LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &none      &none      &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                  &ku ESC    &ku SPACE  &ku TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
         };
 
