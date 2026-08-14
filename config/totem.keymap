@@ -404,10 +404,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J      &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 16 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K      &kp H        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &kp LSHFT
-                                   &lu 14 ESC   &lt 6 SPACE  &lt 7 TAB    &lt 9 RET  &lt 8 BSPC   &lt 15 DEL
+           &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y      &kp U        &kp I        &kp O         &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
+                                   &lu 14 ESC   &lt 6 SPACE  &lt 7 TAB &lt 9 RET  &lt 8 MINUS  &lt 15 EQUAL
             >;
         };
 
@@ -417,16 +417,16 @@
         &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
         &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
 &trans  &lt 16 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 16 FSLH      &trans
-                                    &trans         &lu 10 SPACE  &lu 11 TAB    &lu 13 RET  &lu 12 BSPC  &trans
+                                    &trans         &lu 10 SPACE  &lu 11 TAB    &lu 13 RET  &lu 12 MINUS &trans
             >;
         };
 
         shortcut_layer {
             label = "SHORTCUT";
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B     &kp J   &kp L        &kp U        &kp Y         &kp SQT
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G     &kp M   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 16 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 16 FSLH  &trans
+        &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
+        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -434,9 +434,9 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp APOS
-           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P
+           &kp A  &kp S  &kp D    &kp F      &kp G      &kp H      &kp J     &kp K      &kp L    &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
