@@ -85,37 +85,37 @@
         undo {
             bindings = <&kp LC(Z)>;
             key-positions = <21 22>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         redo {
             bindings = <&kp LC(Y)>;
             key-positions = <21 23>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             key-positions = <22 24>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         copy {
             bindings = <&kp LC(INS)>;
             key-positions = <23 22>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         paste {
             bindings = <&kp LS(INS)>;
             key-positions = <23 24>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
 
         select_all {
             bindings = <&kp LC(A)>;
             key-positions = <24 21>;
-            layers = <0 2>;
+            layers = <0 2 1>;
         };
     };
 
