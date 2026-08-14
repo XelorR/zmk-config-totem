@@ -637,7 +637,7 @@
 
         sym_lang2 {
             bindings = <
-        &ku EXCL       &ku LT         &ku EQUAL        &ku GT          &ku GRAVE    &ku CARET  &ku LBKT        &ku UNDER       &ku RBKT       &ku SQT
+        &ku EXCL       &ku LT         &ku EQUAL        &ku GT          &ku GRAVE    &ku CARET  &ku LBKT        &kp UNDER       &ku RBKT       &ku SQT
         &mu LGUI BSLH  &mu LALT LPAR  &mu LCTRL MINUS  &mu LSHFT RPAR  &ku PLUS     &ku PRCNT  &mu LSHFT LBRC  &mu LCTRL DLLR  &mu LALT RBRC  &mu LGUI AMPS
 &trans  &ku HASH       &ku STAR       &ku CARET        &ku PIPE        &ku AT       &ku NUBS   &ku LS(NUBS)    &ku TILDE       &ku AMPS       &ku DLLR       &trans
                                       &ku ESC          &ku SPACE       &ku AT       &ku ENTER  &ku BSPC        &kp DEL
