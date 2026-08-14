@@ -81,6 +81,42 @@
             key-positions = <2 3>;
             layers = <2>;
         };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <21 22>;
+            layers = <0 2>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <21 23>;
+            layers = <0 2>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <22 24>;
+            layers = <0 2>;
+        };
+
+        copy {
+            bindings = <&kp LC(INS)>;
+            key-positions = <23 22>;
+            layers = <0 2>;
+        };
+
+        paste {
+            bindings = <&kp LS(INS)>;
+            key-positions = <23 24>;
+            layers = <0 2>;
+        };
+
+        select_all {
+            bindings = <&kp LC(A)>;
+            key-positions = <24 21>;
+            layers = <0 2>;
+        };
     };
 
     macros {
