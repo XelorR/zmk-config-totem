@@ -387,13 +387,6 @@
             bindings = <&none>, <&tog 7>;
         };
 
-        frz_mou: frz_mou {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
-        };
-
         frz_med: frz_med {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
@@ -406,13 +399,6 @@
             label = "FRZ_NUM";
             #binding-cells = <0>;
             bindings = <&none>, <&tog 9>;
-        };
-
-        frz_sym: frz_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
         };
 
         frz_fun: frz_fun {
@@ -429,25 +415,11 @@
             bindings = <&none>, <&tog 12>;
         };
 
-        frz_sym2: frz_sym2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
-        };
-
         frz_nav2: frz_nav2 {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NAV2";
             #binding-cells = <0>;
             bindings = <&none>, <&tog 11>;
-        };
-
-        frz_mou2: frz_mou2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 0>;
         };
 
         u_left: u_left {
