@@ -48,13 +48,13 @@
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
-            key-positions = <22 24>;
+            key-positions = <0 3>;
             layers = <0 2>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
-            key-positions = <27 29>;
+            key-positions = <6 9>;
             layers = <0 2>;
         };
 
@@ -493,9 +493,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y      &kp U        &kp I        &kp O         &kp P
-           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
+           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y       &kp U        &kp I        &kp O         &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H       &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N       &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &kp LSHFT
                                    &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
             >;
         };
@@ -505,7 +505,7 @@
             bindings = <
         &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SQT
         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
+&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -525,7 +525,7 @@
             bindings = <
         &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
         &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
+&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -650,10 +650,10 @@
 
         media {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt_4           &bt_0         &bt_1         &bt_2             &bt_3
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP      &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &out OUT_BLE  &kp C_AC_BACK &kp C_AC_FORWARD  &out OUT_USB  &bt BT_CLR_ALL
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt_4       &bt_0         &bt_1          &bt_2             &bt_3
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog   &kp C_PREV    &kp C_VOL_DN   &kp C_VOL_UP      &kp C_NEXT
+&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog  &out OUT_BLE  &kp C_AC_BACK  &kp C_AC_FORWARD  &out OUT_USB  &bt BT_CLR_ALL
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP  &kp C_PP      &kp K_MUTE
             >;
 
             label = "MEDIA";
