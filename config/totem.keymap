@@ -330,19 +330,6 @@
             bindings = <&none>, <&to 4>;
         };
 
-        layer_on: layer_on {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_ON";
-            #binding-cells = <1>;
-        };
-
-        layer_off: layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
         key_on: key_on {
             compatible = "zmk,behavior-key-toggle";
             label = "KEY_ON";
