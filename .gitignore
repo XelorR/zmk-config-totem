@@ -5,3 +5,4 @@ build-right
 modules
 zephyr
 zmk
+/firmware
