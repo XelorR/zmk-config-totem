@@ -123,14 +123,14 @@
         cmd_space_lang1: cmd_space_lang1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 0>;
+            bindings = <&kp LS(LC(N7)) &to 0>;
             label = "CMD_SPACE_LANG1";
         };
 
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 2>;
+            bindings = <&kp LS(LC(N8)) &to 2>;
             label = "CMD_SPACE_LANG2";
         };
 
