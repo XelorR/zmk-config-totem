@@ -48,13 +48,13 @@
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
-            key-positions = <22 24>;
+            key-positions = <0 3>;
             layers = <0 2>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
-            key-positions = <27 29>;
+            key-positions = <6 9>;
             layers = <0 2>;
         };
 
@@ -80,6 +80,42 @@
             bindings = <&kp GRAVE>;
             key-positions = <2 3>;
             layers = <2>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <21 22>;
+            layers = <0 2 1>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <21 23>;
+            layers = <0 2 1>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <22 24>;
+            layers = <0 2 1>;
+        };
+
+        copy {
+            bindings = <&kp LC(INS)>;
+            key-positions = <23 22>;
+            layers = <0 2 1>;
+        };
+
+        paste {
+            bindings = <&kp LS(INS)>;
+            key-positions = <23 24>;
+            layers = <0 2 1>;
+        };
+
+        select_all {
+            bindings = <&kp LC(A)>;
+            key-positions = <24 21>;
+            layers = <0 2 1>;
         };
     };
 
