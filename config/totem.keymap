@@ -574,10 +574,10 @@
 
         fun {
             bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
-                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
+        &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(L)          &kp SCROLLLOCK  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &td_bootloader
+        &kp F11  &kp F4  &kp F5  &kp F6  &kp PSCRN          &u_caps_word    &sk LSHFT     &sk LCTRL   &sk LALT      &sk LGUI
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp LC(LS(ESC))    &kp K_APP       &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp PAUSE_BREAK  &trans
+                         &trans  &trans  &trans             &trans          &trans        &trans
             >;
 
             label = "FUN";
