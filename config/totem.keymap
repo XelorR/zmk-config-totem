@@ -357,7 +357,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
+            bindings = <&none>, <&tog 0>;
         };
 
         frz_num: frz_num {
@@ -378,7 +378,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
+            bindings = <&none>, <&tog 7>;
         };
 
         frz_num2: frz_num2 {
@@ -497,10 +497,10 @@
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans     &trans     &trans    &trans     &kp TAB
-          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans     &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans     &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 2    &lt 7 RET  &kp SPACE  &mo 8
+          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans   &trans     &trans    &trans     &kp TAB
+          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans   &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
+&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans   &trans     &kp DOWN  &trans     &kp RCTRL  &trans
+                            &kp LALT  &kp SPACE  &mo 2    &kp RET  &kp SPACE  &mo 7
             >;
 
             label = "GAM";
@@ -511,7 +511,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 8
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 7
             >;
 
             label = "GAM_FN";
@@ -519,10 +519,10 @@
 
         navi {
             bindings = <
-        &kp DEL   &trans     &trans       &kp LG(TAB)  &kp ESC    &kp ESC  &kp HOME  &kp PG_DN         &kp PG_UP         &kp END
-        &sk LGUI  &sk LALT   &kp LCTRL    &sk LSHFT    &kp RET    &kp RET  &kp LEFT  &kp DOWN          &kp UP            &kp RIGHT
-&trans  &to_gam   &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp TAB    &kp TAB  &kp BSPC  &cmd_space_lang1  &cmd_space_lang2  &kp DEL    &trans
-                             &trans       &mo 4        &trans     &trans   &trans    &trans
+                &kp DEL   &kp LA(TAB)  &kp LC(TAB)  &kp LG(TAB)  &kp ESC    &kp ESC  &kp HOME       &kp PG_DN       &kp PG_UP       &kp END
+                &sk LGUI  &sk LALT     &kp LCTRL    &sk LSHFT    &kp RET    &kp RET  &kp LEFT       &kp DOWN        &kp UP          &kp RIGHT
+&td_bootloader  &to_gam   &kp LC(X)    &kp LC(INS)  &kp LS(INS)  &kp TAB    &kp TAB  &kp BSPC       &kp LS(LC(N7))  &kp LC(LS(N8))  &kp DEL    &trans
+                                       &trans       &mo 4        &trans     &trans   &kp LG(SPACE)  &trans
             >;
 
             label = "NAVI";
@@ -530,10 +530,10 @@
 
         mouse {
             bindings = <
-        &td_bootloader  &to_tap    &to_extra    &to_base     &none     &none      &msc SCRL_LEFT  &msc SCRL_DOWN    &msc SCRL_UP      &msc SCRL_RIGHT
-        &sk LGUI        &sk LALT   &sk LCTRL    &sk LSHFT    &none     &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP      &mmv MOVE_RIGHT
-&trans  &to_gam         &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &none     &none      &kp BSPC        &cmd_space_lang1  &cmd_space_lang2  &kp DEL          &trans
-                                   &trans       &trans       &trans    &mkp RCLK  &mkp LCLK       &mkp MCLK
+        &bt_0     &bt_1      &bt_2        &bt_3        &bt_4           &kp ESC    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT
+        &sk LGUI  &sk LALT   &sk LCTRL    &sk LSHFT    &out OUT_BLE    &kp RET    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT
+&trans  &to_gam   &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &out OUT_USB    &kp TAB    &kp BSPC        &kp LC(LS(N7))  &kp LC(LS(N8))  &kp DEL          &trans
+                             &trans       &trans       &trans          &mkp RCLK  &mkp LCLK       &mkp MCLK
             >;
 
             label = "MOUSE";
@@ -541,10 +541,10 @@
 
         num_base {
             bindings = <
-          &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
-                             &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+         &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     &kp SQT      &kp NUBS   &kp LS(NUBS)    &kp LPAR        &kp RPAR
+         &kp SEMI   &kp N4  &kp N5  &kp N6  &kp EQUAL    &kp MINUS    &sk LSHFT  &sk LCTRL       &sk LALT        &sk LGUI
+&kp SQT  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     &kp LG(DOT)  &kp BSPC   &kp LC(LS(N7))  &kp LS(LC(N8))  &kp DEL   &td_bootloader
+                            &trans  &kp N0  &trans       &trans       &trans     &trans
             >;
 
             label = "NUM_BASE";
@@ -552,24 +552,13 @@
 
         sym_base {
             bindings = <
-              &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
-                                        &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+             &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC    &kp DQT      &kp NUBS   &kp LS(NUBS)    &kp LPAR        &kp RPAR
+             &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS    &kp UNDER    &sk LSHFT  &sk LCTRL       &sk LALT        &sk LGUI
+&kp LS(SQT)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE    &kp LG(DEL)  &kp BSPC   &kp LS(LC(N7))  &kp LC(LS(N8))  &kp DEL   &td_bootloader
+                                       &trans     &trans     &trans      &trans       &trans     &trans
             >;
 
             label = "SYM_BASE";
-        };
-
-        media {
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
-            >;
-
-            label = "MEDIA";
         };
 
         fun {
