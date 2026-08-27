@@ -31,7 +31,7 @@
         un_tap {
             bindings = <&to 0>;
             key-positions = <0 9>;
-            layers = <4>;
+            layers = <2>;
         };
 
         win_lg1 {
@@ -82,72 +82,9 @@
             layers = <2>;
         };
 
-        undo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <21 22>;
-            layers = <0 2 1>;
-        };
-
-        redo {
-            bindings = <&kp LC(Y)>;
-            key-positions = <21 23>;
-            layers = <0 2 1>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <22 24>;
-            layers = <0 2 1>;
-        };
-
-        copy {
-            bindings = <&kp LC(INS)>;
-            key-positions = <23 22>;
-            layers = <0 2 1>;
-        };
-
-        paste {
-            bindings = <&kp LS(INS)>;
-            key-positions = <23 24>;
-            layers = <0 2 1>;
-        };
-
-        select_all {
-            bindings = <&kp LC(A)>;
-            key-positions = <24 21>;
-            layers = <0 2 1>;
-        };
     };
 
     macros {
-        cmd_space_lang1: cmd_space_lang1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(N7)) &to 0>;
-            label = "CMD_SPACE_LANG1";
-        };
-
-        cmd_space_lang2: cmd_space_lang2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8)) &to 2>;
-            label = "CMD_SPACE_LANG2";
-        };
-
-        ctrl_space_lang1: ctrl_space_lang1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 0>;
-            label = "CTRL_SPACE_LANG1";
-        };
-
-        ctrl_space_lang2: ctrl_space_lang2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 2>;
-            label = "CTRL_SPACE_LANG2";
-        };
-
         bt_clear_2: bt_clear_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -183,50 +120,37 @@
             label = "BT_CLEAR_1";
         };
 
-        ml: ml {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 3>,
-                <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 3>;
-
-            label = "ML";
-            wait-ms = <0>;
-            tap-ms = <0>;
+        cmd_space_lang1: cmd_space_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &to 0>;
+            label = "CMD_SPACE_LANG1";
         };
 
-        ku: kp_unshift {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&key_off RSHFT &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "KP_UNSHIFT";
-            wait-ms = <0>;
-            tap-ms = <0>;
+        cmd_space_lang2: cmd_space_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &to 2>;
+            label = "CMD_SPACE_LANG2";
         };
+
+        ctrl_space_lang1: ctrl_space_lang1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &to 0>;
+            label = "CTRL_SPACE_LANG1";
+        };
+
+        ctrl_space_lang2: ctrl_space_lang2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &to 2>;
+            label = "CTRL_SPACE_LANG2";
+        };
+
     };
 
     behaviors {
-        mu: mt_unshift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_UNSHIFT";
-            bindings = <&kp>, <&ku>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            flavor = "tap-preferred";
-        };
-
-        lu: lt_unshift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_UNSHIFT";
-            bindings = <&mo>, <&ku>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         td_bootloader: td_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BOOTLOADER";
@@ -306,15 +230,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        lg2_caps_word: lg2_caps_word {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LG2_CAPS_WORD";
-            bindings = <&key_on RSHFT>, <&kp CAPS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         to_extra: to_extra {
             compatible = "zmk,behavior-tap-dance";
             label = "TO_EXTRA";
@@ -326,7 +241,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TO_TAP";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 4>;
+            bindings = <&none>, <&to 2>;
         };
 
         to_base: to_base {
@@ -340,186 +255,49 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TO_GAM";
             #binding-cells = <0>;
-            bindings = <&none>, <&to 5>;
-        };
-
-        layer_on: layer_on {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_ON";
-            #binding-cells = <1>;
-        };
-
-        layer_off: layer_off {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        key_on: key_on {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_ON";
-            #binding-cells = <1>;
-        };
-
-        key_off: key_off {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        hrml: hrml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <100>;
+            bindings = <&none>, <&to 3>;
         };
 
         frz_nav: frz_nav {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NAV";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
+            bindings = <&none>, <&to 5>;
         };
 
         frz_mou: frz_mou {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MOU";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
+            bindings = <&none>, <&to 6>;
         };
 
         frz_med: frz_med {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 15>;
+            bindings = <&none>, <&to 9>;
         };
 
         frz_num: frz_num {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
+            bindings = <&none>, <&to 7>;
         };
 
         frz_sym: frz_sym {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_SYM";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
+            bindings = <&none>, <&to 8>;
         };
 
         frz_fun: frz_fun {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 16>;
-        };
-
-        frz_num2: frz_num2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 13>;
-        };
-
-        frz_sym2: frz_sym2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 14>;
-        };
-
-        frz_nav2: frz_nav2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 11>;
-        };
-
-        frz_mou2: frz_mou2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU2";
-            #binding-cells = <0>;
-            bindings = <&none>, <&tog 12>;
-        };
-
-        u_left: u_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_LEFT";
-            bindings = <&kp LEFT>, <&kp LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_down: u_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_DOWN";
-            bindings = <&kp DOWN>, <&kp DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_up: u_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_UP";
-            bindings = <&kp UP>, <&kp UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_right: u_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_RIGHT";
-            bindings = <&kp RIGHT>, <&kp RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_home: u_home {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_HOME";
-            bindings = <&kp HOME>, <&kp HOME>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_end: u_end {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_END";
-            bindings = <&kp END>, <&kp END>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_pgdn: u_pgdn {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_PGDN";
-            bindings = <&kp PG_DN>, <&kp PG_DN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        u_pgup: u_pgup {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_PGUP";
-            bindings = <&kp PG_UP>, <&kp PG_UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            bindings = <&none>, <&to 10>;
         };
     };
 
@@ -529,39 +307,19 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V        &kp K       &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &kp LSHFT
-                                   &lu 15 ESC   &lt 7 SPACE  &lt 8 TAB    &lt 10 RET  &lt 9 BSPC   &lt 16 DEL
+           &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SQT
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH  &kp LSHFT
+                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 8 RET  &lt 7 BSPC   &lt 10 DEL
             >;
         };
 
         extra_layer {
             label = "EXTRA";
             bindings = <
-        &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
-        &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 17 FSLH   &trans
-                                &trans       &trans       &trans    &trans  &trans       &trans
-            >;
-        };
-
-        lang2_layer {
-            label = "LANG2";
-            bindings = <
-        &kp Q         &kp W         &kp E          &kp R         &kp T         &kp Y       &kp U        &kp I          &kp O           &kp P
-        &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &mt LSHFT F   &kp G         &kp H       &mt LSHFT J  &hrml LCTRL K  &hrml LALT L    &hrml LGUI SEMI
-&trans  &lt 17 Z      &hrml RALT X  &kp C          &kp V         &kp B         &kp N       &kp M        &kp COMMA      &hrml RALT DOT  &lu 17 FSLH      &trans
-                                    &trans         &lu 11 SPACE  &lu 12 TAB    &lu 14 RET  &lu 13 BSPC  &trans
-            >;
-        };
-
-        shortcut_layer {
-            label = "SHORTCUT";
-            bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B     &kp J   &kp L        &kp U        &kp Y         &kp SQT
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G     &kp M   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 17 Z    &mt RALT X  &kp C        &kp D        &kp V     &kp K   &kp H        &kp COMMA    &mt RALT DOT  &lt 17 FSLH  &trans
+           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -569,19 +327,19 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp APOS
-           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp Q  &kp W  &kp F    &kp P      &kp G      &kp J      &kp L     &kp U      &kp Y    &kp SQT
+           &kp A  &kp R  &kp S    &kp T      &kp D      &kp H      &kp N     &kp E      &kp I    &kp O
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
 
         gaming_layer {
             bindings = <
-          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans      &trans     &trans    &trans     &kp TAB
-          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans      &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans      &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 6    &lt 15 RET  &kp SPACE  &mo 16
+          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans     &trans     &trans    &trans     &kp TAB
+          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans     &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
+&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans     &trans     &kp DOWN  &trans     &kp RCTRL  &trans
+                            &kp LALT  &kp SPACE  &mo 4    &lt 9 RET  &kp SPACE  &mo 10
             >;
 
             label = "GAM";
@@ -592,7 +350,7 @@
        &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 16
+                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 10
             >;
 
             label = "GAM_FN";
@@ -640,48 +398,6 @@
             >;
 
             label = "SYM_BASE";
-        };
-
-        navi_lang2 {
-            label = "NAVI_LANG2";
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)       &ku LS(INS)  &ku LC(INS)  &ku LC(X)  &ku LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &lg2_caps_word  &u_left      &u_down      &u_up      &u_right
-&trans  &none           &kp RALT  &frz_num2  &frz_nav2  &none      &kp INS         &u_home      &u_pgdn      &u_pgup    &u_end     &trans
-                                  &ku ESC    &ku SPACE  &ku TAB    &ku RET         &kp BSPC     &kp DEL
-            >;
-        };
-
-        mouse_lang2 {
-            label = "MOUSE_LANG2";
-            bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &ku LC(Y)  &ku LS(INS)     &ku LC(INS)     &ku LC(X)     &ku LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym2  &frz_mou2  &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                  &ku ESC    &ku SPACE  &ku TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
-            >;
-        };
-
-        num_lang2 {
-            bindings = <
-          &ku LBKT   &ku N7  &ku N8     &ku N9  &ku RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &ku SQT    &ku N4  &ku N5     &ku N6  &ku EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&ku NUBS  &ku GRAVE  &ku N1  &ku N2     &ku N3  &ku BSLH     &none      &frz_num2  &frz_nav2  &kp RALT  &none           &trans
-                             &ku SLASH  &ku N0  &ku MINUS    &ku ENTER  &kp BSPC   &kp DEL
-            >;
-
-            label = "NUM_LANG2";
-        };
-
-        sym_lang2 {
-            bindings = <
-              &ku LBRC   &ku AMPS  &ku STAR   &ku LPAR   &ku RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &ku DQT    &ku DLLR  &ku PRCNT  &ku CARET  &ku PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&ku LS(NUBS)  &ku TILDE  &ku EXCL  &ku AT     &ku HASH   &ku PIPE     &none      &frz_sym2  &frz_mou2  &kp RALT  &none           &trans
-                                   &ku LPAR   &ku RPAR   &kp UNDER    &ku ENTER  &kp BSPC   &kp DEL
-            >;
-
-            label = "SYM_LANG2";
         };
 
         media {
