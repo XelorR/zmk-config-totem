@@ -48,38 +48,50 @@
 
         mac_lg1 {
             bindings = <&ctrl_space_lang1>;
-            key-positions = <0 3>;
+            key-positions = <22 24>;
             layers = <0 2>;
         };
 
         mac_lg2 {
             bindings = <&ctrl_space_lang2>;
-            key-positions = <6 9>;
+            key-positions = <27 29>;
             layers = <0 2>;
         };
 
         lg2_left_bracket_letter {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
-            layers = <2>;
+            layers = <0 1>;
         };
 
         lg2_right_bracket_letter {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <2>;
+            layers = <0 1>;
         };
 
         lg2_quote_letter {
             bindings = <&kp SQT>;
             key-positions = <2 1>;
-            layers = <2>;
+            layers = <1>;
         };
 
         lg2_grave_letter {
             bindings = <&kp GRAVE>;
             key-positions = <2 3>;
-            layers = <2>;
+            layers = <1>;
+        };
+
+        lg1_slash {
+            bindings = <&kp FSLH>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        lg1_ques {
+            bindings = <&kp QMARK>;
+            key-positions = <2 3>;
+            layers = <0>;
         };
     };
 
@@ -129,7 +141,7 @@
         cmd_space_lang2: cmd_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &to 2>;
+            bindings = <&kp LG(SPACE) &to 1>;
             label = "CMD_SPACE_LANG2";
         };
 
@@ -143,7 +155,7 @@
         ctrl_space_lang2: ctrl_space_lang2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &to 2>;
+            bindings = <&kp LC(SPACE) &to 1>;
             label = "CTRL_SPACE_LANG2";
         };
     };
