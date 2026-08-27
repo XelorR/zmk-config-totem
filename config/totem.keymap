@@ -70,15 +70,9 @@
             layers = <1>;
         };
 
-        lg2_quote_letter {
-            bindings = <&kp SQT>;
-            key-positions = <2 1>;
-            layers = <1>;
-        };
-
         lg2_grave_letter {
             bindings = <&kp GRAVE>;
-            key-positions = <2 3>;
+            key-positions = <2 1>;
             layers = <1>;
         };
     };
