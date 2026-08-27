@@ -184,42 +184,42 @@
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NAV";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 5>;
+            bindings = <&none>, <&to 5>;
         };
 
         frz_mou: frz_mou {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MOU";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 6>;
+            bindings = <&none>, <&to 6>;
         };
 
         frz_med: frz_med {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_MED";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 9>;
+            bindings = <&none>, <&to 9>;
         };
 
         frz_num: frz_num {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_NUM";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 7>;
+            bindings = <&none>, <&to 7>;
         };
 
         frz_sym: frz_sym {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_SYM";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 8>;
+            bindings = <&none>, <&to 8>;
         };
 
         frz_fun: frz_fun {
             compatible = "zmk,behavior-tap-dance";
             label = "FRZ_FUN";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 10>;
+            bindings = <&none>, <&to 10>;
         };
     };
 
