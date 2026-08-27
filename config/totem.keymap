@@ -305,9 +305,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp G        &kp J      &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D        &kp H      &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp K      &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH  &kp LSHFT
+           &kp B       &kp L       &kp D        &kp C        &kp V        &kp J      &kp F        &kp O        &kp U       &kp COMMA
+           &mt LGUI N  &mt LALT R  &mt LCTRL T  &mt LSHFT S  &kp G        &kp Y      &mt LSHFT H  &mt LCTRL A  &mt LALT E  &mt LGUI I
+&kp LSHFT  &kp X       &mt RALT Q  &kp M        &kp W        &kp Z        &kp K      &kp P        &kp APOS     &kp SEMI    &lt 11 DOT  &kp LSHFT
                                    &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 8 RET  &lt 7 BSPC   &lt 10 DEL
             >;
         };
@@ -325,9 +325,9 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp G      &kp J      &kp L     &kp U      &kp Y    &kp SQT
-           &kp A  &kp R  &kp S    &kp T      &kp D      &kp H      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp B  &kp L  &kp D    &kp C      &kp V      &kp J      &kp F     &kp O     &kp U     &kp COMMA
+           &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y      &kp H     &kp A     &kp E     &kp I
+&kp LSHFT  &kp X  &kp Q  &kp M    &kp W      &kp Z      &kp K      &kp P     &kp APOS  &kp SEMI  &kp DOT    &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
