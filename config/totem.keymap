@@ -229,9 +229,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
-           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
+           &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SQT
+           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH  &kp LSHFT
                                    &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 8 RET  &lt 7 BSPC   &lt 10 DEL
             >;
         };
@@ -239,9 +239,9 @@
         extra_layer {
             label = "EXTRA";
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SEMI
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&trans  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH  &trans
+           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
+           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -249,9 +249,9 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp E    &kp R      &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P
-           &kp A  &kp S  &kp D    &kp F      &kp G      &kp H      &kp J     &kp K      &kp L    &kp SEMI
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp Q  &kp W  &kp F    &kp P      &kp G      &kp J      &kp L     &kp U      &kp Y    &kp SQT
+           &kp A  &kp R  &kp S    &kp T      &kp D      &kp H      &kp N     &kp E      &kp I    &kp O
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
@@ -303,7 +303,7 @@
         num_base {
             bindings = <
           &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &kp SQT    &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
                              &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -314,7 +314,7 @@
         sym_base {
             bindings = <
               &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &kp DQT         &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
                                         &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
