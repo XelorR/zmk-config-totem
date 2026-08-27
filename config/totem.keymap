@@ -61,13 +61,13 @@
         lg2_left_bracket_letter {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
-            layers = <0 1>;
+            layers = <1>;
         };
 
         lg2_right_bracket_letter {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <0 1>;
+            layers = <1>;
         };
 
         lg2_quote_letter {
@@ -80,18 +80,6 @@
             bindings = <&kp GRAVE>;
             key-positions = <2 3>;
             layers = <1>;
-        };
-
-        lg1_slash {
-            bindings = <&kp FSLH>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        lg1_ques {
-            bindings = <&kp QMARK>;
-            key-positions = <2 3>;
-            layers = <0>;
         };
     };
 
@@ -329,7 +317,7 @@
             bindings = <
            &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 SQT     &kp LSHFT
                                    &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -391,7 +379,7 @@
         num_base {
             bindings = <
           &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+          &kp FSLH   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
                              &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -402,7 +390,7 @@
         sym_base {
             bindings = <
               &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+              &kp QMARK       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
                                         &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
