@@ -12,7 +12,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -196,24 +195,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BT_4";
             bindings = <&bt BT_SEL 4>, <&bt_clear_4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_out_tog: u_out_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_OUT_TOG";
-            bindings = <&out OUT_TOG>, <&out OUT_USB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_EP_TOG";
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
