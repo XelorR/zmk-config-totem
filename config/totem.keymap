@@ -311,7 +311,7 @@
             bindings = <
            &kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O         &kp P
            &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SEMI
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 SQT     &kp LSHFT
+&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
                                    &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
@@ -394,10 +394,10 @@
 
         media {
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &none         &none
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &bt_0         &bt_1         &bt_2         &bt_3       &bt_4
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &none       &none         &none         &none
+        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &out OUT_BLE    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &out OUT_USB    &bt_0       &bt_1         &bt_2         &bt_3       &bt_4
+                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP    &kp K_MUTE
             >;
 
             label = "MEDIA";
