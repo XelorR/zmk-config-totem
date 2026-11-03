@@ -18,11 +18,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <0>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <140>;
 };
+
+&lt { tapping-term-ms = <150>; };
 
 / {
     combos {
@@ -221,6 +223,28 @@
             #binding-cells = <0>;
             bindings = <&none>, <&to 10>;
         };
+
+        mt_pinky: mt_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_PINKY";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <0>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        mt_index: mt_index {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_INDEX";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <0>;
+        };
     };
 
     keymap {
@@ -229,20 +253,20 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q       &kp W       &kp F        &kp P        &kp G     &kp J   &kp L        &kp U        &kp Y         &kp SQT
-           &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D     &kp H   &mt LSHFT N  &mt LCTRL E  &mt LALT I    &mt LGUI O
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B     &kp K   &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH  &kp LSHFT
-                                   &lt 9 ESC    &lt 5 SPACE  &lt 6 TAB    &lt 8 RET  &lt 7 BSPC   &lt 10 DEL
+           &kp Q             &kp W       &kp F        &kp P              &kp G        &kp J      &kp L              &kp U        &kp Y         &kp SQT
+           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp D        &kp H      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
+&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B        &kp K      &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &kp LSHFT
+                                         &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
             >;
         };
 
         extra_layer {
             label = "EXTRA";
             bindings = <
-           &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O         &kp P
-           &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H      &mt LSHFT J  &mt LCTRL K  &mt LALT L    &mt LGUI SQT
-&kp LSHFT  &lt 11 Z    &mt RALT X  &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &mt RALT DOT  &lt 11 FSLH    &kp LSHFT
-                                &trans       &trans       &trans    &trans  &trans       &trans
+           &kp Q             &kp W       &kp E        &kp R              &kp T     &kp Y   &kp U              &kp I        &kp O         &kp P
+           &mt_pinky LGUI A  &mt LALT S  &mt LCTRL D  &mt_index LSHFT F  &kp G     &kp H   &mt_index LSHFT J  &mt LCTRL K  &mt LALT L    &mt_pinky LGUI SQT
+&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B     &kp N   &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH         &kp LSHFT
+                                         &trans       &trans             &trans    &trans  &trans             &trans
             >;
         };
 
