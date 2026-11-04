@@ -314,9 +314,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q             &kp W       &kp F        &kp P              &kp G        &kp J      &kp L              &kp U        &kp Y         &kp SQT
-           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp D        &kp H      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
-&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B        &kp K      &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &kp LSHFT
+           &kp Q             &kp W       &kp F        &kp P              &kp B        &kp J      &kp L              &kp U        &kp Y         &kp SQT
+           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp G        &kp M      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
+&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp D              &kp V        &kp K      &kp H              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &kp LSHFT
                                          &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
             >;
         };
@@ -334,9 +334,9 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp G      &kp J      &kp L     &kp U      &kp Y    &kp SQT
-           &kp A  &kp R  &kp S    &kp T      &kp D      &kp H      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp SQT
+           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
