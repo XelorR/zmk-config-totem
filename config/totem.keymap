@@ -113,15 +113,29 @@
         lang_base: lang_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N7)) &to 0>;
+            bindings = <&lang_en &to 0>;
             label = "LANG_BASE";
         };
 
         lang_extra: lang_extra {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8)) &to 1>;
+            bindings = <&lang_ru &to 1>;
             label = "LANG_EXTRA";
+        };
+
+        lang_en: lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N7))>;
+            label = "LANG_EN";
+        };
+
+        lang_ru: lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N8))>;
+            label = "LANG_RU";
         };
     };
 
