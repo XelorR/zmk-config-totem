@@ -62,6 +62,20 @@
     };
 
     macros {
+        lang_en: lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N7))>;
+            label = "LANG_EN";
+        };
+
+        lang_ru: lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(N8))>;
+            label = "LANG_RU";
+        };
+
         bt_clear_2: bt_clear_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -122,20 +136,6 @@
             #binding-cells = <0>;
             bindings = <&lang_ru &to 1>;
             label = "LANG_EXTRA";
-        };
-
-        lang_en: lang_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(N7))>;
-            label = "LANG_EN";
-        };
-
-        lang_ru: lang_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
-            label = "LANG_RU";
         };
     };
 
