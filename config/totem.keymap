@@ -497,10 +497,10 @@
 
         button {
             bindings = <
-        &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI   &kp LALT   &kp LCTRL    &kp LSHFT    &trans       &trans     &kp LSHFT    &kp LCTRL    &kp LALT   &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)  &trans
-                              &mkp MCLK    &mkp LCLK    &mkp RCLK    &mkp RCLK  &mkp LCLK    &mkp MCLK
+               &kp LA(F4)  &kp LC(W)  &kp LC(E)    &kp LC(R)    &kp LC(T)    &kp LC(Y)  &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
+               &kp LC(A)   &kp LC(S)  &kp LC(D)    &kp LC(F)    &kp LC(G)    &kp LC(H)  &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
+&kp LC(GRAVE)  &kp LC(Z)   &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(B)    &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &kp LC(SQT)
+                                      &mkp MCLK    &mkp LCLK    &mkp RCLK    &mkp RCLK  &mkp LCLK  &mkp MCLK
             >;
 
             label = "BUTTON";
