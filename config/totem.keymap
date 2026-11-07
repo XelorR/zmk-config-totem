@@ -137,6 +137,20 @@
             bindings = <&lang_ru &to 1>;
             label = "LANG_EXTRA";
         };
+
+        checkbox: checkbox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE &kp END>;
+            label = "CHECKBOX";
+        };
+
+        arrow: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "ARROW";
+        };
     };
 
     behaviors {
@@ -366,10 +380,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-          &kp Q             &kp W       &kp F        &kp P              &kp G        &kp J      &kp L              &kp U        &kp Y         &kp SQT
-          &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp D        &kp H      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
-&kp LPAR  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B        &kp K      &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &kp RPAR
-                                        &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
+           &kp Q             &kp W       &kp F        &kp P              &kp G        &kp J      &kp L              &kp U        &kp Y         &kp SQT
+           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp D        &kp H      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
+&checkbox  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B        &kp K      &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &arrow
+                                         &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
             >;
         };
 
