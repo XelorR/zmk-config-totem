@@ -65,14 +65,14 @@
         lang_en: lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N7))>;
+            bindings = <&kp LC(LS(N8))>;
             label = "LANG_EN";
         };
 
         lang_ru: lang_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp LC(LS(N7))>;
             label = "LANG_RU";
         };
 
