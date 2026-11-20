@@ -380,9 +380,9 @@
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q             &kp W       &kp F        &kp P              &kp G        &kp J      &kp L              &kp U        &kp Y         &kp SQT
-           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp D        &kp H      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
-&checkbox  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B        &kp K      &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &arrow
+           &kp B             &kp L       &kp D        &kp C              &kp V        &kp J      &kp F              &kp O        &kp U          &kp COMMA
+           &mt_pinky LGUI N  &mt LALT R  &mt LCTRL T  &mt_index LSHFT S  &kp G        &kp Y      &mt_index LSHFT H  &mt LCTRL A  &mt LALT E     &mt_pinky LGUI I
+&checkbox  &lt 11 X          &mt RALT Q  &kp M        &kp W              &kp Z        &kp K      &kp P              &kp SQT      &mt RALT SEMI  &lt 11 DOT        &arrow
                                          &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
             >;
         };
@@ -400,9 +400,9 @@
         tap_layer {
             label = "TAP";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp G      &kp J      &kp L     &kp U      &kp Y    &kp SQT
-           &kp A  &kp R  &kp S    &kp T      &kp D      &kp H      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V      &kp B      &kp K      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
+           &kp B  &kp L  &kp D    &kp C      &kp V      &kp J      &kp F     &kp O     &kp U     &kp COMMA
+           &kp N  &kp R  &kp T    &kp S      &kp G      &kp Y      &kp H     &kp A     &kp E     &kp I
+&kp LSHFT  &kp X  &kp Q  &kp M    &kp W      &kp Z      &kp K      &kp P     &kp APOS  &kp SEMI  &kp DOT    &kp LSHFT
                          &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
             >;
         };
@@ -454,7 +454,7 @@
         num_base {
             bindings = <
           &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+          &kp FSLH   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
                              &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -465,7 +465,7 @@
         sym_base {
             bindings = <
               &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+              &kp QMARK       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 &kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
                                         &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
             >;
@@ -530,9 +530,9 @@
 
         hrm_shortcuts {
             bindings = <
-        &kp Q             &kp W       &kp F        &kp P               &kp G     &kp J   &kp L              &kp U        &kp Y         &kp APOS
-        &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHIFT T  &kp D     &kp H   &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
-&trans  &kp Z             &mt RALT X  &kp C        &kp V               &kp B     &kp K   &kp M              &kp COMMA    &mt RALT DOT  &kp FSLH          &trans
+        &kp B             &kp L       &kp D        &kp C               &kp V     &kp J   &kp F              &kp O        &kp U          &kp COMMA
+        &mt_pinky LGUI N  &mt LALT R  &mt LCTRL T  &mt_index LSHIFT S  &kp G     &kp Y   &mt_index LSHFT H  &mt LCTRL A  &mt LALT E     &mt_pinky LGUI I
+&trans  &kp X             &mt RALT Q  &kp M        &kp W               &kp Z     &kp K   &kp P              &kp APOS     &mt RALT SEMI  &kp DOT           &trans
                                       &trans       &trans              &trans    &trans  &trans             &trans
             >;
 
