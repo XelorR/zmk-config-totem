@@ -44,7 +44,7 @@
 
         extra_hard_sign {
             bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+            key-positions = <27 28>;
             layers = <1>;
         };
 
@@ -58,6 +58,12 @@
             bindings = <&lang_extra>;
             key-positions = <6 8>;
             layers = <0 1>;
+        };
+
+        extra_e {
+            bindings = <&kp SQT>;
+            key-positions = <7 8>;
+            layers = <1>;
         };
     };
 
