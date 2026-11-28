@@ -17,23 +17,20 @@
 // Layer indices (order matters: *_E layers must sit above their base layers)
 
 #define L_BASE 0
-#define L_EXTRA 1
-#define L_GAME 2
-#define L_GMFN 3
-#define L_NAV 4
-#define L_NAV_E 5
-#define L_NUM 6
-#define L_NUM_E 7
-#define L_FN 8
-#define L_FN_E 9
+#define L_RU 1      // marker: "RU mode is on" (all &trans); *_E layers hang off it
+#define L_EXTRA 2   // RU letters (QWERTY positions)
+#define L_GAME 3
+#define L_GMFN 4
+#define L_NAV 5
+#define L_NAV_E 6
+#define L_NUM 7
+#define L_NUM_E 8
+#define L_FN 9
+#define L_FN_E 10
 
-// All &sk (sticky / one-shot style) modifiers stay "pressed" for ~60 s,
-// i.e. effectively until the next key. ignore-modifiers lets them stack.
-
-&sk {
-    release-after-ms = <60000>;
-    ignore-modifiers;
-};
+// Sticky mods (wellum-style, see cm_* / cme_* below) stay pressed "forever"
+// (~50 days) until: the next key, a second tap of the same mod, or any &mo_fire.
+#define MAX_TIMER 4294967295
 
 / {
     combos {
@@ -155,7 +152,7 @@
             display-name = "RU_ON";
             wait-ms = <30>;
             tap-ms = <20>;
-            bindings = <&macro_tap>, <&kp LC(LS(N7)) &tog L_EXTRA>;
+            bindings = <&macro_tap>, <&kp LC(LS(N7)) &lock_on L_RU &lock_on L_EXTRA>;
         };
 
         // us_off: switch OS to US and disable EXTRA (used on EXTRA)
@@ -166,7 +163,7 @@
             display-name = "US_OFF";
             wait-ms = <30>;
             tap-ms = <20>;
-            bindings = <&macro_tap>, <&kp LC(LS(N8)) &tog L_EXTRA>;
+            bindings = <&macro_tap>, <&kp LC(LS(N8)) &lock_off L_EXTRA &lock_off L_RU>;
         };
 
         // sw: "switch to US, type one symbol, switch back to RU" (the sw# / sw@ / ... keys)
@@ -238,28 +235,110 @@
         };
 
         // ---------------------------------------------------------------------
-        // Inner part of &sk_e: press the mod and SUSPEND the EXTRA layer;
-        // when the sticky mod is released (after the next key), resume EXTRA.
+        // Sticky mods, taken from wellum (firmware/zmk/wellum34)
         // ---------------------------------------------------------------------
 
-        mod_e: mod_e {
+        // release the key twice (it is pressed twice, see below)
+        m_release_key_twice: m_release_key_twice {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            display-name = "MOD_E";
+            display-name = "REL_TWICE";
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
+                <&macro_release>,
                 <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>;
+        };
+
+        // inner binding of sticky_forever: press twice, release twice when the sticky fires
+        m_press_key_twice: m_press_key_twice {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            display-name = "PRESS_TWICE";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
                 <&macro_press>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_tap>,
+                <&macro_param_1to1>,
+                <&m_release_key_twice MACRO_PLACEHOLDER>;
+        };
+
+        // ---------------------------------------------------------------------
+        // *_e flavour: same, but while the mod is pending the RU letters layer
+        // (EXTRA) is switched off, so the next key is read from BASE (shortcuts sit
+        // on the same keys in EN and RU). EXTRA returns when the sticky fires
+        // (next key / second tap / mo_fire) or is cancelled.
+        // ---------------------------------------------------------------------
+
+        m_press_key_twice_e: m_press_key_twice_e {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            display-name = "PRESS_TWICE_E";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&lock_off L_EXTRA>,
                 <&macro_pause_for_release>,
+                <&macro_tap>,
                 <&macro_param_1to1>,
-                <&macro_release>,
-                <&kp MACRO_PLACEHOLDER>,
+                <&m_release_key_twice MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&lock_on L_EXTRA>;
+        };
+
+        // second tap of a pending *_e mod: release it and bring EXTRA back
+        m_cancel_e: m_cancel_e {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            display-name = "CANCEL_E";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1>,
+                <&m_release_key_twice MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&lock_on L_EXTRA>;
+        };
+
+        // ---------------------------------------------------------------------
+        // Layer key for the BASE thumbs (wellum "la"): on press it fires all pending
+        // sticky mods with a dummy keycode (a lone mod gets tapped, *_e mods give
+        // EXTRA back), then holds the layer. Unlike wellum it does NOT force-release
+        // mods on layer release, so a mod set on NAV/NUM can still hit a key on BASE.
+        // ---------------------------------------------------------------------
+
+        mo_fire: mo_fire {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            display-name = "MO_FIRE";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp 0>,
+                <&macro_press>,
+                <&macro_param_1to1>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1>,
+                <&mo MACRO_PLACEHOLDER>;
         };
     };
 
@@ -335,15 +414,98 @@
             locking;
         };
 
-        // &sk with the same long timeout, for mods on the *_E layers (see mod_e)
+        // ---------------------------------------------------------------------
+        // Sticky mods (wellum): sticky_forever + mod-morph "second tap releases"
+        // ---------------------------------------------------------------------
 
-        sk_e: sk_e {
+        sticky_forever: sticky_forever {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
-            display-name = "STICKY_MOD_E";
-            bindings = <&mod_e>;
-            release-after-ms = <60000>;
+            display-name = "STICKY_FOREVER";
+            bindings = <&m_press_key_twice>;
+            release-after-ms = <MAX_TIMER>;
             ignore-modifiers;
+        };
+
+        sticky_forever_e: sticky_forever_e {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            display-name = "STICKY_FOREVER_E";
+            bindings = <&m_press_key_twice_e>;
+            release-after-ms = <MAX_TIMER>;
+            ignore-modifiers;
+        };
+
+        cm_gui: cm_gui {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CM_GUI";
+            bindings = <&sticky_forever LGUI>, <&m_release_key_twice LGUI>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+
+        cme_gui: cme_gui {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CME_GUI";
+            bindings = <&sticky_forever_e LGUI>, <&m_cancel_e LGUI>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+
+        cm_alt: cm_alt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CM_ALT";
+            bindings = <&sticky_forever LALT>, <&m_release_key_twice LALT>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        cme_alt: cme_alt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CME_ALT";
+            bindings = <&sticky_forever_e LALT>, <&m_cancel_e LALT>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        cm_ctrl: cm_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CM_CTRL";
+            bindings = <&sticky_forever LCTRL>, <&m_release_key_twice LCTRL>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        cme_ctrl: cme_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CME_CTRL";
+            bindings = <&sticky_forever_e LCTRL>, <&m_cancel_e LCTRL>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        cm_sft: cm_sft {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CM_SFT";
+            bindings = <&sticky_forever LSHIFT>, <&m_release_key_twice LSHIFT>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        cme_sft: cme_sft {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            display-name = "CME_SFT";
+            bindings = <&sticky_forever_e LSHIFT>, <&m_cancel_e LSHIFT>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
     };
 
@@ -358,7 +520,19 @@
            &kp B  &kp L  &kp D           &kp C      &kp V        &kp J      &kp F      &kp O    &kp U     &kp COMMA
            &kp N  &kp R  &kp T           &kp S      &kp G        &kp Y      &kp H      &kp A    &kp E     &kp I
 &kp LSHFT  &kp X  &kp Q  &kp M           &kp W      &kp Z        &kp K      &kp P      &kp SQT  &kp SEMI  &kp DOT    &kp LSHFT
-                         &kp LC(LS(N8))  &kp SPACE  &mo L_NAV    &mo L_NUM  &sk LSHFT  &ru_on
+                         &kp LC(LS(N8))  &kp SPACE  &mo_fire L_NAV    &mo_fire L_NUM  &cm_sft  &ru_on
+            >;
+        };
+
+        // Marker: "RU mode is on". The *_E layers hang off this layer (not off EXTRA),
+        // so they stay active while EXTRA's letters are suspended by a pending cme_* mod.
+        ru_layer {
+            label = "RU";
+            bindings = <
+                &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                              &trans &trans &trans  &trans &trans &trans
             >;
         };
 
@@ -374,7 +548,7 @@
             >;
         };
 
-        // Plain-hold mods (&kp, not &sk) on purpose. Enter: nav -> game*. Exit: gmfn -> base*.
+        // Plain-hold mods (&kp, not sticky) on purpose. Enter: nav -> game*. Exit: gmfn -> base*.
 
         game_layer {
             label = "GAME";
@@ -394,41 +568,41 @@
        &kp ESC  &kp N7  &kp N8  &kp N9    &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
        &kp I    &kp N4  &kp N5  &kp N6    &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI
 &kp J  &kp M    &kp N1  &kp N2  &kp N3    &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &trans  &kp CAPS  &trans    &tog 2  &trans  &trans
+                        &trans  &kp CAPS  &trans    &tog L_GAME  &trans  &trans
             >;
         };
 
-        // Left inner thumb. Mods are &sk (OSM-like).
+        // Left inner thumb. Mods are cm_* (wellum-style sticky).
 
         nav_layer {
             label = "NAV";
             bindings = <
         &kp EXCL  &kp AT           &kp HASH   &kp SEMI        &kp PRCNT    &kp COLON  &kp QMARK    &kp LBKT   &kp RBKT   &kp BSLH
-        &sk LGUI  &sk LALT         &sk LCTRL  &sk LSHFT       &kp ESC      &kp BSPC   &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT
+        &cm_gui  &cm_alt         &cm_ctrl  &cm_sft       &kp ESC      &kp BSPC   &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT
 &trans  &kp DEL   &kp LC(LS(TAB))  &kp TAB    &kp LC(TAB)     &kp RET      &kp RET    &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &trans
                                    &trans     &td_bootloader  &trans       &trans     &tog L_GAME  &trans
             >;
         };
 
-        // Auto-active when EXTRA + NAV. Only overrides symbols that differ in the RU layout, plus &sk_e mods.
+        // Auto-active when EXTRA + NAV. Only overrides symbols that differ in the RU layout, plus cme_* mods.
 
         nav_extra_layer {
             label = "NAV_E";
             bindings = <
         &trans      &sw AT      &sw HASH     &kp DLLR     &trans    &kp CARET  &kp AMPS  &sw LBKT  &sw RBKT  &trans
-        &sk_e LGUI  &sk_e LALT  &sk_e LCTRL  &sk_e LSHFT  &trans    &trans     &trans    &trans    &trans    &trans
+        &cme_gui  &cme_alt  &cme_ctrl  &cme_sft  &trans    &trans     &trans    &trans    &trans    &trans
 &trans  &trans      &trans      &trans       &trans       &trans    &trans     &trans    &trans    &trans    &trans  &trans
                                 &trans       &trans       &trans    &trans     &trans    &trans
             >;
         };
 
-        // Right inner thumb. Mods are &sk.
+        // Right inner thumb. Mods are cm_* (wellum-style sticky).
 
         num_layer {
             label = "NUM";
             bindings = <
         &kp FSLH  &kp N7  &kp N8  &kp N9     &kp EQUAL    &kp GRAVE  &pair_dq        &kp DLLR   &pair_par  &kp PIPE
-        &kp STAR  &kp N4  &kp N5  &kp N6     &kp MINUS    &kp UNDER  &sk LSHFT       &sk LCTRL  &sk LALT   &sk LGUI
+        &kp STAR  &kp N4  &kp N5  &kp N6     &kp MINUS    &kp UNDER  &cm_sft       &cm_ctrl  &cm_alt   &cm_gui
 &trans  &kp N0    &kp N1  &kp N2  &kp N3     &kp PLUS     &kp TILDE  &kp LT          &checkbox  &kp GT     &kp AMPS  &trans
                           &trans  &kp SPACE  &trans       &trans     &td_bootloader  &trans
             >;
@@ -440,7 +614,7 @@
             label = "NUM_E";
             bindings = <
         &kp PIPE  &trans  &trans  &trans  &trans    &sw GRAVE  &pair_at     &sw DLLR      &trans      &sw PIPE
-        &trans    &trans  &trans  &trans  &trans    &trans     &sk_e LSHFT  &sk_e LCTRL   &sk_e LALT  &sk_e LGUI
+        &trans    &trans  &trans  &trans  &trans    &trans     &cme_sft  &cme_ctrl   &cme_alt  &cme_gui
 &trans  &trans    &trans  &trans  &trans  &trans    &sw TILDE  &sw LT       &checkbox_sw  &sw GT      &sw AMPS    &trans
                           &trans  &trans  &trans    &trans     &trans       &trans
             >;
@@ -452,19 +626,19 @@
             label = "FN";
             bindings = <
         &kp F1    &kp F2    &kp F3     &kp F4     &kp F5     &kp F6     &kp F7        &kp F8      &kp F9        &kp F10
-        &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &kp F11    &kp F12    &sk LSHFT     &sk LCTRL   &sk LALT      &sk LGUI
+        &cm_gui  &cm_alt  &cm_ctrl  &cm_sft  &kp F11    &kp F12    &cm_sft     &cm_ctrl   &cm_alt      &cm_gui
 &trans  &bt_0     &bt_1     &bt_2      &bt_3      &bt_4      &kp PSCRN  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_PP  &trans
                             &trans     &trans     &trans     &trans     &trans        &trans
             >;
         };
 
-        // Auto-active when EXTRA + FN. Only the mods differ (&sk_e).
+        // Auto-active when EXTRA + FN. Only the mods differ (cme_*).
 
         fn_extra_layer {
             label = "FN_E";
             bindings = <
         &trans      &trans      &trans       &trans       &trans    &trans  &trans       &trans       &trans      &trans
-        &sk_e LGUI  &sk_e LALT  &sk_e LCTRL  &sk_e LSHFT  &trans    &trans  &sk_e LSHFT  &sk_e LCTRL  &sk_e LALT  &sk_e LGUI
+        &cme_gui  &cme_alt  &cme_ctrl  &cme_sft  &trans    &trans  &cme_sft  &cme_ctrl  &cme_alt  &cme_gui
 &trans  &trans      &trans      &trans       &trans       &trans    &trans  &trans       &trans       &trans      &trans      &trans
                                 &trans       &trans       &trans    &trans  &trans       &trans
             >;
@@ -475,17 +649,17 @@
         compatible = "zmk,conditional-layers";
 
         nav_for_extra {
-            if-layers = <L_EXTRA L_NAV>;
+            if-layers = <L_RU L_NAV>;
             then-layer = <L_NAV_E>;
         };
 
         num_for_extra {
-            if-layers = <L_EXTRA L_NUM>;
+            if-layers = <L_RU L_NUM>;
             then-layer = <L_NUM_E>;
         };
 
         fn_for_extra {
-            if-layers = <L_EXTRA L_FN>;
+            if-layers = <L_RU L_FN>;
             then-layer = <L_FN_E>;
         };
 
