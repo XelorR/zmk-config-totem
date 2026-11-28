@@ -178,9 +178,10 @@
             wait-ms = <40>;   // give the OS time to switch the layout
             tap-ms = <20>;
             bindings =
-                <&macro_param_1to1>,
                 <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &kp MACRO_PLACEHOLDER &kp LC(LS(N7))>;
+                <&kp LC(LS(N8))>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER &kp LC(LS(N7))>;
         };
 
         // ---------------------------------------------------------------------
