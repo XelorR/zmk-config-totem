@@ -12,28 +12,90 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
-&mt {
-    quick-tap-ms = <0>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <140>;
+// Layer indices (order matters: *_E layers must sit above their base layers)
+#define L_BASE 0
+#define L_EXTRA 1
+#define L_GAME 2
+#define L_GMFN 3
+#define L_NAV 4
+#define L_NAV_E 5
+#define L_NUM 6
+#define L_NUM_E 7
+#define L_FN 8
+#define L_FN_E 9
+
+// All &sk (sticky / one-shot style) modifiers stay "pressed" for ~60 s,
+// i.e. effectively until the next key. ignore-modifiers lets them stack.
+&sk {
+    release-after-ms = <60000>;
+    ignore-modifiers;
 };
 
-&lt { tapping-term-ms = <150>; };
-
 / {
+
     combos {
         compatible = "zmk,combos";
 
-        un_tap {
-            bindings = <&to 0>;
-            key-positions = <0 9>;
-            layers = <2>;
+        // ---- BASE only ----
+        base_us {                       // l + c : OS layout -> US
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <1 3>;
+            layers = <L_BASE>;
+            bindings = <&kp LC(LS(N8))>;
+        };
+        base_ru {                       // f + u : OS layout -> RU and EXTRA on
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <6 8>;
+            layers = <L_BASE>;
+            bindings = <&ru_on>;
+        };
+
+        // ---- EXTRA only ----
+        extra_us {                      // w + r : OS layout -> US and EXTRA off
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <1 3>;
+            layers = <L_EXTRA>;
+            bindings = <&us_off>;
+        };
+        extra_ru {                      // u + o : OS layout -> RU (stay on EXTRA)
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <6 8>;
+            layers = <L_EXTRA>;
+            bindings = <&kp LC(LS(N7))>;
+        };
+        extra_lbkt {                    // u + i : [   (х)
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <6 7>;
+            layers = <L_EXTRA>;
+            bindings = <&kp LBKT>;
+        };
+        extra_sqt {                     // i + o : '   (э)
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <7 8>;
+            layers = <L_EXTRA>;
+            bindings = <&kp SQT>;
+        };
+        extra_rbkt {                    // m + , : ]   (ъ)
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <27 28>;
+            layers = <L_EXTRA>;
+            bindings = <&kp RBKT>;
+        };
+        extra_grave {                   // , + . : `   (ё)
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            key-positions = <28 29>;
+            layers = <L_EXTRA>;
+            bindings = <&kp GRAVE>;
         };
     };
 
@@ -73,18 +135,108 @@
             label = "BT_CLEAR_1";
         };
 
-        ml: ml {
+        // ---------------------------------------------------------------------
+        // Layout switching (OS hotkeys: ctrl+shift+8 = US, ctrl+shift+7 = RU)
+        // ---------------------------------------------------------------------
+        // ru_on: switch OS to RU and enable EXTRA (used on BASE)
+        ru_on: ru_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "RU_ON";
+            wait-ms = <30>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(LS(N7)) &tog L_EXTRA>;
+        };
+
+        // us_off: switch OS to US and disable EXTRA (used on EXTRA)
+        us_off: us_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "US_OFF";
+            wait-ms = <30>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(LS(N8)) &tog L_EXTRA>;
+        };
+
+        // sw: "switch to US, type one symbol, switch back to RU" (the sw# / sw@ / ... keys)
+        sw: sw {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 14>,
-                <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 14>;
+            display-name = "SW";
+            wait-ms = <40>;   // give the OS time to switch the layout
+            tap-ms = <20>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp LC(LS(N8)) &kp MACRO_PLACEHOLDER &kp LC(LS(N7))>
+                ;
+        };
 
-            label = "ML";
+        // ---------------------------------------------------------------------
+        // Pairs: type both symbols, then arrow left
+        // ---------------------------------------------------------------------
+        pair_par: pair_par {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "PAIR_PAR";
+            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
+        };
+
+        pair_dq: pair_dq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "PAIR_DQ";
+            bindings = <&macro_tap &kp DQT &kp DQT &kp LEFT>;
+        };
+
+        // "@@": in the RU layout shift+2 types a double quote, so this makes ""
+        pair_at: pair_at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "PAIR_AT";
+            bindings = <&macro_tap &kp AT &kp AT &kp LEFT>;
+        };
+
+        // ---------------------------------------------------------------------
+        // Markdown checkbox: home, -, space, [, space, ], space, end
+        // ---------------------------------------------------------------------
+        checkbox: checkbox {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "CHECKBOX";
+            bindings = <&macro_tap &kp HOME &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE &kp END>;
+        };
+
+        // "sw" flavour for the EXTRA (RU) layers: [ and ] need the US layout
+        checkbox_sw: checkbox_sw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "CHECKBOX_SW";
+            wait-ms = <40>;
+            tap-ms = <20>;
+            bindings = <&macro_tap &kp LC(LS(N8)) &kp HOME &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE &kp END &kp LC(LS(N7))>;
+        };
+
+        // ---------------------------------------------------------------------
+        // Inner part of &sk_e: press the mod and SUSPEND the EXTRA layer;
+        // when the sticky mod is released (after the next key), resume EXTRA.
+        // ---------------------------------------------------------------------
+        mod_e: mod_e {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            display-name = "MOD_E";
             wait-ms = <0>;
             tap-ms = <0>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &lock_off L_EXTRA>
+                , <&macro_pause_for_release>
+                , <&macro_param_1to1>
+                , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &lock_on L_EXTRA>
+                ;
         };
+
     };
 
     behaviors {
@@ -140,351 +292,166 @@
             mods = <(MOD_LSFT)>;
         };
 
-        u_out_tog: u_out_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_OUT_TOG";
-            bindings = <&out OUT_TOG>, <&out OUT_USB>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_ep_tog: u_ep_tog {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_EP_TOG";
-            bindings = <&ext_power EP_TOG>, <&ext_power EP_OFF>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        u_caps_word: u_caps_word {
-            compatible = "zmk,behavior-mod-morph";
-            label = "U_CAPS_WORD";
-            bindings = <&caps_word>, <&kp CAPS>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        to_extra: to_extra {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_EXTRA";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 1>;
-        };
-
-        to_tap: to_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_TAP";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 2>;
-        };
-
-        to_base: to_base {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_BASE";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 0>;
-        };
-
-        to_gam: to_gam {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TO_GAM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 3>;
-        };
-
-        frz_nav: frz_nav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NAV";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 5>;
-        };
-
-        frz_mou: frz_mou {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MOU";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 6>;
-        };
-
-        frz_med: frz_med {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_MED";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 9>;
-        };
-
-        frz_num: frz_num {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_NUM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 7>;
-        };
-
-        frz_sym: frz_sym {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_SYM";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 8>;
-        };
-
-        frz_fun: frz_fun {
-            compatible = "zmk,behavior-tap-dance";
-            label = "FRZ_FUN";
-            #binding-cells = <0>;
-            bindings = <&none>, <&to 10>;
-        };
-
-        mt_pinky: mt_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_PINKY";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            quick-tap-ms = <0>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
-
-        mt_index: mt_index {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_INDEX";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <0>;
-        };
-
-        key_on: key_on {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_ON";
-            #binding-cells = <1>;
-        };
-
-        key_off: key_off {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
-        };
-
-        layer_on: layer_on {
+        // Locking layer on/off. &tog is "locking" in ZMK, so a normal (non-locking)
+        // layer_off cannot switch off a layer that was enabled with &tog.
+        lock_on: lock_on {
             compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_ON";
             #binding-cells = <1>;
+            display-name = "LOCK_ON";
+            toggle-mode = "on";
+            locking;
         };
 
-        layer_off: layer_off {
+        lock_off: lock_off {
             compatible = "zmk,behavior-toggle-layer";
-            label = "LAYER_OFF";
             #binding-cells = <1>;
+            display-name = "LOCK_OFF";
             toggle-mode = "off";
+            locking;
         };
 
-        hrml: hrml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <140>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+        // &sk with the same long timeout, for mods on the *_E layers (see mod_e)
+        sk_e: sk_e {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            display-name = "STICKY_MOD_E";
+            bindings = <&mod_e>;
+            release-after-ms = <60000>;
+            ignore-modifiers;
         };
 
-        hrml_pinky: hrml_pinky {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML_PINKY";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
+        // Gallium-like letters. Extra keys (outer shifts, ESC, DEL) keep their previous values.
         base_layer {
             label = "BASE";
             bindings = <
-           &kp Q             &kp W       &kp F        &kp P              &kp B        &kp J      &kp L              &kp U        &kp Y         &kp SQT
-           &mt_pinky LGUI A  &mt LALT R  &mt LCTRL S  &mt_index LSHFT T  &kp G        &kp M      &mt_index LSHFT N  &mt LCTRL E  &mt LALT I    &mt_pinky LGUI O
-&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp D              &kp V        &kp K      &kp H              &kp COMMA    &mt RALT DOT  &lt 11 FSLH       &kp LSHFT
-                                         &lt 9 ESC    &lt 5 SPACE        &lt 6 TAB    &lt 8 RET  &lt 7 BSPC         &lt 10 DEL
+                       &kp B      &kp L      &kp D      &kp C      &kp V        &kp J      &kp F      &kp O      &kp U      &kp COMMA
+                       &kp N      &kp R      &kp T      &kp S      &kp G        &kp Y      &kp H      &kp A      &kp E      &kp I
+            &kp LSHFT  &kp X      &kp Q      &kp M      &kp W      &kp Z        &kp K      &kp P      &kp SQT    &kp SEMI   &kp DOT    &kp LSHFT
+                                  &kp ESC    &kp SPACE  &mo L_NAV    &mo L_NUM  &sk LSHFT  &kp DEL
             >;
         };
 
+        // QWERTY positions for the RU OS layout. Toggled by combos. Blanks fall through to BASE.
         extra_layer {
             label = "EXTRA";
             bindings = <
-           &kp Q             &kp W       &kp E        &kp R              &kp T     &kp Y   &kp U              &kp I        &kp O         &kp P
-           &mt_pinky LGUI A  &mt LALT S  &mt LCTRL D  &mt_index LSHFT F  &kp G     &kp H   &mt_index LSHFT J  &mt LCTRL K  &mt LALT L    &mt_pinky LGUI SQT
-&kp LSHFT  &lt 11 Z          &mt RALT X  &kp C        &kp V              &kp B     &kp N   &kp M              &kp COMMA    &mt RALT DOT  &lt 11 FSLH         &kp LSHFT
-                                         &trans       &trans             &trans    &trans  &trans             &trans
+                       &kp Q      &kp W      &kp E      &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O      &kp P
+                       &kp A      &kp S      &kp D      &kp F      &kp G        &kp H      &kp J      &kp K      &kp L      &kp SEMI
+            &trans     &kp Z      &kp X      &kp C      &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
+                                  &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
-        tap_layer {
-            label = "TAP";
+        // Plain-hold mods (&kp, not &sk) on purpose. Enter: nav -> game*. Exit: gmfn -> base*.
+        game_layer {
+            label = "GAME";
             bindings = <
-           &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp SQT
-           &kp A  &kp R  &kp S    &kp T      &kp G      &kp M      &kp N     &kp E      &kp I    &kp O
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp LSHFT
-                         &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
+                        &kp TAB     &kp Q       &kp X       &kp E       &kp R         &trans      &trans      &trans      &trans      &kp TAB
+                        &kp LSHFT   &kp A       &kp W       &kp D       &kp F         &trans      &kp LEFT    &kp UP      &kp RIGHT   &kp RSHFT
+            &kp CAPS    &kp LCTRL   &kp Z       &kp S       &kp C       &kp V         &kp RET     &trans      &kp DOWN    &trans      &kp RCTRL   &trans
+                                    &tkp LALT   &kp SPACE   &mo L_GMFN    &mo L_FN    &kp SPACE   &trans
             >;
         };
 
-        gaming_layer {
+        // Held from the GAME layer (left inner thumb).
+        game_fn_layer {
+            label = "GAME_FN";
             bindings = <
-          &kp TAB    &kp Q  &kp X     &kp E      &kp R    &trans     &trans     &trans    &trans     &kp TAB
-          &kp LSHFT  &kp A  &kp W     &kp D      &kp F    &trans     &kp LEFT   &kp UP    &kp RIGHT  &kp RSHFT
-&kp CAPS  &kp LCTRL  &kp Z  &kp S     &kp C      &kp B    &trans     &trans     &kp DOWN  &trans     &kp RCTRL  &trans
-                            &kp LALT  &kp SPACE  &mo 4    &lt 9 RET  &kp SPACE  &mo 10
+                        &kp ESC     &kp N7      &kp N8      &kp N9      &kp T         &kp Y       &kp U       &kp I       &kp O       &kp P
+                        &kp I       &kp N4      &kp N5      &kp N6      &kp G         &kp H       &kp J       &kp K       &kp L       &kp SEMI
+            &kp J       &kp M       &kp N1      &kp N2      &kp N3      &kp B         &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &trans
+                                    &trans      &kp CAPS    &trans        &to L_BASE  &trans      &trans
             >;
-
-            label = "GAM";
         };
 
-        gaming_fn {
+        // Left inner thumb. Mods are &sk (OSM-like).
+        nav_layer {
+            label = "NAV";
             bindings = <
-       &kp ESC  &kp N7  &kp N8   &kp N9  &kp T     &kp Y  &kp U      &kp I      &kp O    &kp P
-       &kp I    &kp N4  &kp N5   &kp N6  &kp G     &kp H  &kp J      &kp K      &kp L    &kp SEMI
-&kp J  &kp M    &kp N1  &kp N2   &kp N3  &kp B     &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                        &kp RET  &kp N0  &trans    &to 0  &kp PSCRN  &mo 10
+                             &kp EXCL         &kp AT           &kp HASH         &kp SEMI         &kp PRCNT          &kp COLON        &kp QMARK        &kp LBKT         &kp RBKT         &kp BSLH
+                             &sk LGUI         &sk LALT         &sk LCTRL        &sk LSHFT        &kp ESC            &kp BSPC         &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT
+            &trans           &kp DEL          &kp LC(LS(TAB))  &kp TAB          &kp LC(TAB)      &kp RET            &kp RET          &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          &trans
+                                              &trans           &td_bootloader   &trans             &mo L_FN         &tog L_GAME      &trans
             >;
-
-            label = "GAM_FN";
         };
 
-        navi {
+        // Auto-active when EXTRA + NAV. Only overrides symbols that differ in the RU layout, plus &sk_e mods.
+        nav_extra_layer {
+            label = "NAV_E";
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)     &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_caps_word  &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT
-&trans  &none           &kp RALT  &frz_num   &frz_nav   &none      &kp INS       &kp HOME     &kp PG_DN    &kp PG_UP  &kp END    &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp RET       &kp BSPC     &kp DEL
+                         &trans       &sw AT       &sw HASH     &kp DLLR     &trans         &kp CARET    &kp AMPS     &sw LBKT     &sw RBKT     &trans
+                         &sk_e LGUI   &sk_e LALT   &sk_e LCTRL  &sk_e LSHFT  &trans         &trans       &trans       &trans       &trans       &trans
+            &trans       &trans       &trans       &trans       &trans       &trans         &trans       &trans       &trans       &trans       &trans       &trans
+                                      &trans       &trans       &trans         &trans       &trans       &trans
             >;
-
-            label = "NAVI";
         };
 
-        mouse {
+        // Right inner thumb. Mods are &sk.
+        num_layer {
+            label = "NUM";
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &kp LC(Y)  &kp LS(INS)     &kp LC(INS)     &kp LC(X)     &kp LC(Z)
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &none           &kp RALT  &frz_sym   &frz_mou   &none      &none      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-                                  &kp ESC    &kp SPACE  &kp TAB    &mkp RCLK  &mkp LCLK       &mkp MCLK
+                            &kp FSLH        &kp N7          &kp N8          &kp N9          &kp EQUAL         &kp GRAVE       &pair_dq        &kp DLLR        &pair_par       &kp PIPE
+                            &kp STAR        &kp N4          &kp N5          &kp N6          &kp MINUS         &kp UNDER       &sk LSHFT       &sk LCTRL       &sk LALT        &sk LGUI
+            &trans          &kp N0          &kp N1          &kp N2          &kp N3          &kp PLUS          &kp TILDE       &kp LT          &checkbox       &kp GT          &kp AMPS        &trans
+                                            &trans          &kp SPACE       &mo L_FN          &trans          &td_bootloader  &trans
             >;
-
-            label = "MOUSE";
         };
 
-        num_base {
+        // Auto-active when EXTRA + NUM. "sw*" = switch to US, type, switch back to RU.
+        num_extra_layer {
+            label = "NUM_E";
             bindings = <
-          &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-          &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp NUBS  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none      &frz_num   &frz_nav   &kp RALT  &none           &trans
-                             &kp DOT  &kp N0  &kp MINUS    &kp ENTER  &kp BSPC   &kp DEL
+                          &kp PIPE      &trans        &trans        &trans        &trans          &sw GRAVE     &pair_at      &sw DLLR      &trans        &sw PIPE
+                          &trans        &trans        &trans        &trans        &trans          &trans        &sk_e LSHFT   &sk_e LCTRL   &sk_e LALT    &sk_e LGUI
+            &trans        &trans        &trans        &trans        &trans        &trans          &sw TILDE     &sw LT        &checkbox_sw  &sw GT        &sw AMPS      &trans
+                                        &trans        &trans        &trans          &trans        &trans        &trans
             >;
-
-            label = "NUM_BASE";
         };
 
-        sym_base {
+        // nav + num (hold one, press &mo fn on the other). Bluetooth: tap = select, with shift = clear.
+        fn_layer {
+            label = "FN";
             bindings = <
-              &kp LEFT_BRACE  &kp AMPS  &kp STAR   &kp LPAR   &kp RBRC     &none      &to_base   &to_extra  &to_tap   &td_bootloader
-              &kp COLON       &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp LS(NUBS)  &kp TILDE       &kp EXCL  &kp AT     &kp HASH   &kp PIPE     &none      &frz_sym   &frz_mou   &kp RALT  &none           &trans
-                                        &kp LPAR   &kp RPAR   &kp UNDER    &kp ENTER  &kp BSPC   &kp DEL
+                          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+                          &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     &kp F11         &kp F12       &sk LSHFT     &sk LCTRL     &sk LALT      &sk LGUI
+            &trans        &bt_0         &bt_1         &bt_2         &bt_3         &bt_4           &kp PSCRN     &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp C_PP      &trans
+                                        &trans        &trans        &trans          &trans        &trans        &trans
             >;
-
-            label = "SYM_BASE";
         };
 
-        media {
+        // Auto-active when EXTRA + FN. Only the mods differ (&sk_e).
+        fn_extra_layer {
+            label = "FN_E";
             bindings = <
-        &td_bootloader  &to_tap   &to_extra  &to_base   &none      &bt BT_CLR_ALL  &out OUT_BLE  &out OUT_USB  &kp C_AL_MY_COMPUTER  &kp C_AL_CALC
-        &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &to_gam    &u_ep_tog       &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP          &kp C_NEXT
-&trans  &none           &kp RALT  &frz_fun   &frz_med   &none      &u_out_tog      &bt_0         &bt_1         &bt_2                 &bt_3          &bt_4
-                                  &kp ESC    &kp SPACE  &kp TAB    &kp C_STOP      &kp C_PP      &kp K_MUTE
+                         &trans       &trans       &trans       &trans       &trans         &trans       &trans       &trans       &trans       &trans
+                         &sk_e LGUI   &sk_e LALT   &sk_e LCTRL  &sk_e LSHFT  &trans         &trans       &sk_e LSHFT  &sk_e LCTRL  &sk_e LALT   &sk_e LGUI
+            &trans       &trans       &trans       &trans       &trans       &trans         &trans       &trans       &trans       &trans       &trans       &trans
+                                      &trans       &trans       &trans         &trans       &trans       &trans
             >;
-
-            label = "MEDIA";
-        };
-
-        fun {
-            bindings = <
-        &kp F12  &kp F7  &kp F8     &kp F9     &kp PSCRN          &none      &to_base   &to_extra  &to_tap   &td_bootloader
-        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &to_gam    &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&trans  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none      &frz_fun   &frz_med   &kp RALT  &none           &trans
-                         &kp K_APP  &kp SPACE  &kp TAB            &kp ENTER  &kp BSPC   &kp DEL
-            >;
-
-            label = "FUN";
-        };
-
-        button {
-            bindings = <
-        &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)
-        &kp LGUI   &kp LALT   &kp LCTRL    &kp LSHFT    &trans       &trans     &kp LSHFT    &kp LCTRL    &kp LALT   &kp LGUI
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(INS)  &kp LS(INS)  &kp LC(Y)    &kp LC(Y)  &kp LS(INS)  &kp LC(INS)  &kp LC(X)  &kp LC(Z)  &trans
-                              &mkp MCLK    &mkp LCLK    &mkp RCLK    &mkp RCLK  &mkp LCLK    &mkp MCLK
-            >;
-
-            label = "BUTTON";
-        };
-
-        num_extra {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "NUM_EXTRA";
-        };
-
-        sym_extra {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "SYM_EXTRA";
-        };
-
-        hrm_shortcuts {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "HRM_SHORT";
         };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        num_for_extra {
-            if-layers = <1 7>;
-            then-layer = <12>;
+        nav_for_extra {
+            if-layers = <L_EXTRA L_NAV>;
+            then-layer = <L_NAV_E>;
         };
 
-        sym_for_extra {
-            if-layers = <1 8>;
-            then-layer = <13>;
+        num_for_extra {
+            if-layers = <L_EXTRA L_NUM>;
+            then-layer = <L_NUM_E>;
+        };
+
+        fn_for_extra {
+            if-layers = <L_EXTRA L_FN>;
+            then-layer = <L_FN_E>;
         };
     };
 };
